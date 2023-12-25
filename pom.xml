@@ -55,7 +55,7 @@
                 <version>${kotlin.version}</version>
                 <executions>
                     <execution>
-                        <id>compile</id>
+                        <id>kotlin-compile</id>
                         <goals>
                             <goal>compile</goal>
                         </goals>
