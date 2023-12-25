@@ -35,7 +35,7 @@ data class CreateACDCConverterCommand(
     val ratedUdc: String,
     val resistiveLoss: String,
     val switchingLoss: String,
-    val valveU0: String
+    val valveU0: String22
 )
 
 data class UpdateACDCConverterCommand(
