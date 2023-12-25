@@ -56,7 +56,7 @@
                 <executions>
                     <execution>
                         <id>compile</id>
-                        <phase>${compile}</phase>
+                        <phase>compile</phase>
                         <goals>
                             <goal>compile</goal>
                         </goals>
