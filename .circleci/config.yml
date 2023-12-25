@@ -64,7 +64,7 @@ jobs:
           name: Building with testing
           command: echo building with testing...
 
-      - run: mvn package 
+      - run: mvn package -Dcompile=compile
       - run:
           name: Save test results
           command: |
