@@ -2197,7 +2197,7 @@ data class CreateEquipmentCommand(
     @TargetAggregateIdentifier  val equipmentId: java.util.UUID? = null
 )
 
-data class UpdateEquipmentCommand( @TargetAggregateIdentifier  val equipmentId: java.util.UUID? = null )
+data class UpdateEquipmentCommand( @TargetAggregateIdentifier  val equipmentId: java.util.UUID? = null, val tech: String )
 
 data class DeleteEquipmentCommand(@TargetAggregateIdentifier  var equipmentId: java.util.UUID? = null)
 
