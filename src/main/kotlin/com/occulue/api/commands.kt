@@ -2194,10 +2194,10 @@ data class DeleteEnergySourceCommand(@TargetAggregateIdentifier  var energySourc
 
 // Equipment Commands
 data class CreateEquipmentCommand(
-    @TargetAggregateIdentifier  val equipmentId: java.util.UUID? = null
+    @TargetAggregateIdentifier  var equipmentId: java.util.UUID? = null
 )
 
-data class UpdateEquipmentCommand( @TargetAggregateIdentifier  val equipmentId: java.util.UUID? = null, val tech: String )
+data class UpdateEquipmentCommand( @TargetAggregateIdentifier  var equipmentId: java.util.UUID? = null )
 
 data class DeleteEquipmentCommand(@TargetAggregateIdentifier  var equipmentId: java.util.UUID? = null)
 
