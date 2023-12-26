@@ -13,7 +13,7 @@
 package com.occulue.api;
 
 import java.time.Instant
-import java.util.*
+import java.util.UUID
 
 import javax.persistence.*
 
