@@ -16,7 +16,7 @@ import org.axonframework.modelling.command.TargetAggregateIdentifier
 
 
 import java.util.UUID
-import javax.persistence.*
+import javax.persistence.TargetAggregateIdentifier
 
 import com.occulue.entity.*;
 
@@ -9212,11 +9212,11 @@ data class DeletePetersenCoilCommand(@TargetAggregateIdentifier  var petersenCoi
 
 // PhaseTapChanger Commands
 data class CreatePhaseTapChangerCommand(
-    @TargetAggregateIdentifier  val phaseTapChangerId: UUID? = null
+    @TargetAggregateIdentifier  val phaseTapChangerId: java.utilUUID? = null
 )
 
 data class UpdatePhaseTapChangerCommand(
-    @TargetAggregateIdentifier  val phaseTapChangerId: UUID? = null
+    @TargetAggregateIdentifier  val phaseTapChangerId: java.util.UUID? = null
 )
 
 data class DeletePhaseTapChangerCommand(@TargetAggregateIdentifier  var phaseTapChangerId: UUID? = null)
