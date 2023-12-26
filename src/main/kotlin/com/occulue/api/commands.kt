@@ -18,7 +18,7 @@ import org.axonframework.modelling.command.TargetAggregateIdentifier
 import java.util.*
 import javax.persistence.*
 
-import com.occulue.entity.*
+import com.occulue.entity.*;
 
 //-----------------------------------------------------------
 // Command definitions
@@ -26,7 +26,7 @@ import com.occulue.entity.*
 
 // ACDCConverter Commands
 data class CreateACDCConverterCommand(
-    @TargetAggregateIdentifier val aCDCConverterId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val aCDCConverterId: UUID? = null,
     val baseS: String,
     val idleLoss: String,
     val maxUdc: String,
@@ -39,7 +39,7 @@ data class CreateACDCConverterCommand(
 )
 
 data class UpdateACDCConverterCommand(
-    @TargetAggregateIdentifier val aCDCConverterId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val aCDCConverterId: UUID? = null,
     val baseS: String,
     val idleLoss: String,
     val maxUdc: String,
@@ -51,7 +51,7 @@ data class UpdateACDCConverterCommand(
     val valveU0: String
 )
 
-data class DeleteACDCConverterCommand(@TargetAggregateIdentifier  val aCDCConverterId: java.util.UUID? = null)
+data class DeleteACDCConverterCommand(@TargetAggregateIdentifier  val aCDCConverterId: UUID? = null)
 
 // single association commands
 
@@ -60,16 +60,16 @@ data class DeleteACDCConverterCommand(@TargetAggregateIdentifier  val aCDCConver
 
 // ACDCConverterDCTerminal Commands
 data class CreateACDCConverterDCTerminalCommand(
-    @TargetAggregateIdentifier val aCDCConverterDCTerminalId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val aCDCConverterDCTerminalId: UUID? = null,
     val polarity: String
 )
 
 data class UpdateACDCConverterDCTerminalCommand(
-    @TargetAggregateIdentifier val aCDCConverterDCTerminalId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val aCDCConverterDCTerminalId: UUID? = null,
     val polarity: String
 )
 
-data class DeleteACDCConverterDCTerminalCommand(@TargetAggregateIdentifier  val aCDCConverterDCTerminalId: java.util.UUID? = null)
+data class DeleteACDCConverterDCTerminalCommand(@TargetAggregateIdentifier  val aCDCConverterDCTerminalId: UUID? = null)
 
 // single association commands
 
@@ -78,16 +78,16 @@ data class DeleteACDCConverterDCTerminalCommand(@TargetAggregateIdentifier  val 
 
 // ACDCTerminal Commands
 data class CreateACDCTerminalCommand(
-    @TargetAggregateIdentifier val aCDCTerminalId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val aCDCTerminalId: UUID? = null,
     val sequenceNumber: String
 )
 
 data class UpdateACDCTerminalCommand(
-    @TargetAggregateIdentifier val aCDCTerminalId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val aCDCTerminalId: UUID? = null,
     val sequenceNumber: String
 )
 
-data class DeleteACDCTerminalCommand(@TargetAggregateIdentifier  val aCDCTerminalId: java.util.UUID? = null)
+data class DeleteACDCTerminalCommand(@TargetAggregateIdentifier  val aCDCTerminalId: UUID? = null)
 
 // single association commands
 
@@ -96,7 +96,7 @@ data class DeleteACDCTerminalCommand(@TargetAggregateIdentifier  val aCDCTermina
 
 // ACLineSegment Commands
 data class CreateACLineSegmentCommand(
-    @TargetAggregateIdentifier val aCLineSegmentId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val aCLineSegmentId: UUID? = null,
     val b0ch: String,
     val bch: String,
     val g0ch: String,
@@ -109,7 +109,7 @@ data class CreateACLineSegmentCommand(
 )
 
 data class UpdateACLineSegmentCommand(
-    @TargetAggregateIdentifier val aCLineSegmentId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val aCLineSegmentId: UUID? = null,
     val b0ch: String,
     val bch: String,
     val g0ch: String,
@@ -121,7 +121,7 @@ data class UpdateACLineSegmentCommand(
     val x0: String
 )
 
-data class DeleteACLineSegmentCommand(@TargetAggregateIdentifier  val aCLineSegmentId: java.util.UUID? = null)
+data class DeleteACLineSegmentCommand(@TargetAggregateIdentifier  val aCLineSegmentId: UUID? = null)
 
 // single association commands
 
@@ -130,14 +130,14 @@ data class DeleteACLineSegmentCommand(@TargetAggregateIdentifier  val aCLineSegm
 
 // Accumulator Commands
 data class CreateAccumulatorCommand(
-    @TargetAggregateIdentifier  val accumulatorId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val accumulatorId: UUID? = null
 )
 
 data class UpdateAccumulatorCommand(
-    @TargetAggregateIdentifier  val accumulatorId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val accumulatorId: UUID? = null
 )
 
-data class DeleteAccumulatorCommand(@TargetAggregateIdentifier  val accumulatorId: java.util.UUID? = null)
+data class DeleteAccumulatorCommand(@TargetAggregateIdentifier  val accumulatorId: UUID? = null)
 
 // single association commands
 
@@ -146,16 +146,16 @@ data class DeleteAccumulatorCommand(@TargetAggregateIdentifier  val accumulatorI
 
 // AccumulatorLimit Commands
 data class CreateAccumulatorLimitCommand(
-    @TargetAggregateIdentifier val accumulatorLimitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val accumulatorLimitId: UUID? = null,
     val value: String
 )
 
 data class UpdateAccumulatorLimitCommand(
-    @TargetAggregateIdentifier val accumulatorLimitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val accumulatorLimitId: UUID? = null,
     val value: String
 )
 
-data class DeleteAccumulatorLimitCommand(@TargetAggregateIdentifier  val accumulatorLimitId: java.util.UUID? = null)
+data class DeleteAccumulatorLimitCommand(@TargetAggregateIdentifier  val accumulatorLimitId: UUID? = null)
 
 // single association commands
 
@@ -164,14 +164,14 @@ data class DeleteAccumulatorLimitCommand(@TargetAggregateIdentifier  val accumul
 
 // AccumulatorLimitSet Commands
 data class CreateAccumulatorLimitSetCommand(
-    @TargetAggregateIdentifier  val accumulatorLimitSetId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val accumulatorLimitSetId: UUID? = null
 )
 
 data class UpdateAccumulatorLimitSetCommand(
-    @TargetAggregateIdentifier  val accumulatorLimitSetId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val accumulatorLimitSetId: UUID? = null
 )
 
-data class DeleteAccumulatorLimitSetCommand(@TargetAggregateIdentifier  val accumulatorLimitSetId: java.util.UUID? = null)
+data class DeleteAccumulatorLimitSetCommand(@TargetAggregateIdentifier  val accumulatorLimitSetId: UUID? = null)
 
 // single association commands
 
@@ -180,14 +180,14 @@ data class DeleteAccumulatorLimitSetCommand(@TargetAggregateIdentifier  val accu
 
 // AccumulatorReset Commands
 data class CreateAccumulatorResetCommand(
-    @TargetAggregateIdentifier  val accumulatorResetId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val accumulatorResetId: UUID? = null
 )
 
 data class UpdateAccumulatorResetCommand(
-    @TargetAggregateIdentifier  val accumulatorResetId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val accumulatorResetId: UUID? = null
 )
 
-data class DeleteAccumulatorResetCommand(@TargetAggregateIdentifier  val accumulatorResetId: java.util.UUID? = null)
+data class DeleteAccumulatorResetCommand(@TargetAggregateIdentifier  val accumulatorResetId: UUID? = null)
 
 // single association commands
 
@@ -196,16 +196,16 @@ data class DeleteAccumulatorResetCommand(@TargetAggregateIdentifier  val accumul
 
 // AccumulatorValue Commands
 data class CreateAccumulatorValueCommand(
-    @TargetAggregateIdentifier val accumulatorValueId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val accumulatorValueId: UUID? = null,
     val value: String
 )
 
 data class UpdateAccumulatorValueCommand(
-    @TargetAggregateIdentifier val accumulatorValueId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val accumulatorValueId: UUID? = null,
     val value: String
 )
 
-data class DeleteAccumulatorValueCommand(@TargetAggregateIdentifier  val accumulatorValueId: java.util.UUID? = null)
+data class DeleteAccumulatorValueCommand(@TargetAggregateIdentifier  val accumulatorValueId: UUID? = null)
 
 // single association commands
 
@@ -214,20 +214,20 @@ data class DeleteAccumulatorValueCommand(@TargetAggregateIdentifier  val accumul
 
 // ActivePower Commands
 data class CreateActivePowerCommand(
-    @TargetAggregateIdentifier val activePowerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val activePowerId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateActivePowerCommand(
-    @TargetAggregateIdentifier val activePowerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val activePowerId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteActivePowerCommand(@TargetAggregateIdentifier  val activePowerId: java.util.UUID? = null)
+data class DeleteActivePowerCommand(@TargetAggregateIdentifier  val activePowerId: UUID? = null)
 
 // single association commands
 
@@ -236,16 +236,16 @@ data class DeleteActivePowerCommand(@TargetAggregateIdentifier  val activePowerI
 
 // ActivePowerLimit Commands
 data class CreateActivePowerLimitCommand(
-    @TargetAggregateIdentifier val activePowerLimitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val activePowerLimitId: UUID? = null,
     val value: String
 )
 
 data class UpdateActivePowerLimitCommand(
-    @TargetAggregateIdentifier val activePowerLimitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val activePowerLimitId: UUID? = null,
     val value: String
 )
 
-data class DeleteActivePowerLimitCommand(@TargetAggregateIdentifier  val activePowerLimitId: java.util.UUID? = null)
+data class DeleteActivePowerLimitCommand(@TargetAggregateIdentifier  val activePowerLimitId: UUID? = null)
 
 // single association commands
 
@@ -254,7 +254,7 @@ data class DeleteActivePowerLimitCommand(@TargetAggregateIdentifier  val activeP
 
 // ActivePowerPerCurrentFlow Commands
 data class CreateActivePowerPerCurrentFlowCommand(
-    @TargetAggregateIdentifier val activePowerPerCurrentFlowId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val activePowerPerCurrentFlowId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -263,7 +263,7 @@ data class CreateActivePowerPerCurrentFlowCommand(
 )
 
 data class UpdateActivePowerPerCurrentFlowCommand(
-    @TargetAggregateIdentifier val activePowerPerCurrentFlowId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val activePowerPerCurrentFlowId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -271,7 +271,7 @@ data class UpdateActivePowerPerCurrentFlowCommand(
     val value: String
 )
 
-data class DeleteActivePowerPerCurrentFlowCommand(@TargetAggregateIdentifier  val activePowerPerCurrentFlowId: java.util.UUID? = null)
+data class DeleteActivePowerPerCurrentFlowCommand(@TargetAggregateIdentifier  val activePowerPerCurrentFlowId: UUID? = null)
 
 // single association commands
 
@@ -280,7 +280,7 @@ data class DeleteActivePowerPerCurrentFlowCommand(@TargetAggregateIdentifier  va
 
 // ActivePowerPerFrequency Commands
 data class CreateActivePowerPerFrequencyCommand(
-    @TargetAggregateIdentifier val activePowerPerFrequencyId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val activePowerPerFrequencyId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -289,7 +289,7 @@ data class CreateActivePowerPerFrequencyCommand(
 )
 
 data class UpdateActivePowerPerFrequencyCommand(
-    @TargetAggregateIdentifier val activePowerPerFrequencyId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val activePowerPerFrequencyId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -297,7 +297,7 @@ data class UpdateActivePowerPerFrequencyCommand(
     val value: String
 )
 
-data class DeleteActivePowerPerFrequencyCommand(@TargetAggregateIdentifier  val activePowerPerFrequencyId: java.util.UUID? = null)
+data class DeleteActivePowerPerFrequencyCommand(@TargetAggregateIdentifier  val activePowerPerFrequencyId: UUID? = null)
 
 // single association commands
 
@@ -306,16 +306,16 @@ data class DeleteActivePowerPerFrequencyCommand(@TargetAggregateIdentifier  val 
 
 // Analog Commands
 data class CreateAnalogCommand(
-    @TargetAggregateIdentifier val analogId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val analogId: UUID? = null,
     val positiveFlowIn: String
 )
 
 data class UpdateAnalogCommand(
-    @TargetAggregateIdentifier val analogId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val analogId: UUID? = null,
     val positiveFlowIn: String
 )
 
-data class DeleteAnalogCommand(@TargetAggregateIdentifier  val analogId: java.util.UUID? = null)
+data class DeleteAnalogCommand(@TargetAggregateIdentifier  val analogId: UUID? = null)
 
 // single association commands
 
@@ -324,18 +324,18 @@ data class DeleteAnalogCommand(@TargetAggregateIdentifier  val analogId: java.ut
 
 // AnalogControl Commands
 data class CreateAnalogControlCommand(
-    @TargetAggregateIdentifier val analogControlId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val analogControlId: UUID? = null,
     val maxValue: String,
     val minValue: String
 )
 
 data class UpdateAnalogControlCommand(
-    @TargetAggregateIdentifier val analogControlId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val analogControlId: UUID? = null,
     val maxValue: String,
     val minValue: String
 )
 
-data class DeleteAnalogControlCommand(@TargetAggregateIdentifier  val analogControlId: java.util.UUID? = null)
+data class DeleteAnalogControlCommand(@TargetAggregateIdentifier  val analogControlId: UUID? = null)
 
 // single association commands
 
@@ -344,16 +344,16 @@ data class DeleteAnalogControlCommand(@TargetAggregateIdentifier  val analogCont
 
 // AnalogLimit Commands
 data class CreateAnalogLimitCommand(
-    @TargetAggregateIdentifier val analogLimitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val analogLimitId: UUID? = null,
     val value: String
 )
 
 data class UpdateAnalogLimitCommand(
-    @TargetAggregateIdentifier val analogLimitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val analogLimitId: UUID? = null,
     val value: String
 )
 
-data class DeleteAnalogLimitCommand(@TargetAggregateIdentifier  val analogLimitId: java.util.UUID? = null)
+data class DeleteAnalogLimitCommand(@TargetAggregateIdentifier  val analogLimitId: UUID? = null)
 
 // single association commands
 
@@ -362,14 +362,14 @@ data class DeleteAnalogLimitCommand(@TargetAggregateIdentifier  val analogLimitI
 
 // AnalogLimitSet Commands
 data class CreateAnalogLimitSetCommand(
-    @TargetAggregateIdentifier  val analogLimitSetId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val analogLimitSetId: UUID? = null
 )
 
 data class UpdateAnalogLimitSetCommand(
-    @TargetAggregateIdentifier  val analogLimitSetId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val analogLimitSetId: UUID? = null
 )
 
-data class DeleteAnalogLimitSetCommand(@TargetAggregateIdentifier  val analogLimitSetId: java.util.UUID? = null)
+data class DeleteAnalogLimitSetCommand(@TargetAggregateIdentifier  val analogLimitSetId: UUID? = null)
 
 // single association commands
 
@@ -378,16 +378,16 @@ data class DeleteAnalogLimitSetCommand(@TargetAggregateIdentifier  val analogLim
 
 // AnalogValue Commands
 data class CreateAnalogValueCommand(
-    @TargetAggregateIdentifier val analogValueId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val analogValueId: UUID? = null,
     val value: String
 )
 
 data class UpdateAnalogValueCommand(
-    @TargetAggregateIdentifier val analogValueId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val analogValueId: UUID? = null,
     val value: String
 )
 
-data class DeleteAnalogValueCommand(@TargetAggregateIdentifier  val analogValueId: java.util.UUID? = null)
+data class DeleteAnalogValueCommand(@TargetAggregateIdentifier  val analogValueId: UUID? = null)
 
 // single association commands
 
@@ -396,20 +396,20 @@ data class DeleteAnalogValueCommand(@TargetAggregateIdentifier  val analogValueI
 
 // AngleDegrees Commands
 data class CreateAngleDegreesCommand(
-    @TargetAggregateIdentifier val angleDegreesId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val angleDegreesId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateAngleDegreesCommand(
-    @TargetAggregateIdentifier val angleDegreesId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val angleDegreesId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteAngleDegreesCommand(@TargetAggregateIdentifier  val angleDegreesId: java.util.UUID? = null)
+data class DeleteAngleDegreesCommand(@TargetAggregateIdentifier  val angleDegreesId: UUID? = null)
 
 // single association commands
 
@@ -418,20 +418,20 @@ data class DeleteAngleDegreesCommand(@TargetAggregateIdentifier  val angleDegree
 
 // AngleRadians Commands
 data class CreateAngleRadiansCommand(
-    @TargetAggregateIdentifier val angleRadiansId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val angleRadiansId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateAngleRadiansCommand(
-    @TargetAggregateIdentifier val angleRadiansId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val angleRadiansId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteAngleRadiansCommand(@TargetAggregateIdentifier  val angleRadiansId: java.util.UUID? = null)
+data class DeleteAngleRadiansCommand(@TargetAggregateIdentifier  val angleRadiansId: UUID? = null)
 
 // single association commands
 
@@ -440,20 +440,20 @@ data class DeleteAngleRadiansCommand(@TargetAggregateIdentifier  val angleRadian
 
 // ApparentPower Commands
 data class CreateApparentPowerCommand(
-    @TargetAggregateIdentifier val apparentPowerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val apparentPowerId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateApparentPowerCommand(
-    @TargetAggregateIdentifier val apparentPowerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val apparentPowerId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteApparentPowerCommand(@TargetAggregateIdentifier  val apparentPowerId: java.util.UUID? = null)
+data class DeleteApparentPowerCommand(@TargetAggregateIdentifier  val apparentPowerId: UUID? = null)
 
 // single association commands
 
@@ -462,16 +462,16 @@ data class DeleteApparentPowerCommand(@TargetAggregateIdentifier  val apparentPo
 
 // ApparentPowerLimit Commands
 data class CreateApparentPowerLimitCommand(
-    @TargetAggregateIdentifier val apparentPowerLimitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val apparentPowerLimitId: UUID? = null,
     val value: String
 )
 
 data class UpdateApparentPowerLimitCommand(
-    @TargetAggregateIdentifier val apparentPowerLimitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val apparentPowerLimitId: UUID? = null,
     val value: String
 )
 
-data class DeleteApparentPowerLimitCommand(@TargetAggregateIdentifier  val apparentPowerLimitId: java.util.UUID? = null)
+data class DeleteApparentPowerLimitCommand(@TargetAggregateIdentifier  val apparentPowerLimitId: UUID? = null)
 
 // single association commands
 
@@ -480,20 +480,20 @@ data class DeleteApparentPowerLimitCommand(@TargetAggregateIdentifier  val appar
 
 // Area Commands
 data class CreateAreaCommand(
-    @TargetAggregateIdentifier val areaId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val areaId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateAreaCommand(
-    @TargetAggregateIdentifier val areaId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val areaId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteAreaCommand(@TargetAggregateIdentifier  val areaId: java.util.UUID? = null)
+data class DeleteAreaCommand(@TargetAggregateIdentifier  val areaId: UUID? = null)
 
 // single association commands
 
@@ -502,7 +502,7 @@ data class DeleteAreaCommand(@TargetAggregateIdentifier  val areaId: java.util.U
 
 // AsynchronousMachine Commands
 data class CreateAsynchronousMachineCommand(
-    @TargetAggregateIdentifier val asynchronousMachineId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineId: UUID? = null,
     val converterFedDrive: String,
     val efficiency: String,
     val iaIrRatio: String,
@@ -515,7 +515,7 @@ data class CreateAsynchronousMachineCommand(
 )
 
 data class UpdateAsynchronousMachineCommand(
-    @TargetAggregateIdentifier val asynchronousMachineId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineId: UUID? = null,
     val converterFedDrive: String,
     val efficiency: String,
     val iaIrRatio: String,
@@ -527,7 +527,7 @@ data class UpdateAsynchronousMachineCommand(
     val rxLockedRotorRatio: String
 )
 
-data class DeleteAsynchronousMachineCommand(@TargetAggregateIdentifier  val asynchronousMachineId: java.util.UUID? = null)
+data class DeleteAsynchronousMachineCommand(@TargetAggregateIdentifier  val asynchronousMachineId: UUID? = null)
 
 // single association commands
 
@@ -536,14 +536,14 @@ data class DeleteAsynchronousMachineCommand(@TargetAggregateIdentifier  val asyn
 
 // AsynchronousMachineDynamics Commands
 data class CreateAsynchronousMachineDynamicsCommand(
-    @TargetAggregateIdentifier  val asynchronousMachineDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val asynchronousMachineDynamicsId: UUID? = null
 )
 
 data class UpdateAsynchronousMachineDynamicsCommand(
-    @TargetAggregateIdentifier  val asynchronousMachineDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val asynchronousMachineDynamicsId: UUID? = null
 )
 
-data class DeleteAsynchronousMachineDynamicsCommand(@TargetAggregateIdentifier  val asynchronousMachineDynamicsId: java.util.UUID? = null)
+data class DeleteAsynchronousMachineDynamicsCommand(@TargetAggregateIdentifier  val asynchronousMachineDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -552,7 +552,7 @@ data class DeleteAsynchronousMachineDynamicsCommand(@TargetAggregateIdentifier  
 
 // AsynchronousMachineEquivalentCircuit Commands
 data class CreateAsynchronousMachineEquivalentCircuitCommand(
-    @TargetAggregateIdentifier val asynchronousMachineEquivalentCircuitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineEquivalentCircuitId: UUID? = null,
     val rr1: String,
     val rr2: String,
     val xlr1: String,
@@ -561,7 +561,7 @@ data class CreateAsynchronousMachineEquivalentCircuitCommand(
 )
 
 data class UpdateAsynchronousMachineEquivalentCircuitCommand(
-    @TargetAggregateIdentifier val asynchronousMachineEquivalentCircuitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineEquivalentCircuitId: UUID? = null,
     val rr1: String,
     val rr2: String,
     val xlr1: String,
@@ -569,7 +569,7 @@ data class UpdateAsynchronousMachineEquivalentCircuitCommand(
     val xm: String
 )
 
-data class DeleteAsynchronousMachineEquivalentCircuitCommand(@TargetAggregateIdentifier  val asynchronousMachineEquivalentCircuitId: java.util.UUID? = null)
+data class DeleteAsynchronousMachineEquivalentCircuitCommand(@TargetAggregateIdentifier  val asynchronousMachineEquivalentCircuitId: UUID? = null)
 
 // single association commands
 
@@ -578,7 +578,7 @@ data class DeleteAsynchronousMachineEquivalentCircuitCommand(@TargetAggregateIde
 
 // AsynchronousMachineTimeConstantReactance Commands
 data class CreateAsynchronousMachineTimeConstantReactanceCommand(
-    @TargetAggregateIdentifier val asynchronousMachineTimeConstantReactanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineTimeConstantReactanceId: UUID? = null,
     val tpo: String,
     val tppo: String,
     val xp: String,
@@ -587,7 +587,7 @@ data class CreateAsynchronousMachineTimeConstantReactanceCommand(
 )
 
 data class UpdateAsynchronousMachineTimeConstantReactanceCommand(
-    @TargetAggregateIdentifier val asynchronousMachineTimeConstantReactanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineTimeConstantReactanceId: UUID? = null,
     val tpo: String,
     val tppo: String,
     val xp: String,
@@ -595,7 +595,7 @@ data class UpdateAsynchronousMachineTimeConstantReactanceCommand(
     val xs: String
 )
 
-data class DeleteAsynchronousMachineTimeConstantReactanceCommand(@TargetAggregateIdentifier  val asynchronousMachineTimeConstantReactanceId: java.util.UUID? = null)
+data class DeleteAsynchronousMachineTimeConstantReactanceCommand(@TargetAggregateIdentifier  val asynchronousMachineTimeConstantReactanceId: UUID? = null)
 
 // single association commands
 
@@ -604,16 +604,16 @@ data class DeleteAsynchronousMachineTimeConstantReactanceCommand(@TargetAggregat
 
 // AsynchronousMachineUserDefined Commands
 data class CreateAsynchronousMachineUserDefinedCommand(
-    @TargetAggregateIdentifier val asynchronousMachineUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateAsynchronousMachineUserDefinedCommand(
-    @TargetAggregateIdentifier val asynchronousMachineUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteAsynchronousMachineUserDefinedCommand(@TargetAggregateIdentifier  val asynchronousMachineUserDefinedId: java.util.UUID? = null)
+data class DeleteAsynchronousMachineUserDefinedCommand(@TargetAggregateIdentifier  val asynchronousMachineUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -622,16 +622,16 @@ data class DeleteAsynchronousMachineUserDefinedCommand(@TargetAggregateIdentifie
 
 // BaseVoltage Commands
 data class CreateBaseVoltageCommand(
-    @TargetAggregateIdentifier val baseVoltageId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val baseVoltageId: UUID? = null,
     val nominalVoltage: String
 )
 
 data class UpdateBaseVoltageCommand(
-    @TargetAggregateIdentifier val baseVoltageId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val baseVoltageId: UUID? = null,
     val nominalVoltage: String
 )
 
-data class DeleteBaseVoltageCommand(@TargetAggregateIdentifier  val baseVoltageId: java.util.UUID? = null)
+data class DeleteBaseVoltageCommand(@TargetAggregateIdentifier  val baseVoltageId: UUID? = null)
 
 // single association commands
 
@@ -640,20 +640,20 @@ data class DeleteBaseVoltageCommand(@TargetAggregateIdentifier  val baseVoltageI
 
 // BasicIntervalSchedule Commands
 data class CreateBasicIntervalScheduleCommand(
-    @TargetAggregateIdentifier val basicIntervalScheduleId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val basicIntervalScheduleId: UUID? = null,
     val startTime: String,
     val value1Unit: String,
     val value2Unit: String
 )
 
 data class UpdateBasicIntervalScheduleCommand(
-    @TargetAggregateIdentifier val basicIntervalScheduleId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val basicIntervalScheduleId: UUID? = null,
     val startTime: String,
     val value1Unit: String,
     val value2Unit: String
 )
 
-data class DeleteBasicIntervalScheduleCommand(@TargetAggregateIdentifier  val basicIntervalScheduleId: java.util.UUID? = null)
+data class DeleteBasicIntervalScheduleCommand(@TargetAggregateIdentifier  val basicIntervalScheduleId: UUID? = null)
 
 // single association commands
 
@@ -662,14 +662,14 @@ data class DeleteBasicIntervalScheduleCommand(@TargetAggregateIdentifier  val ba
 
 // Bay Commands
 data class CreateBayCommand(
-    @TargetAggregateIdentifier  val bayId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val bayId: UUID? = null
 )
 
 data class UpdateBayCommand(
-    @TargetAggregateIdentifier  val bayId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val bayId: UUID? = null
 )
 
-data class DeleteBayCommand(@TargetAggregateIdentifier  val bayId: java.util.UUID? = null)
+data class DeleteBayCommand(@TargetAggregateIdentifier  val bayId: UUID? = null)
 
 // single association commands
 
@@ -678,14 +678,14 @@ data class DeleteBayCommand(@TargetAggregateIdentifier  val bayId: java.util.UUI
 
 // BooleanProxy Commands
 data class CreateBooleanProxyCommand(
-    @TargetAggregateIdentifier  val booleanProxyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val booleanProxyId: UUID? = null
 )
 
 data class UpdateBooleanProxyCommand(
-    @TargetAggregateIdentifier  val booleanProxyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val booleanProxyId: UUID? = null
 )
 
-data class DeleteBooleanProxyCommand(@TargetAggregateIdentifier  val booleanProxyId: java.util.UUID? = null)
+data class DeleteBooleanProxyCommand(@TargetAggregateIdentifier  val booleanProxyId: UUID? = null)
 
 // single association commands
 
@@ -694,7 +694,7 @@ data class DeleteBooleanProxyCommand(@TargetAggregateIdentifier  val booleanProx
 
 // BoundaryExtensions Commands
 data class CreateBoundaryExtensionsCommand(
-    @TargetAggregateIdentifier val boundaryExtensionsId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val boundaryExtensionsId: UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -705,7 +705,7 @@ data class CreateBoundaryExtensionsCommand(
 )
 
 data class UpdateBoundaryExtensionsCommand(
-    @TargetAggregateIdentifier val boundaryExtensionsId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val boundaryExtensionsId: UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -715,7 +715,7 @@ data class UpdateBoundaryExtensionsCommand(
     val toEndNameTso: String
 )
 
-data class DeleteBoundaryExtensionsCommand(@TargetAggregateIdentifier  val boundaryExtensionsId: java.util.UUID? = null)
+data class DeleteBoundaryExtensionsCommand(@TargetAggregateIdentifier  val boundaryExtensionsId: UUID? = null)
 
 // single association commands
 
@@ -724,14 +724,14 @@ data class DeleteBoundaryExtensionsCommand(@TargetAggregateIdentifier  val bound
 
 // Breaker Commands
 data class CreateBreakerCommand(
-    @TargetAggregateIdentifier  val breakerId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val breakerId: UUID? = null
 )
 
 data class UpdateBreakerCommand(
-    @TargetAggregateIdentifier  val breakerId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val breakerId: UUID? = null
 )
 
-data class DeleteBreakerCommand(@TargetAggregateIdentifier  val breakerId: java.util.UUID? = null)
+data class DeleteBreakerCommand(@TargetAggregateIdentifier  val breakerId: UUID? = null)
 
 // single association commands
 
@@ -740,16 +740,16 @@ data class DeleteBreakerCommand(@TargetAggregateIdentifier  val breakerId: java.
 
 // BusNameMarker Commands
 data class CreateBusNameMarkerCommand(
-    @TargetAggregateIdentifier val busNameMarkerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val busNameMarkerId: UUID? = null,
     val priority: String
 )
 
 data class UpdateBusNameMarkerCommand(
-    @TargetAggregateIdentifier val busNameMarkerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val busNameMarkerId: UUID? = null,
     val priority: String
 )
 
-data class DeleteBusNameMarkerCommand(@TargetAggregateIdentifier  val busNameMarkerId: java.util.UUID? = null)
+data class DeleteBusNameMarkerCommand(@TargetAggregateIdentifier  val busNameMarkerId: UUID? = null)
 
 // single association commands
 
@@ -758,16 +758,16 @@ data class DeleteBusNameMarkerCommand(@TargetAggregateIdentifier  val busNameMar
 
 // BusbarSection Commands
 data class CreateBusbarSectionCommand(
-    @TargetAggregateIdentifier val busbarSectionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val busbarSectionId: UUID? = null,
     val ipMax: String
 )
 
 data class UpdateBusbarSectionCommand(
-    @TargetAggregateIdentifier val busbarSectionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val busbarSectionId: UUID? = null,
     val ipMax: String
 )
 
-data class DeleteBusbarSectionCommand(@TargetAggregateIdentifier  val busbarSectionId: java.util.UUID? = null)
+data class DeleteBusbarSectionCommand(@TargetAggregateIdentifier  val busbarSectionId: UUID? = null)
 
 // single association commands
 
@@ -776,20 +776,20 @@ data class DeleteBusbarSectionCommand(@TargetAggregateIdentifier  val busbarSect
 
 // Capacitance Commands
 data class CreateCapacitanceCommand(
-    @TargetAggregateIdentifier val capacitanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val capacitanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateCapacitanceCommand(
-    @TargetAggregateIdentifier val capacitanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val capacitanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteCapacitanceCommand(@TargetAggregateIdentifier  val capacitanceId: java.util.UUID? = null)
+data class DeleteCapacitanceCommand(@TargetAggregateIdentifier  val capacitanceId: UUID? = null)
 
 // single association commands
 
@@ -798,7 +798,7 @@ data class DeleteCapacitanceCommand(@TargetAggregateIdentifier  val capacitanceI
 
 // CapacitancePerLength Commands
 data class CreateCapacitancePerLengthCommand(
-    @TargetAggregateIdentifier val capacitancePerLengthId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val capacitancePerLengthId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -807,7 +807,7 @@ data class CreateCapacitancePerLengthCommand(
 )
 
 data class UpdateCapacitancePerLengthCommand(
-    @TargetAggregateIdentifier val capacitancePerLengthId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val capacitancePerLengthId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -815,7 +815,7 @@ data class UpdateCapacitancePerLengthCommand(
     val value: String
 )
 
-data class DeleteCapacitancePerLengthCommand(@TargetAggregateIdentifier  val capacitancePerLengthId: java.util.UUID? = null)
+data class DeleteCapacitancePerLengthCommand(@TargetAggregateIdentifier  val capacitancePerLengthId: UUID? = null)
 
 // single association commands
 
@@ -824,18 +824,18 @@ data class DeleteCapacitancePerLengthCommand(@TargetAggregateIdentifier  val cap
 
 // Command Commands
 data class CreateCommandCommand(
-    @TargetAggregateIdentifier val commandId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val commandId: UUID? = null,
     val normalValue: String,
     val value: String
 )
 
 data class UpdateCommandCommand(
-    @TargetAggregateIdentifier val commandId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val commandId: UUID? = null,
     val normalValue: String,
     val value: String
 )
 
-data class DeleteCommandCommand(@TargetAggregateIdentifier  val commandId: java.util.UUID? = null)
+data class DeleteCommandCommand(@TargetAggregateIdentifier  val commandId: UUID? = null)
 
 // single association commands
 
@@ -844,20 +844,20 @@ data class DeleteCommandCommand(@TargetAggregateIdentifier  val commandId: java.
 
 // Conductance Commands
 data class CreateConductanceCommand(
-    @TargetAggregateIdentifier val conductanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val conductanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateConductanceCommand(
-    @TargetAggregateIdentifier val conductanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val conductanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteConductanceCommand(@TargetAggregateIdentifier  val conductanceId: java.util.UUID? = null)
+data class DeleteConductanceCommand(@TargetAggregateIdentifier  val conductanceId: UUID? = null)
 
 // single association commands
 
@@ -866,14 +866,14 @@ data class DeleteConductanceCommand(@TargetAggregateIdentifier  val conductanceI
 
 // ConductingEquipment Commands
 data class CreateConductingEquipmentCommand(
-    @TargetAggregateIdentifier  val conductingEquipmentId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val conductingEquipmentId: UUID? = null
 )
 
 data class UpdateConductingEquipmentCommand(
-    @TargetAggregateIdentifier  val conductingEquipmentId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val conductingEquipmentId: UUID? = null
 )
 
-data class DeleteConductingEquipmentCommand(@TargetAggregateIdentifier  val conductingEquipmentId: java.util.UUID? = null)
+data class DeleteConductingEquipmentCommand(@TargetAggregateIdentifier  val conductingEquipmentId: UUID? = null)
 
 // single association commands
 
@@ -882,16 +882,16 @@ data class DeleteConductingEquipmentCommand(@TargetAggregateIdentifier  val cond
 
 // Conductor Commands
 data class CreateConductorCommand(
-    @TargetAggregateIdentifier val conductorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val conductorId: UUID? = null,
     val length: String
 )
 
 data class UpdateConductorCommand(
-    @TargetAggregateIdentifier val conductorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val conductorId: UUID? = null,
     val length: String
 )
 
-data class DeleteConductorCommand(@TargetAggregateIdentifier  val conductorId: java.util.UUID? = null)
+data class DeleteConductorCommand(@TargetAggregateIdentifier  val conductorId: UUID? = null)
 
 // single association commands
 
@@ -900,14 +900,14 @@ data class DeleteConductorCommand(@TargetAggregateIdentifier  val conductorId: j
 
 // ConformLoad Commands
 data class CreateConformLoadCommand(
-    @TargetAggregateIdentifier  val conformLoadId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val conformLoadId: UUID? = null
 )
 
 data class UpdateConformLoadCommand(
-    @TargetAggregateIdentifier  val conformLoadId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val conformLoadId: UUID? = null
 )
 
-data class DeleteConformLoadCommand(@TargetAggregateIdentifier  val conformLoadId: java.util.UUID? = null)
+data class DeleteConformLoadCommand(@TargetAggregateIdentifier  val conformLoadId: UUID? = null)
 
 // single association commands
 
@@ -916,14 +916,14 @@ data class DeleteConformLoadCommand(@TargetAggregateIdentifier  val conformLoadI
 
 // ConformLoadGroup Commands
 data class CreateConformLoadGroupCommand(
-    @TargetAggregateIdentifier  val conformLoadGroupId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val conformLoadGroupId: UUID? = null
 )
 
 data class UpdateConformLoadGroupCommand(
-    @TargetAggregateIdentifier  val conformLoadGroupId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val conformLoadGroupId: UUID? = null
 )
 
-data class DeleteConformLoadGroupCommand(@TargetAggregateIdentifier  val conformLoadGroupId: java.util.UUID? = null)
+data class DeleteConformLoadGroupCommand(@TargetAggregateIdentifier  val conformLoadGroupId: UUID? = null)
 
 // single association commands
 
@@ -932,14 +932,14 @@ data class DeleteConformLoadGroupCommand(@TargetAggregateIdentifier  val conform
 
 // ConformLoadSchedule Commands
 data class CreateConformLoadScheduleCommand(
-    @TargetAggregateIdentifier  val conformLoadScheduleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val conformLoadScheduleId: UUID? = null
 )
 
 data class UpdateConformLoadScheduleCommand(
-    @TargetAggregateIdentifier  val conformLoadScheduleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val conformLoadScheduleId: UUID? = null
 )
 
-data class DeleteConformLoadScheduleCommand(@TargetAggregateIdentifier  val conformLoadScheduleId: java.util.UUID? = null)
+data class DeleteConformLoadScheduleCommand(@TargetAggregateIdentifier  val conformLoadScheduleId: UUID? = null)
 
 // single association commands
 
@@ -948,7 +948,7 @@ data class DeleteConformLoadScheduleCommand(@TargetAggregateIdentifier  val conf
 
 // ConnectivityNode Commands
 data class CreateConnectivityNodeCommand(
-    @TargetAggregateIdentifier val connectivityNodeId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val connectivityNodeId: UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -959,7 +959,7 @@ data class CreateConnectivityNodeCommand(
 )
 
 data class UpdateConnectivityNodeCommand(
-    @TargetAggregateIdentifier val connectivityNodeId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val connectivityNodeId: UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -969,7 +969,7 @@ data class UpdateConnectivityNodeCommand(
     val toEndNameTso: String
 )
 
-data class DeleteConnectivityNodeCommand(@TargetAggregateIdentifier  val connectivityNodeId: java.util.UUID? = null)
+data class DeleteConnectivityNodeCommand(@TargetAggregateIdentifier  val connectivityNodeId: UUID? = null)
 
 // single association commands
 
@@ -978,14 +978,14 @@ data class DeleteConnectivityNodeCommand(@TargetAggregateIdentifier  val connect
 
 // ConnectivityNodeContainer Commands
 data class CreateConnectivityNodeContainerCommand(
-    @TargetAggregateIdentifier  val connectivityNodeContainerId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val connectivityNodeContainerId: UUID? = null
 )
 
 data class UpdateConnectivityNodeContainerCommand(
-    @TargetAggregateIdentifier  val connectivityNodeContainerId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val connectivityNodeContainerId: UUID? = null
 )
 
-data class DeleteConnectivityNodeContainerCommand(@TargetAggregateIdentifier  val connectivityNodeContainerId: java.util.UUID? = null)
+data class DeleteConnectivityNodeContainerCommand(@TargetAggregateIdentifier  val connectivityNodeContainerId: UUID? = null)
 
 // single association commands
 
@@ -994,14 +994,14 @@ data class DeleteConnectivityNodeContainerCommand(@TargetAggregateIdentifier  va
 
 // Connector Commands
 data class CreateConnectorCommand(
-    @TargetAggregateIdentifier  val connectorId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val connectorId: UUID? = null
 )
 
 data class UpdateConnectorCommand(
-    @TargetAggregateIdentifier  val connectorId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val connectorId: UUID? = null
 )
 
-data class DeleteConnectorCommand(@TargetAggregateIdentifier  val connectorId: java.util.UUID? = null)
+data class DeleteConnectorCommand(@TargetAggregateIdentifier  val connectorId: UUID? = null)
 
 // single association commands
 
@@ -1010,7 +1010,7 @@ data class DeleteConnectorCommand(@TargetAggregateIdentifier  val connectorId: j
 
 // Control Commands
 data class CreateControlCommand(
-    @TargetAggregateIdentifier val controlId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val controlId: UUID? = null,
     val controlType: String,
     val operationInProgress: String,
     val timeStamp: String,
@@ -1019,7 +1019,7 @@ data class CreateControlCommand(
 )
 
 data class UpdateControlCommand(
-    @TargetAggregateIdentifier val controlId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val controlId: UUID? = null,
     val controlType: String,
     val operationInProgress: String,
     val timeStamp: String,
@@ -1027,7 +1027,7 @@ data class UpdateControlCommand(
     val unitSymbol: String
 )
 
-data class DeleteControlCommand(@TargetAggregateIdentifier  val controlId: java.util.UUID? = null)
+data class DeleteControlCommand(@TargetAggregateIdentifier  val controlId: UUID? = null)
 
 // single association commands
 
@@ -1036,16 +1036,16 @@ data class DeleteControlCommand(@TargetAggregateIdentifier  val controlId: java.
 
 // ControlArea Commands
 data class CreateControlAreaCommand(
-    @TargetAggregateIdentifier val controlAreaId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val controlAreaId: UUID? = null,
     val type: String
 )
 
 data class UpdateControlAreaCommand(
-    @TargetAggregateIdentifier val controlAreaId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val controlAreaId: UUID? = null,
     val type: String
 )
 
-data class DeleteControlAreaCommand(@TargetAggregateIdentifier  val controlAreaId: java.util.UUID? = null)
+data class DeleteControlAreaCommand(@TargetAggregateIdentifier  val controlAreaId: UUID? = null)
 
 // single association commands
 
@@ -1054,14 +1054,14 @@ data class DeleteControlAreaCommand(@TargetAggregateIdentifier  val controlAreaI
 
 // ControlAreaGeneratingUnit Commands
 data class CreateControlAreaGeneratingUnitCommand(
-    @TargetAggregateIdentifier  val controlAreaGeneratingUnitId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val controlAreaGeneratingUnitId: UUID? = null
 )
 
 data class UpdateControlAreaGeneratingUnitCommand(
-    @TargetAggregateIdentifier  val controlAreaGeneratingUnitId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val controlAreaGeneratingUnitId: UUID? = null
 )
 
-data class DeleteControlAreaGeneratingUnitCommand(@TargetAggregateIdentifier  val controlAreaGeneratingUnitId: java.util.UUID? = null)
+data class DeleteControlAreaGeneratingUnitCommand(@TargetAggregateIdentifier  val controlAreaGeneratingUnitId: UUID? = null)
 
 // single association commands
 
@@ -1070,16 +1070,16 @@ data class DeleteControlAreaGeneratingUnitCommand(@TargetAggregateIdentifier  va
 
 // CoordinateSystem Commands
 data class CreateCoordinateSystemCommand(
-    @TargetAggregateIdentifier val coordinateSystemId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val coordinateSystemId: UUID? = null,
     val crsUrn: String
 )
 
 data class UpdateCoordinateSystemCommand(
-    @TargetAggregateIdentifier val coordinateSystemId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val coordinateSystemId: UUID? = null,
     val crsUrn: String
 )
 
-data class DeleteCoordinateSystemCommand(@TargetAggregateIdentifier  val coordinateSystemId: java.util.UUID? = null)
+data class DeleteCoordinateSystemCommand(@TargetAggregateIdentifier  val coordinateSystemId: UUID? = null)
 
 // single association commands
 
@@ -1088,7 +1088,7 @@ data class DeleteCoordinateSystemCommand(@TargetAggregateIdentifier  val coordin
 
 // CsConverter Commands
 data class CreateCsConverterCommand(
-    @TargetAggregateIdentifier val csConverterId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val csConverterId: UUID? = null,
     val maxAlpha: String,
     val maxGamma: String,
     val maxIdc: String,
@@ -1099,7 +1099,7 @@ data class CreateCsConverterCommand(
 )
 
 data class UpdateCsConverterCommand(
-    @TargetAggregateIdentifier val csConverterId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val csConverterId: UUID? = null,
     val maxAlpha: String,
     val maxGamma: String,
     val maxIdc: String,
@@ -1109,7 +1109,7 @@ data class UpdateCsConverterCommand(
     val ratedIdc: String
 )
 
-data class DeleteCsConverterCommand(@TargetAggregateIdentifier  val csConverterId: java.util.UUID? = null)
+data class DeleteCsConverterCommand(@TargetAggregateIdentifier  val csConverterId: UUID? = null)
 
 // single association commands
 
@@ -1118,20 +1118,20 @@ data class DeleteCsConverterCommand(@TargetAggregateIdentifier  val csConverterI
 
 // CurrentFlow Commands
 data class CreateCurrentFlowCommand(
-    @TargetAggregateIdentifier val currentFlowId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val currentFlowId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateCurrentFlowCommand(
-    @TargetAggregateIdentifier val currentFlowId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val currentFlowId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteCurrentFlowCommand(@TargetAggregateIdentifier  val currentFlowId: java.util.UUID? = null)
+data class DeleteCurrentFlowCommand(@TargetAggregateIdentifier  val currentFlowId: UUID? = null)
 
 // single association commands
 
@@ -1140,16 +1140,16 @@ data class DeleteCurrentFlowCommand(@TargetAggregateIdentifier  val currentFlowI
 
 // CurrentLimit Commands
 data class CreateCurrentLimitCommand(
-    @TargetAggregateIdentifier val currentLimitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val currentLimitId: UUID? = null,
     val value: String
 )
 
 data class UpdateCurrentLimitCommand(
-    @TargetAggregateIdentifier val currentLimitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val currentLimitId: UUID? = null,
     val value: String
 )
 
-data class DeleteCurrentLimitCommand(@TargetAggregateIdentifier  val currentLimitId: java.util.UUID? = null)
+data class DeleteCurrentLimitCommand(@TargetAggregateIdentifier  val currentLimitId: UUID? = null)
 
 // single association commands
 
@@ -1158,7 +1158,7 @@ data class DeleteCurrentLimitCommand(@TargetAggregateIdentifier  val currentLimi
 
 // Curve Commands
 data class CreateCurveCommand(
-    @TargetAggregateIdentifier val curveId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val curveId: UUID? = null,
     val curveStyle: String,
     val xUnit: String,
     val y1Unit: String,
@@ -1166,14 +1166,14 @@ data class CreateCurveCommand(
 )
 
 data class UpdateCurveCommand(
-    @TargetAggregateIdentifier val curveId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val curveId: UUID? = null,
     val curveStyle: String,
     val xUnit: String,
     val y1Unit: String,
     val y2Unit: String
 )
 
-data class DeleteCurveCommand(@TargetAggregateIdentifier  val curveId: java.util.UUID? = null)
+data class DeleteCurveCommand(@TargetAggregateIdentifier  val curveId: UUID? = null)
 
 // single association commands
 
@@ -1182,20 +1182,20 @@ data class DeleteCurveCommand(@TargetAggregateIdentifier  val curveId: java.util
 
 // CurveData Commands
 data class CreateCurveDataCommand(
-    @TargetAggregateIdentifier val curveDataId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val curveDataId: UUID? = null,
     val xvalue: String,
     val y1value: String,
     val y2value: String
 )
 
 data class UpdateCurveDataCommand(
-    @TargetAggregateIdentifier val curveDataId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val curveDataId: UUID? = null,
     val xvalue: String,
     val y1value: String,
     val y2value: String
 )
 
-data class DeleteCurveDataCommand(@TargetAggregateIdentifier  val curveDataId: java.util.UUID? = null)
+data class DeleteCurveDataCommand(@TargetAggregateIdentifier  val curveDataId: UUID? = null)
 
 // single association commands
 
@@ -1204,14 +1204,14 @@ data class DeleteCurveDataCommand(@TargetAggregateIdentifier  val curveDataId: j
 
 // DCBaseTerminal Commands
 data class CreateDCBaseTerminalCommand(
-    @TargetAggregateIdentifier  val dCBaseTerminalId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCBaseTerminalId: UUID? = null
 )
 
 data class UpdateDCBaseTerminalCommand(
-    @TargetAggregateIdentifier  val dCBaseTerminalId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCBaseTerminalId: UUID? = null
 )
 
-data class DeleteDCBaseTerminalCommand(@TargetAggregateIdentifier  val dCBaseTerminalId: java.util.UUID? = null)
+data class DeleteDCBaseTerminalCommand(@TargetAggregateIdentifier  val dCBaseTerminalId: UUID? = null)
 
 // single association commands
 
@@ -1220,14 +1220,14 @@ data class DeleteDCBaseTerminalCommand(@TargetAggregateIdentifier  val dCBaseTer
 
 // DCBreaker Commands
 data class CreateDCBreakerCommand(
-    @TargetAggregateIdentifier  val dCBreakerId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCBreakerId: UUID? = null
 )
 
 data class UpdateDCBreakerCommand(
-    @TargetAggregateIdentifier  val dCBreakerId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCBreakerId: UUID? = null
 )
 
-data class DeleteDCBreakerCommand(@TargetAggregateIdentifier  val dCBreakerId: java.util.UUID? = null)
+data class DeleteDCBreakerCommand(@TargetAggregateIdentifier  val dCBreakerId: UUID? = null)
 
 // single association commands
 
@@ -1236,14 +1236,14 @@ data class DeleteDCBreakerCommand(@TargetAggregateIdentifier  val dCBreakerId: j
 
 // DCBusbar Commands
 data class CreateDCBusbarCommand(
-    @TargetAggregateIdentifier  val dCBusbarId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCBusbarId: UUID? = null
 )
 
 data class UpdateDCBusbarCommand(
-    @TargetAggregateIdentifier  val dCBusbarId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCBusbarId: UUID? = null
 )
 
-data class DeleteDCBusbarCommand(@TargetAggregateIdentifier  val dCBusbarId: java.util.UUID? = null)
+data class DeleteDCBusbarCommand(@TargetAggregateIdentifier  val dCBusbarId: UUID? = null)
 
 // single association commands
 
@@ -1252,14 +1252,14 @@ data class DeleteDCBusbarCommand(@TargetAggregateIdentifier  val dCBusbarId: jav
 
 // DCChopper Commands
 data class CreateDCChopperCommand(
-    @TargetAggregateIdentifier  val dCChopperId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCChopperId: UUID? = null
 )
 
 data class UpdateDCChopperCommand(
-    @TargetAggregateIdentifier  val dCChopperId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCChopperId: UUID? = null
 )
 
-data class DeleteDCChopperCommand(@TargetAggregateIdentifier  val dCChopperId: java.util.UUID? = null)
+data class DeleteDCChopperCommand(@TargetAggregateIdentifier  val dCChopperId: UUID? = null)
 
 // single association commands
 
@@ -1268,14 +1268,14 @@ data class DeleteDCChopperCommand(@TargetAggregateIdentifier  val dCChopperId: j
 
 // DCConductingEquipment Commands
 data class CreateDCConductingEquipmentCommand(
-    @TargetAggregateIdentifier  val dCConductingEquipmentId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCConductingEquipmentId: UUID? = null
 )
 
 data class UpdateDCConductingEquipmentCommand(
-    @TargetAggregateIdentifier  val dCConductingEquipmentId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCConductingEquipmentId: UUID? = null
 )
 
-data class DeleteDCConductingEquipmentCommand(@TargetAggregateIdentifier  val dCConductingEquipmentId: java.util.UUID? = null)
+data class DeleteDCConductingEquipmentCommand(@TargetAggregateIdentifier  val dCConductingEquipmentId: UUID? = null)
 
 // single association commands
 
@@ -1284,16 +1284,16 @@ data class DeleteDCConductingEquipmentCommand(@TargetAggregateIdentifier  val dC
 
 // DCConverterUnit Commands
 data class CreateDCConverterUnitCommand(
-    @TargetAggregateIdentifier val dCConverterUnitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dCConverterUnitId: UUID? = null,
     val operationMode: String
 )
 
 data class UpdateDCConverterUnitCommand(
-    @TargetAggregateIdentifier val dCConverterUnitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dCConverterUnitId: UUID? = null,
     val operationMode: String
 )
 
-data class DeleteDCConverterUnitCommand(@TargetAggregateIdentifier  val dCConverterUnitId: java.util.UUID? = null)
+data class DeleteDCConverterUnitCommand(@TargetAggregateIdentifier  val dCConverterUnitId: UUID? = null)
 
 // single association commands
 
@@ -1302,14 +1302,14 @@ data class DeleteDCConverterUnitCommand(@TargetAggregateIdentifier  val dCConver
 
 // DCDisconnector Commands
 data class CreateDCDisconnectorCommand(
-    @TargetAggregateIdentifier  val dCDisconnectorId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCDisconnectorId: UUID? = null
 )
 
 data class UpdateDCDisconnectorCommand(
-    @TargetAggregateIdentifier  val dCDisconnectorId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCDisconnectorId: UUID? = null
 )
 
-data class DeleteDCDisconnectorCommand(@TargetAggregateIdentifier  val dCDisconnectorId: java.util.UUID? = null)
+data class DeleteDCDisconnectorCommand(@TargetAggregateIdentifier  val dCDisconnectorId: UUID? = null)
 
 // single association commands
 
@@ -1318,14 +1318,14 @@ data class DeleteDCDisconnectorCommand(@TargetAggregateIdentifier  val dCDisconn
 
 // DCEquipmentContainer Commands
 data class CreateDCEquipmentContainerCommand(
-    @TargetAggregateIdentifier  val dCEquipmentContainerId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCEquipmentContainerId: UUID? = null
 )
 
 data class UpdateDCEquipmentContainerCommand(
-    @TargetAggregateIdentifier  val dCEquipmentContainerId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCEquipmentContainerId: UUID? = null
 )
 
-data class DeleteDCEquipmentContainerCommand(@TargetAggregateIdentifier  val dCEquipmentContainerId: java.util.UUID? = null)
+data class DeleteDCEquipmentContainerCommand(@TargetAggregateIdentifier  val dCEquipmentContainerId: UUID? = null)
 
 // single association commands
 
@@ -1334,18 +1334,18 @@ data class DeleteDCEquipmentContainerCommand(@TargetAggregateIdentifier  val dCE
 
 // DCGround Commands
 data class CreateDCGroundCommand(
-    @TargetAggregateIdentifier val dCGroundId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dCGroundId: UUID? = null,
     val inductance: String,
     val r: String
 )
 
 data class UpdateDCGroundCommand(
-    @TargetAggregateIdentifier val dCGroundId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dCGroundId: UUID? = null,
     val inductance: String,
     val r: String
 )
 
-data class DeleteDCGroundCommand(@TargetAggregateIdentifier  val dCGroundId: java.util.UUID? = null)
+data class DeleteDCGroundCommand(@TargetAggregateIdentifier  val dCGroundId: UUID? = null)
 
 // single association commands
 
@@ -1354,14 +1354,14 @@ data class DeleteDCGroundCommand(@TargetAggregateIdentifier  val dCGroundId: jav
 
 // DCLine Commands
 data class CreateDCLineCommand(
-    @TargetAggregateIdentifier  val dCLineId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCLineId: UUID? = null
 )
 
 data class UpdateDCLineCommand(
-    @TargetAggregateIdentifier  val dCLineId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCLineId: UUID? = null
 )
 
-data class DeleteDCLineCommand(@TargetAggregateIdentifier  val dCLineId: java.util.UUID? = null)
+data class DeleteDCLineCommand(@TargetAggregateIdentifier  val dCLineId: UUID? = null)
 
 // single association commands
 
@@ -1370,7 +1370,7 @@ data class DeleteDCLineCommand(@TargetAggregateIdentifier  val dCLineId: java.ut
 
 // DCLineSegment Commands
 data class CreateDCLineSegmentCommand(
-    @TargetAggregateIdentifier val dCLineSegmentId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dCLineSegmentId: UUID? = null,
     val capacitance: String,
     val inductance: String,
     val length: String,
@@ -1378,14 +1378,14 @@ data class CreateDCLineSegmentCommand(
 )
 
 data class UpdateDCLineSegmentCommand(
-    @TargetAggregateIdentifier val dCLineSegmentId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dCLineSegmentId: UUID? = null,
     val capacitance: String,
     val inductance: String,
     val length: String,
     val resistance: String
 )
 
-data class DeleteDCLineSegmentCommand(@TargetAggregateIdentifier  val dCLineSegmentId: java.util.UUID? = null)
+data class DeleteDCLineSegmentCommand(@TargetAggregateIdentifier  val dCLineSegmentId: UUID? = null)
 
 // single association commands
 
@@ -1394,14 +1394,14 @@ data class DeleteDCLineSegmentCommand(@TargetAggregateIdentifier  val dCLineSegm
 
 // DCNode Commands
 data class CreateDCNodeCommand(
-    @TargetAggregateIdentifier  val dCNodeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCNodeId: UUID? = null
 )
 
 data class UpdateDCNodeCommand(
-    @TargetAggregateIdentifier  val dCNodeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCNodeId: UUID? = null
 )
 
-data class DeleteDCNodeCommand(@TargetAggregateIdentifier  val dCNodeId: java.util.UUID? = null)
+data class DeleteDCNodeCommand(@TargetAggregateIdentifier  val dCNodeId: UUID? = null)
 
 // single association commands
 
@@ -1410,20 +1410,20 @@ data class DeleteDCNodeCommand(@TargetAggregateIdentifier  val dCNodeId: java.ut
 
 // DCSeriesDevice Commands
 data class CreateDCSeriesDeviceCommand(
-    @TargetAggregateIdentifier val dCSeriesDeviceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dCSeriesDeviceId: UUID? = null,
     val inductance: String,
     val ratedUdc: String,
     val resistance: String
 )
 
 data class UpdateDCSeriesDeviceCommand(
-    @TargetAggregateIdentifier val dCSeriesDeviceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dCSeriesDeviceId: UUID? = null,
     val inductance: String,
     val ratedUdc: String,
     val resistance: String
 )
 
-data class DeleteDCSeriesDeviceCommand(@TargetAggregateIdentifier  val dCSeriesDeviceId: java.util.UUID? = null)
+data class DeleteDCSeriesDeviceCommand(@TargetAggregateIdentifier  val dCSeriesDeviceId: UUID? = null)
 
 // single association commands
 
@@ -1432,20 +1432,20 @@ data class DeleteDCSeriesDeviceCommand(@TargetAggregateIdentifier  val dCSeriesD
 
 // DCShunt Commands
 data class CreateDCShuntCommand(
-    @TargetAggregateIdentifier val dCShuntId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dCShuntId: UUID? = null,
     val capacitance: String,
     val ratedUdc: String,
     val resistance: String
 )
 
 data class UpdateDCShuntCommand(
-    @TargetAggregateIdentifier val dCShuntId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dCShuntId: UUID? = null,
     val capacitance: String,
     val ratedUdc: String,
     val resistance: String
 )
 
-data class DeleteDCShuntCommand(@TargetAggregateIdentifier  val dCShuntId: java.util.UUID? = null)
+data class DeleteDCShuntCommand(@TargetAggregateIdentifier  val dCShuntId: UUID? = null)
 
 // single association commands
 
@@ -1454,14 +1454,14 @@ data class DeleteDCShuntCommand(@TargetAggregateIdentifier  val dCShuntId: java.
 
 // DCSwitch Commands
 data class CreateDCSwitchCommand(
-    @TargetAggregateIdentifier  val dCSwitchId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCSwitchId: UUID? = null
 )
 
 data class UpdateDCSwitchCommand(
-    @TargetAggregateIdentifier  val dCSwitchId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCSwitchId: UUID? = null
 )
 
-data class DeleteDCSwitchCommand(@TargetAggregateIdentifier  val dCSwitchId: java.util.UUID? = null)
+data class DeleteDCSwitchCommand(@TargetAggregateIdentifier  val dCSwitchId: UUID? = null)
 
 // single association commands
 
@@ -1470,14 +1470,14 @@ data class DeleteDCSwitchCommand(@TargetAggregateIdentifier  val dCSwitchId: jav
 
 // DCTerminal Commands
 data class CreateDCTerminalCommand(
-    @TargetAggregateIdentifier  val dCTerminalId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCTerminalId: UUID? = null
 )
 
 data class UpdateDCTerminalCommand(
-    @TargetAggregateIdentifier  val dCTerminalId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCTerminalId: UUID? = null
 )
 
-data class DeleteDCTerminalCommand(@TargetAggregateIdentifier  val dCTerminalId: java.util.UUID? = null)
+data class DeleteDCTerminalCommand(@TargetAggregateIdentifier  val dCTerminalId: UUID? = null)
 
 // single association commands
 
@@ -1486,14 +1486,14 @@ data class DeleteDCTerminalCommand(@TargetAggregateIdentifier  val dCTerminalId:
 
 // DCTopologicalIsland Commands
 data class CreateDCTopologicalIslandCommand(
-    @TargetAggregateIdentifier  val dCTopologicalIslandId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCTopologicalIslandId: UUID? = null
 )
 
 data class UpdateDCTopologicalIslandCommand(
-    @TargetAggregateIdentifier  val dCTopologicalIslandId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCTopologicalIslandId: UUID? = null
 )
 
-data class DeleteDCTopologicalIslandCommand(@TargetAggregateIdentifier  val dCTopologicalIslandId: java.util.UUID? = null)
+data class DeleteDCTopologicalIslandCommand(@TargetAggregateIdentifier  val dCTopologicalIslandId: UUID? = null)
 
 // single association commands
 
@@ -1502,14 +1502,14 @@ data class DeleteDCTopologicalIslandCommand(@TargetAggregateIdentifier  val dCTo
 
 // DCTopologicalNode Commands
 data class CreateDCTopologicalNodeCommand(
-    @TargetAggregateIdentifier  val dCTopologicalNodeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCTopologicalNodeId: UUID? = null
 )
 
 data class UpdateDCTopologicalNodeCommand(
-    @TargetAggregateIdentifier  val dCTopologicalNodeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dCTopologicalNodeId: UUID? = null
 )
 
-data class DeleteDCTopologicalNodeCommand(@TargetAggregateIdentifier  val dCTopologicalNodeId: java.util.UUID? = null)
+data class DeleteDCTopologicalNodeCommand(@TargetAggregateIdentifier  val dCTopologicalNodeId: UUID? = null)
 
 // single association commands
 
@@ -1518,14 +1518,14 @@ data class DeleteDCTopologicalNodeCommand(@TargetAggregateIdentifier  val dCTopo
 
 // DateProxy Commands
 data class CreateDateProxyCommand(
-    @TargetAggregateIdentifier  val dateProxyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dateProxyId: UUID? = null
 )
 
 data class UpdateDateProxyCommand(
-    @TargetAggregateIdentifier  val dateProxyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dateProxyId: UUID? = null
 )
 
-data class DeleteDateProxyCommand(@TargetAggregateIdentifier  val dateProxyId: java.util.UUID? = null)
+data class DeleteDateProxyCommand(@TargetAggregateIdentifier  val dateProxyId: UUID? = null)
 
 // single association commands
 
@@ -1534,14 +1534,14 @@ data class DeleteDateProxyCommand(@TargetAggregateIdentifier  val dateProxyId: j
 
 // DateTime Commands
 data class CreateDateTimeCommand(
-    @TargetAggregateIdentifier  val dateTimeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dateTimeId: UUID? = null
 )
 
 data class UpdateDateTimeCommand(
-    @TargetAggregateIdentifier  val dateTimeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dateTimeId: UUID? = null
 )
 
-data class DeleteDateTimeCommand(@TargetAggregateIdentifier  val dateTimeId: java.util.UUID? = null)
+data class DeleteDateTimeCommand(@TargetAggregateIdentifier  val dateTimeId: UUID? = null)
 
 // single association commands
 
@@ -1550,14 +1550,14 @@ data class DeleteDateTimeCommand(@TargetAggregateIdentifier  val dateTimeId: jav
 
 // DayType Commands
 data class CreateDayTypeCommand(
-    @TargetAggregateIdentifier  val dayTypeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dayTypeId: UUID? = null
 )
 
 data class UpdateDayTypeCommand(
-    @TargetAggregateIdentifier  val dayTypeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dayTypeId: UUID? = null
 )
 
-data class DeleteDayTypeCommand(@TargetAggregateIdentifier  val dayTypeId: java.util.UUID? = null)
+data class DeleteDayTypeCommand(@TargetAggregateIdentifier  val dayTypeId: UUID? = null)
 
 // single association commands
 
@@ -1566,14 +1566,14 @@ data class DeleteDayTypeCommand(@TargetAggregateIdentifier  val dayTypeId: java.
 
 // DecimalProxy Commands
 data class CreateDecimalProxyCommand(
-    @TargetAggregateIdentifier  val decimalProxyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val decimalProxyId: UUID? = null
 )
 
 data class UpdateDecimalProxyCommand(
-    @TargetAggregateIdentifier  val decimalProxyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val decimalProxyId: UUID? = null
 )
 
-data class DeleteDecimalProxyCommand(@TargetAggregateIdentifier  val decimalProxyId: java.util.UUID? = null)
+data class DeleteDecimalProxyCommand(@TargetAggregateIdentifier  val decimalProxyId: UUID? = null)
 
 // single association commands
 
@@ -1582,7 +1582,7 @@ data class DeleteDecimalProxyCommand(@TargetAggregateIdentifier  val decimalProx
 
 // Diagram Commands
 data class CreateDiagramCommand(
-    @TargetAggregateIdentifier val diagramId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val diagramId: UUID? = null,
     val orientation: String,
     val x1InitialView: String,
     val x2InitialView: String,
@@ -1591,7 +1591,7 @@ data class CreateDiagramCommand(
 )
 
 data class UpdateDiagramCommand(
-    @TargetAggregateIdentifier val diagramId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val diagramId: UUID? = null,
     val orientation: String,
     val x1InitialView: String,
     val x2InitialView: String,
@@ -1599,7 +1599,7 @@ data class UpdateDiagramCommand(
     val y2InitialView: String
 )
 
-data class DeleteDiagramCommand(@TargetAggregateIdentifier  val diagramId: java.util.UUID? = null)
+data class DeleteDiagramCommand(@TargetAggregateIdentifier  val diagramId: UUID? = null)
 
 // single association commands
 
@@ -1608,7 +1608,7 @@ data class DeleteDiagramCommand(@TargetAggregateIdentifier  val diagramId: java.
 
 // DiagramLayoutVersion Commands
 data class CreateDiagramLayoutVersionCommand(
-    @TargetAggregateIdentifier val diagramLayoutVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val diagramLayoutVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -1622,7 +1622,7 @@ data class CreateDiagramLayoutVersionCommand(
 )
 
 data class UpdateDiagramLayoutVersionCommand(
-    @TargetAggregateIdentifier val diagramLayoutVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val diagramLayoutVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -1635,7 +1635,7 @@ data class UpdateDiagramLayoutVersionCommand(
     val shortName: String
 )
 
-data class DeleteDiagramLayoutVersionCommand(@TargetAggregateIdentifier  val diagramLayoutVersionId: java.util.UUID? = null)
+data class DeleteDiagramLayoutVersionCommand(@TargetAggregateIdentifier  val diagramLayoutVersionId: UUID? = null)
 
 // single association commands
 
@@ -1644,7 +1644,7 @@ data class DeleteDiagramLayoutVersionCommand(@TargetAggregateIdentifier  val dia
 
 // DiagramObject Commands
 data class CreateDiagramObjectCommand(
-    @TargetAggregateIdentifier val diagramObjectId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val diagramObjectId: UUID? = null,
     val drawingOrder: String,
     val isPolygon: String,
     val offsetX: String,
@@ -1653,7 +1653,7 @@ data class CreateDiagramObjectCommand(
 )
 
 data class UpdateDiagramObjectCommand(
-    @TargetAggregateIdentifier val diagramObjectId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val diagramObjectId: UUID? = null,
     val drawingOrder: String,
     val isPolygon: String,
     val offsetX: String,
@@ -1661,7 +1661,7 @@ data class UpdateDiagramObjectCommand(
     val rotation: String
 )
 
-data class DeleteDiagramObjectCommand(@TargetAggregateIdentifier  val diagramObjectId: java.util.UUID? = null)
+data class DeleteDiagramObjectCommand(@TargetAggregateIdentifier  val diagramObjectId: UUID? = null)
 
 // single association commands
 
@@ -1670,14 +1670,14 @@ data class DeleteDiagramObjectCommand(@TargetAggregateIdentifier  val diagramObj
 
 // DiagramObjectGluePoint Commands
 data class CreateDiagramObjectGluePointCommand(
-    @TargetAggregateIdentifier  val diagramObjectGluePointId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val diagramObjectGluePointId: UUID? = null
 )
 
 data class UpdateDiagramObjectGluePointCommand(
-    @TargetAggregateIdentifier  val diagramObjectGluePointId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val diagramObjectGluePointId: UUID? = null
 )
 
-data class DeleteDiagramObjectGluePointCommand(@TargetAggregateIdentifier  val diagramObjectGluePointId: java.util.UUID? = null)
+data class DeleteDiagramObjectGluePointCommand(@TargetAggregateIdentifier  val diagramObjectGluePointId: UUID? = null)
 
 // single association commands
 
@@ -1686,7 +1686,7 @@ data class DeleteDiagramObjectGluePointCommand(@TargetAggregateIdentifier  val d
 
 // DiagramObjectPoint Commands
 data class CreateDiagramObjectPointCommand(
-    @TargetAggregateIdentifier val diagramObjectPointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val diagramObjectPointId: UUID? = null,
     val sequenceNumber: String,
     val xPosition: String,
     val yPosition: String,
@@ -1694,14 +1694,14 @@ data class CreateDiagramObjectPointCommand(
 )
 
 data class UpdateDiagramObjectPointCommand(
-    @TargetAggregateIdentifier val diagramObjectPointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val diagramObjectPointId: UUID? = null,
     val sequenceNumber: String,
     val xPosition: String,
     val yPosition: String,
     val zPosition: String
 )
 
-data class DeleteDiagramObjectPointCommand(@TargetAggregateIdentifier  val diagramObjectPointId: java.util.UUID? = null)
+data class DeleteDiagramObjectPointCommand(@TargetAggregateIdentifier  val diagramObjectPointId: UUID? = null)
 
 // single association commands
 
@@ -1710,14 +1710,14 @@ data class DeleteDiagramObjectPointCommand(@TargetAggregateIdentifier  val diagr
 
 // DiagramObjectStyle Commands
 data class CreateDiagramObjectStyleCommand(
-    @TargetAggregateIdentifier  val diagramObjectStyleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val diagramObjectStyleId: UUID? = null
 )
 
 data class UpdateDiagramObjectStyleCommand(
-    @TargetAggregateIdentifier  val diagramObjectStyleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val diagramObjectStyleId: UUID? = null
 )
 
-data class DeleteDiagramObjectStyleCommand(@TargetAggregateIdentifier  val diagramObjectStyleId: java.util.UUID? = null)
+data class DeleteDiagramObjectStyleCommand(@TargetAggregateIdentifier  val diagramObjectStyleId: UUID? = null)
 
 // single association commands
 
@@ -1726,14 +1726,14 @@ data class DeleteDiagramObjectStyleCommand(@TargetAggregateIdentifier  val diagr
 
 // DiagramStyle Commands
 data class CreateDiagramStyleCommand(
-    @TargetAggregateIdentifier  val diagramStyleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val diagramStyleId: UUID? = null
 )
 
 data class UpdateDiagramStyleCommand(
-    @TargetAggregateIdentifier  val diagramStyleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val diagramStyleId: UUID? = null
 )
 
-data class DeleteDiagramStyleCommand(@TargetAggregateIdentifier  val diagramStyleId: java.util.UUID? = null)
+data class DeleteDiagramStyleCommand(@TargetAggregateIdentifier  val diagramStyleId: UUID? = null)
 
 // single association commands
 
@@ -1742,7 +1742,7 @@ data class DeleteDiagramStyleCommand(@TargetAggregateIdentifier  val diagramStyl
 
 // DiscExcContIEEEDEC1A Commands
 data class CreateDiscExcContIEEEDEC1ACommand(
-    @TargetAggregateIdentifier val discExcContIEEEDEC1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val discExcContIEEEDEC1AId: UUID? = null,
     val esc: String,
     val kan: String,
     val ketl: String,
@@ -1764,7 +1764,7 @@ data class CreateDiscExcContIEEEDEC1ACommand(
 )
 
 data class UpdateDiscExcContIEEEDEC1ACommand(
-    @TargetAggregateIdentifier val discExcContIEEEDEC1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val discExcContIEEEDEC1AId: UUID? = null,
     val esc: String,
     val kan: String,
     val ketl: String,
@@ -1785,7 +1785,7 @@ data class UpdateDiscExcContIEEEDEC1ACommand(
     val vtn: String
 )
 
-data class DeleteDiscExcContIEEEDEC1ACommand(@TargetAggregateIdentifier  val discExcContIEEEDEC1AId: java.util.UUID? = null)
+data class DeleteDiscExcContIEEEDEC1ACommand(@TargetAggregateIdentifier  val discExcContIEEEDEC1AId: UUID? = null)
 
 // single association commands
 
@@ -1794,7 +1794,7 @@ data class DeleteDiscExcContIEEEDEC1ACommand(@TargetAggregateIdentifier  val dis
 
 // DiscExcContIEEEDEC2A Commands
 data class CreateDiscExcContIEEEDEC2ACommand(
-    @TargetAggregateIdentifier val discExcContIEEEDEC2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val discExcContIEEEDEC2AId: UUID? = null,
     val td1: String,
     val td2: String,
     val vdmax: String,
@@ -1803,7 +1803,7 @@ data class CreateDiscExcContIEEEDEC2ACommand(
 )
 
 data class UpdateDiscExcContIEEEDEC2ACommand(
-    @TargetAggregateIdentifier val discExcContIEEEDEC2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val discExcContIEEEDEC2AId: UUID? = null,
     val td1: String,
     val td2: String,
     val vdmax: String,
@@ -1811,7 +1811,7 @@ data class UpdateDiscExcContIEEEDEC2ACommand(
     val vk: String
 )
 
-data class DeleteDiscExcContIEEEDEC2ACommand(@TargetAggregateIdentifier  val discExcContIEEEDEC2AId: java.util.UUID? = null)
+data class DeleteDiscExcContIEEEDEC2ACommand(@TargetAggregateIdentifier  val discExcContIEEEDEC2AId: UUID? = null)
 
 // single association commands
 
@@ -1820,18 +1820,18 @@ data class DeleteDiscExcContIEEEDEC2ACommand(@TargetAggregateIdentifier  val dis
 
 // DiscExcContIEEEDEC3A Commands
 data class CreateDiscExcContIEEEDEC3ACommand(
-    @TargetAggregateIdentifier val discExcContIEEEDEC3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val discExcContIEEEDEC3AId: UUID? = null,
     val tdr: String,
     val vtmin: String
 )
 
 data class UpdateDiscExcContIEEEDEC3ACommand(
-    @TargetAggregateIdentifier val discExcContIEEEDEC3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val discExcContIEEEDEC3AId: UUID? = null,
     val tdr: String,
     val vtmin: String
 )
 
-data class DeleteDiscExcContIEEEDEC3ACommand(@TargetAggregateIdentifier  val discExcContIEEEDEC3AId: java.util.UUID? = null)
+data class DeleteDiscExcContIEEEDEC3ACommand(@TargetAggregateIdentifier  val discExcContIEEEDEC3AId: UUID? = null)
 
 // single association commands
 
@@ -1840,14 +1840,14 @@ data class DeleteDiscExcContIEEEDEC3ACommand(@TargetAggregateIdentifier  val dis
 
 // Disconnector Commands
 data class CreateDisconnectorCommand(
-    @TargetAggregateIdentifier  val disconnectorId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val disconnectorId: UUID? = null
 )
 
 data class UpdateDisconnectorCommand(
-    @TargetAggregateIdentifier  val disconnectorId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val disconnectorId: UUID? = null
 )
 
-data class DeleteDisconnectorCommand(@TargetAggregateIdentifier  val disconnectorId: java.util.UUID? = null)
+data class DeleteDisconnectorCommand(@TargetAggregateIdentifier  val disconnectorId: UUID? = null)
 
 // single association commands
 
@@ -1856,14 +1856,14 @@ data class DeleteDisconnectorCommand(@TargetAggregateIdentifier  val disconnecto
 
 // DiscontinuousExcitationControlDynamics Commands
 data class CreateDiscontinuousExcitationControlDynamicsCommand(
-    @TargetAggregateIdentifier  val discontinuousExcitationControlDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val discontinuousExcitationControlDynamicsId: UUID? = null
 )
 
 data class UpdateDiscontinuousExcitationControlDynamicsCommand(
-    @TargetAggregateIdentifier  val discontinuousExcitationControlDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val discontinuousExcitationControlDynamicsId: UUID? = null
 )
 
-data class DeleteDiscontinuousExcitationControlDynamicsCommand(@TargetAggregateIdentifier  val discontinuousExcitationControlDynamicsId: java.util.UUID? = null)
+data class DeleteDiscontinuousExcitationControlDynamicsCommand(@TargetAggregateIdentifier  val discontinuousExcitationControlDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -1872,16 +1872,16 @@ data class DeleteDiscontinuousExcitationControlDynamicsCommand(@TargetAggregateI
 
 // DiscontinuousExcitationControlUserDefined Commands
 data class CreateDiscontinuousExcitationControlUserDefinedCommand(
-    @TargetAggregateIdentifier val discontinuousExcitationControlUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val discontinuousExcitationControlUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateDiscontinuousExcitationControlUserDefinedCommand(
-    @TargetAggregateIdentifier val discontinuousExcitationControlUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val discontinuousExcitationControlUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteDiscontinuousExcitationControlUserDefinedCommand(@TargetAggregateIdentifier  val discontinuousExcitationControlUserDefinedId: java.util.UUID? = null)
+data class DeleteDiscontinuousExcitationControlUserDefinedCommand(@TargetAggregateIdentifier  val discontinuousExcitationControlUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -1890,14 +1890,14 @@ data class DeleteDiscontinuousExcitationControlUserDefinedCommand(@TargetAggrega
 
 // Discrete Commands
 data class CreateDiscreteCommand(
-    @TargetAggregateIdentifier  val discreteId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val discreteId: UUID? = null
 )
 
 data class UpdateDiscreteCommand(
-    @TargetAggregateIdentifier  val discreteId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val discreteId: UUID? = null
 )
 
-data class DeleteDiscreteCommand(@TargetAggregateIdentifier  val discreteId: java.util.UUID? = null)
+data class DeleteDiscreteCommand(@TargetAggregateIdentifier  val discreteId: UUID? = null)
 
 // single association commands
 
@@ -1906,16 +1906,16 @@ data class DeleteDiscreteCommand(@TargetAggregateIdentifier  val discreteId: jav
 
 // DiscreteValue Commands
 data class CreateDiscreteValueCommand(
-    @TargetAggregateIdentifier val discreteValueId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val discreteValueId: UUID? = null,
     val value: String
 )
 
 data class UpdateDiscreteValueCommand(
-    @TargetAggregateIdentifier val discreteValueId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val discreteValueId: UUID? = null,
     val value: String
 )
 
-data class DeleteDiscreteValueCommand(@TargetAggregateIdentifier  val discreteValueId: java.util.UUID? = null)
+data class DeleteDiscreteValueCommand(@TargetAggregateIdentifier  val discreteValueId: UUID? = null)
 
 // single association commands
 
@@ -1924,7 +1924,7 @@ data class DeleteDiscreteValueCommand(@TargetAggregateIdentifier  val discreteVa
 
 // DomainVersion Commands
 data class CreateDomainVersionCommand(
-    @TargetAggregateIdentifier val domainVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val domainVersionId: UUID? = null,
     val baseUML: String,
     val date: String,
     val entsoeUML: String,
@@ -1932,14 +1932,14 @@ data class CreateDomainVersionCommand(
 )
 
 data class UpdateDomainVersionCommand(
-    @TargetAggregateIdentifier val domainVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val domainVersionId: UUID? = null,
     val baseUML: String,
     val date: String,
     val entsoeUML: String,
     val version: String
 )
 
-data class DeleteDomainVersionCommand(@TargetAggregateIdentifier  val domainVersionId: java.util.UUID? = null)
+data class DeleteDomainVersionCommand(@TargetAggregateIdentifier  val domainVersionId: UUID? = null)
 
 // single association commands
 
@@ -1948,16 +1948,16 @@ data class DeleteDomainVersionCommand(@TargetAggregateIdentifier  val domainVers
 
 // DynamicsFunctionBlock Commands
 data class CreateDynamicsFunctionBlockCommand(
-    @TargetAggregateIdentifier val dynamicsFunctionBlockId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dynamicsFunctionBlockId: UUID? = null,
     val enabled: String
 )
 
 data class UpdateDynamicsFunctionBlockCommand(
-    @TargetAggregateIdentifier val dynamicsFunctionBlockId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dynamicsFunctionBlockId: UUID? = null,
     val enabled: String
 )
 
-data class DeleteDynamicsFunctionBlockCommand(@TargetAggregateIdentifier  val dynamicsFunctionBlockId: java.util.UUID? = null)
+data class DeleteDynamicsFunctionBlockCommand(@TargetAggregateIdentifier  val dynamicsFunctionBlockId: UUID? = null)
 
 // single association commands
 
@@ -1966,7 +1966,7 @@ data class DeleteDynamicsFunctionBlockCommand(@TargetAggregateIdentifier  val dy
 
 // DynamicsVersion Commands
 data class CreateDynamicsVersionCommand(
-    @TargetAggregateIdentifier val dynamicsVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dynamicsVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -1980,7 +1980,7 @@ data class CreateDynamicsVersionCommand(
 )
 
 data class UpdateDynamicsVersionCommand(
-    @TargetAggregateIdentifier val dynamicsVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val dynamicsVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -1993,7 +1993,7 @@ data class UpdateDynamicsVersionCommand(
     val shortName: String
 )
 
-data class DeleteDynamicsVersionCommand(@TargetAggregateIdentifier  val dynamicsVersionId: java.util.UUID? = null)
+data class DeleteDynamicsVersionCommand(@TargetAggregateIdentifier  val dynamicsVersionId: UUID? = null)
 
 // single association commands
 
@@ -2002,14 +2002,14 @@ data class DeleteDynamicsVersionCommand(@TargetAggregateIdentifier  val dynamics
 
 // Dynamicsmodel Commands
 data class CreateDynamicsmodelCommand(
-    @TargetAggregateIdentifier  val dynamicsmodelId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dynamicsmodelId: UUID? = null
 )
 
 data class UpdateDynamicsmodelCommand(
-    @TargetAggregateIdentifier  val dynamicsmodelId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val dynamicsmodelId: UUID? = null
 )
 
-data class DeleteDynamicsmodelCommand(@TargetAggregateIdentifier  val dynamicsmodelId: java.util.UUID? = null)
+data class DeleteDynamicsmodelCommand(@TargetAggregateIdentifier  val dynamicsmodelId: UUID? = null)
 
 // single association commands
 
@@ -2018,14 +2018,14 @@ data class DeleteDynamicsmodelCommand(@TargetAggregateIdentifier  val dynamicsmo
 
 // ENTSOEConnectivityNode Commands
 data class CreateENTSOEConnectivityNodeCommand(
-    @TargetAggregateIdentifier  val eNTSOEConnectivityNodeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val eNTSOEConnectivityNodeId: UUID? = null
 )
 
 data class UpdateENTSOEConnectivityNodeCommand(
-    @TargetAggregateIdentifier  val eNTSOEConnectivityNodeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val eNTSOEConnectivityNodeId: UUID? = null
 )
 
-data class DeleteENTSOEConnectivityNodeCommand(@TargetAggregateIdentifier  val eNTSOEConnectivityNodeId: java.util.UUID? = null)
+data class DeleteENTSOEConnectivityNodeCommand(@TargetAggregateIdentifier  val eNTSOEConnectivityNodeId: UUID? = null)
 
 // single association commands
 
@@ -2034,18 +2034,18 @@ data class DeleteENTSOEConnectivityNodeCommand(@TargetAggregateIdentifier  val e
 
 // ENTSOEIdentifiedObject Commands
 data class CreateENTSOEIdentifiedObjectCommand(
-    @TargetAggregateIdentifier val eNTSOEIdentifiedObjectId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val eNTSOEIdentifiedObjectId: UUID? = null,
     val energyIdentCodeEic: String,
     val shortName: String
 )
 
 data class UpdateENTSOEIdentifiedObjectCommand(
-    @TargetAggregateIdentifier val eNTSOEIdentifiedObjectId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val eNTSOEIdentifiedObjectId: UUID? = null,
     val energyIdentCodeEic: String,
     val shortName: String
 )
 
-data class DeleteENTSOEIdentifiedObjectCommand(@TargetAggregateIdentifier  val eNTSOEIdentifiedObjectId: java.util.UUID? = null)
+data class DeleteENTSOEIdentifiedObjectCommand(@TargetAggregateIdentifier  val eNTSOEIdentifiedObjectId: UUID? = null)
 
 // single association commands
 
@@ -2054,14 +2054,14 @@ data class DeleteENTSOEIdentifiedObjectCommand(@TargetAggregateIdentifier  val e
 
 // ENTSOEJunction Commands
 data class CreateENTSOEJunctionCommand(
-    @TargetAggregateIdentifier  val eNTSOEJunctionId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val eNTSOEJunctionId: UUID? = null
 )
 
 data class UpdateENTSOEJunctionCommand(
-    @TargetAggregateIdentifier  val eNTSOEJunctionId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val eNTSOEJunctionId: UUID? = null
 )
 
-data class DeleteENTSOEJunctionCommand(@TargetAggregateIdentifier  val eNTSOEJunctionId: java.util.UUID? = null)
+data class DeleteENTSOEJunctionCommand(@TargetAggregateIdentifier  val eNTSOEJunctionId: UUID? = null)
 
 // single association commands
 
@@ -2070,16 +2070,16 @@ data class DeleteENTSOEJunctionCommand(@TargetAggregateIdentifier  val eNTSOEJun
 
 // ENTSOEOperationalLimitType Commands
 data class CreateENTSOEOperationalLimitTypeCommand(
-    @TargetAggregateIdentifier val eNTSOEOperationalLimitTypeId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val eNTSOEOperationalLimitTypeId: UUID? = null,
     val limitType: String
 )
 
 data class UpdateENTSOEOperationalLimitTypeCommand(
-    @TargetAggregateIdentifier val eNTSOEOperationalLimitTypeId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val eNTSOEOperationalLimitTypeId: UUID? = null,
     val limitType: String
 )
 
-data class DeleteENTSOEOperationalLimitTypeCommand(@TargetAggregateIdentifier  val eNTSOEOperationalLimitTypeId: java.util.UUID? = null)
+data class DeleteENTSOEOperationalLimitTypeCommand(@TargetAggregateIdentifier  val eNTSOEOperationalLimitTypeId: UUID? = null)
 
 // single association commands
 
@@ -2088,14 +2088,14 @@ data class DeleteENTSOEOperationalLimitTypeCommand(@TargetAggregateIdentifier  v
 
 // ENTSOETopologicalNode Commands
 data class CreateENTSOETopologicalNodeCommand(
-    @TargetAggregateIdentifier  val eNTSOETopologicalNodeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val eNTSOETopologicalNodeId: UUID? = null
 )
 
 data class UpdateENTSOETopologicalNodeCommand(
-    @TargetAggregateIdentifier  val eNTSOETopologicalNodeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val eNTSOETopologicalNodeId: UUID? = null
 )
 
-data class DeleteENTSOETopologicalNodeCommand(@TargetAggregateIdentifier  val eNTSOETopologicalNodeId: java.util.UUID? = null)
+data class DeleteENTSOETopologicalNodeCommand(@TargetAggregateIdentifier  val eNTSOETopologicalNodeId: UUID? = null)
 
 // single association commands
 
@@ -2104,16 +2104,16 @@ data class DeleteENTSOETopologicalNodeCommand(@TargetAggregateIdentifier  val eN
 
 // EarthFaultCompensator Commands
 data class CreateEarthFaultCompensatorCommand(
-    @TargetAggregateIdentifier val earthFaultCompensatorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val earthFaultCompensatorId: UUID? = null,
     val r: String
 )
 
 data class UpdateEarthFaultCompensatorCommand(
-    @TargetAggregateIdentifier val earthFaultCompensatorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val earthFaultCompensatorId: UUID? = null,
     val r: String
 )
 
-data class DeleteEarthFaultCompensatorCommand(@TargetAggregateIdentifier  val earthFaultCompensatorId: java.util.UUID? = null)
+data class DeleteEarthFaultCompensatorCommand(@TargetAggregateIdentifier  val earthFaultCompensatorId: UUID? = null)
 
 // single association commands
 
@@ -2122,14 +2122,14 @@ data class DeleteEarthFaultCompensatorCommand(@TargetAggregateIdentifier  val ea
 
 // EnergyArea Commands
 data class CreateEnergyAreaCommand(
-    @TargetAggregateIdentifier  val energyAreaId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val energyAreaId: UUID? = null
 )
 
 data class UpdateEnergyAreaCommand(
-    @TargetAggregateIdentifier  val energyAreaId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val energyAreaId: UUID? = null
 )
 
-data class DeleteEnergyAreaCommand(@TargetAggregateIdentifier  val energyAreaId: java.util.UUID? = null)
+data class DeleteEnergyAreaCommand(@TargetAggregateIdentifier  val energyAreaId: UUID? = null)
 
 // single association commands
 
@@ -2138,7 +2138,7 @@ data class DeleteEnergyAreaCommand(@TargetAggregateIdentifier  val energyAreaId:
 
 // EnergyConsumer Commands
 data class CreateEnergyConsumerCommand(
-    @TargetAggregateIdentifier val energyConsumerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val energyConsumerId: UUID? = null,
     val pfixed: String,
     val pfixedPct: String,
     val qfixed: String,
@@ -2146,14 +2146,14 @@ data class CreateEnergyConsumerCommand(
 )
 
 data class UpdateEnergyConsumerCommand(
-    @TargetAggregateIdentifier val energyConsumerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val energyConsumerId: UUID? = null,
     val pfixed: String,
     val pfixedPct: String,
     val qfixed: String,
     val qfixedPct: String
 )
 
-data class DeleteEnergyConsumerCommand(@TargetAggregateIdentifier  val energyConsumerId: java.util.UUID? = null)
+data class DeleteEnergyConsumerCommand(@TargetAggregateIdentifier  val energyConsumerId: UUID? = null)
 
 // single association commands
 
@@ -2162,14 +2162,14 @@ data class DeleteEnergyConsumerCommand(@TargetAggregateIdentifier  val energyCon
 
 // EnergySchedulingType Commands
 data class CreateEnergySchedulingTypeCommand(
-    @TargetAggregateIdentifier  val energySchedulingTypeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val energySchedulingTypeId: UUID? = null
 )
 
 data class UpdateEnergySchedulingTypeCommand(
-    @TargetAggregateIdentifier  val energySchedulingTypeId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val energySchedulingTypeId: UUID? = null
 )
 
-data class DeleteEnergySchedulingTypeCommand(@TargetAggregateIdentifier  val energySchedulingTypeId: java.util.UUID? = null)
+data class DeleteEnergySchedulingTypeCommand(@TargetAggregateIdentifier  val energySchedulingTypeId: UUID? = null)
 
 // single association commands
 
@@ -2178,14 +2178,14 @@ data class DeleteEnergySchedulingTypeCommand(@TargetAggregateIdentifier  val ene
 
 // EnergySource Commands
 data class CreateEnergySourceCommand(
-    @TargetAggregateIdentifier  val energySourceId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val energySourceId: UUID? = null
 )
 
 data class UpdateEnergySourceCommand(
-    @TargetAggregateIdentifier  val energySourceId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val energySourceId: UUID? = null
 )
 
-data class DeleteEnergySourceCommand(@TargetAggregateIdentifier  val energySourceId: java.util.UUID? = null)
+data class DeleteEnergySourceCommand(@TargetAggregateIdentifier  val energySourceId: UUID? = null)
 
 // single association commands
 
@@ -2194,12 +2194,14 @@ data class DeleteEnergySourceCommand(@TargetAggregateIdentifier  val energySourc
 
 // Equipment Commands
 data class CreateEquipmentCommand(
-    @TargetAggregateIdentifier  val equipmentId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val equipmentId: UUID? = null
 )
 
-data class UpdateEquipmentCommand( @TargetAggregateIdentifier  val equipmentId: java.util.UUID? = null )
+data class UpdateEquipmentCommand(
+    @TargetAggregateIdentifier  val equipmentId: UUID? = null
+)
 
-data class DeleteEquipmentCommand(@TargetAggregateIdentifier  val equipmentId: java.util.UUID? = null)
+data class DeleteEquipmentCommand(@TargetAggregateIdentifier  val equipmentId: UUID? = null)
 
 // single association commands
 
@@ -2208,7 +2210,7 @@ data class DeleteEquipmentCommand(@TargetAggregateIdentifier  val equipmentId: j
 
 // EquipmentBoundaryVersion Commands
 data class CreateEquipmentBoundaryVersionCommand(
-    @TargetAggregateIdentifier val equipmentBoundaryVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val equipmentBoundaryVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -2223,7 +2225,7 @@ data class CreateEquipmentBoundaryVersionCommand(
 )
 
 data class UpdateEquipmentBoundaryVersionCommand(
-    @TargetAggregateIdentifier val equipmentBoundaryVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val equipmentBoundaryVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -2237,7 +2239,7 @@ data class UpdateEquipmentBoundaryVersionCommand(
     val shortName: String
 )
 
-data class DeleteEquipmentBoundaryVersionCommand(@TargetAggregateIdentifier  val equipmentBoundaryVersionId: java.util.UUID? = null)
+data class DeleteEquipmentBoundaryVersionCommand(@TargetAggregateIdentifier  val equipmentBoundaryVersionId: UUID? = null)
 
 // single association commands
 
@@ -2246,14 +2248,14 @@ data class DeleteEquipmentBoundaryVersionCommand(@TargetAggregateIdentifier  val
 
 // EquipmentContainer Commands
 data class CreateEquipmentContainerCommand(
-    @TargetAggregateIdentifier  val equipmentContainerId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val equipmentContainerId: UUID? = null
 )
 
 data class UpdateEquipmentContainerCommand(
-    @TargetAggregateIdentifier  val equipmentContainerId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val equipmentContainerId: UUID? = null
 )
 
-data class DeleteEquipmentContainerCommand(@TargetAggregateIdentifier  val equipmentContainerId: java.util.UUID? = null)
+data class DeleteEquipmentContainerCommand(@TargetAggregateIdentifier  val equipmentContainerId: UUID? = null)
 
 // single association commands
 
@@ -2262,7 +2264,7 @@ data class DeleteEquipmentContainerCommand(@TargetAggregateIdentifier  val equip
 
 // EquipmentVersion Commands
 data class CreateEquipmentVersionCommand(
-    @TargetAggregateIdentifier val equipmentVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val equipmentVersionId: UUID? = null,
     val baseUML: String,
     val baseURIcore: String,
     val baseURIoperation: String,
@@ -2280,7 +2282,7 @@ data class CreateEquipmentVersionCommand(
 )
 
 data class UpdateEquipmentVersionCommand(
-    @TargetAggregateIdentifier val equipmentVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val equipmentVersionId: UUID? = null,
     val baseUML: String,
     val baseURIcore: String,
     val baseURIoperation: String,
@@ -2297,7 +2299,7 @@ data class UpdateEquipmentVersionCommand(
     val shortName: String
 )
 
-data class DeleteEquipmentVersionCommand(@TargetAggregateIdentifier  val equipmentVersionId: java.util.UUID? = null)
+data class DeleteEquipmentVersionCommand(@TargetAggregateIdentifier  val equipmentVersionId: UUID? = null)
 
 // single association commands
 
@@ -2306,7 +2308,7 @@ data class DeleteEquipmentVersionCommand(@TargetAggregateIdentifier  val equipme
 
 // EquivalentBranch Commands
 data class CreateEquivalentBranchCommand(
-    @TargetAggregateIdentifier val equivalentBranchId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val equivalentBranchId: UUID? = null,
     val negativeR12: String,
     val negativeR21: String,
     val negativeX12: String,
@@ -2326,7 +2328,7 @@ data class CreateEquivalentBranchCommand(
 )
 
 data class UpdateEquivalentBranchCommand(
-    @TargetAggregateIdentifier val equivalentBranchId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val equivalentBranchId: UUID? = null,
     val negativeR12: String,
     val negativeR21: String,
     val negativeX12: String,
@@ -2345,7 +2347,7 @@ data class UpdateEquivalentBranchCommand(
     val zeroX21: String
 )
 
-data class DeleteEquivalentBranchCommand(@TargetAggregateIdentifier  val equivalentBranchId: java.util.UUID? = null)
+data class DeleteEquivalentBranchCommand(@TargetAggregateIdentifier  val equivalentBranchId: UUID? = null)
 
 // single association commands
 
@@ -2354,14 +2356,14 @@ data class DeleteEquivalentBranchCommand(@TargetAggregateIdentifier  val equival
 
 // EquivalentEquipment Commands
 data class CreateEquivalentEquipmentCommand(
-    @TargetAggregateIdentifier  val equivalentEquipmentId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val equivalentEquipmentId: UUID? = null
 )
 
 data class UpdateEquivalentEquipmentCommand(
-    @TargetAggregateIdentifier  val equivalentEquipmentId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val equivalentEquipmentId: UUID? = null
 )
 
-data class DeleteEquivalentEquipmentCommand(@TargetAggregateIdentifier  val equivalentEquipmentId: java.util.UUID? = null)
+data class DeleteEquivalentEquipmentCommand(@TargetAggregateIdentifier  val equivalentEquipmentId: UUID? = null)
 
 // single association commands
 
@@ -2370,7 +2372,7 @@ data class DeleteEquivalentEquipmentCommand(@TargetAggregateIdentifier  val equi
 
 // EquivalentInjection Commands
 data class CreateEquivalentInjectionCommand(
-    @TargetAggregateIdentifier val equivalentInjectionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val equivalentInjectionId: UUID? = null,
     val maxP: String,
     val maxQ: String,
     val minP: String,
@@ -2385,7 +2387,7 @@ data class CreateEquivalentInjectionCommand(
 )
 
 data class UpdateEquivalentInjectionCommand(
-    @TargetAggregateIdentifier val equivalentInjectionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val equivalentInjectionId: UUID? = null,
     val maxP: String,
     val maxQ: String,
     val minP: String,
@@ -2399,7 +2401,7 @@ data class UpdateEquivalentInjectionCommand(
     val x2: String
 )
 
-data class DeleteEquivalentInjectionCommand(@TargetAggregateIdentifier  val equivalentInjectionId: java.util.UUID? = null)
+data class DeleteEquivalentInjectionCommand(@TargetAggregateIdentifier  val equivalentInjectionId: UUID? = null)
 
 // single association commands
 
@@ -2408,14 +2410,14 @@ data class DeleteEquivalentInjectionCommand(@TargetAggregateIdentifier  val equi
 
 // EquivalentNetwork Commands
 data class CreateEquivalentNetworkCommand(
-    @TargetAggregateIdentifier  val equivalentNetworkId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val equivalentNetworkId: UUID? = null
 )
 
 data class UpdateEquivalentNetworkCommand(
-    @TargetAggregateIdentifier  val equivalentNetworkId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val equivalentNetworkId: UUID? = null
 )
 
-data class DeleteEquivalentNetworkCommand(@TargetAggregateIdentifier  val equivalentNetworkId: java.util.UUID? = null)
+data class DeleteEquivalentNetworkCommand(@TargetAggregateIdentifier  val equivalentNetworkId: UUID? = null)
 
 // single association commands
 
@@ -2424,18 +2426,18 @@ data class DeleteEquivalentNetworkCommand(@TargetAggregateIdentifier  val equiva
 
 // EquivalentShunt Commands
 data class CreateEquivalentShuntCommand(
-    @TargetAggregateIdentifier val equivalentShuntId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val equivalentShuntId: UUID? = null,
     val b: String,
     val g: String
 )
 
 data class UpdateEquivalentShuntCommand(
-    @TargetAggregateIdentifier val equivalentShuntId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val equivalentShuntId: UUID? = null,
     val b: String,
     val g: String
 )
 
-data class DeleteEquivalentShuntCommand(@TargetAggregateIdentifier  val equivalentShuntId: java.util.UUID? = null)
+data class DeleteEquivalentShuntCommand(@TargetAggregateIdentifier  val equivalentShuntId: UUID? = null)
 
 // single association commands
 
@@ -2444,7 +2446,7 @@ data class DeleteEquivalentShuntCommand(@TargetAggregateIdentifier  val equivale
 
 // ExcAC1A Commands
 data class CreateExcAC1ACommand(
-    @TargetAggregateIdentifier val excAC1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC1AId: UUID? = null,
     val hvlvgates: String,
     val ka: String,
     val kc: String,
@@ -2470,7 +2472,7 @@ data class CreateExcAC1ACommand(
 )
 
 data class UpdateExcAC1ACommand(
-    @TargetAggregateIdentifier val excAC1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC1AId: UUID? = null,
     val hvlvgates: String,
     val ka: String,
     val kc: String,
@@ -2495,7 +2497,7 @@ data class UpdateExcAC1ACommand(
     val vrmin: String
 )
 
-data class DeleteExcAC1ACommand(@TargetAggregateIdentifier  val excAC1AId: java.util.UUID? = null)
+data class DeleteExcAC1ACommand(@TargetAggregateIdentifier  val excAC1AId: UUID? = null)
 
 // single association commands
 
@@ -2504,7 +2506,7 @@ data class DeleteExcAC1ACommand(@TargetAggregateIdentifier  val excAC1AId: java.
 
 // ExcAC2A Commands
 data class CreateExcAC2ACommand(
-    @TargetAggregateIdentifier val excAC2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC2AId: UUID? = null,
     val hvgate: String,
     val ka: String,
     val kb: String,
@@ -2536,7 +2538,7 @@ data class CreateExcAC2ACommand(
 )
 
 data class UpdateExcAC2ACommand(
-    @TargetAggregateIdentifier val excAC2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC2AId: UUID? = null,
     val hvgate: String,
     val ka: String,
     val kb: String,
@@ -2567,7 +2569,7 @@ data class UpdateExcAC2ACommand(
     val vrmin: String
 )
 
-data class DeleteExcAC2ACommand(@TargetAggregateIdentifier  val excAC2AId: java.util.UUID? = null)
+data class DeleteExcAC2ACommand(@TargetAggregateIdentifier  val excAC2AId: UUID? = null)
 
 // single association commands
 
@@ -2576,7 +2578,7 @@ data class DeleteExcAC2ACommand(@TargetAggregateIdentifier  val excAC2AId: java.
 
 // ExcAC3A Commands
 data class CreateExcAC3ACommand(
-    @TargetAggregateIdentifier val excAC3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC3AId: UUID? = null,
     val efdn: String,
     val ka: String,
     val kc: String,
@@ -2606,7 +2608,7 @@ data class CreateExcAC3ACommand(
 )
 
 data class UpdateExcAC3ACommand(
-    @TargetAggregateIdentifier val excAC3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC3AId: UUID? = null,
     val efdn: String,
     val ka: String,
     val kc: String,
@@ -2635,7 +2637,7 @@ data class UpdateExcAC3ACommand(
     val vlv: String
 )
 
-data class DeleteExcAC3ACommand(@TargetAggregateIdentifier  val excAC3AId: java.util.UUID? = null)
+data class DeleteExcAC3ACommand(@TargetAggregateIdentifier  val excAC3AId: UUID? = null)
 
 // single association commands
 
@@ -2644,7 +2646,7 @@ data class DeleteExcAC3ACommand(@TargetAggregateIdentifier  val excAC3AId: java.
 
 // ExcAC4A Commands
 data class CreateExcAC4ACommand(
-    @TargetAggregateIdentifier val excAC4AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC4AId: UUID? = null,
     val ka: String,
     val kc: String,
     val ta: String,
@@ -2657,7 +2659,7 @@ data class CreateExcAC4ACommand(
 )
 
 data class UpdateExcAC4ACommand(
-    @TargetAggregateIdentifier val excAC4AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC4AId: UUID? = null,
     val ka: String,
     val kc: String,
     val ta: String,
@@ -2669,7 +2671,7 @@ data class UpdateExcAC4ACommand(
     val vrmin: String
 )
 
-data class DeleteExcAC4ACommand(@TargetAggregateIdentifier  val excAC4AId: java.util.UUID? = null)
+data class DeleteExcAC4ACommand(@TargetAggregateIdentifier  val excAC4AId: UUID? = null)
 
 // single association commands
 
@@ -2678,7 +2680,7 @@ data class DeleteExcAC4ACommand(@TargetAggregateIdentifier  val excAC4AId: java.
 
 // ExcAC5A Commands
 data class CreateExcAC5ACommand(
-    @TargetAggregateIdentifier val excAC5AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC5AId: UUID? = null,
     val a: String,
     val efd1: String,
     val efd2: String,
@@ -2700,7 +2702,7 @@ data class CreateExcAC5ACommand(
 )
 
 data class UpdateExcAC5ACommand(
-    @TargetAggregateIdentifier val excAC5AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC5AId: UUID? = null,
     val a: String,
     val efd1: String,
     val efd2: String,
@@ -2721,7 +2723,7 @@ data class UpdateExcAC5ACommand(
     val vrmin: String
 )
 
-data class DeleteExcAC5ACommand(@TargetAggregateIdentifier  val excAC5AId: java.util.UUID? = null)
+data class DeleteExcAC5ACommand(@TargetAggregateIdentifier  val excAC5AId: UUID? = null)
 
 // single association commands
 
@@ -2730,7 +2732,7 @@ data class DeleteExcAC5ACommand(@TargetAggregateIdentifier  val excAC5AId: java.
 
 // ExcAC6A Commands
 data class CreateExcAC6ACommand(
-    @TargetAggregateIdentifier val excAC6AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC6AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -2757,7 +2759,7 @@ data class CreateExcAC6ACommand(
 )
 
 data class UpdateExcAC6ACommand(
-    @TargetAggregateIdentifier val excAC6AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC6AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -2783,7 +2785,7 @@ data class UpdateExcAC6ACommand(
     val vrmin: String
 )
 
-data class DeleteExcAC6ACommand(@TargetAggregateIdentifier  val excAC6AId: java.util.UUID? = null)
+data class DeleteExcAC6ACommand(@TargetAggregateIdentifier  val excAC6AId: UUID? = null)
 
 // single association commands
 
@@ -2792,7 +2794,7 @@ data class DeleteExcAC6ACommand(@TargetAggregateIdentifier  val excAC6AId: java.
 
 // ExcAC8B Commands
 data class CreateExcAC8BCommand(
-    @TargetAggregateIdentifier val excAC8BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC8BId: UUID? = null,
     val inlim: String,
     val ka: String,
     val kc: String,
@@ -2823,7 +2825,7 @@ data class CreateExcAC8BCommand(
 )
 
 data class UpdateExcAC8BCommand(
-    @TargetAggregateIdentifier val excAC8BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAC8BId: UUID? = null,
     val inlim: String,
     val ka: String,
     val kc: String,
@@ -2853,7 +2855,7 @@ data class UpdateExcAC8BCommand(
     val vtmult: String
 )
 
-data class DeleteExcAC8BCommand(@TargetAggregateIdentifier  val excAC8BId: java.util.UUID? = null)
+data class DeleteExcAC8BCommand(@TargetAggregateIdentifier  val excAC8BId: UUID? = null)
 
 // single association commands
 
@@ -2862,7 +2864,7 @@ data class DeleteExcAC8BCommand(@TargetAggregateIdentifier  val excAC8BId: java.
 
 // ExcANS Commands
 data class CreateExcANSCommand(
-    @TargetAggregateIdentifier val excANSId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excANSId: UUID? = null,
     val blint: String,
     val ifmn: String,
     val ifmx: String,
@@ -2880,7 +2882,7 @@ data class CreateExcANSCommand(
 )
 
 data class UpdateExcANSCommand(
-    @TargetAggregateIdentifier val excANSId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excANSId: UUID? = null,
     val blint: String,
     val ifmn: String,
     val ifmx: String,
@@ -2897,7 +2899,7 @@ data class UpdateExcANSCommand(
     val vrmx: String
 )
 
-data class DeleteExcANSCommand(@TargetAggregateIdentifier  val excANSId: java.util.UUID? = null)
+data class DeleteExcANSCommand(@TargetAggregateIdentifier  val excANSId: UUID? = null)
 
 // single association commands
 
@@ -2906,7 +2908,7 @@ data class DeleteExcANSCommand(@TargetAggregateIdentifier  val excANSId: java.ut
 
 // ExcAVR1 Commands
 data class CreateExcAVR1Command(
-    @TargetAggregateIdentifier val excAVR1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAVR1Id: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -2922,7 +2924,7 @@ data class CreateExcAVR1Command(
 )
 
 data class UpdateExcAVR1Command(
-    @TargetAggregateIdentifier val excAVR1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAVR1Id: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -2937,7 +2939,7 @@ data class UpdateExcAVR1Command(
     val vrmx: String
 )
 
-data class DeleteExcAVR1Command(@TargetAggregateIdentifier  val excAVR1Id: java.util.UUID? = null)
+data class DeleteExcAVR1Command(@TargetAggregateIdentifier  val excAVR1Id: UUID? = null)
 
 // single association commands
 
@@ -2946,7 +2948,7 @@ data class DeleteExcAVR1Command(@TargetAggregateIdentifier  val excAVR1Id: java.
 
 // ExcAVR2 Commands
 data class CreateExcAVR2Command(
-    @TargetAggregateIdentifier val excAVR2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAVR2Id: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -2963,7 +2965,7 @@ data class CreateExcAVR2Command(
 )
 
 data class UpdateExcAVR2Command(
-    @TargetAggregateIdentifier val excAVR2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAVR2Id: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -2979,7 +2981,7 @@ data class UpdateExcAVR2Command(
     val vrmx: String
 )
 
-data class DeleteExcAVR2Command(@TargetAggregateIdentifier  val excAVR2Id: java.util.UUID? = null)
+data class DeleteExcAVR2Command(@TargetAggregateIdentifier  val excAVR2Id: UUID? = null)
 
 // single association commands
 
@@ -2988,7 +2990,7 @@ data class DeleteExcAVR2Command(@TargetAggregateIdentifier  val excAVR2Id: java.
 
 // ExcAVR3 Commands
 data class CreateExcAVR3Command(
-    @TargetAggregateIdentifier val excAVR3Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAVR3Id: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -3004,7 +3006,7 @@ data class CreateExcAVR3Command(
 )
 
 data class UpdateExcAVR3Command(
-    @TargetAggregateIdentifier val excAVR3Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAVR3Id: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -3019,7 +3021,7 @@ data class UpdateExcAVR3Command(
     val vrmx: String
 )
 
-data class DeleteExcAVR3Command(@TargetAggregateIdentifier  val excAVR3Id: java.util.UUID? = null)
+data class DeleteExcAVR3Command(@TargetAggregateIdentifier  val excAVR3Id: UUID? = null)
 
 // single association commands
 
@@ -3028,7 +3030,7 @@ data class DeleteExcAVR3Command(@TargetAggregateIdentifier  val excAVR3Id: java.
 
 // ExcAVR4 Commands
 data class CreateExcAVR4Command(
-    @TargetAggregateIdentifier val excAVR4Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAVR4Id: UUID? = null,
     val imul: String,
     val ka: String,
     val ke: String,
@@ -3046,7 +3048,7 @@ data class CreateExcAVR4Command(
 )
 
 data class UpdateExcAVR4Command(
-    @TargetAggregateIdentifier val excAVR4Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAVR4Id: UUID? = null,
     val imul: String,
     val ka: String,
     val ke: String,
@@ -3063,7 +3065,7 @@ data class UpdateExcAVR4Command(
     val vrmx: String
 )
 
-data class DeleteExcAVR4Command(@TargetAggregateIdentifier  val excAVR4Id: java.util.UUID? = null)
+data class DeleteExcAVR4Command(@TargetAggregateIdentifier  val excAVR4Id: UUID? = null)
 
 // single association commands
 
@@ -3072,20 +3074,20 @@ data class DeleteExcAVR4Command(@TargetAggregateIdentifier  val excAVR4Id: java.
 
 // ExcAVR5 Commands
 data class CreateExcAVR5Command(
-    @TargetAggregateIdentifier val excAVR5Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAVR5Id: UUID? = null,
     val ka: String,
     val rex: String,
     val ta: String
 )
 
 data class UpdateExcAVR5Command(
-    @TargetAggregateIdentifier val excAVR5Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAVR5Id: UUID? = null,
     val ka: String,
     val rex: String,
     val ta: String
 )
 
-data class DeleteExcAVR5Command(@TargetAggregateIdentifier  val excAVR5Id: java.util.UUID? = null)
+data class DeleteExcAVR5Command(@TargetAggregateIdentifier  val excAVR5Id: UUID? = null)
 
 // single association commands
 
@@ -3094,7 +3096,7 @@ data class DeleteExcAVR5Command(@TargetAggregateIdentifier  val excAVR5Id: java.
 
 // ExcAVR7 Commands
 data class CreateExcAVR7Command(
-    @TargetAggregateIdentifier val excAVR7Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAVR7Id: UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -3119,7 +3121,7 @@ data class CreateExcAVR7Command(
 )
 
 data class UpdateExcAVR7Command(
-    @TargetAggregateIdentifier val excAVR7Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excAVR7Id: UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -3143,7 +3145,7 @@ data class UpdateExcAVR7Command(
     val vmin5: String
 )
 
-data class DeleteExcAVR7Command(@TargetAggregateIdentifier  val excAVR7Id: java.util.UUID? = null)
+data class DeleteExcAVR7Command(@TargetAggregateIdentifier  val excAVR7Id: UUID? = null)
 
 // single association commands
 
@@ -3152,11 +3154,11 @@ data class DeleteExcAVR7Command(@TargetAggregateIdentifier  val excAVR7Id: java.
 
 // ExcBBC Commands
 data class CreateExcBBCCommand(
-    @TargetAggregateIdentifier val excBBCId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excBBCId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val k: String,
-    val switchIt: String,
+    val switch: String,
     val t1: String,
     val t2: String,
     val t3: String,
@@ -3167,11 +3169,11 @@ data class CreateExcBBCCommand(
 )
 
 data class UpdateExcBBCCommand(
-    @TargetAggregateIdentifier val excBBCId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excBBCId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val k: String,
-    val switchIt: String,
+    val switch: String,
     val t1: String,
     val t2: String,
     val t3: String,
@@ -3181,7 +3183,7 @@ data class UpdateExcBBCCommand(
     val xe: String
 )
 
-data class DeleteExcBBCCommand(@TargetAggregateIdentifier  val excBBCId: java.util.UUID? = null)
+data class DeleteExcBBCCommand(@TargetAggregateIdentifier  val excBBCId: UUID? = null)
 
 // single association commands
 
@@ -3190,7 +3192,7 @@ data class DeleteExcBBCCommand(@TargetAggregateIdentifier  val excBBCId: java.ut
 
 // ExcCZ Commands
 data class CreateExcCZCommand(
-    @TargetAggregateIdentifier val excCZId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excCZId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val ka: String,
@@ -3204,7 +3206,7 @@ data class CreateExcCZCommand(
 )
 
 data class UpdateExcCZCommand(
-    @TargetAggregateIdentifier val excCZId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excCZId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val ka: String,
@@ -3217,7 +3219,7 @@ data class UpdateExcCZCommand(
     val vrmin: String
 )
 
-data class DeleteExcCZCommand(@TargetAggregateIdentifier  val excCZId: java.util.UUID? = null)
+data class DeleteExcCZCommand(@TargetAggregateIdentifier  val excCZId: UUID? = null)
 
 // single association commands
 
@@ -3226,7 +3228,7 @@ data class DeleteExcCZCommand(@TargetAggregateIdentifier  val excCZId: java.util
 
 // ExcDC1A Commands
 data class CreateExcDC1ACommand(
-    @TargetAggregateIdentifier val excDC1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excDC1AId: UUID? = null,
     val edfmax: String,
     val efd1: String,
     val efd2: String,
@@ -3248,7 +3250,7 @@ data class CreateExcDC1ACommand(
 )
 
 data class UpdateExcDC1ACommand(
-    @TargetAggregateIdentifier val excDC1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excDC1AId: UUID? = null,
     val edfmax: String,
     val efd1: String,
     val efd2: String,
@@ -3269,7 +3271,7 @@ data class UpdateExcDC1ACommand(
     val vrmin: String
 )
 
-data class DeleteExcDC1ACommand(@TargetAggregateIdentifier  val excDC1AId: java.util.UUID? = null)
+data class DeleteExcDC1ACommand(@TargetAggregateIdentifier  val excDC1AId: UUID? = null)
 
 // single association commands
 
@@ -3278,7 +3280,7 @@ data class DeleteExcDC1ACommand(@TargetAggregateIdentifier  val excDC1AId: java.
 
 // ExcDC2A Commands
 data class CreateExcDC2ACommand(
-    @TargetAggregateIdentifier val excDC2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excDC2AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -3300,7 +3302,7 @@ data class CreateExcDC2ACommand(
 )
 
 data class UpdateExcDC2ACommand(
-    @TargetAggregateIdentifier val excDC2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excDC2AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -3321,7 +3323,7 @@ data class UpdateExcDC2ACommand(
     val vtlim: String
 )
 
-data class DeleteExcDC2ACommand(@TargetAggregateIdentifier  val excDC2AId: java.util.UUID? = null)
+data class DeleteExcDC2ACommand(@TargetAggregateIdentifier  val excDC2AId: UUID? = null)
 
 // single association commands
 
@@ -3330,7 +3332,7 @@ data class DeleteExcDC2ACommand(@TargetAggregateIdentifier  val excDC2AId: java.
 
 // ExcDC3A Commands
 data class CreateExcDC3ACommand(
-    @TargetAggregateIdentifier val excDC3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excDC3AId: UUID? = null,
     val edfmax: String,
     val efd1: String,
     val efd2: String,
@@ -3350,7 +3352,7 @@ data class CreateExcDC3ACommand(
 )
 
 data class UpdateExcDC3ACommand(
-    @TargetAggregateIdentifier val excDC3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excDC3AId: UUID? = null,
     val edfmax: String,
     val efd1: String,
     val efd2: String,
@@ -3369,7 +3371,7 @@ data class UpdateExcDC3ACommand(
     val vrmin: String
 )
 
-data class DeleteExcDC3ACommand(@TargetAggregateIdentifier  val excDC3AId: java.util.UUID? = null)
+data class DeleteExcDC3ACommand(@TargetAggregateIdentifier  val excDC3AId: UUID? = null)
 
 // single association commands
 
@@ -3378,7 +3380,7 @@ data class DeleteExcDC3ACommand(@TargetAggregateIdentifier  val excDC3AId: java.
 
 // ExcDC3A1 Commands
 data class CreateExcDC3A1Command(
-    @TargetAggregateIdentifier val excDC3A1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excDC3A1Id: UUID? = null,
     val exclim: String,
     val ka: String,
     val ke: String,
@@ -3396,7 +3398,7 @@ data class CreateExcDC3A1Command(
 )
 
 data class UpdateExcDC3A1Command(
-    @TargetAggregateIdentifier val excDC3A1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excDC3A1Id: UUID? = null,
     val exclim: String,
     val ka: String,
     val ke: String,
@@ -3413,7 +3415,7 @@ data class UpdateExcDC3A1Command(
     val vrmin: String
 )
 
-data class DeleteExcDC3A1Command(@TargetAggregateIdentifier  val excDC3A1Id: java.util.UUID? = null)
+data class DeleteExcDC3A1Command(@TargetAggregateIdentifier  val excDC3A1Id: UUID? = null)
 
 // single association commands
 
@@ -3422,7 +3424,7 @@ data class DeleteExcDC3A1Command(@TargetAggregateIdentifier  val excDC3A1Id: jav
 
 // ExcELIN1 Commands
 data class CreateExcELIN1Command(
-    @TargetAggregateIdentifier val excELIN1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excELIN1Id: UUID? = null,
     val dpnf: String,
     val efmax: String,
     val efmin: String,
@@ -3441,7 +3443,7 @@ data class CreateExcELIN1Command(
 )
 
 data class UpdateExcELIN1Command(
-    @TargetAggregateIdentifier val excELIN1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excELIN1Id: UUID? = null,
     val dpnf: String,
     val efmax: String,
     val efmin: String,
@@ -3459,7 +3461,7 @@ data class UpdateExcELIN1Command(
     val xe: String
 )
 
-data class DeleteExcELIN1Command(@TargetAggregateIdentifier  val excELIN1Id: java.util.UUID? = null)
+data class DeleteExcELIN1Command(@TargetAggregateIdentifier  val excELIN1Id: UUID? = null)
 
 // single association commands
 
@@ -3468,7 +3470,7 @@ data class DeleteExcELIN1Command(@TargetAggregateIdentifier  val excELIN1Id: jav
 
 // ExcELIN2 Commands
 data class CreateExcELIN2Command(
-    @TargetAggregateIdentifier val excELIN2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excELIN2Id: UUID? = null,
     val efdbas: String,
     val iefmax: String,
     val iefmax2: String,
@@ -3499,7 +3501,7 @@ data class CreateExcELIN2Command(
 )
 
 data class UpdateExcELIN2Command(
-    @TargetAggregateIdentifier val excELIN2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excELIN2Id: UUID? = null,
     val efdbas: String,
     val iefmax: String,
     val iefmax2: String,
@@ -3529,7 +3531,7 @@ data class UpdateExcELIN2Command(
     val xp: String
 )
 
-data class DeleteExcELIN2Command(@TargetAggregateIdentifier  val excELIN2Id: java.util.UUID? = null)
+data class DeleteExcELIN2Command(@TargetAggregateIdentifier  val excELIN2Id: UUID? = null)
 
 // single association commands
 
@@ -3538,7 +3540,7 @@ data class DeleteExcELIN2Command(@TargetAggregateIdentifier  val excELIN2Id: jav
 
 // ExcHU Commands
 data class CreateExcHUCommand(
-    @TargetAggregateIdentifier val excHUId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excHUId: UUID? = null,
     val ae: String,
     val ai: String,
     val atr: String,
@@ -3554,7 +3556,7 @@ data class CreateExcHUCommand(
 )
 
 data class UpdateExcHUCommand(
-    @TargetAggregateIdentifier val excHUId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excHUId: UUID? = null,
     val ae: String,
     val ai: String,
     val atr: String,
@@ -3569,7 +3571,7 @@ data class UpdateExcHUCommand(
     val tr: String
 )
 
-data class DeleteExcHUCommand(@TargetAggregateIdentifier  val excHUId: java.util.UUID? = null)
+data class DeleteExcHUCommand(@TargetAggregateIdentifier  val excHUId: UUID? = null)
 
 // single association commands
 
@@ -3578,7 +3580,7 @@ data class DeleteExcHUCommand(@TargetAggregateIdentifier  val excHUId: java.util
 
 // ExcIEEEAC1A Commands
 data class CreateExcIEEEAC1ACommand(
-    @TargetAggregateIdentifier val excIEEEAC1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC1AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3600,7 +3602,7 @@ data class CreateExcIEEEAC1ACommand(
 )
 
 data class UpdateExcIEEEAC1ACommand(
-    @TargetAggregateIdentifier val excIEEEAC1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC1AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3621,7 +3623,7 @@ data class UpdateExcIEEEAC1ACommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC1ACommand(@TargetAggregateIdentifier  val excIEEEAC1AId: java.util.UUID? = null)
+data class DeleteExcIEEEAC1ACommand(@TargetAggregateIdentifier  val excIEEEAC1AId: UUID? = null)
 
 // single association commands
 
@@ -3630,7 +3632,7 @@ data class DeleteExcIEEEAC1ACommand(@TargetAggregateIdentifier  val excIEEEAC1AI
 
 // ExcIEEEAC2A Commands
 data class CreateExcIEEEAC2ACommand(
-    @TargetAggregateIdentifier val excIEEEAC2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC2AId: UUID? = null,
     val ka: String,
     val kb: String,
     val kc: String,
@@ -3655,7 +3657,7 @@ data class CreateExcIEEEAC2ACommand(
 )
 
 data class UpdateExcIEEEAC2ACommand(
-    @TargetAggregateIdentifier val excIEEEAC2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC2AId: UUID? = null,
     val ka: String,
     val kb: String,
     val kc: String,
@@ -3679,7 +3681,7 @@ data class UpdateExcIEEEAC2ACommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC2ACommand(@TargetAggregateIdentifier  val excIEEEAC2AId: java.util.UUID? = null)
+data class DeleteExcIEEEAC2ACommand(@TargetAggregateIdentifier  val excIEEEAC2AId: UUID? = null)
 
 // single association commands
 
@@ -3688,7 +3690,7 @@ data class DeleteExcIEEEAC2ACommand(@TargetAggregateIdentifier  val excIEEEAC2AI
 
 // ExcIEEEAC3A Commands
 data class CreateExcIEEEAC3ACommand(
-    @TargetAggregateIdentifier val excIEEEAC3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC3AId: UUID? = null,
     val efdn: String,
     val ka: String,
     val kc: String,
@@ -3713,7 +3715,7 @@ data class CreateExcIEEEAC3ACommand(
 )
 
 data class UpdateExcIEEEAC3ACommand(
-    @TargetAggregateIdentifier val excIEEEAC3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC3AId: UUID? = null,
     val efdn: String,
     val ka: String,
     val kc: String,
@@ -3737,7 +3739,7 @@ data class UpdateExcIEEEAC3ACommand(
     val vfemax: String
 )
 
-data class DeleteExcIEEEAC3ACommand(@TargetAggregateIdentifier  val excIEEEAC3AId: java.util.UUID? = null)
+data class DeleteExcIEEEAC3ACommand(@TargetAggregateIdentifier  val excIEEEAC3AId: UUID? = null)
 
 // single association commands
 
@@ -3746,7 +3748,7 @@ data class DeleteExcIEEEAC3ACommand(@TargetAggregateIdentifier  val excIEEEAC3AI
 
 // ExcIEEEAC4A Commands
 data class CreateExcIEEEAC4ACommand(
-    @TargetAggregateIdentifier val excIEEEAC4AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC4AId: UUID? = null,
     val ka: String,
     val kc: String,
     val ta: String,
@@ -3759,7 +3761,7 @@ data class CreateExcIEEEAC4ACommand(
 )
 
 data class UpdateExcIEEEAC4ACommand(
-    @TargetAggregateIdentifier val excIEEEAC4AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC4AId: UUID? = null,
     val ka: String,
     val kc: String,
     val ta: String,
@@ -3771,7 +3773,7 @@ data class UpdateExcIEEEAC4ACommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC4ACommand(@TargetAggregateIdentifier  val excIEEEAC4AId: java.util.UUID? = null)
+data class DeleteExcIEEEAC4ACommand(@TargetAggregateIdentifier  val excIEEEAC4AId: UUID? = null)
 
 // single association commands
 
@@ -3780,7 +3782,7 @@ data class DeleteExcIEEEAC4ACommand(@TargetAggregateIdentifier  val excIEEEAC4AI
 
 // ExcIEEEAC5A Commands
 data class CreateExcIEEEAC5ACommand(
-    @TargetAggregateIdentifier val excIEEEAC5AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC5AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val ka: String,
@@ -3798,7 +3800,7 @@ data class CreateExcIEEEAC5ACommand(
 )
 
 data class UpdateExcIEEEAC5ACommand(
-    @TargetAggregateIdentifier val excIEEEAC5AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC5AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val ka: String,
@@ -3815,7 +3817,7 @@ data class UpdateExcIEEEAC5ACommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC5ACommand(@TargetAggregateIdentifier  val excIEEEAC5AId: java.util.UUID? = null)
+data class DeleteExcIEEEAC5ACommand(@TargetAggregateIdentifier  val excIEEEAC5AId: UUID? = null)
 
 // single association commands
 
@@ -3824,7 +3826,7 @@ data class DeleteExcIEEEAC5ACommand(@TargetAggregateIdentifier  val excIEEEAC5AI
 
 // ExcIEEEAC6A Commands
 data class CreateExcIEEEAC6ACommand(
-    @TargetAggregateIdentifier val excIEEEAC6AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC6AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3850,7 +3852,7 @@ data class CreateExcIEEEAC6ACommand(
 )
 
 data class UpdateExcIEEEAC6ACommand(
-    @TargetAggregateIdentifier val excIEEEAC6AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC6AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3875,7 +3877,7 @@ data class UpdateExcIEEEAC6ACommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC6ACommand(@TargetAggregateIdentifier  val excIEEEAC6AId: java.util.UUID? = null)
+data class DeleteExcIEEEAC6ACommand(@TargetAggregateIdentifier  val excIEEEAC6AId: UUID? = null)
 
 // single association commands
 
@@ -3884,7 +3886,7 @@ data class DeleteExcIEEEAC6ACommand(@TargetAggregateIdentifier  val excIEEEAC6AI
 
 // ExcIEEEAC7B Commands
 data class CreateExcIEEEAC7BCommand(
-    @TargetAggregateIdentifier val excIEEEAC7BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC7BId: UUID? = null,
     val kc: String,
     val kd: String,
     val kdr: String,
@@ -3914,7 +3916,7 @@ data class CreateExcIEEEAC7BCommand(
 )
 
 data class UpdateExcIEEEAC7BCommand(
-    @TargetAggregateIdentifier val excIEEEAC7BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC7BId: UUID? = null,
     val kc: String,
     val kd: String,
     val kdr: String,
@@ -3943,7 +3945,7 @@ data class UpdateExcIEEEAC7BCommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC7BCommand(@TargetAggregateIdentifier  val excIEEEAC7BId: java.util.UUID? = null)
+data class DeleteExcIEEEAC7BCommand(@TargetAggregateIdentifier  val excIEEEAC7BId: UUID? = null)
 
 // single association commands
 
@@ -3952,7 +3954,7 @@ data class DeleteExcIEEEAC7BCommand(@TargetAggregateIdentifier  val excIEEEAC7BI
 
 // ExcIEEEAC8B Commands
 data class CreateExcIEEEAC8BCommand(
-    @TargetAggregateIdentifier val excIEEEAC8BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC8BId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3974,7 +3976,7 @@ data class CreateExcIEEEAC8BCommand(
 )
 
 data class UpdateExcIEEEAC8BCommand(
-    @TargetAggregateIdentifier val excIEEEAC8BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC8BId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3995,7 +3997,7 @@ data class UpdateExcIEEEAC8BCommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC8BCommand(@TargetAggregateIdentifier  val excIEEEAC8BId: java.util.UUID? = null)
+data class DeleteExcIEEEAC8BCommand(@TargetAggregateIdentifier  val excIEEEAC8BId: UUID? = null)
 
 // single association commands
 
@@ -4004,7 +4006,7 @@ data class DeleteExcIEEEAC8BCommand(@TargetAggregateIdentifier  val excIEEEAC8BI
 
 // ExcIEEEDC1A Commands
 data class CreateExcIEEEDC1ACommand(
-    @TargetAggregateIdentifier val excIEEEDC1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC1AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4024,7 +4026,7 @@ data class CreateExcIEEEDC1ACommand(
 )
 
 data class UpdateExcIEEEDC1ACommand(
-    @TargetAggregateIdentifier val excIEEEDC1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC1AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4043,7 +4045,7 @@ data class UpdateExcIEEEDC1ACommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEDC1ACommand(@TargetAggregateIdentifier  val excIEEEDC1AId: java.util.UUID? = null)
+data class DeleteExcIEEEDC1ACommand(@TargetAggregateIdentifier  val excIEEEDC1AId: UUID? = null)
 
 // single association commands
 
@@ -4052,7 +4054,7 @@ data class DeleteExcIEEEDC1ACommand(@TargetAggregateIdentifier  val excIEEEDC1AI
 
 // ExcIEEEDC2A Commands
 data class CreateExcIEEEDC2ACommand(
-    @TargetAggregateIdentifier val excIEEEDC2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC2AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4072,7 +4074,7 @@ data class CreateExcIEEEDC2ACommand(
 )
 
 data class UpdateExcIEEEDC2ACommand(
-    @TargetAggregateIdentifier val excIEEEDC2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC2AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4091,7 +4093,7 @@ data class UpdateExcIEEEDC2ACommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEDC2ACommand(@TargetAggregateIdentifier  val excIEEEDC2AId: java.util.UUID? = null)
+data class DeleteExcIEEEDC2ACommand(@TargetAggregateIdentifier  val excIEEEDC2AId: UUID? = null)
 
 // single association commands
 
@@ -4100,7 +4102,7 @@ data class DeleteExcIEEEDC2ACommand(@TargetAggregateIdentifier  val excIEEEDC2AI
 
 // ExcIEEEDC3A Commands
 data class CreateExcIEEEDC3ACommand(
-    @TargetAggregateIdentifier val excIEEEDC3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC3AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4115,7 +4117,7 @@ data class CreateExcIEEEDC3ACommand(
 )
 
 data class UpdateExcIEEEDC3ACommand(
-    @TargetAggregateIdentifier val excIEEEDC3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC3AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4129,7 +4131,7 @@ data class UpdateExcIEEEDC3ACommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEDC3ACommand(@TargetAggregateIdentifier  val excIEEEDC3AId: java.util.UUID? = null)
+data class DeleteExcIEEEDC3ACommand(@TargetAggregateIdentifier  val excIEEEDC3AId: UUID? = null)
 
 // single association commands
 
@@ -4138,7 +4140,7 @@ data class DeleteExcIEEEDC3ACommand(@TargetAggregateIdentifier  val excIEEEDC3AI
 
 // ExcIEEEDC4B Commands
 data class CreateExcIEEEDC4BCommand(
-    @TargetAggregateIdentifier val excIEEEDC4BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC4BId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val ka: String,
@@ -4161,7 +4163,7 @@ data class CreateExcIEEEDC4BCommand(
 )
 
 data class UpdateExcIEEEDC4BCommand(
-    @TargetAggregateIdentifier val excIEEEDC4BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC4BId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val ka: String,
@@ -4183,7 +4185,7 @@ data class UpdateExcIEEEDC4BCommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEDC4BCommand(@TargetAggregateIdentifier  val excIEEEDC4BId: java.util.UUID? = null)
+data class DeleteExcIEEEDC4BCommand(@TargetAggregateIdentifier  val excIEEEDC4BId: UUID? = null)
 
 // single association commands
 
@@ -4192,7 +4194,7 @@ data class DeleteExcIEEEDC4BCommand(@TargetAggregateIdentifier  val excIEEEDC4BI
 
 // ExcIEEEST1A Commands
 data class CreateExcIEEEST1ACommand(
-    @TargetAggregateIdentifier val excIEEEST1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST1AId: UUID? = null,
     val ilr: String,
     val ka: String,
     val kc: String,
@@ -4215,7 +4217,7 @@ data class CreateExcIEEEST1ACommand(
 )
 
 data class UpdateExcIEEEST1ACommand(
-    @TargetAggregateIdentifier val excIEEEST1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST1AId: UUID? = null,
     val ilr: String,
     val ka: String,
     val kc: String,
@@ -4237,7 +4239,7 @@ data class UpdateExcIEEEST1ACommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEST1ACommand(@TargetAggregateIdentifier  val excIEEEST1AId: java.util.UUID? = null)
+data class DeleteExcIEEEST1ACommand(@TargetAggregateIdentifier  val excIEEEST1AId: UUID? = null)
 
 // single association commands
 
@@ -4246,7 +4248,7 @@ data class DeleteExcIEEEST1ACommand(@TargetAggregateIdentifier  val excIEEEST1AI
 
 // ExcIEEEST2A Commands
 data class CreateExcIEEEST2ACommand(
-    @TargetAggregateIdentifier val excIEEEST2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST2AId: UUID? = null,
     val efdmax: String,
     val ka: String,
     val kc: String,
@@ -4263,7 +4265,7 @@ data class CreateExcIEEEST2ACommand(
 )
 
 data class UpdateExcIEEEST2ACommand(
-    @TargetAggregateIdentifier val excIEEEST2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST2AId: UUID? = null,
     val efdmax: String,
     val ka: String,
     val kc: String,
@@ -4279,7 +4281,7 @@ data class UpdateExcIEEEST2ACommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEST2ACommand(@TargetAggregateIdentifier  val excIEEEST2AId: java.util.UUID? = null)
+data class DeleteExcIEEEST2ACommand(@TargetAggregateIdentifier  val excIEEEST2AId: UUID? = null)
 
 // single association commands
 
@@ -4288,7 +4290,7 @@ data class DeleteExcIEEEST2ACommand(@TargetAggregateIdentifier  val excIEEEST2AI
 
 // ExcIEEEST3A Commands
 data class CreateExcIEEEST3ACommand(
-    @TargetAggregateIdentifier val excIEEEST3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST3AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kg: String,
@@ -4312,7 +4314,7 @@ data class CreateExcIEEEST3ACommand(
 )
 
 data class UpdateExcIEEEST3ACommand(
-    @TargetAggregateIdentifier val excIEEEST3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST3AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kg: String,
@@ -4335,7 +4337,7 @@ data class UpdateExcIEEEST3ACommand(
     val xl: String
 )
 
-data class DeleteExcIEEEST3ACommand(@TargetAggregateIdentifier  val excIEEEST3AId: java.util.UUID? = null)
+data class DeleteExcIEEEST3ACommand(@TargetAggregateIdentifier  val excIEEEST3AId: UUID? = null)
 
 // single association commands
 
@@ -4344,7 +4346,7 @@ data class DeleteExcIEEEST3ACommand(@TargetAggregateIdentifier  val excIEEEST3AI
 
 // ExcIEEEST4B Commands
 data class CreateExcIEEEST4BCommand(
-    @TargetAggregateIdentifier val excIEEEST4BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST4BId: UUID? = null,
     val kc: String,
     val kg: String,
     val ki: String,
@@ -4364,7 +4366,7 @@ data class CreateExcIEEEST4BCommand(
 )
 
 data class UpdateExcIEEEST4BCommand(
-    @TargetAggregateIdentifier val excIEEEST4BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST4BId: UUID? = null,
     val kc: String,
     val kg: String,
     val ki: String,
@@ -4383,7 +4385,7 @@ data class UpdateExcIEEEST4BCommand(
     val xl: String
 )
 
-data class DeleteExcIEEEST4BCommand(@TargetAggregateIdentifier  val excIEEEST4BId: java.util.UUID? = null)
+data class DeleteExcIEEEST4BCommand(@TargetAggregateIdentifier  val excIEEEST4BId: UUID? = null)
 
 // single association commands
 
@@ -4392,7 +4394,7 @@ data class DeleteExcIEEEST4BCommand(@TargetAggregateIdentifier  val excIEEEST4BI
 
 // ExcIEEEST5B Commands
 data class CreateExcIEEEST5BCommand(
-    @TargetAggregateIdentifier val excIEEEST5BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST5BId: UUID? = null,
     val kc: String,
     val kr: String,
     val t1: String,
@@ -4413,7 +4415,7 @@ data class CreateExcIEEEST5BCommand(
 )
 
 data class UpdateExcIEEEST5BCommand(
-    @TargetAggregateIdentifier val excIEEEST5BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST5BId: UUID? = null,
     val kc: String,
     val kr: String,
     val t1: String,
@@ -4433,7 +4435,7 @@ data class UpdateExcIEEEST5BCommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEST5BCommand(@TargetAggregateIdentifier  val excIEEEST5BId: java.util.UUID? = null)
+data class DeleteExcIEEEST5BCommand(@TargetAggregateIdentifier  val excIEEEST5BId: UUID? = null)
 
 // single association commands
 
@@ -4442,7 +4444,7 @@ data class DeleteExcIEEEST5BCommand(@TargetAggregateIdentifier  val excIEEEST5BI
 
 // ExcIEEEST6B Commands
 data class CreateExcIEEEST6BCommand(
-    @TargetAggregateIdentifier val excIEEEST6BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST6BId: UUID? = null,
     val ilr: String,
     val kci: String,
     val kff: String,
@@ -4460,7 +4462,7 @@ data class CreateExcIEEEST6BCommand(
 )
 
 data class UpdateExcIEEEST6BCommand(
-    @TargetAggregateIdentifier val excIEEEST6BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST6BId: UUID? = null,
     val ilr: String,
     val kci: String,
     val kff: String,
@@ -4477,7 +4479,7 @@ data class UpdateExcIEEEST6BCommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEST6BCommand(@TargetAggregateIdentifier  val excIEEEST6BId: java.util.UUID? = null)
+data class DeleteExcIEEEST6BCommand(@TargetAggregateIdentifier  val excIEEEST6BId: UUID? = null)
 
 // single association commands
 
@@ -4486,7 +4488,7 @@ data class DeleteExcIEEEST6BCommand(@TargetAggregateIdentifier  val excIEEEST6BI
 
 // ExcIEEEST7B Commands
 data class CreateExcIEEEST7BCommand(
-    @TargetAggregateIdentifier val excIEEEST7BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST7BId: UUID? = null,
     val kh: String,
     val kia: String,
     val kl: String,
@@ -4505,7 +4507,7 @@ data class CreateExcIEEEST7BCommand(
 )
 
 data class UpdateExcIEEEST7BCommand(
-    @TargetAggregateIdentifier val excIEEEST7BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST7BId: UUID? = null,
     val kh: String,
     val kia: String,
     val kl: String,
@@ -4523,7 +4525,7 @@ data class UpdateExcIEEEST7BCommand(
     val vrmin: String
 )
 
-data class DeleteExcIEEEST7BCommand(@TargetAggregateIdentifier  val excIEEEST7BId: java.util.UUID? = null)
+data class DeleteExcIEEEST7BCommand(@TargetAggregateIdentifier  val excIEEEST7BId: UUID? = null)
 
 // single association commands
 
@@ -4532,7 +4534,7 @@ data class DeleteExcIEEEST7BCommand(@TargetAggregateIdentifier  val excIEEEST7BI
 
 // ExcOEX3T Commands
 data class CreateExcOEX3TCommand(
-    @TargetAggregateIdentifier val excOEX3TId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excOEX3TId: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -4555,7 +4557,7 @@ data class CreateExcOEX3TCommand(
 )
 
 data class UpdateExcOEX3TCommand(
-    @TargetAggregateIdentifier val excOEX3TId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excOEX3TId: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -4577,7 +4579,7 @@ data class UpdateExcOEX3TCommand(
     val vrmin: String
 )
 
-data class DeleteExcOEX3TCommand(@TargetAggregateIdentifier  val excOEX3TId: java.util.UUID? = null)
+data class DeleteExcOEX3TCommand(@TargetAggregateIdentifier  val excOEX3TId: UUID? = null)
 
 // single association commands
 
@@ -4586,7 +4588,7 @@ data class DeleteExcOEX3TCommand(@TargetAggregateIdentifier  val excOEX3TId: jav
 
 // ExcPIC Commands
 data class CreateExcPICCommand(
-    @TargetAggregateIdentifier val excPICId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excPICId: UUID? = null,
     val e1: String,
     val e2: String,
     val efdmax: String,
@@ -4613,7 +4615,7 @@ data class CreateExcPICCommand(
 )
 
 data class UpdateExcPICCommand(
-    @TargetAggregateIdentifier val excPICId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excPICId: UUID? = null,
     val e1: String,
     val e2: String,
     val efdmax: String,
@@ -4639,7 +4641,7 @@ data class UpdateExcPICCommand(
     val vrmin: String
 )
 
-data class DeleteExcPICCommand(@TargetAggregateIdentifier  val excPICId: java.util.UUID? = null)
+data class DeleteExcPICCommand(@TargetAggregateIdentifier  val excPICId: UUID? = null)
 
 // single association commands
 
@@ -4648,7 +4650,7 @@ data class DeleteExcPICCommand(@TargetAggregateIdentifier  val excPICId: java.ut
 
 // ExcREXS Commands
 data class CreateExcREXSCommand(
-    @TargetAggregateIdentifier val excREXSId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excREXSId: UUID? = null,
     val e1: String,
     val e2: String,
     val fbf: String,
@@ -4688,7 +4690,7 @@ data class CreateExcREXSCommand(
 )
 
 data class UpdateExcREXSCommand(
-    @TargetAggregateIdentifier val excREXSId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excREXSId: UUID? = null,
     val e1: String,
     val e2: String,
     val fbf: String,
@@ -4727,7 +4729,7 @@ data class UpdateExcREXSCommand(
     val xc: String
 )
 
-data class DeleteExcREXSCommand(@TargetAggregateIdentifier  val excREXSId: java.util.UUID? = null)
+data class DeleteExcREXSCommand(@TargetAggregateIdentifier  val excREXSId: UUID? = null)
 
 // single association commands
 
@@ -4736,7 +4738,7 @@ data class DeleteExcREXSCommand(@TargetAggregateIdentifier  val excREXSId: java.
 
 // ExcSCRX Commands
 data class CreateExcSCRXCommand(
-    @TargetAggregateIdentifier val excSCRXId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excSCRXId: UUID? = null,
     val cswitch: String,
     val emax: String,
     val emin: String,
@@ -4748,7 +4750,7 @@ data class CreateExcSCRXCommand(
 )
 
 data class UpdateExcSCRXCommand(
-    @TargetAggregateIdentifier val excSCRXId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excSCRXId: UUID? = null,
     val cswitch: String,
     val emax: String,
     val emin: String,
@@ -4759,7 +4761,7 @@ data class UpdateExcSCRXCommand(
     val te: String
 )
 
-data class DeleteExcSCRXCommand(@TargetAggregateIdentifier  val excSCRXId: java.util.UUID? = null)
+data class DeleteExcSCRXCommand(@TargetAggregateIdentifier  val excSCRXId: UUID? = null)
 
 // single association commands
 
@@ -4768,7 +4770,7 @@ data class DeleteExcSCRXCommand(@TargetAggregateIdentifier  val excSCRXId: java.
 
 // ExcSEXS Commands
 data class CreateExcSEXSCommand(
-    @TargetAggregateIdentifier val excSEXSId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excSEXSId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val emax: String,
@@ -4782,7 +4784,7 @@ data class CreateExcSEXSCommand(
 )
 
 data class UpdateExcSEXSCommand(
-    @TargetAggregateIdentifier val excSEXSId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excSEXSId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val emax: String,
@@ -4795,7 +4797,7 @@ data class UpdateExcSEXSCommand(
     val te: String
 )
 
-data class DeleteExcSEXSCommand(@TargetAggregateIdentifier  val excSEXSId: java.util.UUID? = null)
+data class DeleteExcSEXSCommand(@TargetAggregateIdentifier  val excSEXSId: UUID? = null)
 
 // single association commands
 
@@ -4804,7 +4806,7 @@ data class DeleteExcSEXSCommand(@TargetAggregateIdentifier  val excSEXSId: java.
 
 // ExcSK Commands
 data class CreateExcSKCommand(
-    @TargetAggregateIdentifier val excSKId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excSKId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val emax: String,
@@ -4840,7 +4842,7 @@ data class CreateExcSKCommand(
 )
 
 data class UpdateExcSKCommand(
-    @TargetAggregateIdentifier val excSKId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excSKId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val emax: String,
@@ -4875,7 +4877,7 @@ data class UpdateExcSKCommand(
     val yp: String
 )
 
-data class DeleteExcSKCommand(@TargetAggregateIdentifier  val excSKId: java.util.UUID? = null)
+data class DeleteExcSKCommand(@TargetAggregateIdentifier  val excSKId: UUID? = null)
 
 // single association commands
 
@@ -4884,7 +4886,7 @@ data class DeleteExcSKCommand(@TargetAggregateIdentifier  val excSKId: java.util
 
 // ExcST1A Commands
 data class CreateExcST1ACommand(
-    @TargetAggregateIdentifier val excST1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excST1AId: UUID? = null,
     val ilr: String,
     val ka: String,
     val kc: String,
@@ -4906,7 +4908,7 @@ data class CreateExcST1ACommand(
 )
 
 data class UpdateExcST1ACommand(
-    @TargetAggregateIdentifier val excST1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excST1AId: UUID? = null,
     val ilr: String,
     val ka: String,
     val kc: String,
@@ -4927,7 +4929,7 @@ data class UpdateExcST1ACommand(
     val xe: String
 )
 
-data class DeleteExcST1ACommand(@TargetAggregateIdentifier  val excST1AId: java.util.UUID? = null)
+data class DeleteExcST1ACommand(@TargetAggregateIdentifier  val excST1AId: UUID? = null)
 
 // single association commands
 
@@ -4936,7 +4938,7 @@ data class DeleteExcST1ACommand(@TargetAggregateIdentifier  val excST1AId: java.
 
 // ExcST2A Commands
 data class CreateExcST2ACommand(
-    @TargetAggregateIdentifier val excST2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excST2AId: UUID? = null,
     val efdmax: String,
     val ka: String,
     val kc: String,
@@ -4955,7 +4957,7 @@ data class CreateExcST2ACommand(
 )
 
 data class UpdateExcST2ACommand(
-    @TargetAggregateIdentifier val excST2AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excST2AId: UUID? = null,
     val efdmax: String,
     val ka: String,
     val kc: String,
@@ -4973,7 +4975,7 @@ data class UpdateExcST2ACommand(
     val vrmin: String
 )
 
-data class DeleteExcST2ACommand(@TargetAggregateIdentifier  val excST2AId: java.util.UUID? = null)
+data class DeleteExcST2ACommand(@TargetAggregateIdentifier  val excST2AId: UUID? = null)
 
 // single association commands
 
@@ -4982,7 +4984,7 @@ data class DeleteExcST2ACommand(@TargetAggregateIdentifier  val excST2AId: java.
 
 // ExcST3A Commands
 data class CreateExcST3ACommand(
-    @TargetAggregateIdentifier val excST3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excST3AId: UUID? = null,
     val efdmax: String,
     val kc: String,
     val kg: String,
@@ -5006,7 +5008,7 @@ data class CreateExcST3ACommand(
 )
 
 data class UpdateExcST3ACommand(
-    @TargetAggregateIdentifier val excST3AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excST3AId: UUID? = null,
     val efdmax: String,
     val kc: String,
     val kg: String,
@@ -5029,7 +5031,7 @@ data class UpdateExcST3ACommand(
     val xl: String
 )
 
-data class DeleteExcST3ACommand(@TargetAggregateIdentifier  val excST3AId: java.util.UUID? = null)
+data class DeleteExcST3ACommand(@TargetAggregateIdentifier  val excST3AId: UUID? = null)
 
 // single association commands
 
@@ -5038,7 +5040,7 @@ data class DeleteExcST3ACommand(@TargetAggregateIdentifier  val excST3AId: java.
 
 // ExcST4B Commands
 data class CreateExcST4BCommand(
-    @TargetAggregateIdentifier val excST4BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excST4BId: UUID? = null,
     val kc: String,
     val kg: String,
     val ki: String,
@@ -5061,7 +5063,7 @@ data class CreateExcST4BCommand(
 )
 
 data class UpdateExcST4BCommand(
-    @TargetAggregateIdentifier val excST4BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excST4BId: UUID? = null,
     val kc: String,
     val kg: String,
     val ki: String,
@@ -5083,7 +5085,7 @@ data class UpdateExcST4BCommand(
     val xl: String
 )
 
-data class DeleteExcST4BCommand(@TargetAggregateIdentifier  val excST4BId: java.util.UUID? = null)
+data class DeleteExcST4BCommand(@TargetAggregateIdentifier  val excST4BId: UUID? = null)
 
 // single association commands
 
@@ -5092,7 +5094,7 @@ data class DeleteExcST4BCommand(@TargetAggregateIdentifier  val excST4BId: java.
 
 // ExcST6B Commands
 data class CreateExcST6BCommand(
-    @TargetAggregateIdentifier val excST6BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excST6BId: UUID? = null,
     val ilr: String,
     val k1: String,
     val kcl: String,
@@ -5119,7 +5121,7 @@ data class CreateExcST6BCommand(
 )
 
 data class UpdateExcST6BCommand(
-    @TargetAggregateIdentifier val excST6BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excST6BId: UUID? = null,
     val ilr: String,
     val k1: String,
     val kcl: String,
@@ -5145,7 +5147,7 @@ data class UpdateExcST6BCommand(
     val xc: String
 )
 
-data class DeleteExcST6BCommand(@TargetAggregateIdentifier  val excST6BId: java.util.UUID? = null)
+data class DeleteExcST6BCommand(@TargetAggregateIdentifier  val excST6BId: UUID? = null)
 
 // single association commands
 
@@ -5154,7 +5156,7 @@ data class DeleteExcST6BCommand(@TargetAggregateIdentifier  val excST6BId: java.
 
 // ExcST7B Commands
 data class CreateExcST7BCommand(
-    @TargetAggregateIdentifier val excST7BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excST7BId: UUID? = null,
     val kh: String,
     val kia: String,
     val kl: String,
@@ -5174,7 +5176,7 @@ data class CreateExcST7BCommand(
 )
 
 data class UpdateExcST7BCommand(
-    @TargetAggregateIdentifier val excST7BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excST7BId: UUID? = null,
     val kh: String,
     val kia: String,
     val kl: String,
@@ -5193,7 +5195,7 @@ data class UpdateExcST7BCommand(
     val vrmin: String
 )
 
-data class DeleteExcST7BCommand(@TargetAggregateIdentifier  val excST7BId: java.util.UUID? = null)
+data class DeleteExcST7BCommand(@TargetAggregateIdentifier  val excST7BId: UUID? = null)
 
 // single association commands
 
@@ -5202,14 +5204,14 @@ data class DeleteExcST7BCommand(@TargetAggregateIdentifier  val excST7BId: java.
 
 // ExcitationSystemDynamics Commands
 data class CreateExcitationSystemDynamicsCommand(
-    @TargetAggregateIdentifier  val excitationSystemDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val excitationSystemDynamicsId: UUID? = null
 )
 
 data class UpdateExcitationSystemDynamicsCommand(
-    @TargetAggregateIdentifier  val excitationSystemDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val excitationSystemDynamicsId: UUID? = null
 )
 
-data class DeleteExcitationSystemDynamicsCommand(@TargetAggregateIdentifier  val excitationSystemDynamicsId: java.util.UUID? = null)
+data class DeleteExcitationSystemDynamicsCommand(@TargetAggregateIdentifier  val excitationSystemDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -5218,16 +5220,16 @@ data class DeleteExcitationSystemDynamicsCommand(@TargetAggregateIdentifier  val
 
 // ExcitationSystemUserDefined Commands
 data class CreateExcitationSystemUserDefinedCommand(
-    @TargetAggregateIdentifier val excitationSystemUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excitationSystemUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateExcitationSystemUserDefinedCommand(
-    @TargetAggregateIdentifier val excitationSystemUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val excitationSystemUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteExcitationSystemUserDefinedCommand(@TargetAggregateIdentifier  val excitationSystemUserDefinedId: java.util.UUID? = null)
+data class DeleteExcitationSystemUserDefinedCommand(@TargetAggregateIdentifier  val excitationSystemUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -5236,18 +5238,18 @@ data class DeleteExcitationSystemUserDefinedCommand(@TargetAggregateIdentifier  
 
 // ExtensionVersion Commands
 data class CreateExtensionVersionCommand(
-    @TargetAggregateIdentifier val extensionVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val extensionVersionId: UUID? = null,
     val date: String,
     val namespaceURI: String
 )
 
 data class UpdateExtensionVersionCommand(
-    @TargetAggregateIdentifier val extensionVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val extensionVersionId: UUID? = null,
     val date: String,
     val namespaceURI: String
 )
 
-data class DeleteExtensionVersionCommand(@TargetAggregateIdentifier  val extensionVersionId: java.util.UUID? = null)
+data class DeleteExtensionVersionCommand(@TargetAggregateIdentifier  val extensionVersionId: UUID? = null)
 
 // single association commands
 
@@ -5256,7 +5258,7 @@ data class DeleteExtensionVersionCommand(@TargetAggregateIdentifier  val extensi
 
 // ExternalNetworkInjection Commands
 data class CreateExternalNetworkInjectionCommand(
-    @TargetAggregateIdentifier val externalNetworkInjectionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val externalNetworkInjectionId: UUID? = null,
     val governorSCD: String,
     val ikSecond: String,
     val maxInitialSymShCCurrent: String,
@@ -5275,7 +5277,7 @@ data class CreateExternalNetworkInjectionCommand(
 )
 
 data class UpdateExternalNetworkInjectionCommand(
-    @TargetAggregateIdentifier val externalNetworkInjectionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val externalNetworkInjectionId: UUID? = null,
     val governorSCD: String,
     val ikSecond: String,
     val maxInitialSymShCCurrent: String,
@@ -5293,7 +5295,7 @@ data class UpdateExternalNetworkInjectionCommand(
     val voltageFactor: String
 )
 
-data class DeleteExternalNetworkInjectionCommand(@TargetAggregateIdentifier  val externalNetworkInjectionId: java.util.UUID? = null)
+data class DeleteExternalNetworkInjectionCommand(@TargetAggregateIdentifier  val externalNetworkInjectionId: UUID? = null)
 
 // single association commands
 
@@ -5302,14 +5304,14 @@ data class DeleteExternalNetworkInjectionCommand(@TargetAggregateIdentifier  val
 
 // FloatProxy Commands
 data class CreateFloatProxyCommand(
-    @TargetAggregateIdentifier  val floatProxyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val floatProxyId: UUID? = null
 )
 
 data class UpdateFloatProxyCommand(
-    @TargetAggregateIdentifier  val floatProxyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val floatProxyId: UUID? = null
 )
 
-data class DeleteFloatProxyCommand(@TargetAggregateIdentifier  val floatProxyId: java.util.UUID? = null)
+data class DeleteFloatProxyCommand(@TargetAggregateIdentifier  val floatProxyId: UUID? = null)
 
 // single association commands
 
@@ -5318,16 +5320,16 @@ data class DeleteFloatProxyCommand(@TargetAggregateIdentifier  val floatProxyId:
 
 // FossilFuel Commands
 data class CreateFossilFuelCommand(
-    @TargetAggregateIdentifier val fossilFuelId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val fossilFuelId: UUID? = null,
     val fossilFuelType: String
 )
 
 data class UpdateFossilFuelCommand(
-    @TargetAggregateIdentifier val fossilFuelId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val fossilFuelId: UUID? = null,
     val fossilFuelType: String
 )
 
-data class DeleteFossilFuelCommand(@TargetAggregateIdentifier  val fossilFuelId: java.util.UUID? = null)
+data class DeleteFossilFuelCommand(@TargetAggregateIdentifier  val fossilFuelId: UUID? = null)
 
 // single association commands
 
@@ -5336,20 +5338,20 @@ data class DeleteFossilFuelCommand(@TargetAggregateIdentifier  val fossilFuelId:
 
 // Frequency Commands
 data class CreateFrequencyCommand(
-    @TargetAggregateIdentifier val frequencyId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val frequencyId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateFrequencyCommand(
-    @TargetAggregateIdentifier val frequencyId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val frequencyId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteFrequencyCommand(@TargetAggregateIdentifier  val frequencyId: java.util.UUID? = null)
+data class DeleteFrequencyCommand(@TargetAggregateIdentifier  val frequencyId: UUID? = null)
 
 // single association commands
 
@@ -5358,18 +5360,18 @@ data class DeleteFrequencyCommand(@TargetAggregateIdentifier  val frequencyId: j
 
 // GenICompensationForGenJ Commands
 data class CreateGenICompensationForGenJCommand(
-    @TargetAggregateIdentifier val genICompensationForGenJId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val genICompensationForGenJId: UUID? = null,
     val rcij: String,
     val xcij: String
 )
 
 data class UpdateGenICompensationForGenJCommand(
-    @TargetAggregateIdentifier val genICompensationForGenJId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val genICompensationForGenJId: UUID? = null,
     val rcij: String,
     val xcij: String
 )
 
-data class DeleteGenICompensationForGenJCommand(@TargetAggregateIdentifier  val genICompensationForGenJId: java.util.UUID? = null)
+data class DeleteGenICompensationForGenJCommand(@TargetAggregateIdentifier  val genICompensationForGenJId: UUID? = null)
 
 // single association commands
 
@@ -5378,7 +5380,7 @@ data class DeleteGenICompensationForGenJCommand(@TargetAggregateIdentifier  val 
 
 // GeneratingUnit Commands
 data class CreateGeneratingUnitCommand(
-    @TargetAggregateIdentifier val generatingUnitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val generatingUnitId: UUID? = null,
     val genControlSource: String,
     val governorSCD: String,
     val initialP: String,
@@ -5397,7 +5399,7 @@ data class CreateGeneratingUnitCommand(
 )
 
 data class UpdateGeneratingUnitCommand(
-    @TargetAggregateIdentifier val generatingUnitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val generatingUnitId: UUID? = null,
     val genControlSource: String,
     val governorSCD: String,
     val initialP: String,
@@ -5415,7 +5417,7 @@ data class UpdateGeneratingUnitCommand(
     val valiableCost: String
 )
 
-data class DeleteGeneratingUnitCommand(@TargetAggregateIdentifier  val generatingUnitId: java.util.UUID? = null)
+data class DeleteGeneratingUnitCommand(@TargetAggregateIdentifier  val generatingUnitId: UUID? = null)
 
 // single association commands
 
@@ -5424,7 +5426,7 @@ data class DeleteGeneratingUnitCommand(@TargetAggregateIdentifier  val generatin
 
 // GeographicalLocationVersion Commands
 data class CreateGeographicalLocationVersionCommand(
-    @TargetAggregateIdentifier val geographicalLocationVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val geographicalLocationVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -5438,7 +5440,7 @@ data class CreateGeographicalLocationVersionCommand(
 )
 
 data class UpdateGeographicalLocationVersionCommand(
-    @TargetAggregateIdentifier val geographicalLocationVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val geographicalLocationVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -5451,7 +5453,7 @@ data class UpdateGeographicalLocationVersionCommand(
     val shortName: String
 )
 
-data class DeleteGeographicalLocationVersionCommand(@TargetAggregateIdentifier  val geographicalLocationVersionId: java.util.UUID? = null)
+data class DeleteGeographicalLocationVersionCommand(@TargetAggregateIdentifier  val geographicalLocationVersionId: UUID? = null)
 
 // single association commands
 
@@ -5460,14 +5462,14 @@ data class DeleteGeographicalLocationVersionCommand(@TargetAggregateIdentifier  
 
 // GeographicalRegion Commands
 data class CreateGeographicalRegionCommand(
-    @TargetAggregateIdentifier  val geographicalRegionId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val geographicalRegionId: UUID? = null
 )
 
 data class UpdateGeographicalRegionCommand(
-    @TargetAggregateIdentifier  val geographicalRegionId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val geographicalRegionId: UUID? = null
 )
 
-data class DeleteGeographicalRegionCommand(@TargetAggregateIdentifier  val geographicalRegionId: java.util.UUID? = null)
+data class DeleteGeographicalRegionCommand(@TargetAggregateIdentifier  val geographicalRegionId: UUID? = null)
 
 // single association commands
 
@@ -5476,7 +5478,7 @@ data class DeleteGeographicalRegionCommand(@TargetAggregateIdentifier  val geogr
 
 // GovCT1 Commands
 data class CreateGovCT1Command(
-    @TargetAggregateIdentifier val govCT1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govCT1Id: UUID? = null,
     val aset: String,
     val db: String,
     val dm: String,
@@ -5515,7 +5517,7 @@ data class CreateGovCT1Command(
 )
 
 data class UpdateGovCT1Command(
-    @TargetAggregateIdentifier val govCT1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govCT1Id: UUID? = null,
     val aset: String,
     val db: String,
     val dm: String,
@@ -5553,7 +5555,7 @@ data class UpdateGovCT1Command(
     val wfspd: String
 )
 
-data class DeleteGovCT1Command(@TargetAggregateIdentifier  val govCT1Id: java.util.UUID? = null)
+data class DeleteGovCT1Command(@TargetAggregateIdentifier  val govCT1Id: UUID? = null)
 
 // single association commands
 
@@ -5562,7 +5564,7 @@ data class DeleteGovCT1Command(@TargetAggregateIdentifier  val govCT1Id: java.ut
 
 // GovCT2 Commands
 data class CreateGovCT2Command(
-    @TargetAggregateIdentifier val govCT2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govCT2Id: UUID? = null,
     val aset: String,
     val db: String,
     val dm: String,
@@ -5622,7 +5624,7 @@ data class CreateGovCT2Command(
 )
 
 data class UpdateGovCT2Command(
-    @TargetAggregateIdentifier val govCT2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govCT2Id: UUID? = null,
     val aset: String,
     val db: String,
     val dm: String,
@@ -5681,7 +5683,7 @@ data class UpdateGovCT2Command(
     val wfspd: String
 )
 
-data class DeleteGovCT2Command(@TargetAggregateIdentifier  val govCT2Id: java.util.UUID? = null)
+data class DeleteGovCT2Command(@TargetAggregateIdentifier  val govCT2Id: UUID? = null)
 
 // single association commands
 
@@ -5690,7 +5692,7 @@ data class DeleteGovCT2Command(@TargetAggregateIdentifier  val govCT2Id: java.ut
 
 // GovGAST Commands
 data class CreateGovGASTCommand(
-    @TargetAggregateIdentifier val govGASTId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govGASTId: UUID? = null,
     val at: String,
     val dturb: String,
     val kt: String,
@@ -5704,7 +5706,7 @@ data class CreateGovGASTCommand(
 )
 
 data class UpdateGovGASTCommand(
-    @TargetAggregateIdentifier val govGASTId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govGASTId: UUID? = null,
     val at: String,
     val dturb: String,
     val kt: String,
@@ -5717,7 +5719,7 @@ data class UpdateGovGASTCommand(
     val vmin: String
 )
 
-data class DeleteGovGASTCommand(@TargetAggregateIdentifier  val govGASTId: java.util.UUID? = null)
+data class DeleteGovGASTCommand(@TargetAggregateIdentifier  val govGASTId: UUID? = null)
 
 // single association commands
 
@@ -5726,7 +5728,7 @@ data class DeleteGovGASTCommand(@TargetAggregateIdentifier  val govGASTId: java.
 
 // GovGAST1 Commands
 data class CreateGovGAST1Command(
-    @TargetAggregateIdentifier val govGAST1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govGAST1Id: UUID? = null,
     val a: String,
     val b: String,
     val db1: String,
@@ -5764,7 +5766,7 @@ data class CreateGovGAST1Command(
 )
 
 data class UpdateGovGAST1Command(
-    @TargetAggregateIdentifier val govGAST1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govGAST1Id: UUID? = null,
     val a: String,
     val b: String,
     val db1: String,
@@ -5801,7 +5803,7 @@ data class UpdateGovGAST1Command(
     val vmin: String
 )
 
-data class DeleteGovGAST1Command(@TargetAggregateIdentifier  val govGAST1Id: java.util.UUID? = null)
+data class DeleteGovGAST1Command(@TargetAggregateIdentifier  val govGAST1Id: UUID? = null)
 
 // single association commands
 
@@ -5810,7 +5812,7 @@ data class DeleteGovGAST1Command(@TargetAggregateIdentifier  val govGAST1Id: jav
 
 // GovGAST2 Commands
 data class CreateGovGAST2Command(
-    @TargetAggregateIdentifier val govGAST2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govGAST2Id: UUID? = null,
     val a: String,
     val af1: String,
     val af2: String,
@@ -5846,7 +5848,7 @@ data class CreateGovGAST2Command(
 )
 
 data class UpdateGovGAST2Command(
-    @TargetAggregateIdentifier val govGAST2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govGAST2Id: UUID? = null,
     val a: String,
     val af1: String,
     val af2: String,
@@ -5881,7 +5883,7 @@ data class UpdateGovGAST2Command(
     val z: String
 )
 
-data class DeleteGovGAST2Command(@TargetAggregateIdentifier  val govGAST2Id: java.util.UUID? = null)
+data class DeleteGovGAST2Command(@TargetAggregateIdentifier  val govGAST2Id: UUID? = null)
 
 // single association commands
 
@@ -5890,7 +5892,7 @@ data class DeleteGovGAST2Command(@TargetAggregateIdentifier  val govGAST2Id: jav
 
 // GovGAST3 Commands
 data class CreateGovGAST3Command(
-    @TargetAggregateIdentifier val govGAST3Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govGAST3Id: UUID? = null,
     val bca: String,
     val bp: String,
     val dtc: String,
@@ -5915,7 +5917,7 @@ data class CreateGovGAST3Command(
 )
 
 data class UpdateGovGAST3Command(
-    @TargetAggregateIdentifier val govGAST3Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govGAST3Id: UUID? = null,
     val bca: String,
     val bp: String,
     val dtc: String,
@@ -5939,7 +5941,7 @@ data class UpdateGovGAST3Command(
     val ty: String
 )
 
-data class DeleteGovGAST3Command(@TargetAggregateIdentifier  val govGAST3Id: java.util.UUID? = null)
+data class DeleteGovGAST3Command(@TargetAggregateIdentifier  val govGAST3Id: UUID? = null)
 
 // single association commands
 
@@ -5948,7 +5950,7 @@ data class DeleteGovGAST3Command(@TargetAggregateIdentifier  val govGAST3Id: jav
 
 // GovGAST4 Commands
 data class CreateGovGAST4Command(
-    @TargetAggregateIdentifier val govGAST4Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govGAST4Id: UUID? = null,
     val bp: String,
     val ktm: String,
     val mnef: String,
@@ -5963,7 +5965,7 @@ data class CreateGovGAST4Command(
 )
 
 data class UpdateGovGAST4Command(
-    @TargetAggregateIdentifier val govGAST4Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govGAST4Id: UUID? = null,
     val bp: String,
     val ktm: String,
     val mnef: String,
@@ -5977,7 +5979,7 @@ data class UpdateGovGAST4Command(
     val tv: String
 )
 
-data class DeleteGovGAST4Command(@TargetAggregateIdentifier  val govGAST4Id: java.util.UUID? = null)
+data class DeleteGovGAST4Command(@TargetAggregateIdentifier  val govGAST4Id: UUID? = null)
 
 // single association commands
 
@@ -5986,7 +5988,7 @@ data class DeleteGovGAST4Command(@TargetAggregateIdentifier  val govGAST4Id: jav
 
 // GovGASTWD Commands
 data class CreateGovGASTWDCommand(
-    @TargetAggregateIdentifier val govGASTWDId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govGASTWDId: UUID? = null,
     val a: String,
     val af1: String,
     val af2: String,
@@ -6023,7 +6025,7 @@ data class CreateGovGASTWDCommand(
 )
 
 data class UpdateGovGASTWDCommand(
-    @TargetAggregateIdentifier val govGASTWDId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govGASTWDId: UUID? = null,
     val a: String,
     val af1: String,
     val af2: String,
@@ -6059,7 +6061,7 @@ data class UpdateGovGASTWDCommand(
     val tt: String
 )
 
-data class DeleteGovGASTWDCommand(@TargetAggregateIdentifier  val govGASTWDId: java.util.UUID? = null)
+data class DeleteGovGASTWDCommand(@TargetAggregateIdentifier  val govGASTWDId: UUID? = null)
 
 // single association commands
 
@@ -6068,7 +6070,7 @@ data class DeleteGovGASTWDCommand(@TargetAggregateIdentifier  val govGASTWDId: j
 
 // GovHydro1 Commands
 data class CreateGovHydro1Command(
-    @TargetAggregateIdentifier val govHydro1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydro1Id: UUID? = null,
     val at: String,
     val dturb: String,
     val gmax: String,
@@ -6086,7 +6088,7 @@ data class CreateGovHydro1Command(
 )
 
 data class UpdateGovHydro1Command(
-    @TargetAggregateIdentifier val govHydro1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydro1Id: UUID? = null,
     val at: String,
     val dturb: String,
     val gmax: String,
@@ -6103,7 +6105,7 @@ data class UpdateGovHydro1Command(
     val velm: String
 )
 
-data class DeleteGovHydro1Command(@TargetAggregateIdentifier  val govHydro1Id: java.util.UUID? = null)
+data class DeleteGovHydro1Command(@TargetAggregateIdentifier  val govHydro1Id: UUID? = null)
 
 // single association commands
 
@@ -6112,7 +6114,7 @@ data class DeleteGovHydro1Command(@TargetAggregateIdentifier  val govHydro1Id: j
 
 // GovHydro2 Commands
 data class CreateGovHydro2Command(
-    @TargetAggregateIdentifier val govHydro2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydro2Id: UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6145,7 +6147,7 @@ data class CreateGovHydro2Command(
 )
 
 data class UpdateGovHydro2Command(
-    @TargetAggregateIdentifier val govHydro2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydro2Id: UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6177,7 +6179,7 @@ data class UpdateGovHydro2Command(
     val uo: String
 )
 
-data class DeleteGovHydro2Command(@TargetAggregateIdentifier  val govHydro2Id: java.util.UUID? = null)
+data class DeleteGovHydro2Command(@TargetAggregateIdentifier  val govHydro2Id: UUID? = null)
 
 // single association commands
 
@@ -6186,7 +6188,7 @@ data class DeleteGovHydro2Command(@TargetAggregateIdentifier  val govHydro2Id: j
 
 // GovHydro3 Commands
 data class CreateGovHydro3Command(
-    @TargetAggregateIdentifier val govHydro3Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydro3Id: UUID? = null,
     val at: String,
     val db1: String,
     val db2: String,
@@ -6226,7 +6228,7 @@ data class CreateGovHydro3Command(
 )
 
 data class UpdateGovHydro3Command(
-    @TargetAggregateIdentifier val govHydro3Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydro3Id: UUID? = null,
     val at: String,
     val db1: String,
     val db2: String,
@@ -6265,7 +6267,7 @@ data class UpdateGovHydro3Command(
     val velop: String
 )
 
-data class DeleteGovHydro3Command(@TargetAggregateIdentifier  val govHydro3Id: java.util.UUID? = null)
+data class DeleteGovHydro3Command(@TargetAggregateIdentifier  val govHydro3Id: UUID? = null)
 
 // single association commands
 
@@ -6274,7 +6276,7 @@ data class DeleteGovHydro3Command(@TargetAggregateIdentifier  val govHydro3Id: j
 
 // GovHydro4 Commands
 data class CreateGovHydro4Command(
-    @TargetAggregateIdentifier val govHydro4Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydro4Id: UUID? = null,
     val at: String,
     val bgv0: String,
     val bgv1: String,
@@ -6316,7 +6318,7 @@ data class CreateGovHydro4Command(
 )
 
 data class UpdateGovHydro4Command(
-    @TargetAggregateIdentifier val govHydro4Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydro4Id: UUID? = null,
     val at: String,
     val bgv0: String,
     val bgv1: String,
@@ -6357,7 +6359,7 @@ data class UpdateGovHydro4Command(
     val uo: String
 )
 
-data class DeleteGovHydro4Command(@TargetAggregateIdentifier  val govHydro4Id: java.util.UUID? = null)
+data class DeleteGovHydro4Command(@TargetAggregateIdentifier  val govHydro4Id: UUID? = null)
 
 // single association commands
 
@@ -6366,7 +6368,7 @@ data class DeleteGovHydro4Command(@TargetAggregateIdentifier  val govHydro4Id: j
 
 // GovHydroDD Commands
 data class CreateGovHydroDDCommand(
-    @TargetAggregateIdentifier val govHydroDDId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroDDId: UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6405,7 +6407,7 @@ data class CreateGovHydroDDCommand(
 )
 
 data class UpdateGovHydroDDCommand(
-    @TargetAggregateIdentifier val govHydroDDId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroDDId: UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6443,7 +6445,7 @@ data class UpdateGovHydroDDCommand(
     val velop: String
 )
 
-data class DeleteGovHydroDDCommand(@TargetAggregateIdentifier  val govHydroDDId: java.util.UUID? = null)
+data class DeleteGovHydroDDCommand(@TargetAggregateIdentifier  val govHydroDDId: UUID? = null)
 
 // single association commands
 
@@ -6452,7 +6454,7 @@ data class DeleteGovHydroDDCommand(@TargetAggregateIdentifier  val govHydroDDId:
 
 // GovHydroFrancis Commands
 data class CreateGovHydroFrancisCommand(
-    @TargetAggregateIdentifier val govHydroFrancisId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroFrancisId: UUID? = null,
     val am: String,
     val av0: String,
     val av1: String,
@@ -6483,7 +6485,7 @@ data class CreateGovHydroFrancisCommand(
 )
 
 data class UpdateGovHydroFrancisCommand(
-    @TargetAggregateIdentifier val govHydroFrancisId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroFrancisId: UUID? = null,
     val am: String,
     val av0: String,
     val av1: String,
@@ -6513,7 +6515,7 @@ data class UpdateGovHydroFrancisCommand(
     val zsfc: String
 )
 
-data class DeleteGovHydroFrancisCommand(@TargetAggregateIdentifier  val govHydroFrancisId: java.util.UUID? = null)
+data class DeleteGovHydroFrancisCommand(@TargetAggregateIdentifier  val govHydroFrancisId: UUID? = null)
 
 // single association commands
 
@@ -6522,7 +6524,7 @@ data class DeleteGovHydroFrancisCommand(@TargetAggregateIdentifier  val govHydro
 
 // GovHydroIEEE0 Commands
 data class CreateGovHydroIEEE0Command(
-    @TargetAggregateIdentifier val govHydroIEEE0Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroIEEE0Id: UUID? = null,
     val k: String,
     val mwbase: String,
     val pmax: String,
@@ -6534,7 +6536,7 @@ data class CreateGovHydroIEEE0Command(
 )
 
 data class UpdateGovHydroIEEE0Command(
-    @TargetAggregateIdentifier val govHydroIEEE0Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroIEEE0Id: UUID? = null,
     val k: String,
     val mwbase: String,
     val pmax: String,
@@ -6545,7 +6547,7 @@ data class UpdateGovHydroIEEE0Command(
     val t4: String
 )
 
-data class DeleteGovHydroIEEE0Command(@TargetAggregateIdentifier  val govHydroIEEE0Id: java.util.UUID? = null)
+data class DeleteGovHydroIEEE0Command(@TargetAggregateIdentifier  val govHydroIEEE0Id: UUID? = null)
 
 // single association commands
 
@@ -6554,7 +6556,7 @@ data class DeleteGovHydroIEEE0Command(@TargetAggregateIdentifier  val govHydroIE
 
 // GovHydroIEEE2 Commands
 data class CreateGovHydroIEEE2Command(
-    @TargetAggregateIdentifier val govHydroIEEE2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroIEEE2Id: UUID? = null,
     val aturb: String,
     val bturb: String,
     val gv1: String,
@@ -6584,7 +6586,7 @@ data class CreateGovHydroIEEE2Command(
 )
 
 data class UpdateGovHydroIEEE2Command(
-    @TargetAggregateIdentifier val govHydroIEEE2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroIEEE2Id: UUID? = null,
     val aturb: String,
     val bturb: String,
     val gv1: String,
@@ -6613,7 +6615,7 @@ data class UpdateGovHydroIEEE2Command(
     val uo: String
 )
 
-data class DeleteGovHydroIEEE2Command(@TargetAggregateIdentifier  val govHydroIEEE2Id: java.util.UUID? = null)
+data class DeleteGovHydroIEEE2Command(@TargetAggregateIdentifier  val govHydroIEEE2Id: UUID? = null)
 
 // single association commands
 
@@ -6622,7 +6624,7 @@ data class DeleteGovHydroIEEE2Command(@TargetAggregateIdentifier  val govHydroIE
 
 // GovHydroPID Commands
 data class CreateGovHydroPIDCommand(
-    @TargetAggregateIdentifier val govHydroPIDId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroPIDId: UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6659,7 +6661,7 @@ data class CreateGovHydroPIDCommand(
 )
 
 data class UpdateGovHydroPIDCommand(
-    @TargetAggregateIdentifier val govHydroPIDId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroPIDId: UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6695,7 +6697,7 @@ data class UpdateGovHydroPIDCommand(
     val velop: String
 )
 
-data class DeleteGovHydroPIDCommand(@TargetAggregateIdentifier  val govHydroPIDId: java.util.UUID? = null)
+data class DeleteGovHydroPIDCommand(@TargetAggregateIdentifier  val govHydroPIDId: UUID? = null)
 
 // single association commands
 
@@ -6704,7 +6706,7 @@ data class DeleteGovHydroPIDCommand(@TargetAggregateIdentifier  val govHydroPIDI
 
 // GovHydroPID2 Commands
 data class CreateGovHydroPID2Command(
-    @TargetAggregateIdentifier val govHydroPID2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroPID2Id: UUID? = null,
     val atw: String,
     val d: String,
     val feedbackSignal: String,
@@ -6730,7 +6732,7 @@ data class CreateGovHydroPID2Command(
 )
 
 data class UpdateGovHydroPID2Command(
-    @TargetAggregateIdentifier val govHydroPID2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroPID2Id: UUID? = null,
     val atw: String,
     val d: String,
     val feedbackSignal: String,
@@ -6755,7 +6757,7 @@ data class UpdateGovHydroPID2Command(
     val velmin: String
 )
 
-data class DeleteGovHydroPID2Command(@TargetAggregateIdentifier  val govHydroPID2Id: java.util.UUID? = null)
+data class DeleteGovHydroPID2Command(@TargetAggregateIdentifier  val govHydroPID2Id: UUID? = null)
 
 // single association commands
 
@@ -6764,7 +6766,7 @@ data class DeleteGovHydroPID2Command(@TargetAggregateIdentifier  val govHydroPID
 
 // GovHydroPelton Commands
 data class CreateGovHydroPeltonCommand(
-    @TargetAggregateIdentifier val govHydroPeltonId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroPeltonId: UUID? = null,
     val av0: String,
     val av1: String,
     val bp: String,
@@ -6796,7 +6798,7 @@ data class CreateGovHydroPeltonCommand(
 )
 
 data class UpdateGovHydroPeltonCommand(
-    @TargetAggregateIdentifier val govHydroPeltonId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroPeltonId: UUID? = null,
     val av0: String,
     val av1: String,
     val bp: String,
@@ -6827,7 +6829,7 @@ data class UpdateGovHydroPeltonCommand(
     val zsfc: String
 )
 
-data class DeleteGovHydroPeltonCommand(@TargetAggregateIdentifier  val govHydroPeltonId: java.util.UUID? = null)
+data class DeleteGovHydroPeltonCommand(@TargetAggregateIdentifier  val govHydroPeltonId: UUID? = null)
 
 // single association commands
 
@@ -6836,7 +6838,7 @@ data class DeleteGovHydroPeltonCommand(@TargetAggregateIdentifier  val govHydroP
 
 // GovHydroR Commands
 data class CreateGovHydroRCommand(
-    @TargetAggregateIdentifier val govHydroRId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroRId: UUID? = null,
     val at: String,
     val db1: String,
     val db2: String,
@@ -6882,7 +6884,7 @@ data class CreateGovHydroRCommand(
 )
 
 data class UpdateGovHydroRCommand(
-    @TargetAggregateIdentifier val govHydroRId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroRId: UUID? = null,
     val at: String,
     val db1: String,
     val db2: String,
@@ -6927,7 +6929,7 @@ data class UpdateGovHydroRCommand(
     val velop: String
 )
 
-data class DeleteGovHydroRCommand(@TargetAggregateIdentifier  val govHydroRId: java.util.UUID? = null)
+data class DeleteGovHydroRCommand(@TargetAggregateIdentifier  val govHydroRId: UUID? = null)
 
 // single association commands
 
@@ -6936,7 +6938,7 @@ data class DeleteGovHydroRCommand(@TargetAggregateIdentifier  val govHydroRId: j
 
 // GovHydroWEH Commands
 data class CreateGovHydroWEHCommand(
-    @TargetAggregateIdentifier val govHydroWEHId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroWEHId: UUID? = null,
     val db: String,
     val dicn: String,
     val dpv: String,
@@ -6991,7 +6993,7 @@ data class CreateGovHydroWEHCommand(
 )
 
 data class UpdateGovHydroWEHCommand(
-    @TargetAggregateIdentifier val govHydroWEHId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroWEHId: UUID? = null,
     val db: String,
     val dicn: String,
     val dpv: String,
@@ -7045,7 +7047,7 @@ data class UpdateGovHydroWEHCommand(
     val tw: String
 )
 
-data class DeleteGovHydroWEHCommand(@TargetAggregateIdentifier  val govHydroWEHId: java.util.UUID? = null)
+data class DeleteGovHydroWEHCommand(@TargetAggregateIdentifier  val govHydroWEHId: UUID? = null)
 
 // single association commands
 
@@ -7054,7 +7056,7 @@ data class DeleteGovHydroWEHCommand(@TargetAggregateIdentifier  val govHydroWEHI
 
 // GovHydroWPID Commands
 data class CreateGovHydroWPIDCommand(
-    @TargetAggregateIdentifier val govHydroWPIDId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroWPIDId: UUID? = null,
     val d: String,
     val gatmax: String,
     val gatmin: String,
@@ -7080,7 +7082,7 @@ data class CreateGovHydroWPIDCommand(
 )
 
 data class UpdateGovHydroWPIDCommand(
-    @TargetAggregateIdentifier val govHydroWPIDId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govHydroWPIDId: UUID? = null,
     val d: String,
     val gatmax: String,
     val gatmin: String,
@@ -7105,7 +7107,7 @@ data class UpdateGovHydroWPIDCommand(
     val velmin: String
 )
 
-data class DeleteGovHydroWPIDCommand(@TargetAggregateIdentifier  val govHydroWPIDId: java.util.UUID? = null)
+data class DeleteGovHydroWPIDCommand(@TargetAggregateIdentifier  val govHydroWPIDId: UUID? = null)
 
 // single association commands
 
@@ -7114,7 +7116,7 @@ data class DeleteGovHydroWPIDCommand(@TargetAggregateIdentifier  val govHydroWPI
 
 // GovSteam0 Commands
 data class CreateGovSteam0Command(
-    @TargetAggregateIdentifier val govSteam0Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteam0Id: UUID? = null,
     val dt: String,
     val mwbase: String,
     val r: String,
@@ -7126,7 +7128,7 @@ data class CreateGovSteam0Command(
 )
 
 data class UpdateGovSteam0Command(
-    @TargetAggregateIdentifier val govSteam0Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteam0Id: UUID? = null,
     val dt: String,
     val mwbase: String,
     val r: String,
@@ -7137,7 +7139,7 @@ data class UpdateGovSteam0Command(
     val vmin: String
 )
 
-data class DeleteGovSteam0Command(@TargetAggregateIdentifier  val govSteam0Id: java.util.UUID? = null)
+data class DeleteGovSteam0Command(@TargetAggregateIdentifier  val govSteam0Id: UUID? = null)
 
 // single association commands
 
@@ -7146,7 +7148,7 @@ data class DeleteGovSteam0Command(@TargetAggregateIdentifier  val govSteam0Id: j
 
 // GovSteam1 Commands
 data class CreateGovSteam1Command(
-    @TargetAggregateIdentifier val govSteam1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteam1Id: UUID? = null,
     val db1: String,
     val db2: String,
     val eps: String,
@@ -7189,7 +7191,7 @@ data class CreateGovSteam1Command(
 )
 
 data class UpdateGovSteam1Command(
-    @TargetAggregateIdentifier val govSteam1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteam1Id: UUID? = null,
     val db1: String,
     val db2: String,
     val eps: String,
@@ -7231,7 +7233,7 @@ data class UpdateGovSteam1Command(
     val valve: String
 )
 
-data class DeleteGovSteam1Command(@TargetAggregateIdentifier  val govSteam1Id: java.util.UUID? = null)
+data class DeleteGovSteam1Command(@TargetAggregateIdentifier  val govSteam1Id: UUID? = null)
 
 // single association commands
 
@@ -7240,7 +7242,7 @@ data class DeleteGovSteam1Command(@TargetAggregateIdentifier  val govSteam1Id: j
 
 // GovSteam2 Commands
 data class CreateGovSteam2Command(
-    @TargetAggregateIdentifier val govSteam2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteam2Id: UUID? = null,
     val dbf: String,
     val k: String,
     val mnef: String,
@@ -7252,7 +7254,7 @@ data class CreateGovSteam2Command(
 )
 
 data class UpdateGovSteam2Command(
-    @TargetAggregateIdentifier val govSteam2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteam2Id: UUID? = null,
     val dbf: String,
     val k: String,
     val mnef: String,
@@ -7263,7 +7265,7 @@ data class UpdateGovSteam2Command(
     val t2: String
 )
 
-data class DeleteGovSteam2Command(@TargetAggregateIdentifier  val govSteam2Id: java.util.UUID? = null)
+data class DeleteGovSteam2Command(@TargetAggregateIdentifier  val govSteam2Id: UUID? = null)
 
 // single association commands
 
@@ -7272,7 +7274,7 @@ data class DeleteGovSteam2Command(@TargetAggregateIdentifier  val govSteam2Id: j
 
 // GovSteamCC Commands
 data class CreateGovSteamCCCommand(
-    @TargetAggregateIdentifier val govSteamCCId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamCCId: UUID? = null,
     val dhp: String,
     val dlp: String,
     val fhp: String,
@@ -7293,7 +7295,7 @@ data class CreateGovSteamCCCommand(
 )
 
 data class UpdateGovSteamCCCommand(
-    @TargetAggregateIdentifier val govSteamCCId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamCCId: UUID? = null,
     val dhp: String,
     val dlp: String,
     val fhp: String,
@@ -7313,7 +7315,7 @@ data class UpdateGovSteamCCCommand(
     val t5lp: String
 )
 
-data class DeleteGovSteamCCCommand(@TargetAggregateIdentifier  val govSteamCCId: java.util.UUID? = null)
+data class DeleteGovSteamCCCommand(@TargetAggregateIdentifier  val govSteamCCId: UUID? = null)
 
 // single association commands
 
@@ -7322,7 +7324,7 @@ data class DeleteGovSteamCCCommand(@TargetAggregateIdentifier  val govSteamCCId:
 
 // GovSteamEU Commands
 data class CreateGovSteamEUCommand(
-    @TargetAggregateIdentifier val govSteamEUId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamEUId: UUID? = null,
     val chc: String,
     val cho: String,
     val cic: String,
@@ -7361,7 +7363,7 @@ data class CreateGovSteamEUCommand(
 )
 
 data class UpdateGovSteamEUCommand(
-    @TargetAggregateIdentifier val govSteamEUId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamEUId: UUID? = null,
     val chc: String,
     val cho: String,
     val cic: String,
@@ -7399,7 +7401,7 @@ data class UpdateGovSteamEUCommand(
     val wwmin: String
 )
 
-data class DeleteGovSteamEUCommand(@TargetAggregateIdentifier  val govSteamEUId: java.util.UUID? = null)
+data class DeleteGovSteamEUCommand(@TargetAggregateIdentifier  val govSteamEUId: UUID? = null)
 
 // single association commands
 
@@ -7408,7 +7410,7 @@ data class DeleteGovSteamEUCommand(@TargetAggregateIdentifier  val govSteamEUId:
 
 // GovSteamFV2 Commands
 data class CreateGovSteamFV2Command(
-    @TargetAggregateIdentifier val govSteamFV2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamFV2Id: UUID? = null,
     val dt: String,
     val k: String,
     val mwbase: String,
@@ -7425,7 +7427,7 @@ data class CreateGovSteamFV2Command(
 )
 
 data class UpdateGovSteamFV2Command(
-    @TargetAggregateIdentifier val govSteamFV2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamFV2Id: UUID? = null,
     val dt: String,
     val k: String,
     val mwbase: String,
@@ -7441,7 +7443,7 @@ data class UpdateGovSteamFV2Command(
     val vmin: String
 )
 
-data class DeleteGovSteamFV2Command(@TargetAggregateIdentifier  val govSteamFV2Id: java.util.UUID? = null)
+data class DeleteGovSteamFV2Command(@TargetAggregateIdentifier  val govSteamFV2Id: UUID? = null)
 
 // single association commands
 
@@ -7450,7 +7452,7 @@ data class DeleteGovSteamFV2Command(@TargetAggregateIdentifier  val govSteamFV2I
 
 // GovSteamFV3 Commands
 data class CreateGovSteamFV3Command(
-    @TargetAggregateIdentifier val govSteamFV3Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamFV3Id: UUID? = null,
     val k: String,
     val k1: String,
     val k2: String,
@@ -7473,7 +7475,7 @@ data class CreateGovSteamFV3Command(
 )
 
 data class UpdateGovSteamFV3Command(
-    @TargetAggregateIdentifier val govSteamFV3Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamFV3Id: UUID? = null,
     val k: String,
     val k1: String,
     val k2: String,
@@ -7495,7 +7497,7 @@ data class UpdateGovSteamFV3Command(
     val uo: String
 )
 
-data class DeleteGovSteamFV3Command(@TargetAggregateIdentifier  val govSteamFV3Id: java.util.UUID? = null)
+data class DeleteGovSteamFV3Command(@TargetAggregateIdentifier  val govSteamFV3Id: UUID? = null)
 
 // single association commands
 
@@ -7504,7 +7506,7 @@ data class DeleteGovSteamFV3Command(@TargetAggregateIdentifier  val govSteamFV3I
 
 // GovSteamFV4 Commands
 data class CreateGovSteamFV4Command(
-    @TargetAggregateIdentifier val govSteamFV4Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamFV4Id: UUID? = null,
     val cpsmn: String,
     val cpsmx: String,
     val crmn: String,
@@ -7559,7 +7561,7 @@ data class CreateGovSteamFV4Command(
 )
 
 data class UpdateGovSteamFV4Command(
-    @TargetAggregateIdentifier val govSteamFV4Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamFV4Id: UUID? = null,
     val cpsmn: String,
     val cpsmx: String,
     val crmn: String,
@@ -7613,7 +7615,7 @@ data class UpdateGovSteamFV4Command(
     val ympmx: String
 )
 
-data class DeleteGovSteamFV4Command(@TargetAggregateIdentifier  val govSteamFV4Id: java.util.UUID? = null)
+data class DeleteGovSteamFV4Command(@TargetAggregateIdentifier  val govSteamFV4Id: UUID? = null)
 
 // single association commands
 
@@ -7622,7 +7624,7 @@ data class DeleteGovSteamFV4Command(@TargetAggregateIdentifier  val govSteamFV4I
 
 // GovSteamIEEE1 Commands
 data class CreateGovSteamIEEE1Command(
-    @TargetAggregateIdentifier val govSteamIEEE1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamIEEE1Id: UUID? = null,
     val k: String,
     val k1: String,
     val k2: String,
@@ -7647,7 +7649,7 @@ data class CreateGovSteamIEEE1Command(
 )
 
 data class UpdateGovSteamIEEE1Command(
-    @TargetAggregateIdentifier val govSteamIEEE1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamIEEE1Id: UUID? = null,
     val k: String,
     val k1: String,
     val k2: String,
@@ -7671,7 +7673,7 @@ data class UpdateGovSteamIEEE1Command(
     val uo: String
 )
 
-data class DeleteGovSteamIEEE1Command(@TargetAggregateIdentifier  val govSteamIEEE1Id: java.util.UUID? = null)
+data class DeleteGovSteamIEEE1Command(@TargetAggregateIdentifier  val govSteamIEEE1Id: UUID? = null)
 
 // single association commands
 
@@ -7680,7 +7682,7 @@ data class DeleteGovSteamIEEE1Command(@TargetAggregateIdentifier  val govSteamIE
 
 // GovSteamSGO Commands
 data class CreateGovSteamSGOCommand(
-    @TargetAggregateIdentifier val govSteamSGOId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamSGOId: UUID? = null,
     val k1: String,
     val k2: String,
     val k3: String,
@@ -7696,7 +7698,7 @@ data class CreateGovSteamSGOCommand(
 )
 
 data class UpdateGovSteamSGOCommand(
-    @TargetAggregateIdentifier val govSteamSGOId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val govSteamSGOId: UUID? = null,
     val k1: String,
     val k2: String,
     val k3: String,
@@ -7711,7 +7713,7 @@ data class UpdateGovSteamSGOCommand(
     val t6: String
 )
 
-data class DeleteGovSteamSGOCommand(@TargetAggregateIdentifier  val govSteamSGOId: java.util.UUID? = null)
+data class DeleteGovSteamSGOCommand(@TargetAggregateIdentifier  val govSteamSGOId: UUID? = null)
 
 // single association commands
 
@@ -7720,14 +7722,14 @@ data class DeleteGovSteamSGOCommand(@TargetAggregateIdentifier  val govSteamSGOI
 
 // GrossToNetActivePowerCurve Commands
 data class CreateGrossToNetActivePowerCurveCommand(
-    @TargetAggregateIdentifier  val grossToNetActivePowerCurveId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val grossToNetActivePowerCurveId: UUID? = null
 )
 
 data class UpdateGrossToNetActivePowerCurveCommand(
-    @TargetAggregateIdentifier  val grossToNetActivePowerCurveId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val grossToNetActivePowerCurveId: UUID? = null
 )
 
-data class DeleteGrossToNetActivePowerCurveCommand(@TargetAggregateIdentifier  val grossToNetActivePowerCurveId: java.util.UUID? = null)
+data class DeleteGrossToNetActivePowerCurveCommand(@TargetAggregateIdentifier  val grossToNetActivePowerCurveId: UUID? = null)
 
 // single association commands
 
@@ -7736,14 +7738,14 @@ data class DeleteGrossToNetActivePowerCurveCommand(@TargetAggregateIdentifier  v
 
 // Ground Commands
 data class CreateGroundCommand(
-    @TargetAggregateIdentifier  val groundId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val groundId: UUID? = null
 )
 
 data class UpdateGroundCommand(
-    @TargetAggregateIdentifier  val groundId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val groundId: UUID? = null
 )
 
-data class DeleteGroundCommand(@TargetAggregateIdentifier  val groundId: java.util.UUID? = null)
+data class DeleteGroundCommand(@TargetAggregateIdentifier  val groundId: UUID? = null)
 
 // single association commands
 
@@ -7752,14 +7754,14 @@ data class DeleteGroundCommand(@TargetAggregateIdentifier  val groundId: java.ut
 
 // GroundDisconnector Commands
 data class CreateGroundDisconnectorCommand(
-    @TargetAggregateIdentifier  val groundDisconnectorId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val groundDisconnectorId: UUID? = null
 )
 
 data class UpdateGroundDisconnectorCommand(
-    @TargetAggregateIdentifier  val groundDisconnectorId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val groundDisconnectorId: UUID? = null
 )
 
-data class DeleteGroundDisconnectorCommand(@TargetAggregateIdentifier  val groundDisconnectorId: java.util.UUID? = null)
+data class DeleteGroundDisconnectorCommand(@TargetAggregateIdentifier  val groundDisconnectorId: UUID? = null)
 
 // single association commands
 
@@ -7768,16 +7770,16 @@ data class DeleteGroundDisconnectorCommand(@TargetAggregateIdentifier  val groun
 
 // GroundingImpedance Commands
 data class CreateGroundingImpedanceCommand(
-    @TargetAggregateIdentifier val groundingImpedanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val groundingImpedanceId: UUID? = null,
     val x: String
 )
 
 data class UpdateGroundingImpedanceCommand(
-    @TargetAggregateIdentifier val groundingImpedanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val groundingImpedanceId: UUID? = null,
     val x: String
 )
 
-data class DeleteGroundingImpedanceCommand(@TargetAggregateIdentifier  val groundingImpedanceId: java.util.UUID? = null)
+data class DeleteGroundingImpedanceCommand(@TargetAggregateIdentifier  val groundingImpedanceId: UUID? = null)
 
 // single association commands
 
@@ -7786,16 +7788,16 @@ data class DeleteGroundingImpedanceCommand(@TargetAggregateIdentifier  val groun
 
 // HydroGeneratingUnit Commands
 data class CreateHydroGeneratingUnitCommand(
-    @TargetAggregateIdentifier val hydroGeneratingUnitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val hydroGeneratingUnitId: UUID? = null,
     val energyConversionCapability: String
 )
 
 data class UpdateHydroGeneratingUnitCommand(
-    @TargetAggregateIdentifier val hydroGeneratingUnitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val hydroGeneratingUnitId: UUID? = null,
     val energyConversionCapability: String
 )
 
-data class DeleteHydroGeneratingUnitCommand(@TargetAggregateIdentifier  val hydroGeneratingUnitId: java.util.UUID? = null)
+data class DeleteHydroGeneratingUnitCommand(@TargetAggregateIdentifier  val hydroGeneratingUnitId: UUID? = null)
 
 // single association commands
 
@@ -7804,16 +7806,16 @@ data class DeleteHydroGeneratingUnitCommand(@TargetAggregateIdentifier  val hydr
 
 // HydroPowerPlant Commands
 data class CreateHydroPowerPlantCommand(
-    @TargetAggregateIdentifier val hydroPowerPlantId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val hydroPowerPlantId: UUID? = null,
     val hydroPlantStorageType: String
 )
 
 data class UpdateHydroPowerPlantCommand(
-    @TargetAggregateIdentifier val hydroPowerPlantId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val hydroPowerPlantId: UUID? = null,
     val hydroPlantStorageType: String
 )
 
-data class DeleteHydroPowerPlantCommand(@TargetAggregateIdentifier  val hydroPowerPlantId: java.util.UUID? = null)
+data class DeleteHydroPowerPlantCommand(@TargetAggregateIdentifier  val hydroPowerPlantId: UUID? = null)
 
 // single association commands
 
@@ -7822,14 +7824,14 @@ data class DeleteHydroPowerPlantCommand(@TargetAggregateIdentifier  val hydroPow
 
 // HydroPump Commands
 data class CreateHydroPumpCommand(
-    @TargetAggregateIdentifier  val hydroPumpId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val hydroPumpId: UUID? = null
 )
 
 data class UpdateHydroPumpCommand(
-    @TargetAggregateIdentifier  val hydroPumpId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val hydroPumpId: UUID? = null
 )
 
-data class DeleteHydroPumpCommand(@TargetAggregateIdentifier  val hydroPumpId: java.util.UUID? = null)
+data class DeleteHydroPumpCommand(@TargetAggregateIdentifier  val hydroPumpId: UUID? = null)
 
 // single association commands
 
@@ -7838,7 +7840,7 @@ data class DeleteHydroPumpCommand(@TargetAggregateIdentifier  val hydroPumpId: j
 
 // IdentifiedObject Commands
 data class CreateIdentifiedObjectCommand(
-    @TargetAggregateIdentifier val identifiedObjectId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val identifiedObjectId: UUID? = null,
     val description: String,
     val energyIdentCodeEic: String,
     val mRID: String,
@@ -7847,7 +7849,7 @@ data class CreateIdentifiedObjectCommand(
 )
 
 data class UpdateIdentifiedObjectCommand(
-    @TargetAggregateIdentifier val identifiedObjectId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val identifiedObjectId: UUID? = null,
     val description: String,
     val energyIdentCodeEic: String,
     val mRID: String,
@@ -7855,7 +7857,7 @@ data class UpdateIdentifiedObjectCommand(
     val shortName: String
 )
 
-data class DeleteIdentifiedObjectCommand(@TargetAggregateIdentifier  val identifiedObjectId: java.util.UUID? = null)
+data class DeleteIdentifiedObjectCommand(@TargetAggregateIdentifier  val identifiedObjectId: UUID? = null)
 
 // single association commands
 
@@ -7864,20 +7866,20 @@ data class DeleteIdentifiedObjectCommand(@TargetAggregateIdentifier  val identif
 
 // Inductance Commands
 data class CreateInductanceCommand(
-    @TargetAggregateIdentifier val inductanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val inductanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateInductanceCommand(
-    @TargetAggregateIdentifier val inductanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val inductanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteInductanceCommand(@TargetAggregateIdentifier  val inductanceId: java.util.UUID? = null)
+data class DeleteInductanceCommand(@TargetAggregateIdentifier  val inductanceId: UUID? = null)
 
 // single association commands
 
@@ -7886,7 +7888,7 @@ data class DeleteInductanceCommand(@TargetAggregateIdentifier  val inductanceId:
 
 // InductancePerLength Commands
 data class CreateInductancePerLengthCommand(
-    @TargetAggregateIdentifier val inductancePerLengthId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val inductancePerLengthId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -7895,7 +7897,7 @@ data class CreateInductancePerLengthCommand(
 )
 
 data class UpdateInductancePerLengthCommand(
-    @TargetAggregateIdentifier val inductancePerLengthId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val inductancePerLengthId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -7903,7 +7905,7 @@ data class UpdateInductancePerLengthCommand(
     val value: String
 )
 
-data class DeleteInductancePerLengthCommand(@TargetAggregateIdentifier  val inductancePerLengthId: java.util.UUID? = null)
+data class DeleteInductancePerLengthCommand(@TargetAggregateIdentifier  val inductancePerLengthId: UUID? = null)
 
 // single association commands
 
@@ -7912,14 +7914,14 @@ data class DeleteInductancePerLengthCommand(@TargetAggregateIdentifier  val indu
 
 // IntegerProxy Commands
 data class CreateIntegerProxyCommand(
-    @TargetAggregateIdentifier  val integerProxyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val integerProxyId: UUID? = null
 )
 
 data class UpdateIntegerProxyCommand(
-    @TargetAggregateIdentifier  val integerProxyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val integerProxyId: UUID? = null
 )
 
-data class DeleteIntegerProxyCommand(@TargetAggregateIdentifier  val integerProxyId: java.util.UUID? = null)
+data class DeleteIntegerProxyCommand(@TargetAggregateIdentifier  val integerProxyId: UUID? = null)
 
 // single association commands
 
@@ -7928,14 +7930,14 @@ data class DeleteIntegerProxyCommand(@TargetAggregateIdentifier  val integerProx
 
 // Junction Commands
 data class CreateJunctionCommand(
-    @TargetAggregateIdentifier  val junctionId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val junctionId: UUID? = null
 )
 
 data class UpdateJunctionCommand(
-    @TargetAggregateIdentifier  val junctionId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val junctionId: UUID? = null
 )
 
-data class DeleteJunctionCommand(@TargetAggregateIdentifier  val junctionId: java.util.UUID? = null)
+data class DeleteJunctionCommand(@TargetAggregateIdentifier  val junctionId: UUID? = null)
 
 // single association commands
 
@@ -7944,20 +7946,20 @@ data class DeleteJunctionCommand(@TargetAggregateIdentifier  val junctionId: jav
 
 // Length Commands
 data class CreateLengthCommand(
-    @TargetAggregateIdentifier val lengthId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val lengthId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateLengthCommand(
-    @TargetAggregateIdentifier val lengthId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val lengthId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteLengthCommand(@TargetAggregateIdentifier  val lengthId: java.util.UUID? = null)
+data class DeleteLengthCommand(@TargetAggregateIdentifier  val lengthId: UUID? = null)
 
 // single association commands
 
@@ -7966,14 +7968,14 @@ data class DeleteLengthCommand(@TargetAggregateIdentifier  val lengthId: java.ut
 
 // Limit Commands
 data class CreateLimitCommand(
-    @TargetAggregateIdentifier  val limitId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val limitId: UUID? = null
 )
 
 data class UpdateLimitCommand(
-    @TargetAggregateIdentifier  val limitId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val limitId: UUID? = null
 )
 
-data class DeleteLimitCommand(@TargetAggregateIdentifier  val limitId: java.util.UUID? = null)
+data class DeleteLimitCommand(@TargetAggregateIdentifier  val limitId: UUID? = null)
 
 // single association commands
 
@@ -7982,16 +7984,16 @@ data class DeleteLimitCommand(@TargetAggregateIdentifier  val limitId: java.util
 
 // LimitSet Commands
 data class CreateLimitSetCommand(
-    @TargetAggregateIdentifier val limitSetId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val limitSetId: UUID? = null,
     val isPercentageLimits: String
 )
 
 data class UpdateLimitSetCommand(
-    @TargetAggregateIdentifier val limitSetId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val limitSetId: UUID? = null,
     val isPercentageLimits: String
 )
 
-data class DeleteLimitSetCommand(@TargetAggregateIdentifier  val limitSetId: java.util.UUID? = null)
+data class DeleteLimitSetCommand(@TargetAggregateIdentifier  val limitSetId: UUID? = null)
 
 // single association commands
 
@@ -8000,14 +8002,14 @@ data class DeleteLimitSetCommand(@TargetAggregateIdentifier  val limitSetId: jav
 
 // Line Commands
 data class CreateLineCommand(
-    @TargetAggregateIdentifier  val lineId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val lineId: UUID? = null
 )
 
 data class UpdateLineCommand(
-    @TargetAggregateIdentifier  val lineId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val lineId: UUID? = null
 )
 
-data class DeleteLineCommand(@TargetAggregateIdentifier  val lineId: java.util.UUID? = null)
+data class DeleteLineCommand(@TargetAggregateIdentifier  val lineId: UUID? = null)
 
 // single association commands
 
@@ -8016,7 +8018,7 @@ data class DeleteLineCommand(@TargetAggregateIdentifier  val lineId: java.util.U
 
 // LinearShuntCompensator Commands
 data class CreateLinearShuntCompensatorCommand(
-    @TargetAggregateIdentifier val linearShuntCompensatorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val linearShuntCompensatorId: UUID? = null,
     val b0PerSection: String,
     val bPerSection: String,
     val g0PerSection: String,
@@ -8024,14 +8026,14 @@ data class CreateLinearShuntCompensatorCommand(
 )
 
 data class UpdateLinearShuntCompensatorCommand(
-    @TargetAggregateIdentifier val linearShuntCompensatorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val linearShuntCompensatorId: UUID? = null,
     val b0PerSection: String,
     val bPerSection: String,
     val g0PerSection: String,
     val gPerSection: String
 )
 
-data class DeleteLinearShuntCompensatorCommand(@TargetAggregateIdentifier  val linearShuntCompensatorId: java.util.UUID? = null)
+data class DeleteLinearShuntCompensatorCommand(@TargetAggregateIdentifier  val linearShuntCompensatorId: UUID? = null)
 
 // single association commands
 
@@ -8040,14 +8042,14 @@ data class DeleteLinearShuntCompensatorCommand(@TargetAggregateIdentifier  val l
 
 // LoadAggregate Commands
 data class CreateLoadAggregateCommand(
-    @TargetAggregateIdentifier  val loadAggregateId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val loadAggregateId: UUID? = null
 )
 
 data class UpdateLoadAggregateCommand(
-    @TargetAggregateIdentifier  val loadAggregateId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val loadAggregateId: UUID? = null
 )
 
-data class DeleteLoadAggregateCommand(@TargetAggregateIdentifier  val loadAggregateId: java.util.UUID? = null)
+data class DeleteLoadAggregateCommand(@TargetAggregateIdentifier  val loadAggregateId: UUID? = null)
 
 // single association commands
 
@@ -8056,14 +8058,14 @@ data class DeleteLoadAggregateCommand(@TargetAggregateIdentifier  val loadAggreg
 
 // LoadArea Commands
 data class CreateLoadAreaCommand(
-    @TargetAggregateIdentifier  val loadAreaId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val loadAreaId: UUID? = null
 )
 
 data class UpdateLoadAreaCommand(
-    @TargetAggregateIdentifier  val loadAreaId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val loadAreaId: UUID? = null
 )
 
-data class DeleteLoadAreaCommand(@TargetAggregateIdentifier  val loadAreaId: java.util.UUID? = null)
+data class DeleteLoadAreaCommand(@TargetAggregateIdentifier  val loadAreaId: UUID? = null)
 
 // single association commands
 
@@ -8072,14 +8074,14 @@ data class DeleteLoadAreaCommand(@TargetAggregateIdentifier  val loadAreaId: jav
 
 // LoadBreakSwitch Commands
 data class CreateLoadBreakSwitchCommand(
-    @TargetAggregateIdentifier  val loadBreakSwitchId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val loadBreakSwitchId: UUID? = null
 )
 
 data class UpdateLoadBreakSwitchCommand(
-    @TargetAggregateIdentifier  val loadBreakSwitchId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val loadBreakSwitchId: UUID? = null
 )
 
-data class DeleteLoadBreakSwitchCommand(@TargetAggregateIdentifier  val loadBreakSwitchId: java.util.UUID? = null)
+data class DeleteLoadBreakSwitchCommand(@TargetAggregateIdentifier  val loadBreakSwitchId: UUID? = null)
 
 // single association commands
 
@@ -8088,7 +8090,7 @@ data class DeleteLoadBreakSwitchCommand(@TargetAggregateIdentifier  val loadBrea
 
 // LoadComposite Commands
 data class CreateLoadCompositeCommand(
-    @TargetAggregateIdentifier val loadCompositeId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val loadCompositeId: UUID? = null,
     val epfd: String,
     val epfs: String,
     val epvd: String,
@@ -8103,7 +8105,7 @@ data class CreateLoadCompositeCommand(
 )
 
 data class UpdateLoadCompositeCommand(
-    @TargetAggregateIdentifier val loadCompositeId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val loadCompositeId: UUID? = null,
     val epfd: String,
     val epfs: String,
     val epvd: String,
@@ -8117,7 +8119,7 @@ data class UpdateLoadCompositeCommand(
     val pfrac: String
 )
 
-data class DeleteLoadCompositeCommand(@TargetAggregateIdentifier  val loadCompositeId: java.util.UUID? = null)
+data class DeleteLoadCompositeCommand(@TargetAggregateIdentifier  val loadCompositeId: UUID? = null)
 
 // single association commands
 
@@ -8126,14 +8128,14 @@ data class DeleteLoadCompositeCommand(@TargetAggregateIdentifier  val loadCompos
 
 // LoadDynamics Commands
 data class CreateLoadDynamicsCommand(
-    @TargetAggregateIdentifier  val loadDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val loadDynamicsId: UUID? = null
 )
 
 data class UpdateLoadDynamicsCommand(
-    @TargetAggregateIdentifier  val loadDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val loadDynamicsId: UUID? = null
 )
 
-data class DeleteLoadDynamicsCommand(@TargetAggregateIdentifier  val loadDynamicsId: java.util.UUID? = null)
+data class DeleteLoadDynamicsCommand(@TargetAggregateIdentifier  val loadDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -8142,7 +8144,7 @@ data class DeleteLoadDynamicsCommand(@TargetAggregateIdentifier  val loadDynamic
 
 // LoadGenericNonLinear Commands
 data class CreateLoadGenericNonLinearCommand(
-    @TargetAggregateIdentifier val loadGenericNonLinearId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val loadGenericNonLinearId: UUID? = null,
     val bs: String,
     val bt: String,
     val genericNonLinearLoadModelType: String,
@@ -8155,7 +8157,7 @@ data class CreateLoadGenericNonLinearCommand(
 )
 
 data class UpdateLoadGenericNonLinearCommand(
-    @TargetAggregateIdentifier val loadGenericNonLinearId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val loadGenericNonLinearId: UUID? = null,
     val bs: String,
     val bt: String,
     val genericNonLinearLoadModelType: String,
@@ -8167,7 +8169,7 @@ data class UpdateLoadGenericNonLinearCommand(
     val tq: String
 )
 
-data class DeleteLoadGenericNonLinearCommand(@TargetAggregateIdentifier  val loadGenericNonLinearId: java.util.UUID? = null)
+data class DeleteLoadGenericNonLinearCommand(@TargetAggregateIdentifier  val loadGenericNonLinearId: UUID? = null)
 
 // single association commands
 
@@ -8176,14 +8178,14 @@ data class DeleteLoadGenericNonLinearCommand(@TargetAggregateIdentifier  val loa
 
 // LoadGroup Commands
 data class CreateLoadGroupCommand(
-    @TargetAggregateIdentifier  val loadGroupId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val loadGroupId: UUID? = null
 )
 
 data class UpdateLoadGroupCommand(
-    @TargetAggregateIdentifier  val loadGroupId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val loadGroupId: UUID? = null
 )
 
-data class DeleteLoadGroupCommand(@TargetAggregateIdentifier  val loadGroupId: java.util.UUID? = null)
+data class DeleteLoadGroupCommand(@TargetAggregateIdentifier  val loadGroupId: UUID? = null)
 
 // single association commands
 
@@ -8192,7 +8194,7 @@ data class DeleteLoadGroupCommand(@TargetAggregateIdentifier  val loadGroupId: j
 
 // LoadMotor Commands
 data class CreateLoadMotorCommand(
-    @TargetAggregateIdentifier val loadMotorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val loadMotorId: UUID? = null,
     val d: String,
     val h: String,
     val lfac: String,
@@ -8209,7 +8211,7 @@ data class CreateLoadMotorCommand(
 )
 
 data class UpdateLoadMotorCommand(
-    @TargetAggregateIdentifier val loadMotorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val loadMotorId: UUID? = null,
     val d: String,
     val h: String,
     val lfac: String,
@@ -8225,7 +8227,7 @@ data class UpdateLoadMotorCommand(
     val vt: String
 )
 
-data class DeleteLoadMotorCommand(@TargetAggregateIdentifier  val loadMotorId: java.util.UUID? = null)
+data class DeleteLoadMotorCommand(@TargetAggregateIdentifier  val loadMotorId: UUID? = null)
 
 // single association commands
 
@@ -8234,7 +8236,7 @@ data class DeleteLoadMotorCommand(@TargetAggregateIdentifier  val loadMotorId: j
 
 // LoadResponseCharacteristic Commands
 data class CreateLoadResponseCharacteristicCommand(
-    @TargetAggregateIdentifier val loadResponseCharacteristicId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val loadResponseCharacteristicId: UUID? = null,
     val exponentModel: String,
     val pConstantCurrent: String,
     val pConstantImpedance: String,
@@ -8249,7 +8251,7 @@ data class CreateLoadResponseCharacteristicCommand(
 )
 
 data class UpdateLoadResponseCharacteristicCommand(
-    @TargetAggregateIdentifier val loadResponseCharacteristicId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val loadResponseCharacteristicId: UUID? = null,
     val exponentModel: String,
     val pConstantCurrent: String,
     val pConstantImpedance: String,
@@ -8263,7 +8265,7 @@ data class UpdateLoadResponseCharacteristicCommand(
     val qVoltageExponent: String
 )
 
-data class DeleteLoadResponseCharacteristicCommand(@TargetAggregateIdentifier  val loadResponseCharacteristicId: java.util.UUID? = null)
+data class DeleteLoadResponseCharacteristicCommand(@TargetAggregateIdentifier  val loadResponseCharacteristicId: UUID? = null)
 
 // single association commands
 
@@ -8272,7 +8274,7 @@ data class DeleteLoadResponseCharacteristicCommand(@TargetAggregateIdentifier  v
 
 // LoadStatic Commands
 data class CreateLoadStaticCommand(
-    @TargetAggregateIdentifier val loadStaticId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val loadStaticId: UUID? = null,
     val ep1: String,
     val ep2: String,
     val ep3: String,
@@ -8293,7 +8295,7 @@ data class CreateLoadStaticCommand(
 )
 
 data class UpdateLoadStaticCommand(
-    @TargetAggregateIdentifier val loadStaticId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val loadStaticId: UUID? = null,
     val ep1: String,
     val ep2: String,
     val ep3: String,
@@ -8313,7 +8315,7 @@ data class UpdateLoadStaticCommand(
     val staticLoadModelType: String
 )
 
-data class DeleteLoadStaticCommand(@TargetAggregateIdentifier  val loadStaticId: java.util.UUID? = null)
+data class DeleteLoadStaticCommand(@TargetAggregateIdentifier  val loadStaticId: UUID? = null)
 
 // single association commands
 
@@ -8322,16 +8324,16 @@ data class DeleteLoadStaticCommand(@TargetAggregateIdentifier  val loadStaticId:
 
 // LoadUserDefined Commands
 data class CreateLoadUserDefinedCommand(
-    @TargetAggregateIdentifier val loadUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val loadUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateLoadUserDefinedCommand(
-    @TargetAggregateIdentifier val loadUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val loadUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteLoadUserDefinedCommand(@TargetAggregateIdentifier  val loadUserDefinedId: java.util.UUID? = null)
+data class DeleteLoadUserDefinedCommand(@TargetAggregateIdentifier  val loadUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -8340,14 +8342,14 @@ data class DeleteLoadUserDefinedCommand(@TargetAggregateIdentifier  val loadUser
 
 // Location Commands
 data class CreateLocationCommand(
-    @TargetAggregateIdentifier  val locationId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val locationId: UUID? = null
 )
 
 data class UpdateLocationCommand(
-    @TargetAggregateIdentifier  val locationId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val locationId: UUID? = null
 )
 
-data class DeleteLocationCommand(@TargetAggregateIdentifier  val locationId: java.util.UUID? = null)
+data class DeleteLocationCommand(@TargetAggregateIdentifier  val locationId: UUID? = null)
 
 // single association commands
 
@@ -8356,7 +8358,7 @@ data class DeleteLocationCommand(@TargetAggregateIdentifier  val locationId: jav
 
 // Measurement Commands
 data class CreateMeasurementCommand(
-    @TargetAggregateIdentifier val measurementId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val measurementId: UUID? = null,
     val measurementType: String,
     val phases: String,
     val unitMultiplier: String,
@@ -8364,14 +8366,14 @@ data class CreateMeasurementCommand(
 )
 
 data class UpdateMeasurementCommand(
-    @TargetAggregateIdentifier val measurementId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val measurementId: UUID? = null,
     val measurementType: String,
     val phases: String,
     val unitMultiplier: String,
     val unitSymbol: String
 )
 
-data class DeleteMeasurementCommand(@TargetAggregateIdentifier  val measurementId: java.util.UUID? = null)
+data class DeleteMeasurementCommand(@TargetAggregateIdentifier  val measurementId: UUID? = null)
 
 // single association commands
 
@@ -8380,18 +8382,18 @@ data class DeleteMeasurementCommand(@TargetAggregateIdentifier  val measurementI
 
 // MeasurementValue Commands
 data class CreateMeasurementValueCommand(
-    @TargetAggregateIdentifier val measurementValueId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val measurementValueId: UUID? = null,
     val sensorAccuracy: String,
     val timeStamp: String
 )
 
 data class UpdateMeasurementValueCommand(
-    @TargetAggregateIdentifier val measurementValueId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val measurementValueId: UUID? = null,
     val sensorAccuracy: String,
     val timeStamp: String
 )
 
-data class DeleteMeasurementValueCommand(@TargetAggregateIdentifier  val measurementValueId: java.util.UUID? = null)
+data class DeleteMeasurementValueCommand(@TargetAggregateIdentifier  val measurementValueId: UUID? = null)
 
 // single association commands
 
@@ -8400,14 +8402,14 @@ data class DeleteMeasurementValueCommand(@TargetAggregateIdentifier  val measure
 
 // MeasurementValueQuality Commands
 data class CreateMeasurementValueQualityCommand(
-    @TargetAggregateIdentifier  val measurementValueQualityId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val measurementValueQualityId: UUID? = null
 )
 
 data class UpdateMeasurementValueQualityCommand(
-    @TargetAggregateIdentifier  val measurementValueQualityId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val measurementValueQualityId: UUID? = null
 )
 
-data class DeleteMeasurementValueQualityCommand(@TargetAggregateIdentifier  val measurementValueQualityId: java.util.UUID? = null)
+data class DeleteMeasurementValueQualityCommand(@TargetAggregateIdentifier  val measurementValueQualityId: UUID? = null)
 
 // single association commands
 
@@ -8416,14 +8418,14 @@ data class DeleteMeasurementValueQualityCommand(@TargetAggregateIdentifier  val 
 
 // MeasurementValueSource Commands
 data class CreateMeasurementValueSourceCommand(
-    @TargetAggregateIdentifier  val measurementValueSourceId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val measurementValueSourceId: UUID? = null
 )
 
 data class UpdateMeasurementValueSourceCommand(
-    @TargetAggregateIdentifier  val measurementValueSourceId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val measurementValueSourceId: UUID? = null
 )
 
-data class DeleteMeasurementValueSourceCommand(@TargetAggregateIdentifier  val measurementValueSourceId: java.util.UUID? = null)
+data class DeleteMeasurementValueSourceCommand(@TargetAggregateIdentifier  val measurementValueSourceId: UUID? = null)
 
 // single association commands
 
@@ -8432,7 +8434,7 @@ data class DeleteMeasurementValueSourceCommand(@TargetAggregateIdentifier  val m
 
 // MechLoad1 Commands
 data class CreateMechLoad1Command(
-    @TargetAggregateIdentifier val mechLoad1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val mechLoad1Id: UUID? = null,
     val a: String,
     val b: String,
     val d: String,
@@ -8440,14 +8442,14 @@ data class CreateMechLoad1Command(
 )
 
 data class UpdateMechLoad1Command(
-    @TargetAggregateIdentifier val mechLoad1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val mechLoad1Id: UUID? = null,
     val a: String,
     val b: String,
     val d: String,
     val e: String
 )
 
-data class DeleteMechLoad1Command(@TargetAggregateIdentifier  val mechLoad1Id: java.util.UUID? = null)
+data class DeleteMechLoad1Command(@TargetAggregateIdentifier  val mechLoad1Id: UUID? = null)
 
 // single association commands
 
@@ -8456,14 +8458,14 @@ data class DeleteMechLoad1Command(@TargetAggregateIdentifier  val mechLoad1Id: j
 
 // MechanicalLoadDynamics Commands
 data class CreateMechanicalLoadDynamicsCommand(
-    @TargetAggregateIdentifier  val mechanicalLoadDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val mechanicalLoadDynamicsId: UUID? = null
 )
 
 data class UpdateMechanicalLoadDynamicsCommand(
-    @TargetAggregateIdentifier  val mechanicalLoadDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val mechanicalLoadDynamicsId: UUID? = null
 )
 
-data class DeleteMechanicalLoadDynamicsCommand(@TargetAggregateIdentifier  val mechanicalLoadDynamicsId: java.util.UUID? = null)
+data class DeleteMechanicalLoadDynamicsCommand(@TargetAggregateIdentifier  val mechanicalLoadDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -8472,16 +8474,16 @@ data class DeleteMechanicalLoadDynamicsCommand(@TargetAggregateIdentifier  val m
 
 // MechanicalLoadUserDefined Commands
 data class CreateMechanicalLoadUserDefinedCommand(
-    @TargetAggregateIdentifier val mechanicalLoadUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val mechanicalLoadUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateMechanicalLoadUserDefinedCommand(
-    @TargetAggregateIdentifier val mechanicalLoadUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val mechanicalLoadUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteMechanicalLoadUserDefinedCommand(@TargetAggregateIdentifier  val mechanicalLoadUserDefinedId: java.util.UUID? = null)
+data class DeleteMechanicalLoadUserDefinedCommand(@TargetAggregateIdentifier  val mechanicalLoadUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -8490,20 +8492,20 @@ data class DeleteMechanicalLoadUserDefinedCommand(@TargetAggregateIdentifier  va
 
 // Money Commands
 data class CreateMoneyCommand(
-    @TargetAggregateIdentifier val moneyId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val moneyId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateMoneyCommand(
-    @TargetAggregateIdentifier val moneyId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val moneyId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteMoneyCommand(@TargetAggregateIdentifier  val moneyId: java.util.UUID? = null)
+data class DeleteMoneyCommand(@TargetAggregateIdentifier  val moneyId: UUID? = null)
 
 // single association commands
 
@@ -8512,14 +8514,14 @@ data class DeleteMoneyCommand(@TargetAggregateIdentifier  val moneyId: java.util
 
 // MonthDay Commands
 data class CreateMonthDayCommand(
-    @TargetAggregateIdentifier  val monthDayId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val monthDayId: UUID? = null
 )
 
 data class UpdateMonthDayCommand(
-    @TargetAggregateIdentifier  val monthDayId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val monthDayId: UUID? = null
 )
 
-data class DeleteMonthDayCommand(@TargetAggregateIdentifier  val monthDayId: java.util.UUID? = null)
+data class DeleteMonthDayCommand(@TargetAggregateIdentifier  val monthDayId: UUID? = null)
 
 // single association commands
 
@@ -8528,18 +8530,18 @@ data class DeleteMonthDayCommand(@TargetAggregateIdentifier  val monthDayId: jav
 
 // MonthDayInterval Commands
 data class CreateMonthDayIntervalCommand(
-    @TargetAggregateIdentifier val monthDayIntervalId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val monthDayIntervalId: UUID? = null,
     val end: String,
     val start: String
 )
 
 data class UpdateMonthDayIntervalCommand(
-    @TargetAggregateIdentifier val monthDayIntervalId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val monthDayIntervalId: UUID? = null,
     val end: String,
     val start: String
 )
 
-data class DeleteMonthDayIntervalCommand(@TargetAggregateIdentifier  val monthDayIntervalId: java.util.UUID? = null)
+data class DeleteMonthDayIntervalCommand(@TargetAggregateIdentifier  val monthDayIntervalId: UUID? = null)
 
 // single association commands
 
@@ -8548,7 +8550,7 @@ data class DeleteMonthDayIntervalCommand(@TargetAggregateIdentifier  val monthDa
 
 // MutualCoupling Commands
 data class CreateMutualCouplingCommand(
-    @TargetAggregateIdentifier val mutualCouplingId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val mutualCouplingId: UUID? = null,
     val b0ch: String,
     val distance11: String,
     val distance12: String,
@@ -8560,7 +8562,7 @@ data class CreateMutualCouplingCommand(
 )
 
 data class UpdateMutualCouplingCommand(
-    @TargetAggregateIdentifier val mutualCouplingId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val mutualCouplingId: UUID? = null,
     val b0ch: String,
     val distance11: String,
     val distance12: String,
@@ -8571,7 +8573,7 @@ data class UpdateMutualCouplingCommand(
     val x0: String
 )
 
-data class DeleteMutualCouplingCommand(@TargetAggregateIdentifier  val mutualCouplingId: java.util.UUID? = null)
+data class DeleteMutualCouplingCommand(@TargetAggregateIdentifier  val mutualCouplingId: UUID? = null)
 
 // single association commands
 
@@ -8580,14 +8582,14 @@ data class DeleteMutualCouplingCommand(@TargetAggregateIdentifier  val mutualCou
 
 // NonConformLoad Commands
 data class CreateNonConformLoadCommand(
-    @TargetAggregateIdentifier  val nonConformLoadId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val nonConformLoadId: UUID? = null
 )
 
 data class UpdateNonConformLoadCommand(
-    @TargetAggregateIdentifier  val nonConformLoadId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val nonConformLoadId: UUID? = null
 )
 
-data class DeleteNonConformLoadCommand(@TargetAggregateIdentifier  val nonConformLoadId: java.util.UUID? = null)
+data class DeleteNonConformLoadCommand(@TargetAggregateIdentifier  val nonConformLoadId: UUID? = null)
 
 // single association commands
 
@@ -8596,14 +8598,14 @@ data class DeleteNonConformLoadCommand(@TargetAggregateIdentifier  val nonConfor
 
 // NonConformLoadGroup Commands
 data class CreateNonConformLoadGroupCommand(
-    @TargetAggregateIdentifier  val nonConformLoadGroupId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val nonConformLoadGroupId: UUID? = null
 )
 
 data class UpdateNonConformLoadGroupCommand(
-    @TargetAggregateIdentifier  val nonConformLoadGroupId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val nonConformLoadGroupId: UUID? = null
 )
 
-data class DeleteNonConformLoadGroupCommand(@TargetAggregateIdentifier  val nonConformLoadGroupId: java.util.UUID? = null)
+data class DeleteNonConformLoadGroupCommand(@TargetAggregateIdentifier  val nonConformLoadGroupId: UUID? = null)
 
 // single association commands
 
@@ -8612,14 +8614,14 @@ data class DeleteNonConformLoadGroupCommand(@TargetAggregateIdentifier  val nonC
 
 // NonConformLoadSchedule Commands
 data class CreateNonConformLoadScheduleCommand(
-    @TargetAggregateIdentifier  val nonConformLoadScheduleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val nonConformLoadScheduleId: UUID? = null
 )
 
 data class UpdateNonConformLoadScheduleCommand(
-    @TargetAggregateIdentifier  val nonConformLoadScheduleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val nonConformLoadScheduleId: UUID? = null
 )
 
-data class DeleteNonConformLoadScheduleCommand(@TargetAggregateIdentifier  val nonConformLoadScheduleId: java.util.UUID? = null)
+data class DeleteNonConformLoadScheduleCommand(@TargetAggregateIdentifier  val nonConformLoadScheduleId: UUID? = null)
 
 // single association commands
 
@@ -8628,14 +8630,14 @@ data class DeleteNonConformLoadScheduleCommand(@TargetAggregateIdentifier  val n
 
 // NonlinearShuntCompensator Commands
 data class CreateNonlinearShuntCompensatorCommand(
-    @TargetAggregateIdentifier  val nonlinearShuntCompensatorId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val nonlinearShuntCompensatorId: UUID? = null
 )
 
 data class UpdateNonlinearShuntCompensatorCommand(
-    @TargetAggregateIdentifier  val nonlinearShuntCompensatorId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val nonlinearShuntCompensatorId: UUID? = null
 )
 
-data class DeleteNonlinearShuntCompensatorCommand(@TargetAggregateIdentifier  val nonlinearShuntCompensatorId: java.util.UUID? = null)
+data class DeleteNonlinearShuntCompensatorCommand(@TargetAggregateIdentifier  val nonlinearShuntCompensatorId: UUID? = null)
 
 // single association commands
 
@@ -8644,7 +8646,7 @@ data class DeleteNonlinearShuntCompensatorCommand(@TargetAggregateIdentifier  va
 
 // NonlinearShuntCompensatorPoint Commands
 data class CreateNonlinearShuntCompensatorPointCommand(
-    @TargetAggregateIdentifier val nonlinearShuntCompensatorPointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val nonlinearShuntCompensatorPointId: UUID? = null,
     val b: String,
     val b0: String,
     val g: String,
@@ -8653,7 +8655,7 @@ data class CreateNonlinearShuntCompensatorPointCommand(
 )
 
 data class UpdateNonlinearShuntCompensatorPointCommand(
-    @TargetAggregateIdentifier val nonlinearShuntCompensatorPointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val nonlinearShuntCompensatorPointId: UUID? = null,
     val b: String,
     val b0: String,
     val g: String,
@@ -8661,7 +8663,7 @@ data class UpdateNonlinearShuntCompensatorPointCommand(
     val sectionNumber: String
 )
 
-data class DeleteNonlinearShuntCompensatorPointCommand(@TargetAggregateIdentifier  val nonlinearShuntCompensatorPointId: java.util.UUID? = null)
+data class DeleteNonlinearShuntCompensatorPointCommand(@TargetAggregateIdentifier  val nonlinearShuntCompensatorPointId: UUID? = null)
 
 // single association commands
 
@@ -8670,14 +8672,14 @@ data class DeleteNonlinearShuntCompensatorPointCommand(@TargetAggregateIdentifie
 
 // NuclearGeneratingUnit Commands
 data class CreateNuclearGeneratingUnitCommand(
-    @TargetAggregateIdentifier  val nuclearGeneratingUnitId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val nuclearGeneratingUnitId: UUID? = null
 )
 
 data class UpdateNuclearGeneratingUnitCommand(
-    @TargetAggregateIdentifier  val nuclearGeneratingUnitId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val nuclearGeneratingUnitId: UUID? = null
 )
 
-data class DeleteNuclearGeneratingUnitCommand(@TargetAggregateIdentifier  val nuclearGeneratingUnitId: java.util.UUID? = null)
+data class DeleteNuclearGeneratingUnitCommand(@TargetAggregateIdentifier  val nuclearGeneratingUnitId: UUID? = null)
 
 // single association commands
 
@@ -8686,14 +8688,14 @@ data class DeleteNuclearGeneratingUnitCommand(@TargetAggregateIdentifier  val nu
 
 // OperationalLimit Commands
 data class CreateOperationalLimitCommand(
-    @TargetAggregateIdentifier  val operationalLimitId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val operationalLimitId: UUID? = null
 )
 
 data class UpdateOperationalLimitCommand(
-    @TargetAggregateIdentifier  val operationalLimitId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val operationalLimitId: UUID? = null
 )
 
-data class DeleteOperationalLimitCommand(@TargetAggregateIdentifier  val operationalLimitId: java.util.UUID? = null)
+data class DeleteOperationalLimitCommand(@TargetAggregateIdentifier  val operationalLimitId: UUID? = null)
 
 // single association commands
 
@@ -8702,14 +8704,14 @@ data class DeleteOperationalLimitCommand(@TargetAggregateIdentifier  val operati
 
 // OperationalLimitSet Commands
 data class CreateOperationalLimitSetCommand(
-    @TargetAggregateIdentifier  val operationalLimitSetId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val operationalLimitSetId: UUID? = null
 )
 
 data class UpdateOperationalLimitSetCommand(
-    @TargetAggregateIdentifier  val operationalLimitSetId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val operationalLimitSetId: UUID? = null
 )
 
-data class DeleteOperationalLimitSetCommand(@TargetAggregateIdentifier  val operationalLimitSetId: java.util.UUID? = null)
+data class DeleteOperationalLimitSetCommand(@TargetAggregateIdentifier  val operationalLimitSetId: UUID? = null)
 
 // single association commands
 
@@ -8718,20 +8720,20 @@ data class DeleteOperationalLimitSetCommand(@TargetAggregateIdentifier  val oper
 
 // OperationalLimitType Commands
 data class CreateOperationalLimitTypeCommand(
-    @TargetAggregateIdentifier val operationalLimitTypeId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val operationalLimitTypeId: UUID? = null,
     val acceptableDuration: String,
     val direction: String,
     val limitType: String
 )
 
 data class UpdateOperationalLimitTypeCommand(
-    @TargetAggregateIdentifier val operationalLimitTypeId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val operationalLimitTypeId: UUID? = null,
     val acceptableDuration: String,
     val direction: String,
     val limitType: String
 )
 
-data class DeleteOperationalLimitTypeCommand(@TargetAggregateIdentifier  val operationalLimitTypeId: java.util.UUID? = null)
+data class DeleteOperationalLimitTypeCommand(@TargetAggregateIdentifier  val operationalLimitTypeId: UUID? = null)
 
 // single association commands
 
@@ -8740,7 +8742,7 @@ data class DeleteOperationalLimitTypeCommand(@TargetAggregateIdentifier  val ope
 
 // OverexcLim2 Commands
 data class CreateOverexcLim2Command(
-    @TargetAggregateIdentifier val overexcLim2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val overexcLim2Id: UUID? = null,
     val ifdlim: String,
     val koi: String,
     val voimax: String,
@@ -8748,14 +8750,14 @@ data class CreateOverexcLim2Command(
 )
 
 data class UpdateOverexcLim2Command(
-    @TargetAggregateIdentifier val overexcLim2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val overexcLim2Id: UUID? = null,
     val ifdlim: String,
     val koi: String,
     val voimax: String,
     val voimin: String
 )
 
-data class DeleteOverexcLim2Command(@TargetAggregateIdentifier  val overexcLim2Id: java.util.UUID? = null)
+data class DeleteOverexcLim2Command(@TargetAggregateIdentifier  val overexcLim2Id: UUID? = null)
 
 // single association commands
 
@@ -8764,7 +8766,7 @@ data class DeleteOverexcLim2Command(@TargetAggregateIdentifier  val overexcLim2I
 
 // OverexcLimIEEE Commands
 data class CreateOverexcLimIEEECommand(
-    @TargetAggregateIdentifier val overexcLimIEEEId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val overexcLimIEEEId: UUID? = null,
     val hyst: String,
     val ifdlim: String,
     val ifdmax: String,
@@ -8774,7 +8776,7 @@ data class CreateOverexcLimIEEECommand(
 )
 
 data class UpdateOverexcLimIEEECommand(
-    @TargetAggregateIdentifier val overexcLimIEEEId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val overexcLimIEEEId: UUID? = null,
     val hyst: String,
     val ifdlim: String,
     val ifdmax: String,
@@ -8783,7 +8785,7 @@ data class UpdateOverexcLimIEEECommand(
     val kramp: String
 )
 
-data class DeleteOverexcLimIEEECommand(@TargetAggregateIdentifier  val overexcLimIEEEId: java.util.UUID? = null)
+data class DeleteOverexcLimIEEECommand(@TargetAggregateIdentifier  val overexcLimIEEEId: UUID? = null)
 
 // single association commands
 
@@ -8792,7 +8794,7 @@ data class DeleteOverexcLimIEEECommand(@TargetAggregateIdentifier  val overexcLi
 
 // OverexcLimX1 Commands
 data class CreateOverexcLimX1Command(
-    @TargetAggregateIdentifier val overexcLimX1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val overexcLimX1Id: UUID? = null,
     val efd1: String,
     val efd2: String,
     val efd3: String,
@@ -8806,7 +8808,7 @@ data class CreateOverexcLimX1Command(
 )
 
 data class UpdateOverexcLimX1Command(
-    @TargetAggregateIdentifier val overexcLimX1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val overexcLimX1Id: UUID? = null,
     val efd1: String,
     val efd2: String,
     val efd3: String,
@@ -8819,7 +8821,7 @@ data class UpdateOverexcLimX1Command(
     val vlow: String
 )
 
-data class DeleteOverexcLimX1Command(@TargetAggregateIdentifier  val overexcLimX1Id: java.util.UUID? = null)
+data class DeleteOverexcLimX1Command(@TargetAggregateIdentifier  val overexcLimX1Id: UUID? = null)
 
 // single association commands
 
@@ -8828,7 +8830,7 @@ data class DeleteOverexcLimX1Command(@TargetAggregateIdentifier  val overexcLimX
 
 // OverexcLimX2 Commands
 data class CreateOverexcLimX2Command(
-    @TargetAggregateIdentifier val overexcLimX2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val overexcLimX2Id: UUID? = null,
     val efd1: String,
     val efd2: String,
     val efd3: String,
@@ -8843,7 +8845,7 @@ data class CreateOverexcLimX2Command(
 )
 
 data class UpdateOverexcLimX2Command(
-    @TargetAggregateIdentifier val overexcLimX2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val overexcLimX2Id: UUID? = null,
     val efd1: String,
     val efd2: String,
     val efd3: String,
@@ -8857,7 +8859,7 @@ data class UpdateOverexcLimX2Command(
     val vlow: String
 )
 
-data class DeleteOverexcLimX2Command(@TargetAggregateIdentifier  val overexcLimX2Id: java.util.UUID? = null)
+data class DeleteOverexcLimX2Command(@TargetAggregateIdentifier  val overexcLimX2Id: UUID? = null)
 
 // single association commands
 
@@ -8866,14 +8868,14 @@ data class DeleteOverexcLimX2Command(@TargetAggregateIdentifier  val overexcLimX
 
 // OverexcitationLimiterDynamics Commands
 data class CreateOverexcitationLimiterDynamicsCommand(
-    @TargetAggregateIdentifier  val overexcitationLimiterDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val overexcitationLimiterDynamicsId: UUID? = null
 )
 
 data class UpdateOverexcitationLimiterDynamicsCommand(
-    @TargetAggregateIdentifier  val overexcitationLimiterDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val overexcitationLimiterDynamicsId: UUID? = null
 )
 
-data class DeleteOverexcitationLimiterDynamicsCommand(@TargetAggregateIdentifier  val overexcitationLimiterDynamicsId: java.util.UUID? = null)
+data class DeleteOverexcitationLimiterDynamicsCommand(@TargetAggregateIdentifier  val overexcitationLimiterDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -8882,16 +8884,16 @@ data class DeleteOverexcitationLimiterDynamicsCommand(@TargetAggregateIdentifier
 
 // OverexcitationLimiterUserDefined Commands
 data class CreateOverexcitationLimiterUserDefinedCommand(
-    @TargetAggregateIdentifier val overexcitationLimiterUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val overexcitationLimiterUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateOverexcitationLimiterUserDefinedCommand(
-    @TargetAggregateIdentifier val overexcitationLimiterUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val overexcitationLimiterUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteOverexcitationLimiterUserDefinedCommand(@TargetAggregateIdentifier  val overexcitationLimiterUserDefinedId: java.util.UUID? = null)
+data class DeleteOverexcitationLimiterUserDefinedCommand(@TargetAggregateIdentifier  val overexcitationLimiterUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -8900,14 +8902,14 @@ data class DeleteOverexcitationLimiterUserDefinedCommand(@TargetAggregateIdentif
 
 // PFvalControllerType1Dynamics Commands
 data class CreatePFvalControllerType1DynamicsCommand(
-    @TargetAggregateIdentifier  val pFvalControllerType1DynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val pFvalControllerType1DynamicsId: UUID? = null
 )
 
 data class UpdatePFvalControllerType1DynamicsCommand(
-    @TargetAggregateIdentifier  val pFvalControllerType1DynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val pFvalControllerType1DynamicsId: UUID? = null
 )
 
-data class DeletePFvalControllerType1DynamicsCommand(@TargetAggregateIdentifier  val pFvalControllerType1DynamicsId: java.util.UUID? = null)
+data class DeletePFvalControllerType1DynamicsCommand(@TargetAggregateIdentifier  val pFvalControllerType1DynamicsId: UUID? = null)
 
 // single association commands
 
@@ -8916,16 +8918,16 @@ data class DeletePFvalControllerType1DynamicsCommand(@TargetAggregateIdentifier 
 
 // PFvalControllerType1UserDefined Commands
 data class CreatePFvalControllerType1UserDefinedCommand(
-    @TargetAggregateIdentifier val pFvalControllerType1UserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalControllerType1UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdatePFvalControllerType1UserDefinedCommand(
-    @TargetAggregateIdentifier val pFvalControllerType1UserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalControllerType1UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeletePFvalControllerType1UserDefinedCommand(@TargetAggregateIdentifier  val pFvalControllerType1UserDefinedId: java.util.UUID? = null)
+data class DeletePFvalControllerType1UserDefinedCommand(@TargetAggregateIdentifier  val pFvalControllerType1UserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -8934,14 +8936,14 @@ data class DeletePFvalControllerType1UserDefinedCommand(@TargetAggregateIdentifi
 
 // PFvalControllerType2Dynamics Commands
 data class CreatePFvalControllerType2DynamicsCommand(
-    @TargetAggregateIdentifier  val pFvalControllerType2DynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val pFvalControllerType2DynamicsId: UUID? = null
 )
 
 data class UpdatePFvalControllerType2DynamicsCommand(
-    @TargetAggregateIdentifier  val pFvalControllerType2DynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val pFvalControllerType2DynamicsId: UUID? = null
 )
 
-data class DeletePFvalControllerType2DynamicsCommand(@TargetAggregateIdentifier  val pFvalControllerType2DynamicsId: java.util.UUID? = null)
+data class DeletePFvalControllerType2DynamicsCommand(@TargetAggregateIdentifier  val pFvalControllerType2DynamicsId: UUID? = null)
 
 // single association commands
 
@@ -8950,16 +8952,16 @@ data class DeletePFvalControllerType2DynamicsCommand(@TargetAggregateIdentifier 
 
 // PFvalControllerType2UserDefined Commands
 data class CreatePFvalControllerType2UserDefinedCommand(
-    @TargetAggregateIdentifier val pFvalControllerType2UserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalControllerType2UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdatePFvalControllerType2UserDefinedCommand(
-    @TargetAggregateIdentifier val pFvalControllerType2UserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalControllerType2UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeletePFvalControllerType2UserDefinedCommand(@TargetAggregateIdentifier  val pFvalControllerType2UserDefinedId: java.util.UUID? = null)
+data class DeletePFvalControllerType2UserDefinedCommand(@TargetAggregateIdentifier  val pFvalControllerType2UserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -8968,7 +8970,7 @@ data class DeletePFvalControllerType2UserDefinedCommand(@TargetAggregateIdentifi
 
 // PFvalType1IEEEPFController Commands
 data class CreatePFvalType1IEEEPFControllerCommand(
-    @TargetAggregateIdentifier val pFvalType1IEEEPFControllerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalType1IEEEPFControllerId: UUID? = null,
     val ovex: String,
     val tpfc: String,
     val vitmin: String,
@@ -8980,7 +8982,7 @@ data class CreatePFvalType1IEEEPFControllerCommand(
 )
 
 data class UpdatePFvalType1IEEEPFControllerCommand(
-    @TargetAggregateIdentifier val pFvalType1IEEEPFControllerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalType1IEEEPFControllerId: UUID? = null,
     val ovex: String,
     val tpfc: String,
     val vitmin: String,
@@ -8991,7 +8993,7 @@ data class UpdatePFvalType1IEEEPFControllerCommand(
     val vvtmin: String
 )
 
-data class DeletePFvalType1IEEEPFControllerCommand(@TargetAggregateIdentifier  val pFvalType1IEEEPFControllerId: java.util.UUID? = null)
+data class DeletePFvalType1IEEEPFControllerCommand(@TargetAggregateIdentifier  val pFvalType1IEEEPFControllerId: UUID? = null)
 
 // single association commands
 
@@ -9000,7 +9002,7 @@ data class DeletePFvalType1IEEEPFControllerCommand(@TargetAggregateIdentifier  v
 
 // PFvalType1IEEEvalController Commands
 data class CreatePFvalType1IEEEvalControllerCommand(
-    @TargetAggregateIdentifier val pFvalType1IEEEvalControllerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalType1IEEEvalControllerId: UUID? = null,
     val tvalc: String,
     val vval: String,
     val vvalcbw: String,
@@ -9010,7 +9012,7 @@ data class CreatePFvalType1IEEEvalControllerCommand(
 )
 
 data class UpdatePFvalType1IEEEvalControllerCommand(
-    @TargetAggregateIdentifier val pFvalType1IEEEvalControllerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalType1IEEEvalControllerId: UUID? = null,
     val tvalc: String,
     val vval: String,
     val vvalcbw: String,
@@ -9019,7 +9021,7 @@ data class UpdatePFvalType1IEEEvalControllerCommand(
     val vvtmin: String
 )
 
-data class DeletePFvalType1IEEEvalControllerCommand(@TargetAggregateIdentifier  val pFvalType1IEEEvalControllerId: java.util.UUID? = null)
+data class DeletePFvalType1IEEEvalControllerCommand(@TargetAggregateIdentifier  val pFvalType1IEEEvalControllerId: UUID? = null)
 
 // single association commands
 
@@ -9028,7 +9030,7 @@ data class DeletePFvalType1IEEEvalControllerCommand(@TargetAggregateIdentifier  
 
 // PFvalType2Common1 Commands
 data class CreatePFvalType2Common1Command(
-    @TargetAggregateIdentifier val pFvalType2Common1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalType2Common1Id: UUID? = null,
     val j: String,
     val ki: String,
     val kp: String,
@@ -9037,7 +9039,7 @@ data class CreatePFvalType2Common1Command(
 )
 
 data class UpdatePFvalType2Common1Command(
-    @TargetAggregateIdentifier val pFvalType2Common1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalType2Common1Id: UUID? = null,
     val j: String,
     val ki: String,
     val kp: String,
@@ -9045,7 +9047,7 @@ data class UpdatePFvalType2Common1Command(
     val ref: String
 )
 
-data class DeletePFvalType2Common1Command(@TargetAggregateIdentifier  val pFvalType2Common1Id: java.util.UUID? = null)
+data class DeletePFvalType2Common1Command(@TargetAggregateIdentifier  val pFvalType2Common1Id: UUID? = null)
 
 // single association commands
 
@@ -9054,7 +9056,7 @@ data class DeletePFvalType2Common1Command(@TargetAggregateIdentifier  val pFvalT
 
 // PFvalType2IEEEPFController Commands
 data class CreatePFvalType2IEEEPFControllerCommand(
-    @TargetAggregateIdentifier val pFvalType2IEEEPFControllerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalType2IEEEPFControllerId: UUID? = null,
     val exlon: String,
     val ki: String,
     val kp: String,
@@ -9065,7 +9067,7 @@ data class CreatePFvalType2IEEEPFControllerCommand(
 )
 
 data class UpdatePFvalType2IEEEPFControllerCommand(
-    @TargetAggregateIdentifier val pFvalType2IEEEPFControllerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalType2IEEEPFControllerId: UUID? = null,
     val exlon: String,
     val ki: String,
     val kp: String,
@@ -9075,7 +9077,7 @@ data class UpdatePFvalType2IEEEPFControllerCommand(
     val vs: String
 )
 
-data class DeletePFvalType2IEEEPFControllerCommand(@TargetAggregateIdentifier  val pFvalType2IEEEPFControllerId: java.util.UUID? = null)
+data class DeletePFvalType2IEEEPFControllerCommand(@TargetAggregateIdentifier  val pFvalType2IEEEPFControllerId: UUID? = null)
 
 // single association commands
 
@@ -9084,7 +9086,7 @@ data class DeletePFvalType2IEEEPFControllerCommand(@TargetAggregateIdentifier  v
 
 // PFvalType2IEEEvalController Commands
 data class CreatePFvalType2IEEEvalControllerCommand(
-    @TargetAggregateIdentifier val pFvalType2IEEEvalControllerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalType2IEEEvalControllerId: UUID? = null,
     val exlon: String,
     val ki: String,
     val kp: String,
@@ -9095,7 +9097,7 @@ data class CreatePFvalType2IEEEvalControllerCommand(
 )
 
 data class UpdatePFvalType2IEEEvalControllerCommand(
-    @TargetAggregateIdentifier val pFvalType2IEEEvalControllerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pFvalType2IEEEvalControllerId: UUID? = null,
     val exlon: String,
     val ki: String,
     val kp: String,
@@ -9105,7 +9107,7 @@ data class UpdatePFvalType2IEEEvalControllerCommand(
     val vs: String
 )
 
-data class DeletePFvalType2IEEEvalControllerCommand(@TargetAggregateIdentifier  val pFvalType2IEEEvalControllerId: java.util.UUID? = null)
+data class DeletePFvalType2IEEEvalControllerCommand(@TargetAggregateIdentifier  val pFvalType2IEEEvalControllerId: UUID? = null)
 
 // single association commands
 
@@ -9114,20 +9116,20 @@ data class DeletePFvalType2IEEEvalControllerCommand(@TargetAggregateIdentifier  
 
 // PU Commands
 data class CreatePUCommand(
-    @TargetAggregateIdentifier val pUId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pUId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdatePUCommand(
-    @TargetAggregateIdentifier val pUId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pUId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeletePUCommand(@TargetAggregateIdentifier  val pUId: java.util.UUID? = null)
+data class DeletePUCommand(@TargetAggregateIdentifier  val pUId: UUID? = null)
 
 // single association commands
 
@@ -9136,20 +9138,20 @@ data class DeletePUCommand(@TargetAggregateIdentifier  val pUId: java.util.UUID?
 
 // PerCent Commands
 data class CreatePerCentCommand(
-    @TargetAggregateIdentifier val perCentId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val perCentId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdatePerCentCommand(
-    @TargetAggregateIdentifier val perCentId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val perCentId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeletePerCentCommand(@TargetAggregateIdentifier  val perCentId: java.util.UUID? = null)
+data class DeletePerCentCommand(@TargetAggregateIdentifier  val perCentId: UUID? = null)
 
 // single association commands
 
@@ -9158,20 +9160,20 @@ data class DeletePerCentCommand(@TargetAggregateIdentifier  val perCentId: java.
 
 // PerLengthDCLineParameter Commands
 data class CreatePerLengthDCLineParameterCommand(
-    @TargetAggregateIdentifier val perLengthDCLineParameterId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val perLengthDCLineParameterId: UUID? = null,
     val capacitance: String,
     val inductance: String,
     val resistance: String
 )
 
 data class UpdatePerLengthDCLineParameterCommand(
-    @TargetAggregateIdentifier val perLengthDCLineParameterId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val perLengthDCLineParameterId: UUID? = null,
     val capacitance: String,
     val inductance: String,
     val resistance: String
 )
 
-data class DeletePerLengthDCLineParameterCommand(@TargetAggregateIdentifier  val perLengthDCLineParameterId: java.util.UUID? = null)
+data class DeletePerLengthDCLineParameterCommand(@TargetAggregateIdentifier  val perLengthDCLineParameterId: UUID? = null)
 
 // single association commands
 
@@ -9180,7 +9182,7 @@ data class DeletePerLengthDCLineParameterCommand(@TargetAggregateIdentifier  val
 
 // PetersenCoil Commands
 data class CreatePetersenCoilCommand(
-    @TargetAggregateIdentifier val petersenCoilId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val petersenCoilId: UUID? = null,
     val mode: String,
     val nominalU: String,
     val offsetCurrent: String,
@@ -9191,7 +9193,7 @@ data class CreatePetersenCoilCommand(
 )
 
 data class UpdatePetersenCoilCommand(
-    @TargetAggregateIdentifier val petersenCoilId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val petersenCoilId: UUID? = null,
     val mode: String,
     val nominalU: String,
     val offsetCurrent: String,
@@ -9201,7 +9203,7 @@ data class UpdatePetersenCoilCommand(
     val xGroundNominal: String
 )
 
-data class DeletePetersenCoilCommand(@TargetAggregateIdentifier  val petersenCoilId: java.util.UUID? = null)
+data class DeletePetersenCoilCommand(@TargetAggregateIdentifier  val petersenCoilId: UUID? = null)
 
 // single association commands
 
@@ -9210,14 +9212,14 @@ data class DeletePetersenCoilCommand(@TargetAggregateIdentifier  val petersenCoi
 
 // PhaseTapChanger Commands
 data class CreatePhaseTapChangerCommand(
-    @TargetAggregateIdentifier  val phaseTapChangerId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val phaseTapChangerId: UUID? = null
 )
 
 data class UpdatePhaseTapChangerCommand(
-    @TargetAggregateIdentifier  val phaseTapChangerId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val phaseTapChangerId: UUID? = null
 )
 
-data class DeletePhaseTapChangerCommand(@TargetAggregateIdentifier  val phaseTapChangerId: java.util.UUID? = null)
+data class DeletePhaseTapChangerCommand(@TargetAggregateIdentifier  val phaseTapChangerId: UUID? = null)
 
 // single association commands
 
@@ -9226,16 +9228,16 @@ data class DeletePhaseTapChangerCommand(@TargetAggregateIdentifier  val phaseTap
 
 // PhaseTapChangerAsymmetrical Commands
 data class CreatePhaseTapChangerAsymmetricalCommand(
-    @TargetAggregateIdentifier val phaseTapChangerAsymmetricalId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerAsymmetricalId: UUID? = null,
     val windingConnectionAngle: String
 )
 
 data class UpdatePhaseTapChangerAsymmetricalCommand(
-    @TargetAggregateIdentifier val phaseTapChangerAsymmetricalId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerAsymmetricalId: UUID? = null,
     val windingConnectionAngle: String
 )
 
-data class DeletePhaseTapChangerAsymmetricalCommand(@TargetAggregateIdentifier  val phaseTapChangerAsymmetricalId: java.util.UUID? = null)
+data class DeletePhaseTapChangerAsymmetricalCommand(@TargetAggregateIdentifier  val phaseTapChangerAsymmetricalId: UUID? = null)
 
 // single association commands
 
@@ -9244,20 +9246,20 @@ data class DeletePhaseTapChangerAsymmetricalCommand(@TargetAggregateIdentifier  
 
 // PhaseTapChangerLinear Commands
 data class CreatePhaseTapChangerLinearCommand(
-    @TargetAggregateIdentifier val phaseTapChangerLinearId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerLinearId: UUID? = null,
     val stepPhaseShiftIncrement: String,
     val xMax: String,
     val xMin: String
 )
 
 data class UpdatePhaseTapChangerLinearCommand(
-    @TargetAggregateIdentifier val phaseTapChangerLinearId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerLinearId: UUID? = null,
     val stepPhaseShiftIncrement: String,
     val xMax: String,
     val xMin: String
 )
 
-data class DeletePhaseTapChangerLinearCommand(@TargetAggregateIdentifier  val phaseTapChangerLinearId: java.util.UUID? = null)
+data class DeletePhaseTapChangerLinearCommand(@TargetAggregateIdentifier  val phaseTapChangerLinearId: UUID? = null)
 
 // single association commands
 
@@ -9266,20 +9268,20 @@ data class DeletePhaseTapChangerLinearCommand(@TargetAggregateIdentifier  val ph
 
 // PhaseTapChangerNonLinear Commands
 data class CreatePhaseTapChangerNonLinearCommand(
-    @TargetAggregateIdentifier val phaseTapChangerNonLinearId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerNonLinearId: UUID? = null,
     val voltageStepIncrement: String,
     val xMax: String,
     val xMin: String
 )
 
 data class UpdatePhaseTapChangerNonLinearCommand(
-    @TargetAggregateIdentifier val phaseTapChangerNonLinearId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerNonLinearId: UUID? = null,
     val voltageStepIncrement: String,
     val xMax: String,
     val xMin: String
 )
 
-data class DeletePhaseTapChangerNonLinearCommand(@TargetAggregateIdentifier  val phaseTapChangerNonLinearId: java.util.UUID? = null)
+data class DeletePhaseTapChangerNonLinearCommand(@TargetAggregateIdentifier  val phaseTapChangerNonLinearId: UUID? = null)
 
 // single association commands
 
@@ -9288,14 +9290,14 @@ data class DeletePhaseTapChangerNonLinearCommand(@TargetAggregateIdentifier  val
 
 // PhaseTapChangerSymmetrical Commands
 data class CreatePhaseTapChangerSymmetricalCommand(
-    @TargetAggregateIdentifier  val phaseTapChangerSymmetricalId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val phaseTapChangerSymmetricalId: UUID? = null
 )
 
 data class UpdatePhaseTapChangerSymmetricalCommand(
-    @TargetAggregateIdentifier  val phaseTapChangerSymmetricalId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val phaseTapChangerSymmetricalId: UUID? = null
 )
 
-data class DeletePhaseTapChangerSymmetricalCommand(@TargetAggregateIdentifier  val phaseTapChangerSymmetricalId: java.util.UUID? = null)
+data class DeletePhaseTapChangerSymmetricalCommand(@TargetAggregateIdentifier  val phaseTapChangerSymmetricalId: UUID? = null)
 
 // single association commands
 
@@ -9304,14 +9306,14 @@ data class DeletePhaseTapChangerSymmetricalCommand(@TargetAggregateIdentifier  v
 
 // PhaseTapChangerTable Commands
 data class CreatePhaseTapChangerTableCommand(
-    @TargetAggregateIdentifier  val phaseTapChangerTableId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val phaseTapChangerTableId: UUID? = null
 )
 
 data class UpdatePhaseTapChangerTableCommand(
-    @TargetAggregateIdentifier  val phaseTapChangerTableId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val phaseTapChangerTableId: UUID? = null
 )
 
-data class DeletePhaseTapChangerTableCommand(@TargetAggregateIdentifier  val phaseTapChangerTableId: java.util.UUID? = null)
+data class DeletePhaseTapChangerTableCommand(@TargetAggregateIdentifier  val phaseTapChangerTableId: UUID? = null)
 
 // single association commands
 
@@ -9320,16 +9322,16 @@ data class DeletePhaseTapChangerTableCommand(@TargetAggregateIdentifier  val pha
 
 // PhaseTapChangerTablePoint Commands
 data class CreatePhaseTapChangerTablePointCommand(
-    @TargetAggregateIdentifier val phaseTapChangerTablePointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerTablePointId: UUID? = null,
     val angle: String
 )
 
 data class UpdatePhaseTapChangerTablePointCommand(
-    @TargetAggregateIdentifier val phaseTapChangerTablePointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerTablePointId: UUID? = null,
     val angle: String
 )
 
-data class DeletePhaseTapChangerTablePointCommand(@TargetAggregateIdentifier  val phaseTapChangerTablePointId: java.util.UUID? = null)
+data class DeletePhaseTapChangerTablePointCommand(@TargetAggregateIdentifier  val phaseTapChangerTablePointId: UUID? = null)
 
 // single association commands
 
@@ -9338,14 +9340,14 @@ data class DeletePhaseTapChangerTablePointCommand(@TargetAggregateIdentifier  va
 
 // PhaseTapChangerTabular Commands
 data class CreatePhaseTapChangerTabularCommand(
-    @TargetAggregateIdentifier  val phaseTapChangerTabularId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val phaseTapChangerTabularId: UUID? = null
 )
 
 data class UpdatePhaseTapChangerTabularCommand(
-    @TargetAggregateIdentifier  val phaseTapChangerTabularId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val phaseTapChangerTabularId: UUID? = null
 )
 
-data class DeletePhaseTapChangerTabularCommand(@TargetAggregateIdentifier  val phaseTapChangerTabularId: java.util.UUID? = null)
+data class DeletePhaseTapChangerTabularCommand(@TargetAggregateIdentifier  val phaseTapChangerTabularId: UUID? = null)
 
 // single association commands
 
@@ -9354,7 +9356,7 @@ data class DeletePhaseTapChangerTabularCommand(@TargetAggregateIdentifier  val p
 
 // PositionPoint Commands
 data class CreatePositionPointCommand(
-    @TargetAggregateIdentifier val positionPointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val positionPointId: UUID? = null,
     val sequenceNumber: String,
     val xPosition: String,
     val yPosition: String,
@@ -9362,14 +9364,14 @@ data class CreatePositionPointCommand(
 )
 
 data class UpdatePositionPointCommand(
-    @TargetAggregateIdentifier val positionPointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val positionPointId: UUID? = null,
     val sequenceNumber: String,
     val xPosition: String,
     val yPosition: String,
     val zPosition: String
 )
 
-data class DeletePositionPointCommand(@TargetAggregateIdentifier  val positionPointId: java.util.UUID? = null)
+data class DeletePositionPointCommand(@TargetAggregateIdentifier  val positionPointId: UUID? = null)
 
 // single association commands
 
@@ -9378,14 +9380,14 @@ data class DeletePositionPointCommand(@TargetAggregateIdentifier  val positionPo
 
 // PowerSystemResource Commands
 data class CreatePowerSystemResourceCommand(
-    @TargetAggregateIdentifier  val powerSystemResourceId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val powerSystemResourceId: UUID? = null
 )
 
 data class UpdatePowerSystemResourceCommand(
-    @TargetAggregateIdentifier  val powerSystemResourceId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val powerSystemResourceId: UUID? = null
 )
 
-data class DeletePowerSystemResourceCommand(@TargetAggregateIdentifier  val powerSystemResourceId: java.util.UUID? = null)
+data class DeletePowerSystemResourceCommand(@TargetAggregateIdentifier  val powerSystemResourceId: UUID? = null)
 
 // single association commands
 
@@ -9394,14 +9396,14 @@ data class DeletePowerSystemResourceCommand(@TargetAggregateIdentifier  val powe
 
 // PowerSystemStabilizerDynamics Commands
 data class CreatePowerSystemStabilizerDynamicsCommand(
-    @TargetAggregateIdentifier  val powerSystemStabilizerDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val powerSystemStabilizerDynamicsId: UUID? = null
 )
 
 data class UpdatePowerSystemStabilizerDynamicsCommand(
-    @TargetAggregateIdentifier  val powerSystemStabilizerDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val powerSystemStabilizerDynamicsId: UUID? = null
 )
 
-data class DeletePowerSystemStabilizerDynamicsCommand(@TargetAggregateIdentifier  val powerSystemStabilizerDynamicsId: java.util.UUID? = null)
+data class DeletePowerSystemStabilizerDynamicsCommand(@TargetAggregateIdentifier  val powerSystemStabilizerDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -9410,16 +9412,16 @@ data class DeletePowerSystemStabilizerDynamicsCommand(@TargetAggregateIdentifier
 
 // PowerSystemStabilizerUserDefined Commands
 data class CreatePowerSystemStabilizerUserDefinedCommand(
-    @TargetAggregateIdentifier val powerSystemStabilizerUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val powerSystemStabilizerUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdatePowerSystemStabilizerUserDefinedCommand(
-    @TargetAggregateIdentifier val powerSystemStabilizerUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val powerSystemStabilizerUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeletePowerSystemStabilizerUserDefinedCommand(@TargetAggregateIdentifier  val powerSystemStabilizerUserDefinedId: java.util.UUID? = null)
+data class DeletePowerSystemStabilizerUserDefinedCommand(@TargetAggregateIdentifier  val powerSystemStabilizerUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -9428,7 +9430,7 @@ data class DeletePowerSystemStabilizerUserDefinedCommand(@TargetAggregateIdentif
 
 // PowerTransformer Commands
 data class CreatePowerTransformerCommand(
-    @TargetAggregateIdentifier val powerTransformerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val powerTransformerId: UUID? = null,
     val beforeShCircuitHighestOperatingCurrent: String,
     val beforeShCircuitHighestOperatingVoltage: String,
     val beforeShortCircuitAnglePf: String,
@@ -9438,7 +9440,7 @@ data class CreatePowerTransformerCommand(
 )
 
 data class UpdatePowerTransformerCommand(
-    @TargetAggregateIdentifier val powerTransformerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val powerTransformerId: UUID? = null,
     val beforeShCircuitHighestOperatingCurrent: String,
     val beforeShCircuitHighestOperatingVoltage: String,
     val beforeShortCircuitAnglePf: String,
@@ -9447,7 +9449,7 @@ data class UpdatePowerTransformerCommand(
     val operationalValuesConsidered: String
 )
 
-data class DeletePowerTransformerCommand(@TargetAggregateIdentifier  val powerTransformerId: java.util.UUID? = null)
+data class DeletePowerTransformerCommand(@TargetAggregateIdentifier  val powerTransformerId: UUID? = null)
 
 // single association commands
 
@@ -9456,7 +9458,7 @@ data class DeletePowerTransformerCommand(@TargetAggregateIdentifier  val powerTr
 
 // PowerTransformerEnd Commands
 data class CreatePowerTransformerEndCommand(
-    @TargetAggregateIdentifier val powerTransformerEndId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val powerTransformerEndId: UUID? = null,
     val b: String,
     val b0: String,
     val connectionKind: String,
@@ -9472,7 +9474,7 @@ data class CreatePowerTransformerEndCommand(
 )
 
 data class UpdatePowerTransformerEndCommand(
-    @TargetAggregateIdentifier val powerTransformerEndId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val powerTransformerEndId: UUID? = null,
     val b: String,
     val b0: String,
     val connectionKind: String,
@@ -9487,7 +9489,7 @@ data class UpdatePowerTransformerEndCommand(
     val x0: String
 )
 
-data class DeletePowerTransformerEndCommand(@TargetAggregateIdentifier  val powerTransformerEndId: java.util.UUID? = null)
+data class DeletePowerTransformerEndCommand(@TargetAggregateIdentifier  val powerTransformerEndId: UUID? = null)
 
 // single association commands
 
@@ -9496,7 +9498,7 @@ data class DeletePowerTransformerEndCommand(@TargetAggregateIdentifier  val powe
 
 // ProprietaryParameterDynamics Commands
 data class CreateProprietaryParameterDynamicsCommand(
-    @TargetAggregateIdentifier val proprietaryParameterDynamicsId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val proprietaryParameterDynamicsId: UUID? = null,
     val booleanParameterValue: String,
     val floatParameterValue: String,
     val integerParameterValue: String,
@@ -9504,14 +9506,14 @@ data class CreateProprietaryParameterDynamicsCommand(
 )
 
 data class UpdateProprietaryParameterDynamicsCommand(
-    @TargetAggregateIdentifier val proprietaryParameterDynamicsId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val proprietaryParameterDynamicsId: UUID? = null,
     val booleanParameterValue: String,
     val floatParameterValue: String,
     val integerParameterValue: String,
     val parameterNumber: String
 )
 
-data class DeleteProprietaryParameterDynamicsCommand(@TargetAggregateIdentifier  val proprietaryParameterDynamicsId: java.util.UUID? = null)
+data class DeleteProprietaryParameterDynamicsCommand(@TargetAggregateIdentifier  val proprietaryParameterDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -9520,14 +9522,14 @@ data class DeleteProprietaryParameterDynamicsCommand(@TargetAggregateIdentifier 
 
 // ProtectedSwitch Commands
 data class CreateProtectedSwitchCommand(
-    @TargetAggregateIdentifier  val protectedSwitchId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val protectedSwitchId: UUID? = null
 )
 
 data class UpdateProtectedSwitchCommand(
-    @TargetAggregateIdentifier  val protectedSwitchId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val protectedSwitchId: UUID? = null
 )
 
-data class DeleteProtectedSwitchCommand(@TargetAggregateIdentifier  val protectedSwitchId: java.util.UUID? = null)
+data class DeleteProtectedSwitchCommand(@TargetAggregateIdentifier  val protectedSwitchId: UUID? = null)
 
 // single association commands
 
@@ -9536,7 +9538,7 @@ data class DeleteProtectedSwitchCommand(@TargetAggregateIdentifier  val protecte
 
 // Pss1 Commands
 data class CreatePss1Command(
-    @TargetAggregateIdentifier val pss1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pss1Id: UUID? = null,
     val kf: String,
     val kpe: String,
     val ks: String,
@@ -9555,7 +9557,7 @@ data class CreatePss1Command(
 )
 
 data class UpdatePss1Command(
-    @TargetAggregateIdentifier val pss1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pss1Id: UUID? = null,
     val kf: String,
     val kpe: String,
     val ks: String,
@@ -9573,7 +9575,7 @@ data class UpdatePss1Command(
     val vsmx: String
 )
 
-data class DeletePss1Command(@TargetAggregateIdentifier  val pss1Id: java.util.UUID? = null)
+data class DeletePss1Command(@TargetAggregateIdentifier  val pss1Id: UUID? = null)
 
 // single association commands
 
@@ -9582,7 +9584,7 @@ data class DeletePss1Command(@TargetAggregateIdentifier  val pss1Id: java.util.U
 
 // Pss1A Commands
 data class CreatePss1ACommand(
-    @TargetAggregateIdentifier val pss1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pss1AId: UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -9608,7 +9610,7 @@ data class CreatePss1ACommand(
 )
 
 data class UpdatePss1ACommand(
-    @TargetAggregateIdentifier val pss1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pss1AId: UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -9633,7 +9635,7 @@ data class UpdatePss1ACommand(
     val vrmin: String
 )
 
-data class DeletePss1ACommand(@TargetAggregateIdentifier  val pss1AId: java.util.UUID? = null)
+data class DeletePss1ACommand(@TargetAggregateIdentifier  val pss1AId: UUID? = null)
 
 // single association commands
 
@@ -9642,7 +9644,7 @@ data class DeletePss1ACommand(@TargetAggregateIdentifier  val pss1AId: java.util
 
 // Pss2B Commands
 data class CreatePss2BCommand(
-    @TargetAggregateIdentifier val pss2BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pss2BId: UUID? = null,
     val a: String,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
@@ -9677,7 +9679,7 @@ data class CreatePss2BCommand(
 )
 
 data class UpdatePss2BCommand(
-    @TargetAggregateIdentifier val pss2BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pss2BId: UUID? = null,
     val a: String,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
@@ -9711,7 +9713,7 @@ data class UpdatePss2BCommand(
     val vstmin: String
 )
 
-data class DeletePss2BCommand(@TargetAggregateIdentifier  val pss2BId: java.util.UUID? = null)
+data class DeletePss2BCommand(@TargetAggregateIdentifier  val pss2BId: UUID? = null)
 
 // single association commands
 
@@ -9720,7 +9722,7 @@ data class DeletePss2BCommand(@TargetAggregateIdentifier  val pss2BId: java.util
 
 // Pss2ST Commands
 data class CreatePss2STCommand(
-    @TargetAggregateIdentifier val pss2STId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pss2STId: UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val k1: String,
@@ -9742,7 +9744,7 @@ data class CreatePss2STCommand(
 )
 
 data class UpdatePss2STCommand(
-    @TargetAggregateIdentifier val pss2STId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pss2STId: UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val k1: String,
@@ -9763,7 +9765,7 @@ data class UpdatePss2STCommand(
     val vcu: String
 )
 
-data class DeletePss2STCommand(@TargetAggregateIdentifier  val pss2STId: java.util.UUID? = null)
+data class DeletePss2STCommand(@TargetAggregateIdentifier  val pss2STId: UUID? = null)
 
 // single association commands
 
@@ -9772,7 +9774,7 @@ data class DeletePss2STCommand(@TargetAggregateIdentifier  val pss2STId: java.ut
 
 // Pss5 Commands
 data class CreatePss5Command(
-    @TargetAggregateIdentifier val pss5Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pss5Id: UUID? = null,
     val ctw2: String,
     val deadband: String,
     val isfreq: String,
@@ -9793,7 +9795,7 @@ data class CreatePss5Command(
 )
 
 data class UpdatePss5Command(
-    @TargetAggregateIdentifier val pss5Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pss5Id: UUID? = null,
     val ctw2: String,
     val deadband: String,
     val isfreq: String,
@@ -9813,7 +9815,7 @@ data class UpdatePss5Command(
     val vsmx: String
 )
 
-data class DeletePss5Command(@TargetAggregateIdentifier  val pss5Id: java.util.UUID? = null)
+data class DeletePss5Command(@TargetAggregateIdentifier  val pss5Id: UUID? = null)
 
 // single association commands
 
@@ -9822,7 +9824,7 @@ data class DeletePss5Command(@TargetAggregateIdentifier  val pss5Id: java.util.U
 
 // PssELIN2 Commands
 data class CreatePssELIN2Command(
-    @TargetAggregateIdentifier val pssELIN2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssELIN2Id: UUID? = null,
     val apss: String,
     val ks1: String,
     val ks2: String,
@@ -9837,7 +9839,7 @@ data class CreatePssELIN2Command(
 )
 
 data class UpdatePssELIN2Command(
-    @TargetAggregateIdentifier val pssELIN2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssELIN2Id: UUID? = null,
     val apss: String,
     val ks1: String,
     val ks2: String,
@@ -9851,7 +9853,7 @@ data class UpdatePssELIN2Command(
     val ts6: String
 )
 
-data class DeletePssELIN2Command(@TargetAggregateIdentifier  val pssELIN2Id: java.util.UUID? = null)
+data class DeletePssELIN2Command(@TargetAggregateIdentifier  val pssELIN2Id: UUID? = null)
 
 // single association commands
 
@@ -9860,7 +9862,7 @@ data class DeletePssELIN2Command(@TargetAggregateIdentifier  val pssELIN2Id: jav
 
 // PssIEEE1A Commands
 data class CreatePssIEEE1ACommand(
-    @TargetAggregateIdentifier val pssIEEE1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE1AId: UUID? = null,
     val a1: String,
     val a2: String,
     val inputSignalType: String,
@@ -9876,7 +9878,7 @@ data class CreatePssIEEE1ACommand(
 )
 
 data class UpdatePssIEEE1ACommand(
-    @TargetAggregateIdentifier val pssIEEE1AId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE1AId: UUID? = null,
     val a1: String,
     val a2: String,
     val inputSignalType: String,
@@ -9891,7 +9893,7 @@ data class UpdatePssIEEE1ACommand(
     val vrmin: String
 )
 
-data class DeletePssIEEE1ACommand(@TargetAggregateIdentifier  val pssIEEE1AId: java.util.UUID? = null)
+data class DeletePssIEEE1ACommand(@TargetAggregateIdentifier  val pssIEEE1AId: UUID? = null)
 
 // single association commands
 
@@ -9900,7 +9902,7 @@ data class DeletePssIEEE1ACommand(@TargetAggregateIdentifier  val pssIEEE1AId: j
 
 // PssIEEE2B Commands
 data class CreatePssIEEE2BCommand(
-    @TargetAggregateIdentifier val pssIEEE2BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE2BId: UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val ks1: String,
@@ -9931,7 +9933,7 @@ data class CreatePssIEEE2BCommand(
 )
 
 data class UpdatePssIEEE2BCommand(
-    @TargetAggregateIdentifier val pssIEEE2BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE2BId: UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val ks1: String,
@@ -9961,7 +9963,7 @@ data class UpdatePssIEEE2BCommand(
     val vstmin: String
 )
 
-data class DeletePssIEEE2BCommand(@TargetAggregateIdentifier  val pssIEEE2BId: java.util.UUID? = null)
+data class DeletePssIEEE2BCommand(@TargetAggregateIdentifier  val pssIEEE2BId: UUID? = null)
 
 // single association commands
 
@@ -9970,7 +9972,7 @@ data class DeletePssIEEE2BCommand(@TargetAggregateIdentifier  val pssIEEE2BId: j
 
 // PssIEEE3B Commands
 data class CreatePssIEEE3BCommand(
-    @TargetAggregateIdentifier val pssIEEE3BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE3BId: UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -9993,7 +9995,7 @@ data class CreatePssIEEE3BCommand(
 )
 
 data class UpdatePssIEEE3BCommand(
-    @TargetAggregateIdentifier val pssIEEE3BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE3BId: UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -10015,7 +10017,7 @@ data class UpdatePssIEEE3BCommand(
     val vstmin: String
 )
 
-data class DeletePssIEEE3BCommand(@TargetAggregateIdentifier  val pssIEEE3BId: java.util.UUID? = null)
+data class DeletePssIEEE3BCommand(@TargetAggregateIdentifier  val pssIEEE3BId: UUID? = null)
 
 // single association commands
 
@@ -10024,7 +10026,7 @@ data class DeletePssIEEE3BCommand(@TargetAggregateIdentifier  val pssIEEE3BId: j
 
 // PssIEEE4B Commands
 data class CreatePssIEEE4BCommand(
-    @TargetAggregateIdentifier val pssIEEE4BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE4BId: UUID? = null,
     val bwh1: String,
     val bwh2: String,
     val bwl1: String,
@@ -10095,7 +10097,7 @@ data class CreatePssIEEE4BCommand(
 )
 
 data class UpdatePssIEEE4BCommand(
-    @TargetAggregateIdentifier val pssIEEE4BId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE4BId: UUID? = null,
     val bwh1: String,
     val bwh2: String,
     val bwl1: String,
@@ -10165,7 +10167,7 @@ data class UpdatePssIEEE4BCommand(
     val vstmin: String
 )
 
-data class DeletePssIEEE4BCommand(@TargetAggregateIdentifier  val pssIEEE4BId: java.util.UUID? = null)
+data class DeletePssIEEE4BCommand(@TargetAggregateIdentifier  val pssIEEE4BId: UUID? = null)
 
 // single association commands
 
@@ -10174,7 +10176,7 @@ data class DeletePssIEEE4BCommand(@TargetAggregateIdentifier  val pssIEEE4BId: j
 
 // PssPTIST1 Commands
 data class CreatePssPTIST1Command(
-    @TargetAggregateIdentifier val pssPTIST1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssPTIST1Id: UUID? = null,
     val dtc: String,
     val dtf: String,
     val dtp: String,
@@ -10189,7 +10191,7 @@ data class CreatePssPTIST1Command(
 )
 
 data class UpdatePssPTIST1Command(
-    @TargetAggregateIdentifier val pssPTIST1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssPTIST1Id: UUID? = null,
     val dtc: String,
     val dtf: String,
     val dtp: String,
@@ -10203,7 +10205,7 @@ data class UpdatePssPTIST1Command(
     val tp: String
 )
 
-data class DeletePssPTIST1Command(@TargetAggregateIdentifier  val pssPTIST1Id: java.util.UUID? = null)
+data class DeletePssPTIST1Command(@TargetAggregateIdentifier  val pssPTIST1Id: UUID? = null)
 
 // single association commands
 
@@ -10212,7 +10214,7 @@ data class DeletePssPTIST1Command(@TargetAggregateIdentifier  val pssPTIST1Id: j
 
 // PssPTIST3 Commands
 data class CreatePssPTIST3Command(
-    @TargetAggregateIdentifier val pssPTIST3Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssPTIST3Id: UUID? = null,
     val a0: String,
     val a1: String,
     val a2: String,
@@ -10250,7 +10252,7 @@ data class CreatePssPTIST3Command(
 )
 
 data class UpdatePssPTIST3Command(
-    @TargetAggregateIdentifier val pssPTIST3Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssPTIST3Id: UUID? = null,
     val a0: String,
     val a1: String,
     val a2: String,
@@ -10287,7 +10289,7 @@ data class UpdatePssPTIST3Command(
     val tp: String
 )
 
-data class DeletePssPTIST3Command(@TargetAggregateIdentifier  val pssPTIST3Id: java.util.UUID? = null)
+data class DeletePssPTIST3Command(@TargetAggregateIdentifier  val pssPTIST3Id: UUID? = null)
 
 // single association commands
 
@@ -10296,7 +10298,7 @@ data class DeletePssPTIST3Command(@TargetAggregateIdentifier  val pssPTIST3Id: j
 
 // PssSB4 Commands
 data class CreatePssSB4Command(
-    @TargetAggregateIdentifier val pssSB4Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssSB4Id: UUID? = null,
     val kx: String,
     val ta: String,
     val tb: String,
@@ -10311,7 +10313,7 @@ data class CreatePssSB4Command(
 )
 
 data class UpdatePssSB4Command(
-    @TargetAggregateIdentifier val pssSB4Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssSB4Id: UUID? = null,
     val kx: String,
     val ta: String,
     val tb: String,
@@ -10325,7 +10327,7 @@ data class UpdatePssSB4Command(
     val vsmin: String
 )
 
-data class DeletePssSB4Command(@TargetAggregateIdentifier  val pssSB4Id: java.util.UUID? = null)
+data class DeletePssSB4Command(@TargetAggregateIdentifier  val pssSB4Id: UUID? = null)
 
 // single association commands
 
@@ -10334,7 +10336,7 @@ data class DeletePssSB4Command(@TargetAggregateIdentifier  val pssSB4Id: java.ut
 
 // PssSH Commands
 data class CreatePssSHCommand(
-    @TargetAggregateIdentifier val pssSHId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssSHId: UUID? = null,
     val k: String,
     val k0: String,
     val k1: String,
@@ -10351,7 +10353,7 @@ data class CreatePssSHCommand(
 )
 
 data class UpdatePssSHCommand(
-    @TargetAggregateIdentifier val pssSHId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssSHId: UUID? = null,
     val k: String,
     val k0: String,
     val k1: String,
@@ -10367,7 +10369,7 @@ data class UpdatePssSHCommand(
     val vsmin: String
 )
 
-data class DeletePssSHCommand(@TargetAggregateIdentifier  val pssSHId: java.util.UUID? = null)
+data class DeletePssSHCommand(@TargetAggregateIdentifier  val pssSHId: UUID? = null)
 
 // single association commands
 
@@ -10376,7 +10378,7 @@ data class DeletePssSHCommand(@TargetAggregateIdentifier  val pssSHId: java.util
 
 // PssSK Commands
 data class CreatePssSKCommand(
-    @TargetAggregateIdentifier val pssSKId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssSKId: UUID? = null,
     val k1: String,
     val k2: String,
     val k3: String,
@@ -10391,7 +10393,7 @@ data class CreatePssSKCommand(
 )
 
 data class UpdatePssSKCommand(
-    @TargetAggregateIdentifier val pssSKId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssSKId: UUID? = null,
     val k1: String,
     val k2: String,
     val k3: String,
@@ -10405,7 +10407,7 @@ data class UpdatePssSKCommand(
     val vsmin: String
 )
 
-data class DeletePssSKCommand(@TargetAggregateIdentifier  val pssSKId: java.util.UUID? = null)
+data class DeletePssSKCommand(@TargetAggregateIdentifier  val pssSKId: UUID? = null)
 
 // single association commands
 
@@ -10414,7 +10416,7 @@ data class DeletePssSKCommand(@TargetAggregateIdentifier  val pssSKId: java.util
 
 // PssWECC Commands
 data class CreatePssWECCCommand(
-    @TargetAggregateIdentifier val pssWECCId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssWECCId: UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val k1: String,
@@ -10436,7 +10438,7 @@ data class CreatePssWECCCommand(
 )
 
 data class UpdatePssWECCCommand(
-    @TargetAggregateIdentifier val pssWECCId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val pssWECCId: UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val k1: String,
@@ -10457,7 +10459,7 @@ data class UpdatePssWECCCommand(
     val vsmin: String
 )
 
-data class DeletePssWECCCommand(@TargetAggregateIdentifier  val pssWECCId: java.util.UUID? = null)
+data class DeletePssWECCCommand(@TargetAggregateIdentifier  val pssWECCId: UUID? = null)
 
 // single association commands
 
@@ -10466,7 +10468,7 @@ data class DeletePssWECCCommand(@TargetAggregateIdentifier  val pssWECCId: java.
 
 // Quality61850 Commands
 data class CreateQuality61850Command(
-    @TargetAggregateIdentifier val quality61850Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val quality61850Id: UUID? = null,
     val badReference: String,
     val estimatorReplaced: String,
     val failure: String,
@@ -10482,7 +10484,7 @@ data class CreateQuality61850Command(
 )
 
 data class UpdateQuality61850Command(
-    @TargetAggregateIdentifier val quality61850Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val quality61850Id: UUID? = null,
     val badReference: String,
     val estimatorReplaced: String,
     val failure: String,
@@ -10497,7 +10499,7 @@ data class UpdateQuality61850Command(
     val validity: String
 )
 
-data class DeleteQuality61850Command(@TargetAggregateIdentifier  val quality61850Id: java.util.UUID? = null)
+data class DeleteQuality61850Command(@TargetAggregateIdentifier  val quality61850Id: UUID? = null)
 
 // single association commands
 
@@ -10506,14 +10508,14 @@ data class DeleteQuality61850Command(@TargetAggregateIdentifier  val quality6185
 
 // RaiseLowerCommand Commands
 data class CreateRaiseLowerCommandCommand(
-    @TargetAggregateIdentifier  val raiseLowerCommandId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val raiseLowerCommandId: UUID? = null
 )
 
 data class UpdateRaiseLowerCommandCommand(
-    @TargetAggregateIdentifier  val raiseLowerCommandId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val raiseLowerCommandId: UUID? = null
 )
 
-data class DeleteRaiseLowerCommandCommand(@TargetAggregateIdentifier  val raiseLowerCommandId: java.util.UUID? = null)
+data class DeleteRaiseLowerCommandCommand(@TargetAggregateIdentifier  val raiseLowerCommandId: UUID? = null)
 
 // single association commands
 
@@ -10522,18 +10524,18 @@ data class DeleteRaiseLowerCommandCommand(@TargetAggregateIdentifier  val raiseL
 
 // RatioTapChanger Commands
 data class CreateRatioTapChangerCommand(
-    @TargetAggregateIdentifier val ratioTapChangerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val ratioTapChangerId: UUID? = null,
     val stepVoltageIncrement: String,
     val tculControlMode: String
 )
 
 data class UpdateRatioTapChangerCommand(
-    @TargetAggregateIdentifier val ratioTapChangerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val ratioTapChangerId: UUID? = null,
     val stepVoltageIncrement: String,
     val tculControlMode: String
 )
 
-data class DeleteRatioTapChangerCommand(@TargetAggregateIdentifier  val ratioTapChangerId: java.util.UUID? = null)
+data class DeleteRatioTapChangerCommand(@TargetAggregateIdentifier  val ratioTapChangerId: UUID? = null)
 
 // single association commands
 
@@ -10542,14 +10544,14 @@ data class DeleteRatioTapChangerCommand(@TargetAggregateIdentifier  val ratioTap
 
 // RatioTapChangerTable Commands
 data class CreateRatioTapChangerTableCommand(
-    @TargetAggregateIdentifier  val ratioTapChangerTableId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val ratioTapChangerTableId: UUID? = null
 )
 
 data class UpdateRatioTapChangerTableCommand(
-    @TargetAggregateIdentifier  val ratioTapChangerTableId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val ratioTapChangerTableId: UUID? = null
 )
 
-data class DeleteRatioTapChangerTableCommand(@TargetAggregateIdentifier  val ratioTapChangerTableId: java.util.UUID? = null)
+data class DeleteRatioTapChangerTableCommand(@TargetAggregateIdentifier  val ratioTapChangerTableId: UUID? = null)
 
 // single association commands
 
@@ -10558,14 +10560,14 @@ data class DeleteRatioTapChangerTableCommand(@TargetAggregateIdentifier  val rat
 
 // RatioTapChangerTablePoint Commands
 data class CreateRatioTapChangerTablePointCommand(
-    @TargetAggregateIdentifier  val ratioTapChangerTablePointId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val ratioTapChangerTablePointId: UUID? = null
 )
 
 data class UpdateRatioTapChangerTablePointCommand(
-    @TargetAggregateIdentifier  val ratioTapChangerTablePointId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val ratioTapChangerTablePointId: UUID? = null
 )
 
-data class DeleteRatioTapChangerTablePointCommand(@TargetAggregateIdentifier  val ratioTapChangerTablePointId: java.util.UUID? = null)
+data class DeleteRatioTapChangerTablePointCommand(@TargetAggregateIdentifier  val ratioTapChangerTablePointId: UUID? = null)
 
 // single association commands
 
@@ -10574,20 +10576,20 @@ data class DeleteRatioTapChangerTablePointCommand(@TargetAggregateIdentifier  va
 
 // Reactance Commands
 data class CreateReactanceCommand(
-    @TargetAggregateIdentifier val reactanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val reactanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateReactanceCommand(
-    @TargetAggregateIdentifier val reactanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val reactanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteReactanceCommand(@TargetAggregateIdentifier  val reactanceId: java.util.UUID? = null)
+data class DeleteReactanceCommand(@TargetAggregateIdentifier  val reactanceId: UUID? = null)
 
 // single association commands
 
@@ -10596,14 +10598,14 @@ data class DeleteReactanceCommand(@TargetAggregateIdentifier  val reactanceId: j
 
 // ReactiveCapabilityCurve Commands
 data class CreateReactiveCapabilityCurveCommand(
-    @TargetAggregateIdentifier  val reactiveCapabilityCurveId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val reactiveCapabilityCurveId: UUID? = null
 )
 
 data class UpdateReactiveCapabilityCurveCommand(
-    @TargetAggregateIdentifier  val reactiveCapabilityCurveId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val reactiveCapabilityCurveId: UUID? = null
 )
 
-data class DeleteReactiveCapabilityCurveCommand(@TargetAggregateIdentifier  val reactiveCapabilityCurveId: java.util.UUID? = null)
+data class DeleteReactiveCapabilityCurveCommand(@TargetAggregateIdentifier  val reactiveCapabilityCurveId: UUID? = null)
 
 // single association commands
 
@@ -10612,20 +10614,20 @@ data class DeleteReactiveCapabilityCurveCommand(@TargetAggregateIdentifier  val 
 
 // ReactivePower Commands
 data class CreateReactivePowerCommand(
-    @TargetAggregateIdentifier val reactivePowerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val reactivePowerId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateReactivePowerCommand(
-    @TargetAggregateIdentifier val reactivePowerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val reactivePowerId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteReactivePowerCommand(@TargetAggregateIdentifier  val reactivePowerId: java.util.UUID? = null)
+data class DeleteReactivePowerCommand(@TargetAggregateIdentifier  val reactivePowerId: UUID? = null)
 
 // single association commands
 
@@ -10634,18 +10636,18 @@ data class DeleteReactivePowerCommand(@TargetAggregateIdentifier  val reactivePo
 
 // RegularIntervalSchedule Commands
 data class CreateRegularIntervalScheduleCommand(
-    @TargetAggregateIdentifier val regularIntervalScheduleId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val regularIntervalScheduleId: UUID? = null,
     val endTime: String,
     val timeStep: String
 )
 
 data class UpdateRegularIntervalScheduleCommand(
-    @TargetAggregateIdentifier val regularIntervalScheduleId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val regularIntervalScheduleId: UUID? = null,
     val endTime: String,
     val timeStep: String
 )
 
-data class DeleteRegularIntervalScheduleCommand(@TargetAggregateIdentifier  val regularIntervalScheduleId: java.util.UUID? = null)
+data class DeleteRegularIntervalScheduleCommand(@TargetAggregateIdentifier  val regularIntervalScheduleId: UUID? = null)
 
 // single association commands
 
@@ -10654,20 +10656,20 @@ data class DeleteRegularIntervalScheduleCommand(@TargetAggregateIdentifier  val 
 
 // RegularTimePoint Commands
 data class CreateRegularTimePointCommand(
-    @TargetAggregateIdentifier val regularTimePointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val regularTimePointId: UUID? = null,
     val sequenceNumber: String,
     val value1: String,
     val value2: String
 )
 
 data class UpdateRegularTimePointCommand(
-    @TargetAggregateIdentifier val regularTimePointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val regularTimePointId: UUID? = null,
     val sequenceNumber: String,
     val value1: String,
     val value2: String
 )
 
-data class DeleteRegularTimePointCommand(@TargetAggregateIdentifier  val regularTimePointId: java.util.UUID? = null)
+data class DeleteRegularTimePointCommand(@TargetAggregateIdentifier  val regularTimePointId: UUID? = null)
 
 // single association commands
 
@@ -10676,14 +10678,14 @@ data class DeleteRegularTimePointCommand(@TargetAggregateIdentifier  val regular
 
 // RegulatingCondEq Commands
 data class CreateRegulatingCondEqCommand(
-    @TargetAggregateIdentifier  val regulatingCondEqId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val regulatingCondEqId: UUID? = null
 )
 
 data class UpdateRegulatingCondEqCommand(
-    @TargetAggregateIdentifier  val regulatingCondEqId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val regulatingCondEqId: UUID? = null
 )
 
-data class DeleteRegulatingCondEqCommand(@TargetAggregateIdentifier  val regulatingCondEqId: java.util.UUID? = null)
+data class DeleteRegulatingCondEqCommand(@TargetAggregateIdentifier  val regulatingCondEqId: UUID? = null)
 
 // single association commands
 
@@ -10692,16 +10694,16 @@ data class DeleteRegulatingCondEqCommand(@TargetAggregateIdentifier  val regulat
 
 // RegulatingControl Commands
 data class CreateRegulatingControlCommand(
-    @TargetAggregateIdentifier val regulatingControlId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val regulatingControlId: UUID? = null,
     val mode: String
 )
 
 data class UpdateRegulatingControlCommand(
-    @TargetAggregateIdentifier val regulatingControlId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val regulatingControlId: UUID? = null,
     val mode: String
 )
 
-data class DeleteRegulatingControlCommand(@TargetAggregateIdentifier  val regulatingControlId: java.util.UUID? = null)
+data class DeleteRegulatingControlCommand(@TargetAggregateIdentifier  val regulatingControlId: UUID? = null)
 
 // single association commands
 
@@ -10710,14 +10712,14 @@ data class DeleteRegulatingControlCommand(@TargetAggregateIdentifier  val regula
 
 // RegulationSchedule Commands
 data class CreateRegulationScheduleCommand(
-    @TargetAggregateIdentifier  val regulationScheduleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val regulationScheduleId: UUID? = null
 )
 
 data class UpdateRegulationScheduleCommand(
-    @TargetAggregateIdentifier  val regulationScheduleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val regulationScheduleId: UUID? = null
 )
 
-data class DeleteRegulationScheduleCommand(@TargetAggregateIdentifier  val regulationScheduleId: java.util.UUID? = null)
+data class DeleteRegulationScheduleCommand(@TargetAggregateIdentifier  val regulationScheduleId: UUID? = null)
 
 // single association commands
 
@@ -10726,16 +10728,16 @@ data class DeleteRegulationScheduleCommand(@TargetAggregateIdentifier  val regul
 
 // RemoteInputSignal Commands
 data class CreateRemoteInputSignalCommand(
-    @TargetAggregateIdentifier val remoteInputSignalId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val remoteInputSignalId: UUID? = null,
     val remoteSignalType: String
 )
 
 data class UpdateRemoteInputSignalCommand(
-    @TargetAggregateIdentifier val remoteInputSignalId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val remoteInputSignalId: UUID? = null,
     val remoteSignalType: String
 )
 
-data class DeleteRemoteInputSignalCommand(@TargetAggregateIdentifier  val remoteInputSignalId: java.util.UUID? = null)
+data class DeleteRemoteInputSignalCommand(@TargetAggregateIdentifier  val remoteInputSignalId: UUID? = null)
 
 // single association commands
 
@@ -10744,14 +10746,14 @@ data class DeleteRemoteInputSignalCommand(@TargetAggregateIdentifier  val remote
 
 // ReportingGroup Commands
 data class CreateReportingGroupCommand(
-    @TargetAggregateIdentifier  val reportingGroupId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val reportingGroupId: UUID? = null
 )
 
 data class UpdateReportingGroupCommand(
-    @TargetAggregateIdentifier  val reportingGroupId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val reportingGroupId: UUID? = null
 )
 
-data class DeleteReportingGroupCommand(@TargetAggregateIdentifier  val reportingGroupId: java.util.UUID? = null)
+data class DeleteReportingGroupCommand(@TargetAggregateIdentifier  val reportingGroupId: UUID? = null)
 
 // single association commands
 
@@ -10760,20 +10762,20 @@ data class DeleteReportingGroupCommand(@TargetAggregateIdentifier  val reporting
 
 // Resistance Commands
 data class CreateResistanceCommand(
-    @TargetAggregateIdentifier val resistanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val resistanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateResistanceCommand(
-    @TargetAggregateIdentifier val resistanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val resistanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteResistanceCommand(@TargetAggregateIdentifier  val resistanceId: java.util.UUID? = null)
+data class DeleteResistanceCommand(@TargetAggregateIdentifier  val resistanceId: UUID? = null)
 
 // single association commands
 
@@ -10782,7 +10784,7 @@ data class DeleteResistanceCommand(@TargetAggregateIdentifier  val resistanceId:
 
 // ResistancePerLength Commands
 data class CreateResistancePerLengthCommand(
-    @TargetAggregateIdentifier val resistancePerLengthId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val resistancePerLengthId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -10791,7 +10793,7 @@ data class CreateResistancePerLengthCommand(
 )
 
 data class UpdateResistancePerLengthCommand(
-    @TargetAggregateIdentifier val resistancePerLengthId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val resistancePerLengthId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -10799,7 +10801,7 @@ data class UpdateResistancePerLengthCommand(
     val value: String
 )
 
-data class DeleteResistancePerLengthCommand(@TargetAggregateIdentifier  val resistancePerLengthId: java.util.UUID? = null)
+data class DeleteResistancePerLengthCommand(@TargetAggregateIdentifier  val resistancePerLengthId: UUID? = null)
 
 // single association commands
 
@@ -10808,20 +10810,20 @@ data class DeleteResistancePerLengthCommand(@TargetAggregateIdentifier  val resi
 
 // RotatingMachine Commands
 data class CreateRotatingMachineCommand(
-    @TargetAggregateIdentifier val rotatingMachineId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val rotatingMachineId: UUID? = null,
     val ratedPowerFactor: String,
     val ratedS: String,
     val ratedU: String
 )
 
 data class UpdateRotatingMachineCommand(
-    @TargetAggregateIdentifier val rotatingMachineId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val rotatingMachineId: UUID? = null,
     val ratedPowerFactor: String,
     val ratedS: String,
     val ratedU: String
 )
 
-data class DeleteRotatingMachineCommand(@TargetAggregateIdentifier  val rotatingMachineId: java.util.UUID? = null)
+data class DeleteRotatingMachineCommand(@TargetAggregateIdentifier  val rotatingMachineId: UUID? = null)
 
 // single association commands
 
@@ -10830,7 +10832,7 @@ data class DeleteRotatingMachineCommand(@TargetAggregateIdentifier  val rotating
 
 // RotatingMachineDynamics Commands
 data class CreateRotatingMachineDynamicsCommand(
-    @TargetAggregateIdentifier val rotatingMachineDynamicsId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val rotatingMachineDynamicsId: UUID? = null,
     val damping: String,
     val inertia: String,
     val saturationFactor: String,
@@ -10840,7 +10842,7 @@ data class CreateRotatingMachineDynamicsCommand(
 )
 
 data class UpdateRotatingMachineDynamicsCommand(
-    @TargetAggregateIdentifier val rotatingMachineDynamicsId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val rotatingMachineDynamicsId: UUID? = null,
     val damping: String,
     val inertia: String,
     val saturationFactor: String,
@@ -10849,7 +10851,7 @@ data class UpdateRotatingMachineDynamicsCommand(
     val statorResistance: String
 )
 
-data class DeleteRotatingMachineDynamicsCommand(@TargetAggregateIdentifier  val rotatingMachineDynamicsId: java.util.UUID? = null)
+data class DeleteRotatingMachineDynamicsCommand(@TargetAggregateIdentifier  val rotatingMachineDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -10858,7 +10860,7 @@ data class DeleteRotatingMachineDynamicsCommand(@TargetAggregateIdentifier  val 
 
 // RotationSpeed Commands
 data class CreateRotationSpeedCommand(
-    @TargetAggregateIdentifier val rotationSpeedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val rotationSpeedId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -10867,7 +10869,7 @@ data class CreateRotationSpeedCommand(
 )
 
 data class UpdateRotationSpeedCommand(
-    @TargetAggregateIdentifier val rotationSpeedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val rotationSpeedId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -10875,7 +10877,7 @@ data class UpdateRotationSpeedCommand(
     val value: String
 )
 
-data class DeleteRotationSpeedCommand(@TargetAggregateIdentifier  val rotationSpeedId: java.util.UUID? = null)
+data class DeleteRotationSpeedCommand(@TargetAggregateIdentifier  val rotationSpeedId: UUID? = null)
 
 // single association commands
 
@@ -10884,18 +10886,18 @@ data class DeleteRotationSpeedCommand(@TargetAggregateIdentifier  val rotationSp
 
 // Season Commands
 data class CreateSeasonCommand(
-    @TargetAggregateIdentifier val seasonId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val seasonId: UUID? = null,
     val endDate: String,
     val startDate: String
 )
 
 data class UpdateSeasonCommand(
-    @TargetAggregateIdentifier val seasonId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val seasonId: UUID? = null,
     val endDate: String,
     val startDate: String
 )
 
-data class DeleteSeasonCommand(@TargetAggregateIdentifier  val seasonId: java.util.UUID? = null)
+data class DeleteSeasonCommand(@TargetAggregateIdentifier  val seasonId: UUID? = null)
 
 // single association commands
 
@@ -10904,14 +10906,14 @@ data class DeleteSeasonCommand(@TargetAggregateIdentifier  val seasonId: java.ut
 
 // SeasonDayTypeSchedule Commands
 data class CreateSeasonDayTypeScheduleCommand(
-    @TargetAggregateIdentifier  val seasonDayTypeScheduleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val seasonDayTypeScheduleId: UUID? = null
 )
 
 data class UpdateSeasonDayTypeScheduleCommand(
-    @TargetAggregateIdentifier  val seasonDayTypeScheduleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val seasonDayTypeScheduleId: UUID? = null
 )
 
-data class DeleteSeasonDayTypeScheduleCommand(@TargetAggregateIdentifier  val seasonDayTypeScheduleId: java.util.UUID? = null)
+data class DeleteSeasonDayTypeScheduleCommand(@TargetAggregateIdentifier  val seasonDayTypeScheduleId: UUID? = null)
 
 // single association commands
 
@@ -10920,20 +10922,20 @@ data class DeleteSeasonDayTypeScheduleCommand(@TargetAggregateIdentifier  val se
 
 // Seconds Commands
 data class CreateSecondsCommand(
-    @TargetAggregateIdentifier val secondsId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val secondsId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateSecondsCommand(
-    @TargetAggregateIdentifier val secondsId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val secondsId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteSecondsCommand(@TargetAggregateIdentifier  val secondsId: java.util.UUID? = null)
+data class DeleteSecondsCommand(@TargetAggregateIdentifier  val secondsId: UUID? = null)
 
 // single association commands
 
@@ -10942,7 +10944,7 @@ data class DeleteSecondsCommand(@TargetAggregateIdentifier  val secondsId: java.
 
 // SeriesCompensator Commands
 data class CreateSeriesCompensatorCommand(
-    @TargetAggregateIdentifier val seriesCompensatorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val seriesCompensatorId: UUID? = null,
     val r: String,
     val r0: String,
     val valistorPresent: String,
@@ -10953,7 +10955,7 @@ data class CreateSeriesCompensatorCommand(
 )
 
 data class UpdateSeriesCompensatorCommand(
-    @TargetAggregateIdentifier val seriesCompensatorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val seriesCompensatorId: UUID? = null,
     val r: String,
     val r0: String,
     val valistorPresent: String,
@@ -10963,7 +10965,7 @@ data class UpdateSeriesCompensatorCommand(
     val x0: String
 )
 
-data class DeleteSeriesCompensatorCommand(@TargetAggregateIdentifier  val seriesCompensatorId: java.util.UUID? = null)
+data class DeleteSeriesCompensatorCommand(@TargetAggregateIdentifier  val seriesCompensatorId: UUID? = null)
 
 // single association commands
 
@@ -10972,18 +10974,18 @@ data class DeleteSeriesCompensatorCommand(@TargetAggregateIdentifier  val series
 
 // SetPoint Commands
 data class CreateSetPointCommand(
-    @TargetAggregateIdentifier val setPointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val setPointId: UUID? = null,
     val normalValue: String,
     val value: String
 )
 
 data class UpdateSetPointCommand(
-    @TargetAggregateIdentifier val setPointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val setPointId: UUID? = null,
     val normalValue: String,
     val value: String
 )
 
-data class DeleteSetPointCommand(@TargetAggregateIdentifier  val setPointId: java.util.UUID? = null)
+data class DeleteSetPointCommand(@TargetAggregateIdentifier  val setPointId: UUID? = null)
 
 // single association commands
 
@@ -10992,7 +10994,7 @@ data class DeleteSetPointCommand(@TargetAggregateIdentifier  val setPointId: jav
 
 // ShuntCompensator Commands
 data class CreateShuntCompensatorCommand(
-    @TargetAggregateIdentifier val shuntCompensatorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val shuntCompensatorId: UUID? = null,
     val aVRDelay: String,
     val grounded: String,
     val maximumSections: String,
@@ -11004,7 +11006,7 @@ data class CreateShuntCompensatorCommand(
 )
 
 data class UpdateShuntCompensatorCommand(
-    @TargetAggregateIdentifier val shuntCompensatorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val shuntCompensatorId: UUID? = null,
     val aVRDelay: String,
     val grounded: String,
     val maximumSections: String,
@@ -11015,7 +11017,7 @@ data class UpdateShuntCompensatorCommand(
     val voltageSensitivity: String
 )
 
-data class DeleteShuntCompensatorCommand(@TargetAggregateIdentifier  val shuntCompensatorId: java.util.UUID? = null)
+data class DeleteShuntCompensatorCommand(@TargetAggregateIdentifier  val shuntCompensatorId: UUID? = null)
 
 // single association commands
 
@@ -11024,16 +11026,16 @@ data class DeleteShuntCompensatorCommand(@TargetAggregateIdentifier  val shuntCo
 
 // Simple_Float Commands
 data class CreateSimple_FloatCommand(
-    @TargetAggregateIdentifier val simple_FloatId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val simple_FloatId: UUID? = null,
     val value: String
 )
 
 data class UpdateSimple_FloatCommand(
-    @TargetAggregateIdentifier val simple_FloatId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val simple_FloatId: UUID? = null,
     val value: String
 )
 
-data class DeleteSimple_FloatCommand(@TargetAggregateIdentifier  val simple_FloatId: java.util.UUID? = null)
+data class DeleteSimple_FloatCommand(@TargetAggregateIdentifier  val simple_FloatId: UUID? = null)
 
 // single association commands
 
@@ -11042,14 +11044,14 @@ data class DeleteSimple_FloatCommand(@TargetAggregateIdentifier  val simple_Floa
 
 // SolarGeneratingUnit Commands
 data class CreateSolarGeneratingUnitCommand(
-    @TargetAggregateIdentifier  val solarGeneratingUnitId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val solarGeneratingUnitId: UUID? = null
 )
 
 data class UpdateSolarGeneratingUnitCommand(
-    @TargetAggregateIdentifier  val solarGeneratingUnitId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val solarGeneratingUnitId: UUID? = null
 )
 
-data class DeleteSolarGeneratingUnitCommand(@TargetAggregateIdentifier  val solarGeneratingUnitId: java.util.UUID? = null)
+data class DeleteSolarGeneratingUnitCommand(@TargetAggregateIdentifier  val solarGeneratingUnitId: UUID? = null)
 
 // single association commands
 
@@ -11058,7 +11060,7 @@ data class DeleteSolarGeneratingUnitCommand(@TargetAggregateIdentifier  val sola
 
 // StatevaliablesVersion Commands
 data class CreateStatevaliablesVersionCommand(
-    @TargetAggregateIdentifier val statevaliablesVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val statevaliablesVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11072,7 +11074,7 @@ data class CreateStatevaliablesVersionCommand(
 )
 
 data class UpdateStatevaliablesVersionCommand(
-    @TargetAggregateIdentifier val statevaliablesVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val statevaliablesVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11085,7 +11087,7 @@ data class UpdateStatevaliablesVersionCommand(
     val shortName: String
 )
 
-data class DeleteStatevaliablesVersionCommand(@TargetAggregateIdentifier  val statevaliablesVersionId: java.util.UUID? = null)
+data class DeleteStatevaliablesVersionCommand(@TargetAggregateIdentifier  val statevaliablesVersionId: UUID? = null)
 
 // single association commands
 
@@ -11094,7 +11096,7 @@ data class DeleteStatevaliablesVersionCommand(@TargetAggregateIdentifier  val st
 
 // StaticvalCompensator Commands
 data class CreateStaticvalCompensatorCommand(
-    @TargetAggregateIdentifier val staticvalCompensatorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val staticvalCompensatorId: UUID? = null,
     val capacitiveRating: String,
     val inductiveRating: String,
     val slope: String,
@@ -11103,7 +11105,7 @@ data class CreateStaticvalCompensatorCommand(
 )
 
 data class UpdateStaticvalCompensatorCommand(
-    @TargetAggregateIdentifier val staticvalCompensatorId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val staticvalCompensatorId: UUID? = null,
     val capacitiveRating: String,
     val inductiveRating: String,
     val slope: String,
@@ -11111,7 +11113,7 @@ data class UpdateStaticvalCompensatorCommand(
     val voltageSetPoint: String
 )
 
-data class DeleteStaticvalCompensatorCommand(@TargetAggregateIdentifier  val staticvalCompensatorId: java.util.UUID? = null)
+data class DeleteStaticvalCompensatorCommand(@TargetAggregateIdentifier  val staticvalCompensatorId: UUID? = null)
 
 // single association commands
 
@@ -11120,14 +11122,14 @@ data class DeleteStaticvalCompensatorCommand(@TargetAggregateIdentifier  val sta
 
 // Staticpowersystemmodel Commands
 data class CreateStaticpowersystemmodelCommand(
-    @TargetAggregateIdentifier  val staticpowersystemmodelId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val staticpowersystemmodelId: UUID? = null
 )
 
 data class UpdateStaticpowersystemmodelCommand(
-    @TargetAggregateIdentifier  val staticpowersystemmodelId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val staticpowersystemmodelId: UUID? = null
 )
 
-data class DeleteStaticpowersystemmodelCommand(@TargetAggregateIdentifier  val staticpowersystemmodelId: java.util.UUID? = null)
+data class DeleteStaticpowersystemmodelCommand(@TargetAggregateIdentifier  val staticpowersystemmodelId: UUID? = null)
 
 // single association commands
 
@@ -11136,14 +11138,14 @@ data class DeleteStaticpowersystemmodelCommand(@TargetAggregateIdentifier  val s
 
 // StationSupply Commands
 data class CreateStationSupplyCommand(
-    @TargetAggregateIdentifier  val stationSupplyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val stationSupplyId: UUID? = null
 )
 
 data class UpdateStationSupplyCommand(
-    @TargetAggregateIdentifier  val stationSupplyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val stationSupplyId: UUID? = null
 )
 
-data class DeleteStationSupplyCommand(@TargetAggregateIdentifier  val stationSupplyId: java.util.UUID? = null)
+data class DeleteStationSupplyCommand(@TargetAggregateIdentifier  val stationSupplyId: UUID? = null)
 
 // single association commands
 
@@ -11152,7 +11154,7 @@ data class DeleteStationSupplyCommand(@TargetAggregateIdentifier  val stationSup
 
 // SteadyStateHypothesisVersion Commands
 data class CreateSteadyStateHypothesisVersionCommand(
-    @TargetAggregateIdentifier val steadyStateHypothesisVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val steadyStateHypothesisVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11166,7 +11168,7 @@ data class CreateSteadyStateHypothesisVersionCommand(
 )
 
 data class UpdateSteadyStateHypothesisVersionCommand(
-    @TargetAggregateIdentifier val steadyStateHypothesisVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val steadyStateHypothesisVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11179,7 +11181,7 @@ data class UpdateSteadyStateHypothesisVersionCommand(
     val shortName: String
 )
 
-data class DeleteSteadyStateHypothesisVersionCommand(@TargetAggregateIdentifier  val steadyStateHypothesisVersionId: java.util.UUID? = null)
+data class DeleteSteadyStateHypothesisVersionCommand(@TargetAggregateIdentifier  val steadyStateHypothesisVersionId: UUID? = null)
 
 // single association commands
 
@@ -11188,14 +11190,14 @@ data class DeleteSteadyStateHypothesisVersionCommand(@TargetAggregateIdentifier 
 
 // StringMeasurement Commands
 data class CreateStringMeasurementCommand(
-    @TargetAggregateIdentifier  val stringMeasurementId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val stringMeasurementId: UUID? = null
 )
 
 data class UpdateStringMeasurementCommand(
-    @TargetAggregateIdentifier  val stringMeasurementId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val stringMeasurementId: UUID? = null
 )
 
-data class DeleteStringMeasurementCommand(@TargetAggregateIdentifier  val stringMeasurementId: java.util.UUID? = null)
+data class DeleteStringMeasurementCommand(@TargetAggregateIdentifier  val stringMeasurementId: UUID? = null)
 
 // single association commands
 
@@ -11204,16 +11206,16 @@ data class DeleteStringMeasurementCommand(@TargetAggregateIdentifier  val string
 
 // StringMeasurementValue Commands
 data class CreateStringMeasurementValueCommand(
-    @TargetAggregateIdentifier val stringMeasurementValueId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val stringMeasurementValueId: UUID? = null,
     val value: String
 )
 
 data class UpdateStringMeasurementValueCommand(
-    @TargetAggregateIdentifier val stringMeasurementValueId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val stringMeasurementValueId: UUID? = null,
     val value: String
 )
 
-data class DeleteStringMeasurementValueCommand(@TargetAggregateIdentifier  val stringMeasurementValueId: java.util.UUID? = null)
+data class DeleteStringMeasurementValueCommand(@TargetAggregateIdentifier  val stringMeasurementValueId: UUID? = null)
 
 // single association commands
 
@@ -11222,14 +11224,14 @@ data class DeleteStringMeasurementValueCommand(@TargetAggregateIdentifier  val s
 
 // StringProxy Commands
 data class CreateStringProxyCommand(
-    @TargetAggregateIdentifier  val stringProxyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val stringProxyId: UUID? = null
 )
 
 data class UpdateStringProxyCommand(
-    @TargetAggregateIdentifier  val stringProxyId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val stringProxyId: UUID? = null
 )
 
-data class DeleteStringProxyCommand(@TargetAggregateIdentifier  val stringProxyId: java.util.UUID? = null)
+data class DeleteStringProxyCommand(@TargetAggregateIdentifier  val stringProxyId: UUID? = null)
 
 // single association commands
 
@@ -11238,14 +11240,14 @@ data class DeleteStringProxyCommand(@TargetAggregateIdentifier  val stringProxyI
 
 // SubGeographicalRegion Commands
 data class CreateSubGeographicalRegionCommand(
-    @TargetAggregateIdentifier  val subGeographicalRegionId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val subGeographicalRegionId: UUID? = null
 )
 
 data class UpdateSubGeographicalRegionCommand(
-    @TargetAggregateIdentifier  val subGeographicalRegionId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val subGeographicalRegionId: UUID? = null
 )
 
-data class DeleteSubGeographicalRegionCommand(@TargetAggregateIdentifier  val subGeographicalRegionId: java.util.UUID? = null)
+data class DeleteSubGeographicalRegionCommand(@TargetAggregateIdentifier  val subGeographicalRegionId: UUID? = null)
 
 // single association commands
 
@@ -11254,14 +11256,14 @@ data class DeleteSubGeographicalRegionCommand(@TargetAggregateIdentifier  val su
 
 // SubLoadArea Commands
 data class CreateSubLoadAreaCommand(
-    @TargetAggregateIdentifier  val subLoadAreaId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val subLoadAreaId: UUID? = null
 )
 
 data class UpdateSubLoadAreaCommand(
-    @TargetAggregateIdentifier  val subLoadAreaId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val subLoadAreaId: UUID? = null
 )
 
-data class DeleteSubLoadAreaCommand(@TargetAggregateIdentifier  val subLoadAreaId: java.util.UUID? = null)
+data class DeleteSubLoadAreaCommand(@TargetAggregateIdentifier  val subLoadAreaId: UUID? = null)
 
 // single association commands
 
@@ -11270,14 +11272,14 @@ data class DeleteSubLoadAreaCommand(@TargetAggregateIdentifier  val subLoadAreaI
 
 // Substation Commands
 data class CreateSubstationCommand(
-    @TargetAggregateIdentifier  val substationId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val substationId: UUID? = null
 )
 
 data class UpdateSubstationCommand(
-    @TargetAggregateIdentifier  val substationId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val substationId: UUID? = null
 )
 
-data class DeleteSubstationCommand(@TargetAggregateIdentifier  val substationId: java.util.UUID? = null)
+data class DeleteSubstationCommand(@TargetAggregateIdentifier  val substationId: UUID? = null)
 
 // single association commands
 
@@ -11286,20 +11288,20 @@ data class DeleteSubstationCommand(@TargetAggregateIdentifier  val substationId:
 
 // Susceptance Commands
 data class CreateSusceptanceCommand(
-    @TargetAggregateIdentifier val susceptanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val susceptanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateSusceptanceCommand(
-    @TargetAggregateIdentifier val susceptanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val susceptanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteSusceptanceCommand(@TargetAggregateIdentifier  val susceptanceId: java.util.UUID? = null)
+data class DeleteSusceptanceCommand(@TargetAggregateIdentifier  val susceptanceId: UUID? = null)
 
 // single association commands
 
@@ -11308,18 +11310,18 @@ data class DeleteSusceptanceCommand(@TargetAggregateIdentifier  val susceptanceI
 
 // SvInjection Commands
 data class CreateSvInjectionCommand(
-    @TargetAggregateIdentifier val svInjectionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val svInjectionId: UUID? = null,
     val pInjection: String,
     val qInjection: String
 )
 
 data class UpdateSvInjectionCommand(
-    @TargetAggregateIdentifier val svInjectionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val svInjectionId: UUID? = null,
     val pInjection: String,
     val qInjection: String
 )
 
-data class DeleteSvInjectionCommand(@TargetAggregateIdentifier  val svInjectionId: java.util.UUID? = null)
+data class DeleteSvInjectionCommand(@TargetAggregateIdentifier  val svInjectionId: UUID? = null)
 
 // single association commands
 
@@ -11328,18 +11330,18 @@ data class DeleteSvInjectionCommand(@TargetAggregateIdentifier  val svInjectionI
 
 // SvPowerFlow Commands
 data class CreateSvPowerFlowCommand(
-    @TargetAggregateIdentifier val svPowerFlowId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val svPowerFlowId: UUID? = null,
     val p: String,
     val q: String
 )
 
 data class UpdateSvPowerFlowCommand(
-    @TargetAggregateIdentifier val svPowerFlowId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val svPowerFlowId: UUID? = null,
     val p: String,
     val q: String
 )
 
-data class DeleteSvPowerFlowCommand(@TargetAggregateIdentifier  val svPowerFlowId: java.util.UUID? = null)
+data class DeleteSvPowerFlowCommand(@TargetAggregateIdentifier  val svPowerFlowId: UUID? = null)
 
 // single association commands
 
@@ -11348,16 +11350,16 @@ data class DeleteSvPowerFlowCommand(@TargetAggregateIdentifier  val svPowerFlowI
 
 // SvShuntCompensatorSections Commands
 data class CreateSvShuntCompensatorSectionsCommand(
-    @TargetAggregateIdentifier val svShuntCompensatorSectionsId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val svShuntCompensatorSectionsId: UUID? = null,
     val sections: String
 )
 
 data class UpdateSvShuntCompensatorSectionsCommand(
-    @TargetAggregateIdentifier val svShuntCompensatorSectionsId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val svShuntCompensatorSectionsId: UUID? = null,
     val sections: String
 )
 
-data class DeleteSvShuntCompensatorSectionsCommand(@TargetAggregateIdentifier  val svShuntCompensatorSectionsId: java.util.UUID? = null)
+data class DeleteSvShuntCompensatorSectionsCommand(@TargetAggregateIdentifier  val svShuntCompensatorSectionsId: UUID? = null)
 
 // single association commands
 
@@ -11366,16 +11368,16 @@ data class DeleteSvShuntCompensatorSectionsCommand(@TargetAggregateIdentifier  v
 
 // SvStatus Commands
 data class CreateSvStatusCommand(
-    @TargetAggregateIdentifier val svStatusId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val svStatusId: UUID? = null,
     val inService: String
 )
 
 data class UpdateSvStatusCommand(
-    @TargetAggregateIdentifier val svStatusId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val svStatusId: UUID? = null,
     val inService: String
 )
 
-data class DeleteSvStatusCommand(@TargetAggregateIdentifier  val svStatusId: java.util.UUID? = null)
+data class DeleteSvStatusCommand(@TargetAggregateIdentifier  val svStatusId: UUID? = null)
 
 // single association commands
 
@@ -11384,16 +11386,16 @@ data class DeleteSvStatusCommand(@TargetAggregateIdentifier  val svStatusId: jav
 
 // SvTapStep Commands
 data class CreateSvTapStepCommand(
-    @TargetAggregateIdentifier val svTapStepId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val svTapStepId: UUID? = null,
     val position: String
 )
 
 data class UpdateSvTapStepCommand(
-    @TargetAggregateIdentifier val svTapStepId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val svTapStepId: UUID? = null,
     val position: String
 )
 
-data class DeleteSvTapStepCommand(@TargetAggregateIdentifier  val svTapStepId: java.util.UUID? = null)
+data class DeleteSvTapStepCommand(@TargetAggregateIdentifier  val svTapStepId: UUID? = null)
 
 // single association commands
 
@@ -11402,36 +11404,36 @@ data class DeleteSvTapStepCommand(@TargetAggregateIdentifier  val svTapStepId: j
 
 // SvVoltage Commands
 data class CreateSvVoltageCommand(
-    @TargetAggregateIdentifier val svVoltageId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val svVoltageId: UUID? = null,
     val angle: String,
     val v: String
 )
 
 data class UpdateSvVoltageCommand(
-    @TargetAggregateIdentifier val svVoltageId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val svVoltageId: UUID? = null,
     val angle: String,
     val v: String
 )
 
-data class DeleteSvVoltageCommand(@TargetAggregateIdentifier  val svVoltageId: java.util.UUID? = null)
+data class DeleteSvVoltageCommand(@TargetAggregateIdentifier  val svVoltageId: UUID? = null)
 
 // single association commands
 
 // multiple association commands
 
 
-// SwitchIt Commands
-data class CreateSwitchItCommand(
-    @TargetAggregateIdentifier val switchItId: java.util.UUID? = null,
+// Switch Commands
+data class CreateSwitchCommand(
+    @TargetAggregateIdentifier val switchId: UUID? = null,
     val open: String
 )
 
-data class UpdateSwitchItCommand(
-    @TargetAggregateIdentifier val switchItId: java.util.UUID? = null,
+data class UpdateSwitchCommand(
+    @TargetAggregateIdentifier val switchId: UUID? = null,
     val open: String
 )
 
-data class DeleteSwitchItCommand(@TargetAggregateIdentifier  val switchItId: java.util.UUID? = null)
+data class DeleteSwitchCommand(@TargetAggregateIdentifier  val switchId: UUID? = null)
 
 // single association commands
 
@@ -11440,20 +11442,20 @@ data class DeleteSwitchItCommand(@TargetAggregateIdentifier  val switchItId: jav
 
 // SwitchProxy Commands
 data class CreateSwitchProxyCommand(
-    @TargetAggregateIdentifier val switchProxyId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val switchProxyId: UUID? = null,
     val normalOpen: String,
     val ratedCurrent: String,
     val retained: String
 )
 
 data class UpdateSwitchProxyCommand(
-    @TargetAggregateIdentifier val switchProxyId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val switchProxyId: UUID? = null,
     val normalOpen: String,
     val ratedCurrent: String,
     val retained: String
 )
 
-data class DeleteSwitchProxyCommand(@TargetAggregateIdentifier  val switchProxyId: java.util.UUID? = null)
+data class DeleteSwitchProxyCommand(@TargetAggregateIdentifier  val switchProxyId: UUID? = null)
 
 // single association commands
 
@@ -11462,14 +11464,14 @@ data class DeleteSwitchProxyCommand(@TargetAggregateIdentifier  val switchProxyI
 
 // SwitchSchedule Commands
 data class CreateSwitchScheduleCommand(
-    @TargetAggregateIdentifier  val switchScheduleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val switchScheduleId: UUID? = null
 )
 
 data class UpdateSwitchScheduleCommand(
-    @TargetAggregateIdentifier  val switchScheduleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val switchScheduleId: UUID? = null
 )
 
-data class DeleteSwitchScheduleCommand(@TargetAggregateIdentifier  val switchScheduleId: java.util.UUID? = null)
+data class DeleteSwitchScheduleCommand(@TargetAggregateIdentifier  val switchScheduleId: UUID? = null)
 
 // single association commands
 
@@ -11478,7 +11480,7 @@ data class DeleteSwitchScheduleCommand(@TargetAggregateIdentifier  val switchSch
 
 // SynchronousMachine Commands
 data class CreateSynchronousMachineCommand(
-    @TargetAggregateIdentifier val synchronousMachineId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineId: UUID? = null,
     val earthing: String,
     val earthingStarPointR: String,
     val earthingStarPointX: String,
@@ -11501,7 +11503,7 @@ data class CreateSynchronousMachineCommand(
 )
 
 data class UpdateSynchronousMachineCommand(
-    @TargetAggregateIdentifier val synchronousMachineId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineId: UUID? = null,
     val earthing: String,
     val earthingStarPointR: String,
     val earthingStarPointX: String,
@@ -11523,7 +11525,7 @@ data class UpdateSynchronousMachineCommand(
     val x2: String
 )
 
-data class DeleteSynchronousMachineCommand(@TargetAggregateIdentifier  val synchronousMachineId: java.util.UUID? = null)
+data class DeleteSynchronousMachineCommand(@TargetAggregateIdentifier  val synchronousMachineId: UUID? = null)
 
 // single association commands
 
@@ -11532,7 +11534,7 @@ data class DeleteSynchronousMachineCommand(@TargetAggregateIdentifier  val synch
 
 // SynchronousMachineDetailed Commands
 data class CreateSynchronousMachineDetailedCommand(
-    @TargetAggregateIdentifier val synchronousMachineDetailedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineDetailedId: UUID? = null,
     val efdBaseRatio: String,
     val ifdBaseType: String,
     val ifdBaseValue: String,
@@ -11541,7 +11543,7 @@ data class CreateSynchronousMachineDetailedCommand(
 )
 
 data class UpdateSynchronousMachineDetailedCommand(
-    @TargetAggregateIdentifier val synchronousMachineDetailedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineDetailedId: UUID? = null,
     val efdBaseRatio: String,
     val ifdBaseType: String,
     val ifdBaseValue: String,
@@ -11549,7 +11551,7 @@ data class UpdateSynchronousMachineDetailedCommand(
     val saturationFactorQAxis: String
 )
 
-data class DeleteSynchronousMachineDetailedCommand(@TargetAggregateIdentifier  val synchronousMachineDetailedId: java.util.UUID? = null)
+data class DeleteSynchronousMachineDetailedCommand(@TargetAggregateIdentifier  val synchronousMachineDetailedId: UUID? = null)
 
 // single association commands
 
@@ -11558,14 +11560,14 @@ data class DeleteSynchronousMachineDetailedCommand(@TargetAggregateIdentifier  v
 
 // SynchronousMachineDynamics Commands
 data class CreateSynchronousMachineDynamicsCommand(
-    @TargetAggregateIdentifier  val synchronousMachineDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val synchronousMachineDynamicsId: UUID? = null
 )
 
 data class UpdateSynchronousMachineDynamicsCommand(
-    @TargetAggregateIdentifier  val synchronousMachineDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val synchronousMachineDynamicsId: UUID? = null
 )
 
-data class DeleteSynchronousMachineDynamicsCommand(@TargetAggregateIdentifier  val synchronousMachineDynamicsId: java.util.UUID? = null)
+data class DeleteSynchronousMachineDynamicsCommand(@TargetAggregateIdentifier  val synchronousMachineDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -11574,7 +11576,7 @@ data class DeleteSynchronousMachineDynamicsCommand(@TargetAggregateIdentifier  v
 
 // SynchronousMachineEquivalentCircuit Commands
 data class CreateSynchronousMachineEquivalentCircuitCommand(
-    @TargetAggregateIdentifier val synchronousMachineEquivalentCircuitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineEquivalentCircuitId: UUID? = null,
     val r1d: String,
     val r1q: String,
     val r2q: String,
@@ -11589,7 +11591,7 @@ data class CreateSynchronousMachineEquivalentCircuitCommand(
 )
 
 data class UpdateSynchronousMachineEquivalentCircuitCommand(
-    @TargetAggregateIdentifier val synchronousMachineEquivalentCircuitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineEquivalentCircuitId: UUID? = null,
     val r1d: String,
     val r1q: String,
     val r2q: String,
@@ -11603,7 +11605,7 @@ data class UpdateSynchronousMachineEquivalentCircuitCommand(
     val xfd: String
 )
 
-data class DeleteSynchronousMachineEquivalentCircuitCommand(@TargetAggregateIdentifier  val synchronousMachineEquivalentCircuitId: java.util.UUID? = null)
+data class DeleteSynchronousMachineEquivalentCircuitCommand(@TargetAggregateIdentifier  val synchronousMachineEquivalentCircuitId: UUID? = null)
 
 // single association commands
 
@@ -11612,14 +11614,14 @@ data class DeleteSynchronousMachineEquivalentCircuitCommand(@TargetAggregateIden
 
 // SynchronousMachineSimplified Commands
 data class CreateSynchronousMachineSimplifiedCommand(
-    @TargetAggregateIdentifier  val synchronousMachineSimplifiedId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val synchronousMachineSimplifiedId: UUID? = null
 )
 
 data class UpdateSynchronousMachineSimplifiedCommand(
-    @TargetAggregateIdentifier  val synchronousMachineSimplifiedId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val synchronousMachineSimplifiedId: UUID? = null
 )
 
-data class DeleteSynchronousMachineSimplifiedCommand(@TargetAggregateIdentifier  val synchronousMachineSimplifiedId: java.util.UUID? = null)
+data class DeleteSynchronousMachineSimplifiedCommand(@TargetAggregateIdentifier  val synchronousMachineSimplifiedId: UUID? = null)
 
 // single association commands
 
@@ -11628,7 +11630,7 @@ data class DeleteSynchronousMachineSimplifiedCommand(@TargetAggregateIdentifier 
 
 // SynchronousMachineTimeConstantReactance Commands
 data class CreateSynchronousMachineTimeConstantReactanceCommand(
-    @TargetAggregateIdentifier val synchronousMachineTimeConstantReactanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineTimeConstantReactanceId: UUID? = null,
     val ks: String,
     val modelType: String,
     val rotorType: String,
@@ -11646,7 +11648,7 @@ data class CreateSynchronousMachineTimeConstantReactanceCommand(
 )
 
 data class UpdateSynchronousMachineTimeConstantReactanceCommand(
-    @TargetAggregateIdentifier val synchronousMachineTimeConstantReactanceId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineTimeConstantReactanceId: UUID? = null,
     val ks: String,
     val modelType: String,
     val rotorType: String,
@@ -11663,7 +11665,7 @@ data class UpdateSynchronousMachineTimeConstantReactanceCommand(
     val xQuadTrans: String
 )
 
-data class DeleteSynchronousMachineTimeConstantReactanceCommand(@TargetAggregateIdentifier  val synchronousMachineTimeConstantReactanceId: java.util.UUID? = null)
+data class DeleteSynchronousMachineTimeConstantReactanceCommand(@TargetAggregateIdentifier  val synchronousMachineTimeConstantReactanceId: UUID? = null)
 
 // single association commands
 
@@ -11672,16 +11674,16 @@ data class DeleteSynchronousMachineTimeConstantReactanceCommand(@TargetAggregate
 
 // SynchronousMachineUserDefined Commands
 data class CreateSynchronousMachineUserDefinedCommand(
-    @TargetAggregateIdentifier val synchronousMachineUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateSynchronousMachineUserDefinedCommand(
-    @TargetAggregateIdentifier val synchronousMachineUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteSynchronousMachineUserDefinedCommand(@TargetAggregateIdentifier  val synchronousMachineUserDefinedId: java.util.UUID? = null)
+data class DeleteSynchronousMachineUserDefinedCommand(@TargetAggregateIdentifier  val synchronousMachineUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -11690,7 +11692,7 @@ data class DeleteSynchronousMachineUserDefinedCommand(@TargetAggregateIdentifier
 
 // TapChanger Commands
 data class CreateTapChangerCommand(
-    @TargetAggregateIdentifier val tapChangerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val tapChangerId: UUID? = null,
     val highStep: String,
     val lowStep: String,
     val ltcFlag: String,
@@ -11700,7 +11702,7 @@ data class CreateTapChangerCommand(
 )
 
 data class UpdateTapChangerCommand(
-    @TargetAggregateIdentifier val tapChangerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val tapChangerId: UUID? = null,
     val highStep: String,
     val lowStep: String,
     val ltcFlag: String,
@@ -11709,7 +11711,7 @@ data class UpdateTapChangerCommand(
     val normalStep: String
 )
 
-data class DeleteTapChangerCommand(@TargetAggregateIdentifier  val tapChangerId: java.util.UUID? = null)
+data class DeleteTapChangerCommand(@TargetAggregateIdentifier  val tapChangerId: UUID? = null)
 
 // single association commands
 
@@ -11718,14 +11720,14 @@ data class DeleteTapChangerCommand(@TargetAggregateIdentifier  val tapChangerId:
 
 // TapChangerControl Commands
 data class CreateTapChangerControlCommand(
-    @TargetAggregateIdentifier  val tapChangerControlId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val tapChangerControlId: UUID? = null
 )
 
 data class UpdateTapChangerControlCommand(
-    @TargetAggregateIdentifier  val tapChangerControlId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val tapChangerControlId: UUID? = null
 )
 
-data class DeleteTapChangerControlCommand(@TargetAggregateIdentifier  val tapChangerControlId: java.util.UUID? = null)
+data class DeleteTapChangerControlCommand(@TargetAggregateIdentifier  val tapChangerControlId: UUID? = null)
 
 // single association commands
 
@@ -11734,7 +11736,7 @@ data class DeleteTapChangerControlCommand(@TargetAggregateIdentifier  val tapCha
 
 // TapChangerTablePoint Commands
 data class CreateTapChangerTablePointCommand(
-    @TargetAggregateIdentifier val tapChangerTablePointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val tapChangerTablePointId: UUID? = null,
     val b: String,
     val g: String,
     val r: String,
@@ -11744,7 +11746,7 @@ data class CreateTapChangerTablePointCommand(
 )
 
 data class UpdateTapChangerTablePointCommand(
-    @TargetAggregateIdentifier val tapChangerTablePointId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val tapChangerTablePointId: UUID? = null,
     val b: String,
     val g: String,
     val r: String,
@@ -11753,7 +11755,7 @@ data class UpdateTapChangerTablePointCommand(
     val x: String
 )
 
-data class DeleteTapChangerTablePointCommand(@TargetAggregateIdentifier  val tapChangerTablePointId: java.util.UUID? = null)
+data class DeleteTapChangerTablePointCommand(@TargetAggregateIdentifier  val tapChangerTablePointId: UUID? = null)
 
 // single association commands
 
@@ -11762,14 +11764,14 @@ data class DeleteTapChangerTablePointCommand(@TargetAggregateIdentifier  val tap
 
 // TapSchedule Commands
 data class CreateTapScheduleCommand(
-    @TargetAggregateIdentifier  val tapScheduleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val tapScheduleId: UUID? = null
 )
 
 data class UpdateTapScheduleCommand(
-    @TargetAggregateIdentifier  val tapScheduleId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val tapScheduleId: UUID? = null
 )
 
-data class DeleteTapScheduleCommand(@TargetAggregateIdentifier  val tapScheduleId: java.util.UUID? = null)
+data class DeleteTapScheduleCommand(@TargetAggregateIdentifier  val tapScheduleId: UUID? = null)
 
 // single association commands
 
@@ -11778,20 +11780,20 @@ data class DeleteTapScheduleCommand(@TargetAggregateIdentifier  val tapScheduleI
 
 // Temperature Commands
 data class CreateTemperatureCommand(
-    @TargetAggregateIdentifier val temperatureId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val temperatureId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateTemperatureCommand(
-    @TargetAggregateIdentifier val temperatureId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val temperatureId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteTemperatureCommand(@TargetAggregateIdentifier  val temperatureId: java.util.UUID? = null)
+data class DeleteTemperatureCommand(@TargetAggregateIdentifier  val temperatureId: UUID? = null)
 
 // single association commands
 
@@ -11800,14 +11802,14 @@ data class DeleteTemperatureCommand(@TargetAggregateIdentifier  val temperatureI
 
 // Terminal Commands
 data class CreateTerminalCommand(
-    @TargetAggregateIdentifier  val terminalId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val terminalId: UUID? = null
 )
 
 data class UpdateTerminalCommand(
-    @TargetAggregateIdentifier  val terminalId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val terminalId: UUID? = null
 )
 
-data class DeleteTerminalCommand(@TargetAggregateIdentifier  val terminalId: java.util.UUID? = null)
+data class DeleteTerminalCommand(@TargetAggregateIdentifier  val terminalId: UUID? = null)
 
 // single association commands
 
@@ -11816,16 +11818,16 @@ data class DeleteTerminalCommand(@TargetAggregateIdentifier  val terminalId: jav
 
 // TextDiagramObject Commands
 data class CreateTextDiagramObjectCommand(
-    @TargetAggregateIdentifier val textDiagramObjectId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val textDiagramObjectId: UUID? = null,
     val text: String
 )
 
 data class UpdateTextDiagramObjectCommand(
-    @TargetAggregateIdentifier val textDiagramObjectId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val textDiagramObjectId: UUID? = null,
     val text: String
 )
 
-data class DeleteTextDiagramObjectCommand(@TargetAggregateIdentifier  val textDiagramObjectId: java.util.UUID? = null)
+data class DeleteTextDiagramObjectCommand(@TargetAggregateIdentifier  val textDiagramObjectId: UUID? = null)
 
 // single association commands
 
@@ -11834,14 +11836,14 @@ data class DeleteTextDiagramObjectCommand(@TargetAggregateIdentifier  val textDi
 
 // ThermalGeneratingUnit Commands
 data class CreateThermalGeneratingUnitCommand(
-    @TargetAggregateIdentifier  val thermalGeneratingUnitId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val thermalGeneratingUnitId: UUID? = null
 )
 
 data class UpdateThermalGeneratingUnitCommand(
-    @TargetAggregateIdentifier  val thermalGeneratingUnitId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val thermalGeneratingUnitId: UUID? = null
 )
 
-data class DeleteThermalGeneratingUnitCommand(@TargetAggregateIdentifier  val thermalGeneratingUnitId: java.util.UUID? = null)
+data class DeleteThermalGeneratingUnitCommand(@TargetAggregateIdentifier  val thermalGeneratingUnitId: UUID? = null)
 
 // single association commands
 
@@ -11850,16 +11852,16 @@ data class DeleteThermalGeneratingUnitCommand(@TargetAggregateIdentifier  val th
 
 // TieFlow Commands
 data class CreateTieFlowCommand(
-    @TargetAggregateIdentifier val tieFlowId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val tieFlowId: UUID? = null,
     val positiveFlowIn: String
 )
 
 data class UpdateTieFlowCommand(
-    @TargetAggregateIdentifier val tieFlowId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val tieFlowId: UUID? = null,
     val positiveFlowIn: String
 )
 
-data class DeleteTieFlowCommand(@TargetAggregateIdentifier  val tieFlowId: java.util.UUID? = null)
+data class DeleteTieFlowCommand(@TargetAggregateIdentifier  val tieFlowId: UUID? = null)
 
 // single association commands
 
@@ -11868,14 +11870,14 @@ data class DeleteTieFlowCommand(@TargetAggregateIdentifier  val tieFlowId: java.
 
 // TopologicalIsland Commands
 data class CreateTopologicalIslandCommand(
-    @TargetAggregateIdentifier  val topologicalIslandId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val topologicalIslandId: UUID? = null
 )
 
 data class UpdateTopologicalIslandCommand(
-    @TargetAggregateIdentifier  val topologicalIslandId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val topologicalIslandId: UUID? = null
 )
 
-data class DeleteTopologicalIslandCommand(@TargetAggregateIdentifier  val topologicalIslandId: java.util.UUID? = null)
+data class DeleteTopologicalIslandCommand(@TargetAggregateIdentifier  val topologicalIslandId: UUID? = null)
 
 // single association commands
 
@@ -11884,7 +11886,7 @@ data class DeleteTopologicalIslandCommand(@TargetAggregateIdentifier  val topolo
 
 // TopologicalNode Commands
 data class CreateTopologicalNodeCommand(
-    @TargetAggregateIdentifier val topologicalNodeId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val topologicalNodeId: UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -11895,7 +11897,7 @@ data class CreateTopologicalNodeCommand(
 )
 
 data class UpdateTopologicalNodeCommand(
-    @TargetAggregateIdentifier val topologicalNodeId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val topologicalNodeId: UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -11905,7 +11907,7 @@ data class UpdateTopologicalNodeCommand(
     val toEndNameTso: String
 )
 
-data class DeleteTopologicalNodeCommand(@TargetAggregateIdentifier  val topologicalNodeId: java.util.UUID? = null)
+data class DeleteTopologicalNodeCommand(@TargetAggregateIdentifier  val topologicalNodeId: UUID? = null)
 
 // single association commands
 
@@ -11914,7 +11916,7 @@ data class DeleteTopologicalNodeCommand(@TargetAggregateIdentifier  val topologi
 
 // TopologyBoundaryVersion Commands
 data class CreateTopologyBoundaryVersionCommand(
-    @TargetAggregateIdentifier val topologyBoundaryVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val topologyBoundaryVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11928,7 +11930,7 @@ data class CreateTopologyBoundaryVersionCommand(
 )
 
 data class UpdateTopologyBoundaryVersionCommand(
-    @TargetAggregateIdentifier val topologyBoundaryVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val topologyBoundaryVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11941,7 +11943,7 @@ data class UpdateTopologyBoundaryVersionCommand(
     val shortName: String
 )
 
-data class DeleteTopologyBoundaryVersionCommand(@TargetAggregateIdentifier  val topologyBoundaryVersionId: java.util.UUID? = null)
+data class DeleteTopologyBoundaryVersionCommand(@TargetAggregateIdentifier  val topologyBoundaryVersionId: UUID? = null)
 
 // single association commands
 
@@ -11950,7 +11952,7 @@ data class DeleteTopologyBoundaryVersionCommand(@TargetAggregateIdentifier  val 
 
 // TopologyVersion Commands
 data class CreateTopologyVersionCommand(
-    @TargetAggregateIdentifier val topologyVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val topologyVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11964,7 +11966,7 @@ data class CreateTopologyVersionCommand(
 )
 
 data class UpdateTopologyVersionCommand(
-    @TargetAggregateIdentifier val topologyVersionId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val topologyVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11977,7 +11979,7 @@ data class UpdateTopologyVersionCommand(
     val shortName: String
 )
 
-data class DeleteTopologyVersionCommand(@TargetAggregateIdentifier  val topologyVersionId: java.util.UUID? = null)
+data class DeleteTopologyVersionCommand(@TargetAggregateIdentifier  val topologyVersionId: UUID? = null)
 
 // single association commands
 
@@ -11986,7 +11988,7 @@ data class DeleteTopologyVersionCommand(@TargetAggregateIdentifier  val topology
 
 // TransformerEnd Commands
 data class CreateTransformerEndCommand(
-    @TargetAggregateIdentifier val transformerEndId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val transformerEndId: UUID? = null,
     val endNumber: String,
     val grounded: String,
     val rground: String,
@@ -11994,14 +11996,14 @@ data class CreateTransformerEndCommand(
 )
 
 data class UpdateTransformerEndCommand(
-    @TargetAggregateIdentifier val transformerEndId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val transformerEndId: UUID? = null,
     val endNumber: String,
     val grounded: String,
     val rground: String,
     val xground: String
 )
 
-data class DeleteTransformerEndCommand(@TargetAggregateIdentifier  val transformerEndId: java.util.UUID? = null)
+data class DeleteTransformerEndCommand(@TargetAggregateIdentifier  val transformerEndId: UUID? = null)
 
 // single association commands
 
@@ -12010,7 +12012,7 @@ data class DeleteTransformerEndCommand(@TargetAggregateIdentifier  val transform
 
 // TurbLCFB1 Commands
 data class CreateTurbLCFB1Command(
-    @TargetAggregateIdentifier val turbLCFB1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val turbLCFB1Id: UUID? = null,
     val db: String,
     val emax: String,
     val fb: String,
@@ -12026,7 +12028,7 @@ data class CreateTurbLCFB1Command(
 )
 
 data class UpdateTurbLCFB1Command(
-    @TargetAggregateIdentifier val turbLCFB1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val turbLCFB1Id: UUID? = null,
     val db: String,
     val emax: String,
     val fb: String,
@@ -12041,7 +12043,7 @@ data class UpdateTurbLCFB1Command(
     val tpelec: String
 )
 
-data class DeleteTurbLCFB1Command(@TargetAggregateIdentifier  val turbLCFB1Id: java.util.UUID? = null)
+data class DeleteTurbLCFB1Command(@TargetAggregateIdentifier  val turbLCFB1Id: UUID? = null)
 
 // single association commands
 
@@ -12050,14 +12052,14 @@ data class DeleteTurbLCFB1Command(@TargetAggregateIdentifier  val turbLCFB1Id: j
 
 // TurbineGovernorDynamics Commands
 data class CreateTurbineGovernorDynamicsCommand(
-    @TargetAggregateIdentifier  val turbineGovernorDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val turbineGovernorDynamicsId: UUID? = null
 )
 
 data class UpdateTurbineGovernorDynamicsCommand(
-    @TargetAggregateIdentifier  val turbineGovernorDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val turbineGovernorDynamicsId: UUID? = null
 )
 
-data class DeleteTurbineGovernorDynamicsCommand(@TargetAggregateIdentifier  val turbineGovernorDynamicsId: java.util.UUID? = null)
+data class DeleteTurbineGovernorDynamicsCommand(@TargetAggregateIdentifier  val turbineGovernorDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -12066,16 +12068,16 @@ data class DeleteTurbineGovernorDynamicsCommand(@TargetAggregateIdentifier  val 
 
 // TurbineGovernorUserDefined Commands
 data class CreateTurbineGovernorUserDefinedCommand(
-    @TargetAggregateIdentifier val turbineGovernorUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val turbineGovernorUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateTurbineGovernorUserDefinedCommand(
-    @TargetAggregateIdentifier val turbineGovernorUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val turbineGovernorUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteTurbineGovernorUserDefinedCommand(@TargetAggregateIdentifier  val turbineGovernorUserDefinedId: java.util.UUID? = null)
+data class DeleteTurbineGovernorUserDefinedCommand(@TargetAggregateIdentifier  val turbineGovernorUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -12084,14 +12086,14 @@ data class DeleteTurbineGovernorUserDefinedCommand(@TargetAggregateIdentifier  v
 
 // TurbineLoadControllerDynamics Commands
 data class CreateTurbineLoadControllerDynamicsCommand(
-    @TargetAggregateIdentifier  val turbineLoadControllerDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val turbineLoadControllerDynamicsId: UUID? = null
 )
 
 data class UpdateTurbineLoadControllerDynamicsCommand(
-    @TargetAggregateIdentifier  val turbineLoadControllerDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val turbineLoadControllerDynamicsId: UUID? = null
 )
 
-data class DeleteTurbineLoadControllerDynamicsCommand(@TargetAggregateIdentifier  val turbineLoadControllerDynamicsId: java.util.UUID? = null)
+data class DeleteTurbineLoadControllerDynamicsCommand(@TargetAggregateIdentifier  val turbineLoadControllerDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -12100,16 +12102,16 @@ data class DeleteTurbineLoadControllerDynamicsCommand(@TargetAggregateIdentifier
 
 // TurbineLoadControllerUserDefined Commands
 data class CreateTurbineLoadControllerUserDefinedCommand(
-    @TargetAggregateIdentifier val turbineLoadControllerUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val turbineLoadControllerUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateTurbineLoadControllerUserDefinedCommand(
-    @TargetAggregateIdentifier val turbineLoadControllerUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val turbineLoadControllerUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteTurbineLoadControllerUserDefinedCommand(@TargetAggregateIdentifier  val turbineLoadControllerUserDefinedId: java.util.UUID? = null)
+data class DeleteTurbineLoadControllerUserDefinedCommand(@TargetAggregateIdentifier  val turbineLoadControllerUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -12118,7 +12120,7 @@ data class DeleteTurbineLoadControllerUserDefinedCommand(@TargetAggregateIdentif
 
 // UnderexcLim2Simplified Commands
 data class CreateUnderexcLim2SimplifiedCommand(
-    @TargetAggregateIdentifier val underexcLim2SimplifiedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val underexcLim2SimplifiedId: UUID? = null,
     val kui: String,
     val p0: String,
     val p1: String,
@@ -12129,7 +12131,7 @@ data class CreateUnderexcLim2SimplifiedCommand(
 )
 
 data class UpdateUnderexcLim2SimplifiedCommand(
-    @TargetAggregateIdentifier val underexcLim2SimplifiedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val underexcLim2SimplifiedId: UUID? = null,
     val kui: String,
     val p0: String,
     val p1: String,
@@ -12139,7 +12141,7 @@ data class UpdateUnderexcLim2SimplifiedCommand(
     val vuimin: String
 )
 
-data class DeleteUnderexcLim2SimplifiedCommand(@TargetAggregateIdentifier  val underexcLim2SimplifiedId: java.util.UUID? = null)
+data class DeleteUnderexcLim2SimplifiedCommand(@TargetAggregateIdentifier  val underexcLim2SimplifiedId: UUID? = null)
 
 // single association commands
 
@@ -12148,7 +12150,7 @@ data class DeleteUnderexcLim2SimplifiedCommand(@TargetAggregateIdentifier  val u
 
 // UnderexcLimIEEE1 Commands
 data class CreateUnderexcLimIEEE1Command(
-    @TargetAggregateIdentifier val underexcLimIEEE1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val underexcLimIEEE1Id: UUID? = null,
     val kuc: String,
     val kuf: String,
     val kui: String,
@@ -12167,7 +12169,7 @@ data class CreateUnderexcLimIEEE1Command(
 )
 
 data class UpdateUnderexcLimIEEE1Command(
-    @TargetAggregateIdentifier val underexcLimIEEE1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val underexcLimIEEE1Id: UUID? = null,
     val kuc: String,
     val kuf: String,
     val kui: String,
@@ -12185,7 +12187,7 @@ data class UpdateUnderexcLimIEEE1Command(
     val vurmax: String
 )
 
-data class DeleteUnderexcLimIEEE1Command(@TargetAggregateIdentifier  val underexcLimIEEE1Id: java.util.UUID? = null)
+data class DeleteUnderexcLimIEEE1Command(@TargetAggregateIdentifier  val underexcLimIEEE1Id: UUID? = null)
 
 // single association commands
 
@@ -12194,7 +12196,7 @@ data class DeleteUnderexcLimIEEE1Command(@TargetAggregateIdentifier  val underex
 
 // UnderexcLimIEEE2 Commands
 data class CreateUnderexcLimIEEE2Command(
-    @TargetAggregateIdentifier val underexcLimIEEE2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val underexcLimIEEE2Id: UUID? = null,
     val k1: String,
     val k2: String,
     val kfb: String,
@@ -12238,7 +12240,7 @@ data class CreateUnderexcLimIEEE2Command(
 )
 
 data class UpdateUnderexcLimIEEE2Command(
-    @TargetAggregateIdentifier val underexcLimIEEE2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val underexcLimIEEE2Id: UUID? = null,
     val k1: String,
     val k2: String,
     val kfb: String,
@@ -12281,7 +12283,7 @@ data class UpdateUnderexcLimIEEE2Command(
     val vulmin: String
 )
 
-data class DeleteUnderexcLimIEEE2Command(@TargetAggregateIdentifier  val underexcLimIEEE2Id: java.util.UUID? = null)
+data class DeleteUnderexcLimIEEE2Command(@TargetAggregateIdentifier  val underexcLimIEEE2Id: UUID? = null)
 
 // single association commands
 
@@ -12290,7 +12292,7 @@ data class DeleteUnderexcLimIEEE2Command(@TargetAggregateIdentifier  val underex
 
 // UnderexcLimX1 Commands
 data class CreateUnderexcLimX1Command(
-    @TargetAggregateIdentifier val underexcLimX1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val underexcLimX1Id: UUID? = null,
     val k: String,
     val kf2: String,
     val km: String,
@@ -12300,7 +12302,7 @@ data class CreateUnderexcLimX1Command(
 )
 
 data class UpdateUnderexcLimX1Command(
-    @TargetAggregateIdentifier val underexcLimX1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val underexcLimX1Id: UUID? = null,
     val k: String,
     val kf2: String,
     val km: String,
@@ -12309,7 +12311,7 @@ data class UpdateUnderexcLimX1Command(
     val tm: String
 )
 
-data class DeleteUnderexcLimX1Command(@TargetAggregateIdentifier  val underexcLimX1Id: java.util.UUID? = null)
+data class DeleteUnderexcLimX1Command(@TargetAggregateIdentifier  val underexcLimX1Id: UUID? = null)
 
 // single association commands
 
@@ -12318,7 +12320,7 @@ data class DeleteUnderexcLimX1Command(@TargetAggregateIdentifier  val underexcLi
 
 // UnderexcLimX2 Commands
 data class CreateUnderexcLimX2Command(
-    @TargetAggregateIdentifier val underexcLimX2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val underexcLimX2Id: UUID? = null,
     val kf2: String,
     val km: String,
     val melmax: String,
@@ -12329,7 +12331,7 @@ data class CreateUnderexcLimX2Command(
 )
 
 data class UpdateUnderexcLimX2Command(
-    @TargetAggregateIdentifier val underexcLimX2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val underexcLimX2Id: UUID? = null,
     val kf2: String,
     val km: String,
     val melmax: String,
@@ -12339,7 +12341,7 @@ data class UpdateUnderexcLimX2Command(
     val tm: String
 )
 
-data class DeleteUnderexcLimX2Command(@TargetAggregateIdentifier  val underexcLimX2Id: java.util.UUID? = null)
+data class DeleteUnderexcLimX2Command(@TargetAggregateIdentifier  val underexcLimX2Id: UUID? = null)
 
 // single association commands
 
@@ -12348,14 +12350,14 @@ data class DeleteUnderexcLimX2Command(@TargetAggregateIdentifier  val underexcLi
 
 // UnderexcitationLimiterDynamics Commands
 data class CreateUnderexcitationLimiterDynamicsCommand(
-    @TargetAggregateIdentifier  val underexcitationLimiterDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val underexcitationLimiterDynamicsId: UUID? = null
 )
 
 data class UpdateUnderexcitationLimiterDynamicsCommand(
-    @TargetAggregateIdentifier  val underexcitationLimiterDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val underexcitationLimiterDynamicsId: UUID? = null
 )
 
-data class DeleteUnderexcitationLimiterDynamicsCommand(@TargetAggregateIdentifier  val underexcitationLimiterDynamicsId: java.util.UUID? = null)
+data class DeleteUnderexcitationLimiterDynamicsCommand(@TargetAggregateIdentifier  val underexcitationLimiterDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -12364,16 +12366,16 @@ data class DeleteUnderexcitationLimiterDynamicsCommand(@TargetAggregateIdentifie
 
 // UnderexcitationLimiterUserDefined Commands
 data class CreateUnderexcitationLimiterUserDefinedCommand(
-    @TargetAggregateIdentifier val underexcitationLimiterUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val underexcitationLimiterUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateUnderexcitationLimiterUserDefinedCommand(
-    @TargetAggregateIdentifier val underexcitationLimiterUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val underexcitationLimiterUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteUnderexcitationLimiterUserDefinedCommand(@TargetAggregateIdentifier  val underexcitationLimiterUserDefinedId: java.util.UUID? = null)
+data class DeleteUnderexcitationLimiterUserDefinedCommand(@TargetAggregateIdentifier  val underexcitationLimiterUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -12382,14 +12384,14 @@ data class DeleteUnderexcitationLimiterUserDefinedCommand(@TargetAggregateIdenti
 
 // Unresolvedname Commands
 data class CreateUnresolvednameCommand(
-    @TargetAggregateIdentifier  val unresolvednameId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val unresolvednameId: UUID? = null
 )
 
 data class UpdateUnresolvednameCommand(
-    @TargetAggregateIdentifier  val unresolvednameId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val unresolvednameId: UUID? = null
 )
 
-data class DeleteUnresolvednameCommand(@TargetAggregateIdentifier  val unresolvednameId: java.util.UUID? = null)
+data class DeleteUnresolvednameCommand(@TargetAggregateIdentifier  val unresolvednameId: UUID? = null)
 
 // single association commands
 
@@ -12398,7 +12400,7 @@ data class DeleteUnresolvednameCommand(@TargetAggregateIdentifier  val unresolve
 
 // VAdjIEEE Commands
 data class CreateVAdjIEEECommand(
-    @TargetAggregateIdentifier val vAdjIEEEId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val vAdjIEEEId: UUID? = null,
     val adjslew: String,
     val taoff: String,
     val taon: String,
@@ -12408,7 +12410,7 @@ data class CreateVAdjIEEECommand(
 )
 
 data class UpdateVAdjIEEECommand(
-    @TargetAggregateIdentifier val vAdjIEEEId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val vAdjIEEEId: UUID? = null,
     val adjslew: String,
     val taoff: String,
     val taon: String,
@@ -12417,7 +12419,7 @@ data class UpdateVAdjIEEECommand(
     val vadjmin: String
 )
 
-data class DeleteVAdjIEEECommand(@TargetAggregateIdentifier  val vAdjIEEEId: java.util.UUID? = null)
+data class DeleteVAdjIEEECommand(@TargetAggregateIdentifier  val vAdjIEEEId: UUID? = null)
 
 // single association commands
 
@@ -12426,20 +12428,20 @@ data class DeleteVAdjIEEECommand(@TargetAggregateIdentifier  val vAdjIEEEId: jav
 
 // VCompIEEEType1 Commands
 data class CreateVCompIEEEType1Command(
-    @TargetAggregateIdentifier val vCompIEEEType1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val vCompIEEEType1Id: UUID? = null,
     val rc: String,
     val tr: String,
     val xc: String
 )
 
 data class UpdateVCompIEEEType1Command(
-    @TargetAggregateIdentifier val vCompIEEEType1Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val vCompIEEEType1Id: UUID? = null,
     val rc: String,
     val tr: String,
     val xc: String
 )
 
-data class DeleteVCompIEEEType1Command(@TargetAggregateIdentifier  val vCompIEEEType1Id: java.util.UUID? = null)
+data class DeleteVCompIEEEType1Command(@TargetAggregateIdentifier  val vCompIEEEType1Id: UUID? = null)
 
 // single association commands
 
@@ -12448,16 +12450,16 @@ data class DeleteVCompIEEEType1Command(@TargetAggregateIdentifier  val vCompIEEE
 
 // VCompIEEEType2 Commands
 data class CreateVCompIEEEType2Command(
-    @TargetAggregateIdentifier val vCompIEEEType2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val vCompIEEEType2Id: UUID? = null,
     val tr: String
 )
 
 data class UpdateVCompIEEEType2Command(
-    @TargetAggregateIdentifier val vCompIEEEType2Id: java.util.UUID? = null,
+    @TargetAggregateIdentifier val vCompIEEEType2Id: UUID? = null,
     val tr: String
 )
 
-data class DeleteVCompIEEEType2Command(@TargetAggregateIdentifier  val vCompIEEEType2Id: java.util.UUID? = null)
+data class DeleteVCompIEEEType2Command(@TargetAggregateIdentifier  val vCompIEEEType2Id: UUID? = null)
 
 // single association commands
 
@@ -12466,14 +12468,14 @@ data class DeleteVCompIEEEType2Command(@TargetAggregateIdentifier  val vCompIEEE
 
 // ValueAliasSet Commands
 data class CreateValueAliasSetCommand(
-    @TargetAggregateIdentifier  val valueAliasSetId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val valueAliasSetId: UUID? = null
 )
 
 data class UpdateValueAliasSetCommand(
-    @TargetAggregateIdentifier  val valueAliasSetId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val valueAliasSetId: UUID? = null
 )
 
-data class DeleteValueAliasSetCommand(@TargetAggregateIdentifier  val valueAliasSetId: java.util.UUID? = null)
+data class DeleteValueAliasSetCommand(@TargetAggregateIdentifier  val valueAliasSetId: UUID? = null)
 
 // single association commands
 
@@ -12482,16 +12484,16 @@ data class DeleteValueAliasSetCommand(@TargetAggregateIdentifier  val valueAlias
 
 // ValueToAlias Commands
 data class CreateValueToAliasCommand(
-    @TargetAggregateIdentifier val valueToAliasId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val valueToAliasId: UUID? = null,
     val value: String
 )
 
 data class UpdateValueToAliasCommand(
-    @TargetAggregateIdentifier val valueToAliasId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val valueToAliasId: UUID? = null,
     val value: String
 )
 
-data class DeleteValueToAliasCommand(@TargetAggregateIdentifier  val valueToAliasId: java.util.UUID? = null)
+data class DeleteValueToAliasCommand(@TargetAggregateIdentifier  val valueToAliasId: UUID? = null)
 
 // single association commands
 
@@ -12500,16 +12502,16 @@ data class DeleteValueToAliasCommand(@TargetAggregateIdentifier  val valueToAlia
 
 // VisibilityLayer Commands
 data class CreateVisibilityLayerCommand(
-    @TargetAggregateIdentifier val visibilityLayerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val visibilityLayerId: UUID? = null,
     val drawingOrder: String
 )
 
 data class UpdateVisibilityLayerCommand(
-    @TargetAggregateIdentifier val visibilityLayerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val visibilityLayerId: UUID? = null,
     val drawingOrder: String
 )
 
-data class DeleteVisibilityLayerCommand(@TargetAggregateIdentifier  val visibilityLayerId: java.util.UUID? = null)
+data class DeleteVisibilityLayerCommand(@TargetAggregateIdentifier  val visibilityLayerId: UUID? = null)
 
 // single association commands
 
@@ -12518,20 +12520,20 @@ data class DeleteVisibilityLayerCommand(@TargetAggregateIdentifier  val visibili
 
 // Voltage Commands
 data class CreateVoltageCommand(
-    @TargetAggregateIdentifier val voltageId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val voltageId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateVoltageCommand(
-    @TargetAggregateIdentifier val voltageId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val voltageId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteVoltageCommand(@TargetAggregateIdentifier  val voltageId: java.util.UUID? = null)
+data class DeleteVoltageCommand(@TargetAggregateIdentifier  val voltageId: UUID? = null)
 
 // single association commands
 
@@ -12540,14 +12542,14 @@ data class DeleteVoltageCommand(@TargetAggregateIdentifier  val voltageId: java.
 
 // VoltageAdjusterDynamics Commands
 data class CreateVoltageAdjusterDynamicsCommand(
-    @TargetAggregateIdentifier  val voltageAdjusterDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val voltageAdjusterDynamicsId: UUID? = null
 )
 
 data class UpdateVoltageAdjusterDynamicsCommand(
-    @TargetAggregateIdentifier  val voltageAdjusterDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val voltageAdjusterDynamicsId: UUID? = null
 )
 
-data class DeleteVoltageAdjusterDynamicsCommand(@TargetAggregateIdentifier  val voltageAdjusterDynamicsId: java.util.UUID? = null)
+data class DeleteVoltageAdjusterDynamicsCommand(@TargetAggregateIdentifier  val voltageAdjusterDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -12556,16 +12558,16 @@ data class DeleteVoltageAdjusterDynamicsCommand(@TargetAggregateIdentifier  val 
 
 // VoltageAdjusterUserDefined Commands
 data class CreateVoltageAdjusterUserDefinedCommand(
-    @TargetAggregateIdentifier val voltageAdjusterUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val voltageAdjusterUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateVoltageAdjusterUserDefinedCommand(
-    @TargetAggregateIdentifier val voltageAdjusterUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val voltageAdjusterUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteVoltageAdjusterUserDefinedCommand(@TargetAggregateIdentifier  val voltageAdjusterUserDefinedId: java.util.UUID? = null)
+data class DeleteVoltageAdjusterUserDefinedCommand(@TargetAggregateIdentifier  val voltageAdjusterUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -12574,14 +12576,14 @@ data class DeleteVoltageAdjusterUserDefinedCommand(@TargetAggregateIdentifier  v
 
 // VoltageCompensatorDynamics Commands
 data class CreateVoltageCompensatorDynamicsCommand(
-    @TargetAggregateIdentifier  val voltageCompensatorDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val voltageCompensatorDynamicsId: UUID? = null
 )
 
 data class UpdateVoltageCompensatorDynamicsCommand(
-    @TargetAggregateIdentifier  val voltageCompensatorDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val voltageCompensatorDynamicsId: UUID? = null
 )
 
-data class DeleteVoltageCompensatorDynamicsCommand(@TargetAggregateIdentifier  val voltageCompensatorDynamicsId: java.util.UUID? = null)
+data class DeleteVoltageCompensatorDynamicsCommand(@TargetAggregateIdentifier  val voltageCompensatorDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -12590,16 +12592,16 @@ data class DeleteVoltageCompensatorDynamicsCommand(@TargetAggregateIdentifier  v
 
 // VoltageCompensatorUserDefined Commands
 data class CreateVoltageCompensatorUserDefinedCommand(
-    @TargetAggregateIdentifier val voltageCompensatorUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val voltageCompensatorUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateVoltageCompensatorUserDefinedCommand(
-    @TargetAggregateIdentifier val voltageCompensatorUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val voltageCompensatorUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteVoltageCompensatorUserDefinedCommand(@TargetAggregateIdentifier  val voltageCompensatorUserDefinedId: java.util.UUID? = null)
+data class DeleteVoltageCompensatorUserDefinedCommand(@TargetAggregateIdentifier  val voltageCompensatorUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -12608,18 +12610,18 @@ data class DeleteVoltageCompensatorUserDefinedCommand(@TargetAggregateIdentifier
 
 // VoltageLevel Commands
 data class CreateVoltageLevelCommand(
-    @TargetAggregateIdentifier val voltageLevelId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val voltageLevelId: UUID? = null,
     val highVoltageLimit: String,
     val lowVoltageLimit: String
 )
 
 data class UpdateVoltageLevelCommand(
-    @TargetAggregateIdentifier val voltageLevelId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val voltageLevelId: UUID? = null,
     val highVoltageLimit: String,
     val lowVoltageLimit: String
 )
 
-data class DeleteVoltageLevelCommand(@TargetAggregateIdentifier  val voltageLevelId: java.util.UUID? = null)
+data class DeleteVoltageLevelCommand(@TargetAggregateIdentifier  val voltageLevelId: UUID? = null)
 
 // single association commands
 
@@ -12628,16 +12630,16 @@ data class DeleteVoltageLevelCommand(@TargetAggregateIdentifier  val voltageLeve
 
 // VoltageLimit Commands
 data class CreateVoltageLimitCommand(
-    @TargetAggregateIdentifier val voltageLimitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val voltageLimitId: UUID? = null,
     val value: String
 )
 
 data class UpdateVoltageLimitCommand(
-    @TargetAggregateIdentifier val voltageLimitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val voltageLimitId: UUID? = null,
     val value: String
 )
 
-data class DeleteVoltageLimitCommand(@TargetAggregateIdentifier  val voltageLimitId: java.util.UUID? = null)
+data class DeleteVoltageLimitCommand(@TargetAggregateIdentifier  val voltageLimitId: UUID? = null)
 
 // single association commands
 
@@ -12646,7 +12648,7 @@ data class DeleteVoltageLimitCommand(@TargetAggregateIdentifier  val voltageLimi
 
 // VoltagePerReactivePower Commands
 data class CreateVoltagePerReactivePowerCommand(
-    @TargetAggregateIdentifier val voltagePerReactivePowerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val voltagePerReactivePowerId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -12655,7 +12657,7 @@ data class CreateVoltagePerReactivePowerCommand(
 )
 
 data class UpdateVoltagePerReactivePowerCommand(
-    @TargetAggregateIdentifier val voltagePerReactivePowerId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val voltagePerReactivePowerId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -12663,7 +12665,7 @@ data class UpdateVoltagePerReactivePowerCommand(
     val value: String
 )
 
-data class DeleteVoltagePerReactivePowerCommand(@TargetAggregateIdentifier  val voltagePerReactivePowerId: java.util.UUID? = null)
+data class DeleteVoltagePerReactivePowerCommand(@TargetAggregateIdentifier  val voltagePerReactivePowerId: UUID? = null)
 
 // single association commands
 
@@ -12672,7 +12674,7 @@ data class DeleteVoltagePerReactivePowerCommand(@TargetAggregateIdentifier  val 
 
 // VolumeFlowRate Commands
 data class CreateVolumeFlowRateCommand(
-    @TargetAggregateIdentifier val volumeFlowRateId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val volumeFlowRateId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -12681,7 +12683,7 @@ data class CreateVolumeFlowRateCommand(
 )
 
 data class UpdateVolumeFlowRateCommand(
-    @TargetAggregateIdentifier val volumeFlowRateId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val volumeFlowRateId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -12689,7 +12691,7 @@ data class UpdateVolumeFlowRateCommand(
     val value: String
 )
 
-data class DeleteVolumeFlowRateCommand(@TargetAggregateIdentifier  val volumeFlowRateId: java.util.UUID? = null)
+data class DeleteVolumeFlowRateCommand(@TargetAggregateIdentifier  val volumeFlowRateId: UUID? = null)
 
 // single association commands
 
@@ -12698,14 +12700,14 @@ data class DeleteVolumeFlowRateCommand(@TargetAggregateIdentifier  val volumeFlo
 
 // VsCapabilityCurve Commands
 data class CreateVsCapabilityCurveCommand(
-    @TargetAggregateIdentifier  val vsCapabilityCurveId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val vsCapabilityCurveId: UUID? = null
 )
 
 data class UpdateVsCapabilityCurveCommand(
-    @TargetAggregateIdentifier  val vsCapabilityCurveId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val vsCapabilityCurveId: UUID? = null
 )
 
-data class DeleteVsCapabilityCurveCommand(@TargetAggregateIdentifier  val vsCapabilityCurveId: java.util.UUID? = null)
+data class DeleteVsCapabilityCurveCommand(@TargetAggregateIdentifier  val vsCapabilityCurveId: UUID? = null)
 
 // single association commands
 
@@ -12714,18 +12716,18 @@ data class DeleteVsCapabilityCurveCommand(@TargetAggregateIdentifier  val vsCapa
 
 // VsConverter Commands
 data class CreateVsConverterCommand(
-    @TargetAggregateIdentifier val vsConverterId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val vsConverterId: UUID? = null,
     val maxModulationIndex: String,
     val maxValveCurrent: String
 )
 
 data class UpdateVsConverterCommand(
-    @TargetAggregateIdentifier val vsConverterId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val vsConverterId: UUID? = null,
     val maxModulationIndex: String,
     val maxValveCurrent: String
 )
 
-data class DeleteVsConverterCommand(@TargetAggregateIdentifier  val vsConverterId: java.util.UUID? = null)
+data class DeleteVsConverterCommand(@TargetAggregateIdentifier  val vsConverterId: UUID? = null)
 
 // single association commands
 
@@ -12734,14 +12736,14 @@ data class DeleteVsConverterCommand(@TargetAggregateIdentifier  val vsConverterI
 
 // WindAeroConstIEC Commands
 data class CreateWindAeroConstIECCommand(
-    @TargetAggregateIdentifier  val windAeroConstIECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windAeroConstIECId: UUID? = null
 )
 
 data class UpdateWindAeroConstIECCommand(
-    @TargetAggregateIdentifier  val windAeroConstIECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windAeroConstIECId: UUID? = null
 )
 
-data class DeleteWindAeroConstIECCommand(@TargetAggregateIdentifier  val windAeroConstIECId: java.util.UUID? = null)
+data class DeleteWindAeroConstIECCommand(@TargetAggregateIdentifier  val windAeroConstIECId: UUID? = null)
 
 // single association commands
 
@@ -12750,7 +12752,7 @@ data class DeleteWindAeroConstIECCommand(@TargetAggregateIdentifier  val windAer
 
 // WindAeroLinearIEC Commands
 data class CreateWindAeroLinearIECCommand(
-    @TargetAggregateIdentifier val windAeroLinearIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windAeroLinearIECId: UUID? = null,
     val dpomega: String,
     val dptheta: String,
     val omegazero: String,
@@ -12759,7 +12761,7 @@ data class CreateWindAeroLinearIECCommand(
 )
 
 data class UpdateWindAeroLinearIECCommand(
-    @TargetAggregateIdentifier val windAeroLinearIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windAeroLinearIECId: UUID? = null,
     val dpomega: String,
     val dptheta: String,
     val omegazero: String,
@@ -12767,7 +12769,7 @@ data class UpdateWindAeroLinearIECCommand(
     val thetazero: String
 )
 
-data class DeleteWindAeroLinearIECCommand(@TargetAggregateIdentifier  val windAeroLinearIECId: java.util.UUID? = null)
+data class DeleteWindAeroLinearIECCommand(@TargetAggregateIdentifier  val windAeroLinearIECId: UUID? = null)
 
 // single association commands
 
@@ -12776,7 +12778,7 @@ data class DeleteWindAeroLinearIECCommand(@TargetAggregateIdentifier  val windAe
 
 // WindContCurrLimIEC Commands
 data class CreateWindContCurrLimIECCommand(
-    @TargetAggregateIdentifier val windContCurrLimIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContCurrLimIECId: UUID? = null,
     val imax: String,
     val imaxdip: String,
     val mdfslim: String,
@@ -12785,7 +12787,7 @@ data class CreateWindContCurrLimIECCommand(
 )
 
 data class UpdateWindContCurrLimIECCommand(
-    @TargetAggregateIdentifier val windContCurrLimIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContCurrLimIECId: UUID? = null,
     val imax: String,
     val imaxdip: String,
     val mdfslim: String,
@@ -12793,7 +12795,7 @@ data class UpdateWindContCurrLimIECCommand(
     val tufilt: String
 )
 
-data class DeleteWindContCurrLimIECCommand(@TargetAggregateIdentifier  val windContCurrLimIECId: java.util.UUID? = null)
+data class DeleteWindContCurrLimIECCommand(@TargetAggregateIdentifier  val windContCurrLimIECId: UUID? = null)
 
 // single association commands
 
@@ -12802,7 +12804,7 @@ data class DeleteWindContCurrLimIECCommand(@TargetAggregateIdentifier  val windC
 
 // WindContPType3IEC Commands
 data class CreateWindContPType3IECCommand(
-    @TargetAggregateIdentifier val windContPType3IECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContPType3IECId: UUID? = null,
     val dpmax: String,
     val dtrisemaxlvrt: String,
     val kdtd: String,
@@ -12827,7 +12829,7 @@ data class CreateWindContPType3IECCommand(
 )
 
 data class UpdateWindContPType3IECCommand(
-    @TargetAggregateIdentifier val windContPType3IECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContPType3IECId: UUID? = null,
     val dpmax: String,
     val dtrisemaxlvrt: String,
     val kdtd: String,
@@ -12851,7 +12853,7 @@ data class UpdateWindContPType3IECCommand(
     val zeta: String
 )
 
-data class DeleteWindContPType3IECCommand(@TargetAggregateIdentifier  val windContPType3IECId: java.util.UUID? = null)
+data class DeleteWindContPType3IECCommand(@TargetAggregateIdentifier  val windContPType3IECId: UUID? = null)
 
 // single association commands
 
@@ -12860,20 +12862,20 @@ data class DeleteWindContPType3IECCommand(@TargetAggregateIdentifier  val windCo
 
 // WindContPType4aIEC Commands
 data class CreateWindContPType4aIECCommand(
-    @TargetAggregateIdentifier val windContPType4aIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContPType4aIECId: UUID? = null,
     val dpmax: String,
     val tpord: String,
     val tufilt: String
 )
 
 data class UpdateWindContPType4aIECCommand(
-    @TargetAggregateIdentifier val windContPType4aIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContPType4aIECId: UUID? = null,
     val dpmax: String,
     val tpord: String,
     val tufilt: String
 )
 
-data class DeleteWindContPType4aIECCommand(@TargetAggregateIdentifier  val windContPType4aIECId: java.util.UUID? = null)
+data class DeleteWindContPType4aIECCommand(@TargetAggregateIdentifier  val windContPType4aIECId: UUID? = null)
 
 // single association commands
 
@@ -12882,7 +12884,7 @@ data class DeleteWindContPType4aIECCommand(@TargetAggregateIdentifier  val windC
 
 // WindContPType4bIEC Commands
 data class CreateWindContPType4bIECCommand(
-    @TargetAggregateIdentifier val windContPType4bIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContPType4bIECId: UUID? = null,
     val dpmax: String,
     val tpaero: String,
     val tpord: String,
@@ -12890,14 +12892,14 @@ data class CreateWindContPType4bIECCommand(
 )
 
 data class UpdateWindContPType4bIECCommand(
-    @TargetAggregateIdentifier val windContPType4bIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContPType4bIECId: UUID? = null,
     val dpmax: String,
     val tpaero: String,
     val tpord: String,
     val tufilt: String
 )
 
-data class DeleteWindContPType4bIECCommand(@TargetAggregateIdentifier  val windContPType4bIECId: java.util.UUID? = null)
+data class DeleteWindContPType4bIECCommand(@TargetAggregateIdentifier  val windContPType4bIECId: UUID? = null)
 
 // single association commands
 
@@ -12906,7 +12908,7 @@ data class DeleteWindContPType4bIECCommand(@TargetAggregateIdentifier  val windC
 
 // WindContPitchAngleIEC Commands
 data class CreateWindContPitchAngleIECCommand(
-    @TargetAggregateIdentifier val windContPitchAngleIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContPitchAngleIECId: UUID? = null,
     val dthetamax: String,
     val dthetamin: String,
     val kic: String,
@@ -12920,7 +12922,7 @@ data class CreateWindContPitchAngleIECCommand(
 )
 
 data class UpdateWindContPitchAngleIECCommand(
-    @TargetAggregateIdentifier val windContPitchAngleIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContPitchAngleIECId: UUID? = null,
     val dthetamax: String,
     val dthetamin: String,
     val kic: String,
@@ -12933,7 +12935,7 @@ data class UpdateWindContPitchAngleIECCommand(
     val ttheta: String
 )
 
-data class DeleteWindContPitchAngleIECCommand(@TargetAggregateIdentifier  val windContPitchAngleIECId: java.util.UUID? = null)
+data class DeleteWindContPitchAngleIECCommand(@TargetAggregateIdentifier  val windContPitchAngleIECId: UUID? = null)
 
 // single association commands
 
@@ -12942,7 +12944,7 @@ data class DeleteWindContPitchAngleIECCommand(@TargetAggregateIdentifier  val wi
 
 // WindContQIEC Commands
 data class CreateWindContQIECCommand(
-    @TargetAggregateIdentifier val windContQIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContQIECId: UUID? = null,
     val iqh1: String,
     val iqmax: String,
     val iqmin: String,
@@ -12972,7 +12974,7 @@ data class CreateWindContQIECCommand(
 )
 
 data class UpdateWindContQIECCommand(
-    @TargetAggregateIdentifier val windContQIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContQIECId: UUID? = null,
     val iqh1: String,
     val iqmax: String,
     val iqmin: String,
@@ -13001,7 +13003,7 @@ data class UpdateWindContQIECCommand(
     val xdroop: String
 )
 
-data class DeleteWindContQIECCommand(@TargetAggregateIdentifier  val windContQIECId: java.util.UUID? = null)
+data class DeleteWindContQIECCommand(@TargetAggregateIdentifier  val windContQIECId: UUID? = null)
 
 // single association commands
 
@@ -13010,7 +13012,7 @@ data class DeleteWindContQIECCommand(@TargetAggregateIdentifier  val windContQIE
 
 // WindContRotorRIEC Commands
 data class CreateWindContRotorRIECCommand(
-    @TargetAggregateIdentifier val windContRotorRIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContRotorRIECId: UUID? = null,
     val kirr: String,
     val komegafilt: String,
     val kpfilt: String,
@@ -13022,7 +13024,7 @@ data class CreateWindContRotorRIECCommand(
 )
 
 data class UpdateWindContRotorRIECCommand(
-    @TargetAggregateIdentifier val windContRotorRIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windContRotorRIECId: UUID? = null,
     val kirr: String,
     val komegafilt: String,
     val kpfilt: String,
@@ -13033,7 +13035,7 @@ data class UpdateWindContRotorRIECCommand(
     val tpfilt: String
 )
 
-data class DeleteWindContRotorRIECCommand(@TargetAggregateIdentifier  val windContRotorRIECId: java.util.UUID? = null)
+data class DeleteWindContRotorRIECCommand(@TargetAggregateIdentifier  val windContRotorRIECId: UUID? = null)
 
 // single association commands
 
@@ -13042,7 +13044,7 @@ data class DeleteWindContRotorRIECCommand(@TargetAggregateIdentifier  val windCo
 
 // WindDynamicsLookupTable Commands
 data class CreateWindDynamicsLookupTableCommand(
-    @TargetAggregateIdentifier val windDynamicsLookupTableId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windDynamicsLookupTableId: UUID? = null,
     val input: String,
     val lookupTableFunctionType: String,
     val output: String,
@@ -13050,14 +13052,14 @@ data class CreateWindDynamicsLookupTableCommand(
 )
 
 data class UpdateWindDynamicsLookupTableCommand(
-    @TargetAggregateIdentifier val windDynamicsLookupTableId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windDynamicsLookupTableId: UUID? = null,
     val input: String,
     val lookupTableFunctionType: String,
     val output: String,
     val sequence: String
 )
 
-data class DeleteWindDynamicsLookupTableCommand(@TargetAggregateIdentifier  val windDynamicsLookupTableId: java.util.UUID? = null)
+data class DeleteWindDynamicsLookupTableCommand(@TargetAggregateIdentifier  val windDynamicsLookupTableId: UUID? = null)
 
 // single association commands
 
@@ -13066,14 +13068,14 @@ data class DeleteWindDynamicsLookupTableCommand(@TargetAggregateIdentifier  val 
 
 // WindGenTurbineType1IEC Commands
 data class CreateWindGenTurbineType1IECCommand(
-    @TargetAggregateIdentifier  val windGenTurbineType1IECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windGenTurbineType1IECId: UUID? = null
 )
 
 data class UpdateWindGenTurbineType1IECCommand(
-    @TargetAggregateIdentifier  val windGenTurbineType1IECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windGenTurbineType1IECId: UUID? = null
 )
 
-data class DeleteWindGenTurbineType1IECCommand(@TargetAggregateIdentifier  val windGenTurbineType1IECId: java.util.UUID? = null)
+data class DeleteWindGenTurbineType1IECCommand(@TargetAggregateIdentifier  val windGenTurbineType1IECId: UUID? = null)
 
 // single association commands
 
@@ -13082,14 +13084,14 @@ data class DeleteWindGenTurbineType1IECCommand(@TargetAggregateIdentifier  val w
 
 // WindGenTurbineType2IEC Commands
 data class CreateWindGenTurbineType2IECCommand(
-    @TargetAggregateIdentifier  val windGenTurbineType2IECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windGenTurbineType2IECId: UUID? = null
 )
 
 data class UpdateWindGenTurbineType2IECCommand(
-    @TargetAggregateIdentifier  val windGenTurbineType2IECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windGenTurbineType2IECId: UUID? = null
 )
 
-data class DeleteWindGenTurbineType2IECCommand(@TargetAggregateIdentifier  val windGenTurbineType2IECId: java.util.UUID? = null)
+data class DeleteWindGenTurbineType2IECCommand(@TargetAggregateIdentifier  val windGenTurbineType2IECId: UUID? = null)
 
 // single association commands
 
@@ -13098,18 +13100,18 @@ data class DeleteWindGenTurbineType2IECCommand(@TargetAggregateIdentifier  val w
 
 // WindGenTurbineType3IEC Commands
 data class CreateWindGenTurbineType3IECCommand(
-    @TargetAggregateIdentifier val windGenTurbineType3IECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windGenTurbineType3IECId: UUID? = null,
     val dipmax: String,
     val diqmax: String
 )
 
 data class UpdateWindGenTurbineType3IECCommand(
-    @TargetAggregateIdentifier val windGenTurbineType3IECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windGenTurbineType3IECId: UUID? = null,
     val dipmax: String,
     val diqmax: String
 )
 
-data class DeleteWindGenTurbineType3IECCommand(@TargetAggregateIdentifier  val windGenTurbineType3IECId: java.util.UUID? = null)
+data class DeleteWindGenTurbineType3IECCommand(@TargetAggregateIdentifier  val windGenTurbineType3IECId: UUID? = null)
 
 // single association commands
 
@@ -13118,20 +13120,20 @@ data class DeleteWindGenTurbineType3IECCommand(@TargetAggregateIdentifier  val w
 
 // WindGenTurbineType3aIEC Commands
 data class CreateWindGenTurbineType3aIECCommand(
-    @TargetAggregateIdentifier val windGenTurbineType3aIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windGenTurbineType3aIECId: UUID? = null,
     val kpc: String,
     val tic: String,
     val xs: String
 )
 
 data class UpdateWindGenTurbineType3aIECCommand(
-    @TargetAggregateIdentifier val windGenTurbineType3aIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windGenTurbineType3aIECId: UUID? = null,
     val kpc: String,
     val tic: String,
     val xs: String
 )
 
-data class DeleteWindGenTurbineType3aIECCommand(@TargetAggregateIdentifier  val windGenTurbineType3aIECId: java.util.UUID? = null)
+data class DeleteWindGenTurbineType3aIECCommand(@TargetAggregateIdentifier  val windGenTurbineType3aIECId: UUID? = null)
 
 // single association commands
 
@@ -13140,7 +13142,7 @@ data class DeleteWindGenTurbineType3aIECCommand(@TargetAggregateIdentifier  val 
 
 // WindGenTurbineType3bIEC Commands
 data class CreateWindGenTurbineType3bIECCommand(
-    @TargetAggregateIdentifier val windGenTurbineType3bIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windGenTurbineType3bIECId: UUID? = null,
     val fducw: String,
     val mwtcwp: String,
     val tg: String,
@@ -13149,7 +13151,7 @@ data class CreateWindGenTurbineType3bIECCommand(
 )
 
 data class UpdateWindGenTurbineType3bIECCommand(
-    @TargetAggregateIdentifier val windGenTurbineType3bIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windGenTurbineType3bIECId: UUID? = null,
     val fducw: String,
     val mwtcwp: String,
     val tg: String,
@@ -13157,7 +13159,7 @@ data class UpdateWindGenTurbineType3bIECCommand(
     val xs: String
 )
 
-data class DeleteWindGenTurbineType3bIECCommand(@TargetAggregateIdentifier  val windGenTurbineType3bIECId: java.util.UUID? = null)
+data class DeleteWindGenTurbineType3bIECCommand(@TargetAggregateIdentifier  val windGenTurbineType3bIECId: UUID? = null)
 
 // single association commands
 
@@ -13166,7 +13168,7 @@ data class DeleteWindGenTurbineType3bIECCommand(@TargetAggregateIdentifier  val 
 
 // WindGenType4IEC Commands
 data class CreateWindGenType4IECCommand(
-    @TargetAggregateIdentifier val windGenType4IECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windGenType4IECId: UUID? = null,
     val dipmax: String,
     val diqmax: String,
     val diqmin: String,
@@ -13174,14 +13176,14 @@ data class CreateWindGenType4IECCommand(
 )
 
 data class UpdateWindGenType4IECCommand(
-    @TargetAggregateIdentifier val windGenType4IECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windGenType4IECId: UUID? = null,
     val dipmax: String,
     val diqmax: String,
     val diqmin: String,
     val tg: String
 )
 
-data class DeleteWindGenType4IECCommand(@TargetAggregateIdentifier  val windGenType4IECId: java.util.UUID? = null)
+data class DeleteWindGenType4IECCommand(@TargetAggregateIdentifier  val windGenType4IECId: UUID? = null)
 
 // single association commands
 
@@ -13190,16 +13192,16 @@ data class DeleteWindGenType4IECCommand(@TargetAggregateIdentifier  val windGenT
 
 // WindGeneratingUnit Commands
 data class CreateWindGeneratingUnitCommand(
-    @TargetAggregateIdentifier val windGeneratingUnitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windGeneratingUnitId: UUID? = null,
     val windGenUnitType: String
 )
 
 data class UpdateWindGeneratingUnitCommand(
-    @TargetAggregateIdentifier val windGeneratingUnitId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windGeneratingUnitId: UUID? = null,
     val windGenUnitType: String
 )
 
-data class DeleteWindGeneratingUnitCommand(@TargetAggregateIdentifier  val windGeneratingUnitId: java.util.UUID? = null)
+data class DeleteWindGeneratingUnitCommand(@TargetAggregateIdentifier  val windGeneratingUnitId: UUID? = null)
 
 // single association commands
 
@@ -13208,7 +13210,7 @@ data class DeleteWindGeneratingUnitCommand(@TargetAggregateIdentifier  val windG
 
 // WindMechIEC Commands
 data class CreateWindMechIECCommand(
-    @TargetAggregateIdentifier val windMechIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windMechIECId: UUID? = null,
     val cdrt: String,
     val hgen: String,
     val hwtr: String,
@@ -13216,14 +13218,14 @@ data class CreateWindMechIECCommand(
 )
 
 data class UpdateWindMechIECCommand(
-    @TargetAggregateIdentifier val windMechIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windMechIECId: UUID? = null,
     val cdrt: String,
     val hgen: String,
     val hwtr: String,
     val kdrt: String
 )
 
-data class DeleteWindMechIECCommand(@TargetAggregateIdentifier  val windMechIECId: java.util.UUID? = null)
+data class DeleteWindMechIECCommand(@TargetAggregateIdentifier  val windMechIECId: UUID? = null)
 
 // single association commands
 
@@ -13232,7 +13234,7 @@ data class DeleteWindMechIECCommand(@TargetAggregateIdentifier  val windMechIECI
 
 // WindPitchContEmulIEC Commands
 data class CreateWindPitchContEmulIECCommand(
-    @TargetAggregateIdentifier val windPitchContEmulIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windPitchContEmulIECId: UUID? = null,
     val kdroop: String,
     val kipce: String,
     val komegaaero: String,
@@ -13246,7 +13248,7 @@ data class CreateWindPitchContEmulIECCommand(
 )
 
 data class UpdateWindPitchContEmulIECCommand(
-    @TargetAggregateIdentifier val windPitchContEmulIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windPitchContEmulIECId: UUID? = null,
     val kdroop: String,
     val kipce: String,
     val komegaaero: String,
@@ -13259,7 +13261,7 @@ data class UpdateWindPitchContEmulIECCommand(
     val tpe: String
 )
 
-data class DeleteWindPitchContEmulIECCommand(@TargetAggregateIdentifier  val windPitchContEmulIECId: java.util.UUID? = null)
+data class DeleteWindPitchContEmulIECCommand(@TargetAggregateIdentifier  val windPitchContEmulIECId: UUID? = null)
 
 // single association commands
 
@@ -13268,14 +13270,14 @@ data class DeleteWindPitchContEmulIECCommand(@TargetAggregateIdentifier  val win
 
 // WindPlantDynamics Commands
 data class CreateWindPlantDynamicsCommand(
-    @TargetAggregateIdentifier  val windPlantDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windPlantDynamicsId: UUID? = null
 )
 
 data class UpdateWindPlantDynamicsCommand(
-    @TargetAggregateIdentifier  val windPlantDynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windPlantDynamicsId: UUID? = null
 )
 
-data class DeleteWindPlantDynamicsCommand(@TargetAggregateIdentifier  val windPlantDynamicsId: java.util.UUID? = null)
+data class DeleteWindPlantDynamicsCommand(@TargetAggregateIdentifier  val windPlantDynamicsId: UUID? = null)
 
 // single association commands
 
@@ -13284,7 +13286,7 @@ data class DeleteWindPlantDynamicsCommand(@TargetAggregateIdentifier  val windPl
 
 // WindPlantFreqPcontrolIEC Commands
 data class CreateWindPlantFreqPcontrolIECCommand(
-    @TargetAggregateIdentifier val windPlantFreqPcontrolIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windPlantFreqPcontrolIECId: UUID? = null,
     val dprefmax: String,
     val dprefmin: String,
     val kiwpp: String,
@@ -13298,7 +13300,7 @@ data class CreateWindPlantFreqPcontrolIECCommand(
 )
 
 data class UpdateWindPlantFreqPcontrolIECCommand(
-    @TargetAggregateIdentifier val windPlantFreqPcontrolIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windPlantFreqPcontrolIECId: UUID? = null,
     val dprefmax: String,
     val dprefmin: String,
     val kiwpp: String,
@@ -13311,7 +13313,7 @@ data class UpdateWindPlantFreqPcontrolIECCommand(
     val twppfilt: String
 )
 
-data class DeleteWindPlantFreqPcontrolIECCommand(@TargetAggregateIdentifier  val windPlantFreqPcontrolIECId: java.util.UUID? = null)
+data class DeleteWindPlantFreqPcontrolIECCommand(@TargetAggregateIdentifier  val windPlantFreqPcontrolIECId: UUID? = null)
 
 // single association commands
 
@@ -13320,14 +13322,14 @@ data class DeleteWindPlantFreqPcontrolIECCommand(@TargetAggregateIdentifier  val
 
 // WindPlantIEC Commands
 data class CreateWindPlantIECCommand(
-    @TargetAggregateIdentifier  val windPlantIECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windPlantIECId: UUID? = null
 )
 
 data class UpdateWindPlantIECCommand(
-    @TargetAggregateIdentifier  val windPlantIECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windPlantIECId: UUID? = null
 )
 
-data class DeleteWindPlantIECCommand(@TargetAggregateIdentifier  val windPlantIECId: java.util.UUID? = null)
+data class DeleteWindPlantIECCommand(@TargetAggregateIdentifier  val windPlantIECId: UUID? = null)
 
 // single association commands
 
@@ -13336,7 +13338,7 @@ data class DeleteWindPlantIECCommand(@TargetAggregateIdentifier  val windPlantIE
 
 // WindPlantReactiveControlIEC Commands
 data class CreateWindPlantReactiveControlIECCommand(
-    @TargetAggregateIdentifier val windPlantReactiveControlIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windPlantReactiveControlIECId: UUID? = null,
     val kiwpx: String,
     val kpwpx: String,
     val kwpqu: String,
@@ -13353,7 +13355,7 @@ data class CreateWindPlantReactiveControlIECCommand(
 )
 
 data class UpdateWindPlantReactiveControlIECCommand(
-    @TargetAggregateIdentifier val windPlantReactiveControlIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windPlantReactiveControlIECId: UUID? = null,
     val kiwpx: String,
     val kpwpx: String,
     val kwpqu: String,
@@ -13369,7 +13371,7 @@ data class UpdateWindPlantReactiveControlIECCommand(
     val xrefmin: String
 )
 
-data class DeleteWindPlantReactiveControlIECCommand(@TargetAggregateIdentifier  val windPlantReactiveControlIECId: java.util.UUID? = null)
+data class DeleteWindPlantReactiveControlIECCommand(@TargetAggregateIdentifier  val windPlantReactiveControlIECId: UUID? = null)
 
 // single association commands
 
@@ -13378,16 +13380,16 @@ data class DeleteWindPlantReactiveControlIECCommand(@TargetAggregateIdentifier  
 
 // WindPlantUserDefined Commands
 data class CreateWindPlantUserDefinedCommand(
-    @TargetAggregateIdentifier val windPlantUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windPlantUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateWindPlantUserDefinedCommand(
-    @TargetAggregateIdentifier val windPlantUserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windPlantUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteWindPlantUserDefinedCommand(@TargetAggregateIdentifier  val windPlantUserDefinedId: java.util.UUID? = null)
+data class DeleteWindPlantUserDefinedCommand(@TargetAggregateIdentifier  val windPlantUserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -13396,7 +13398,7 @@ data class DeleteWindPlantUserDefinedCommand(@TargetAggregateIdentifier  val win
 
 // WindProtectionIEC Commands
 data class CreateWindProtectionIECCommand(
-    @TargetAggregateIdentifier val windProtectionIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windProtectionIECId: UUID? = null,
     val fover: String,
     val funder: String,
     val tfover: String,
@@ -13408,7 +13410,7 @@ data class CreateWindProtectionIECCommand(
 )
 
 data class UpdateWindProtectionIECCommand(
-    @TargetAggregateIdentifier val windProtectionIECId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windProtectionIECId: UUID? = null,
     val fover: String,
     val funder: String,
     val tfover: String,
@@ -13419,7 +13421,7 @@ data class UpdateWindProtectionIECCommand(
     val uunder: String
 )
 
-data class DeleteWindProtectionIECCommand(@TargetAggregateIdentifier  val windProtectionIECId: java.util.UUID? = null)
+data class DeleteWindProtectionIECCommand(@TargetAggregateIdentifier  val windProtectionIECId: UUID? = null)
 
 // single association commands
 
@@ -13428,14 +13430,14 @@ data class DeleteWindProtectionIECCommand(@TargetAggregateIdentifier  val windPr
 
 // WindTurbineType1or2Dynamics Commands
 data class CreateWindTurbineType1or2DynamicsCommand(
-    @TargetAggregateIdentifier  val windTurbineType1or2DynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windTurbineType1or2DynamicsId: UUID? = null
 )
 
 data class UpdateWindTurbineType1or2DynamicsCommand(
-    @TargetAggregateIdentifier  val windTurbineType1or2DynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windTurbineType1or2DynamicsId: UUID? = null
 )
 
-data class DeleteWindTurbineType1or2DynamicsCommand(@TargetAggregateIdentifier  val windTurbineType1or2DynamicsId: java.util.UUID? = null)
+data class DeleteWindTurbineType1or2DynamicsCommand(@TargetAggregateIdentifier  val windTurbineType1or2DynamicsId: UUID? = null)
 
 // single association commands
 
@@ -13444,14 +13446,14 @@ data class DeleteWindTurbineType1or2DynamicsCommand(@TargetAggregateIdentifier  
 
 // WindTurbineType1or2IEC Commands
 data class CreateWindTurbineType1or2IECCommand(
-    @TargetAggregateIdentifier  val windTurbineType1or2IECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windTurbineType1or2IECId: UUID? = null
 )
 
 data class UpdateWindTurbineType1or2IECCommand(
-    @TargetAggregateIdentifier  val windTurbineType1or2IECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windTurbineType1or2IECId: UUID? = null
 )
 
-data class DeleteWindTurbineType1or2IECCommand(@TargetAggregateIdentifier  val windTurbineType1or2IECId: java.util.UUID? = null)
+data class DeleteWindTurbineType1or2IECCommand(@TargetAggregateIdentifier  val windTurbineType1or2IECId: UUID? = null)
 
 // single association commands
 
@@ -13460,14 +13462,14 @@ data class DeleteWindTurbineType1or2IECCommand(@TargetAggregateIdentifier  val w
 
 // WindTurbineType3or4Dynamics Commands
 data class CreateWindTurbineType3or4DynamicsCommand(
-    @TargetAggregateIdentifier  val windTurbineType3or4DynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windTurbineType3or4DynamicsId: UUID? = null
 )
 
 data class UpdateWindTurbineType3or4DynamicsCommand(
-    @TargetAggregateIdentifier  val windTurbineType3or4DynamicsId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windTurbineType3or4DynamicsId: UUID? = null
 )
 
-data class DeleteWindTurbineType3or4DynamicsCommand(@TargetAggregateIdentifier  val windTurbineType3or4DynamicsId: java.util.UUID? = null)
+data class DeleteWindTurbineType3or4DynamicsCommand(@TargetAggregateIdentifier  val windTurbineType3or4DynamicsId: UUID? = null)
 
 // single association commands
 
@@ -13476,14 +13478,14 @@ data class DeleteWindTurbineType3or4DynamicsCommand(@TargetAggregateIdentifier  
 
 // WindTurbineType3or4IEC Commands
 data class CreateWindTurbineType3or4IECCommand(
-    @TargetAggregateIdentifier  val windTurbineType3or4IECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windTurbineType3or4IECId: UUID? = null
 )
 
 data class UpdateWindTurbineType3or4IECCommand(
-    @TargetAggregateIdentifier  val windTurbineType3or4IECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windTurbineType3or4IECId: UUID? = null
 )
 
-data class DeleteWindTurbineType3or4IECCommand(@TargetAggregateIdentifier  val windTurbineType3or4IECId: java.util.UUID? = null)
+data class DeleteWindTurbineType3or4IECCommand(@TargetAggregateIdentifier  val windTurbineType3or4IECId: UUID? = null)
 
 // single association commands
 
@@ -13492,14 +13494,14 @@ data class DeleteWindTurbineType3or4IECCommand(@TargetAggregateIdentifier  val w
 
 // WindTurbineType4aIEC Commands
 data class CreateWindTurbineType4aIECCommand(
-    @TargetAggregateIdentifier  val windTurbineType4aIECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windTurbineType4aIECId: UUID? = null
 )
 
 data class UpdateWindTurbineType4aIECCommand(
-    @TargetAggregateIdentifier  val windTurbineType4aIECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windTurbineType4aIECId: UUID? = null
 )
 
-data class DeleteWindTurbineType4aIECCommand(@TargetAggregateIdentifier  val windTurbineType4aIECId: java.util.UUID? = null)
+data class DeleteWindTurbineType4aIECCommand(@TargetAggregateIdentifier  val windTurbineType4aIECId: UUID? = null)
 
 // single association commands
 
@@ -13508,14 +13510,14 @@ data class DeleteWindTurbineType4aIECCommand(@TargetAggregateIdentifier  val win
 
 // WindTurbineType4bIEC Commands
 data class CreateWindTurbineType4bIECCommand(
-    @TargetAggregateIdentifier  val windTurbineType4bIECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windTurbineType4bIECId: UUID? = null
 )
 
 data class UpdateWindTurbineType4bIECCommand(
-    @TargetAggregateIdentifier  val windTurbineType4bIECId: java.util.UUID? = null
+    @TargetAggregateIdentifier  val windTurbineType4bIECId: UUID? = null
 )
 
-data class DeleteWindTurbineType4bIECCommand(@TargetAggregateIdentifier  val windTurbineType4bIECId: java.util.UUID? = null)
+data class DeleteWindTurbineType4bIECCommand(@TargetAggregateIdentifier  val windTurbineType4bIECId: UUID? = null)
 
 // single association commands
 
@@ -13524,16 +13526,16 @@ data class DeleteWindTurbineType4bIECCommand(@TargetAggregateIdentifier  val win
 
 // WindType1or2UserDefined Commands
 data class CreateWindType1or2UserDefinedCommand(
-    @TargetAggregateIdentifier val windType1or2UserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windType1or2UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateWindType1or2UserDefinedCommand(
-    @TargetAggregateIdentifier val windType1or2UserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windType1or2UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteWindType1or2UserDefinedCommand(@TargetAggregateIdentifier  val windType1or2UserDefinedId: java.util.UUID? = null)
+data class DeleteWindType1or2UserDefinedCommand(@TargetAggregateIdentifier  val windType1or2UserDefinedId: UUID? = null)
 
 // single association commands
 
@@ -13542,20 +13544,19 @@ data class DeleteWindType1or2UserDefinedCommand(@TargetAggregateIdentifier  val 
 
 // WindType3or4UserDefined Commands
 data class CreateWindType3or4UserDefinedCommand(
-    @TargetAggregateIdentifier val windType3or4UserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windType3or4UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateWindType3or4UserDefinedCommand(
-    @TargetAggregateIdentifier val windType3or4UserDefinedId: java.util.UUID? = null,
+    @TargetAggregateIdentifier val windType3or4UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
-data class DeleteWindType3or4UserDefinedCommand(@TargetAggregateIdentifier  val windType3or4UserDefinedId: java.util.UUID? = null)
+data class DeleteWindType3or4UserDefinedCommand(@TargetAggregateIdentifier  val windType3or4UserDefinedId: UUID? = null)
 
 // single association commands
 
 // multiple association commands
-
 
 
