@@ -27,7 +27,7 @@ import com.occulue.entity.*;
 // ACDCConverter Events
 
 data class CreateACDCConverterEvent(
-    @Id var aCDCConverterId: UUID? = null,
+    @Id var aCDCConverterId: java.util.UUID? = null,
     val baseS: String,
     val idleLoss: String,
     val maxUdc: String,
@@ -40,7 +40,7 @@ data class CreateACDCConverterEvent(
 )
 
 data class UpdateACDCConverterEvent(
-    @Id var aCDCConverterId: UUID? = null,
+    @Id var aCDCConverterId: java.util.UUID? = null,
     val baseS: String,
     val idleLoss: String,
     val maxUdc: String,
@@ -52,7 +52,7 @@ data class UpdateACDCConverterEvent(
     val valveU0: String
 )
 
-data class DeleteACDCConverterEvent(@Id val aCDCConverterId: UUID? = null)
+data class DeleteACDCConverterEvent(@Id val aCDCConverterId: java.util.UUID? = null)
 
 // single association events
 
@@ -62,16 +62,16 @@ data class DeleteACDCConverterEvent(@Id val aCDCConverterId: UUID? = null)
 // ACDCConverterDCTerminal Events
 
 data class CreateACDCConverterDCTerminalEvent(
-    @Id var aCDCConverterDCTerminalId: UUID? = null,
+    @Id var aCDCConverterDCTerminalId: java.util.UUID? = null,
     val polarity: String
 )
 
 data class UpdateACDCConverterDCTerminalEvent(
-    @Id var aCDCConverterDCTerminalId: UUID? = null,
+    @Id var aCDCConverterDCTerminalId: java.util.UUID? = null,
     val polarity: String
 )
 
-data class DeleteACDCConverterDCTerminalEvent(@Id val aCDCConverterDCTerminalId: UUID? = null)
+data class DeleteACDCConverterDCTerminalEvent(@Id val aCDCConverterDCTerminalId: java.util.UUID? = null)
 
 // single association events
 
@@ -81,16 +81,16 @@ data class DeleteACDCConverterDCTerminalEvent(@Id val aCDCConverterDCTerminalId:
 // ACDCTerminal Events
 
 data class CreateACDCTerminalEvent(
-    @Id var aCDCTerminalId: UUID? = null,
+    @Id var aCDCTerminalId: java.util.UUID? = null,
     val sequenceNumber: String
 )
 
 data class UpdateACDCTerminalEvent(
-    @Id var aCDCTerminalId: UUID? = null,
+    @Id var aCDCTerminalId: java.util.UUID? = null,
     val sequenceNumber: String
 )
 
-data class DeleteACDCTerminalEvent(@Id val aCDCTerminalId: UUID? = null)
+data class DeleteACDCTerminalEvent(@Id val aCDCTerminalId: java.util.UUID? = null)
 
 // single association events
 
@@ -100,7 +100,7 @@ data class DeleteACDCTerminalEvent(@Id val aCDCTerminalId: UUID? = null)
 // ACLineSegment Events
 
 data class CreateACLineSegmentEvent(
-    @Id var aCLineSegmentId: UUID? = null,
+    @Id var aCLineSegmentId: java.util.UUID? = null,
     val b0ch: String,
     val bch: String,
     val g0ch: String,
@@ -113,7 +113,7 @@ data class CreateACLineSegmentEvent(
 )
 
 data class UpdateACLineSegmentEvent(
-    @Id var aCLineSegmentId: UUID? = null,
+    @Id var aCLineSegmentId: java.util.UUID? = null,
     val b0ch: String,
     val bch: String,
     val g0ch: String,
@@ -125,7 +125,7 @@ data class UpdateACLineSegmentEvent(
     val x0: String
 )
 
-data class DeleteACLineSegmentEvent(@Id val aCLineSegmentId: UUID? = null)
+data class DeleteACLineSegmentEvent(@Id val aCLineSegmentId: java.util.UUID? = null)
 
 // single association events
 
@@ -135,14 +135,14 @@ data class DeleteACLineSegmentEvent(@Id val aCLineSegmentId: UUID? = null)
 // Accumulator Events
 
 data class CreateAccumulatorEvent(
-     val accumulatorId: UUID? = null
+     val accumulatorId: java.util.UUID? = null
 )
 
 data class UpdateAccumulatorEvent(
-     val accumulatorId: UUID? = null
+     val accumulatorId: java.util.UUID? = null
 )
 
-data class DeleteAccumulatorEvent(@Id val accumulatorId: UUID? = null)
+data class DeleteAccumulatorEvent(@Id val accumulatorId: java.util.UUID? = null)
 
 // single association events
 
@@ -152,16 +152,16 @@ data class DeleteAccumulatorEvent(@Id val accumulatorId: UUID? = null)
 // AccumulatorLimit Events
 
 data class CreateAccumulatorLimitEvent(
-    @Id var accumulatorLimitId: UUID? = null,
+    @Id var accumulatorLimitId: java.util.UUID? = null,
     val value: String
 )
 
 data class UpdateAccumulatorLimitEvent(
-    @Id var accumulatorLimitId: UUID? = null,
+    @Id var accumulatorLimitId: java.util.UUID? = null,
     val value: String
 )
 
-data class DeleteAccumulatorLimitEvent(@Id val accumulatorLimitId: UUID? = null)
+data class DeleteAccumulatorLimitEvent(@Id val accumulatorLimitId: java.util.UUID? = null)
 
 // single association events
 
@@ -171,14 +171,14 @@ data class DeleteAccumulatorLimitEvent(@Id val accumulatorLimitId: UUID? = null)
 // AccumulatorLimitSet Events
 
 data class CreateAccumulatorLimitSetEvent(
-     val accumulatorLimitSetId: UUID? = null
+     val accumulatorLimitSetId: java.util.UUID? = null
 )
 
 data class UpdateAccumulatorLimitSetEvent(
-     val accumulatorLimitSetId: UUID? = null
+     val accumulatorLimitSetId: java.util.UUID? = null
 )
 
-data class DeleteAccumulatorLimitSetEvent(@Id val accumulatorLimitSetId: UUID? = null)
+data class DeleteAccumulatorLimitSetEvent(@Id val accumulatorLimitSetId: java.util.UUID? = null)
 
 // single association events
 
@@ -188,14 +188,14 @@ data class DeleteAccumulatorLimitSetEvent(@Id val accumulatorLimitSetId: UUID? =
 // AccumulatorReset Events
 
 data class CreateAccumulatorResetEvent(
-     val accumulatorResetId: UUID? = null
+     val accumulatorResetId: java.util.UUID? = null
 )
 
 data class UpdateAccumulatorResetEvent(
-     val accumulatorResetId: UUID? = null
+     val accumulatorResetId: java.util.UUID? = null
 )
 
-data class DeleteAccumulatorResetEvent(@Id val accumulatorResetId: UUID? = null)
+data class DeleteAccumulatorResetEvent(@Id val accumulatorResetId: java.util.UUID? = null)
 
 // single association events
 
@@ -205,16 +205,16 @@ data class DeleteAccumulatorResetEvent(@Id val accumulatorResetId: UUID? = null)
 // AccumulatorValue Events
 
 data class CreateAccumulatorValueEvent(
-    @Id var accumulatorValueId: UUID? = null,
+    @Id var accumulatorValueId: java.util.UUID? = null,
     val value: String
 )
 
 data class UpdateAccumulatorValueEvent(
-    @Id var accumulatorValueId: UUID? = null,
+    @Id var accumulatorValueId: java.util.UUID? = null,
     val value: String
 )
 
-data class DeleteAccumulatorValueEvent(@Id val accumulatorValueId: UUID? = null)
+data class DeleteAccumulatorValueEvent(@Id val accumulatorValueId: java.util.UUID? = null)
 
 // single association events
 
@@ -224,20 +224,20 @@ data class DeleteAccumulatorValueEvent(@Id val accumulatorValueId: UUID? = null)
 // ActivePower Events
 
 data class CreateActivePowerEvent(
-    @Id var activePowerId: UUID? = null,
+    @Id var activePowerId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateActivePowerEvent(
-    @Id var activePowerId: UUID? = null,
+    @Id var activePowerId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteActivePowerEvent(@Id val activePowerId: UUID? = null)
+data class DeleteActivePowerEvent(@Id val activePowerId: java.util.UUID? = null)
 
 // single association events
 
@@ -247,16 +247,16 @@ data class DeleteActivePowerEvent(@Id val activePowerId: UUID? = null)
 // ActivePowerLimit Events
 
 data class CreateActivePowerLimitEvent(
-    @Id var activePowerLimitId: UUID? = null,
+    @Id var activePowerLimitId: java.util.UUID? = null,
     val value: String
 )
 
 data class UpdateActivePowerLimitEvent(
-    @Id var activePowerLimitId: UUID? = null,
+    @Id var activePowerLimitId: java.util.UUID? = null,
     val value: String
 )
 
-data class DeleteActivePowerLimitEvent(@Id val activePowerLimitId: UUID? = null)
+data class DeleteActivePowerLimitEvent(@Id val activePowerLimitId: java.util.UUID? = null)
 
 // single association events
 
@@ -266,7 +266,7 @@ data class DeleteActivePowerLimitEvent(@Id val activePowerLimitId: UUID? = null)
 // ActivePowerPerCurrentFlow Events
 
 data class CreateActivePowerPerCurrentFlowEvent(
-    @Id var activePowerPerCurrentFlowId: UUID? = null,
+    @Id var activePowerPerCurrentFlowId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -275,7 +275,7 @@ data class CreateActivePowerPerCurrentFlowEvent(
 )
 
 data class UpdateActivePowerPerCurrentFlowEvent(
-    @Id var activePowerPerCurrentFlowId: UUID? = null,
+    @Id var activePowerPerCurrentFlowId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -283,7 +283,7 @@ data class UpdateActivePowerPerCurrentFlowEvent(
     val value: String
 )
 
-data class DeleteActivePowerPerCurrentFlowEvent(@Id val activePowerPerCurrentFlowId: UUID? = null)
+data class DeleteActivePowerPerCurrentFlowEvent(@Id val activePowerPerCurrentFlowId: java.util.UUID? = null)
 
 // single association events
 
@@ -293,7 +293,7 @@ data class DeleteActivePowerPerCurrentFlowEvent(@Id val activePowerPerCurrentFlo
 // ActivePowerPerFrequency Events
 
 data class CreateActivePowerPerFrequencyEvent(
-    @Id var activePowerPerFrequencyId: UUID? = null,
+    @Id var activePowerPerFrequencyId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -302,7 +302,7 @@ data class CreateActivePowerPerFrequencyEvent(
 )
 
 data class UpdateActivePowerPerFrequencyEvent(
-    @Id var activePowerPerFrequencyId: UUID? = null,
+    @Id var activePowerPerFrequencyId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -310,7 +310,7 @@ data class UpdateActivePowerPerFrequencyEvent(
     val value: String
 )
 
-data class DeleteActivePowerPerFrequencyEvent(@Id val activePowerPerFrequencyId: UUID? = null)
+data class DeleteActivePowerPerFrequencyEvent(@Id val activePowerPerFrequencyId: java.util.UUID? = null)
 
 // single association events
 
@@ -320,16 +320,16 @@ data class DeleteActivePowerPerFrequencyEvent(@Id val activePowerPerFrequencyId:
 // Analog Events
 
 data class CreateAnalogEvent(
-    @Id var analogId: UUID? = null,
+    @Id var analogId: java.util.UUID? = null,
     val positiveFlowIn: String
 )
 
 data class UpdateAnalogEvent(
-    @Id var analogId: UUID? = null,
+    @Id var analogId: java.util.UUID? = null,
     val positiveFlowIn: String
 )
 
-data class DeleteAnalogEvent(@Id val analogId: UUID? = null)
+data class DeleteAnalogEvent(@Id val analogId: java.util.UUID? = null)
 
 // single association events
 
@@ -339,18 +339,18 @@ data class DeleteAnalogEvent(@Id val analogId: UUID? = null)
 // AnalogControl Events
 
 data class CreateAnalogControlEvent(
-    @Id var analogControlId: UUID? = null,
+    @Id var analogControlId: java.util.UUID? = null,
     val maxValue: String,
     val minValue: String
 )
 
 data class UpdateAnalogControlEvent(
-    @Id var analogControlId: UUID? = null,
+    @Id var analogControlId: java.util.UUID? = null,
     val maxValue: String,
     val minValue: String
 )
 
-data class DeleteAnalogControlEvent(@Id val analogControlId: UUID? = null)
+data class DeleteAnalogControlEvent(@Id val analogControlId: java.util.UUID? = null)
 
 // single association events
 
@@ -360,16 +360,16 @@ data class DeleteAnalogControlEvent(@Id val analogControlId: UUID? = null)
 // AnalogLimit Events
 
 data class CreateAnalogLimitEvent(
-    @Id var analogLimitId: UUID? = null,
+    @Id var analogLimitId: java.util.UUID? = null,
     val value: String
 )
 
 data class UpdateAnalogLimitEvent(
-    @Id var analogLimitId: UUID? = null,
+    @Id var analogLimitId: java.util.UUID? = null,
     val value: String
 )
 
-data class DeleteAnalogLimitEvent(@Id val analogLimitId: UUID? = null)
+data class DeleteAnalogLimitEvent(@Id val analogLimitId: java.util.UUID? = null)
 
 // single association events
 
@@ -379,14 +379,14 @@ data class DeleteAnalogLimitEvent(@Id val analogLimitId: UUID? = null)
 // AnalogLimitSet Events
 
 data class CreateAnalogLimitSetEvent(
-     val analogLimitSetId: UUID? = null
+     val analogLimitSetId: java.util.UUID? = null
 )
 
 data class UpdateAnalogLimitSetEvent(
-     val analogLimitSetId: UUID? = null
+     val analogLimitSetId: java.util.UUID? = null
 )
 
-data class DeleteAnalogLimitSetEvent(@Id val analogLimitSetId: UUID? = null)
+data class DeleteAnalogLimitSetEvent(@Id val analogLimitSetId: java.util.UUID? = null)
 
 // single association events
 
@@ -396,16 +396,16 @@ data class DeleteAnalogLimitSetEvent(@Id val analogLimitSetId: UUID? = null)
 // AnalogValue Events
 
 data class CreateAnalogValueEvent(
-    @Id var analogValueId: UUID? = null,
+    @Id var analogValueId: java.util.UUID? = null,
     val value: String
 )
 
 data class UpdateAnalogValueEvent(
-    @Id var analogValueId: UUID? = null,
+    @Id var analogValueId: java.util.UUID? = null,
     val value: String
 )
 
-data class DeleteAnalogValueEvent(@Id val analogValueId: UUID? = null)
+data class DeleteAnalogValueEvent(@Id val analogValueId: java.util.UUID? = null)
 
 // single association events
 
@@ -415,20 +415,20 @@ data class DeleteAnalogValueEvent(@Id val analogValueId: UUID? = null)
 // AngleDegrees Events
 
 data class CreateAngleDegreesEvent(
-    @Id var angleDegreesId: UUID? = null,
+    @Id var angleDegreesId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateAngleDegreesEvent(
-    @Id var angleDegreesId: UUID? = null,
+    @Id var angleDegreesId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteAngleDegreesEvent(@Id val angleDegreesId: UUID? = null)
+data class DeleteAngleDegreesEvent(@Id val angleDegreesId: java.util.UUID? = null)
 
 // single association events
 
@@ -438,20 +438,20 @@ data class DeleteAngleDegreesEvent(@Id val angleDegreesId: UUID? = null)
 // AngleRadians Events
 
 data class CreateAngleRadiansEvent(
-    @Id var angleRadiansId: UUID? = null,
+    @Id var angleRadiansId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateAngleRadiansEvent(
-    @Id var angleRadiansId: UUID? = null,
+    @Id var angleRadiansId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteAngleRadiansEvent(@Id val angleRadiansId: UUID? = null)
+data class DeleteAngleRadiansEvent(@Id val angleRadiansId: java.util.UUID? = null)
 
 // single association events
 
@@ -461,20 +461,20 @@ data class DeleteAngleRadiansEvent(@Id val angleRadiansId: UUID? = null)
 // ApparentPower Events
 
 data class CreateApparentPowerEvent(
-    @Id var apparentPowerId: UUID? = null,
+    @Id var apparentPowerId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateApparentPowerEvent(
-    @Id var apparentPowerId: UUID? = null,
+    @Id var apparentPowerId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteApparentPowerEvent(@Id val apparentPowerId: UUID? = null)
+data class DeleteApparentPowerEvent(@Id val apparentPowerId: java.util.UUID? = null)
 
 // single association events
 
@@ -484,16 +484,16 @@ data class DeleteApparentPowerEvent(@Id val apparentPowerId: UUID? = null)
 // ApparentPowerLimit Events
 
 data class CreateApparentPowerLimitEvent(
-    @Id var apparentPowerLimitId: UUID? = null,
+    @Id var apparentPowerLimitId: java.util.UUID? = null,
     val value: String
 )
 
 data class UpdateApparentPowerLimitEvent(
-    @Id var apparentPowerLimitId: UUID? = null,
+    @Id var apparentPowerLimitId: java.util.UUID? = null,
     val value: String
 )
 
-data class DeleteApparentPowerLimitEvent(@Id val apparentPowerLimitId: UUID? = null)
+data class DeleteApparentPowerLimitEvent(@Id val apparentPowerLimitId: java.util.UUID? = null)
 
 // single association events
 
@@ -503,20 +503,20 @@ data class DeleteApparentPowerLimitEvent(@Id val apparentPowerLimitId: UUID? = n
 // Area Events
 
 data class CreateAreaEvent(
-    @Id var areaId: UUID? = null,
+    @Id var areaId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateAreaEvent(
-    @Id var areaId: UUID? = null,
+    @Id var areaId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteAreaEvent(@Id val areaId: UUID? = null)
+data class DeleteAreaEvent(@Id val areaId: java.util.UUID? = null)
 
 // single association events
 
@@ -526,7 +526,7 @@ data class DeleteAreaEvent(@Id val areaId: UUID? = null)
 // AsynchronousMachine Events
 
 data class CreateAsynchronousMachineEvent(
-    @Id var asynchronousMachineId: UUID? = null,
+    @Id var asynchronousMachineId: java.util.UUID? = null,
     val converterFedDrive: String,
     val efficiency: String,
     val iaIrRatio: String,
@@ -539,7 +539,7 @@ data class CreateAsynchronousMachineEvent(
 )
 
 data class UpdateAsynchronousMachineEvent(
-    @Id var asynchronousMachineId: UUID? = null,
+    @Id var asynchronousMachineId: java.util.UUID? = null,
     val converterFedDrive: String,
     val efficiency: String,
     val iaIrRatio: String,
@@ -551,7 +551,7 @@ data class UpdateAsynchronousMachineEvent(
     val rxLockedRotorRatio: String
 )
 
-data class DeleteAsynchronousMachineEvent(@Id val asynchronousMachineId: UUID? = null)
+data class DeleteAsynchronousMachineEvent(@Id val asynchronousMachineId: java.util.UUID? = null)
 
 // single association events
 
@@ -561,14 +561,14 @@ data class DeleteAsynchronousMachineEvent(@Id val asynchronousMachineId: UUID? =
 // AsynchronousMachineDynamics Events
 
 data class CreateAsynchronousMachineDynamicsEvent(
-     val asynchronousMachineDynamicsId: UUID? = null
+     val asynchronousMachineDynamicsId: java.util.UUID? = null
 )
 
 data class UpdateAsynchronousMachineDynamicsEvent(
-     val asynchronousMachineDynamicsId: UUID? = null
+     val asynchronousMachineDynamicsId: java.util.UUID? = null
 )
 
-data class DeleteAsynchronousMachineDynamicsEvent(@Id val asynchronousMachineDynamicsId: UUID? = null)
+data class DeleteAsynchronousMachineDynamicsEvent(@Id val asynchronousMachineDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -578,7 +578,7 @@ data class DeleteAsynchronousMachineDynamicsEvent(@Id val asynchronousMachineDyn
 // AsynchronousMachineEquivalentCircuit Events
 
 data class CreateAsynchronousMachineEquivalentCircuitEvent(
-    @Id var asynchronousMachineEquivalentCircuitId: UUID? = null,
+    @Id var asynchronousMachineEquivalentCircuitId: java.util.UUID? = null,
     val rr1: String,
     val rr2: String,
     val xlr1: String,
@@ -587,7 +587,7 @@ data class CreateAsynchronousMachineEquivalentCircuitEvent(
 )
 
 data class UpdateAsynchronousMachineEquivalentCircuitEvent(
-    @Id var asynchronousMachineEquivalentCircuitId: UUID? = null,
+    @Id var asynchronousMachineEquivalentCircuitId: java.util.UUID? = null,
     val rr1: String,
     val rr2: String,
     val xlr1: String,
@@ -595,7 +595,7 @@ data class UpdateAsynchronousMachineEquivalentCircuitEvent(
     val xm: String
 )
 
-data class DeleteAsynchronousMachineEquivalentCircuitEvent(@Id val asynchronousMachineEquivalentCircuitId: UUID? = null)
+data class DeleteAsynchronousMachineEquivalentCircuitEvent(@Id val asynchronousMachineEquivalentCircuitId: java.util.UUID? = null)
 
 // single association events
 
@@ -605,7 +605,7 @@ data class DeleteAsynchronousMachineEquivalentCircuitEvent(@Id val asynchronousM
 // AsynchronousMachineTimeConstantReactance Events
 
 data class CreateAsynchronousMachineTimeConstantReactanceEvent(
-    @Id var asynchronousMachineTimeConstantReactanceId: UUID? = null,
+    @Id var asynchronousMachineTimeConstantReactanceId: java.util.UUID? = null,
     val tpo: String,
     val tppo: String,
     val xp: String,
@@ -614,7 +614,7 @@ data class CreateAsynchronousMachineTimeConstantReactanceEvent(
 )
 
 data class UpdateAsynchronousMachineTimeConstantReactanceEvent(
-    @Id var asynchronousMachineTimeConstantReactanceId: UUID? = null,
+    @Id var asynchronousMachineTimeConstantReactanceId: java.util.UUID? = null,
     val tpo: String,
     val tppo: String,
     val xp: String,
@@ -622,7 +622,7 @@ data class UpdateAsynchronousMachineTimeConstantReactanceEvent(
     val xs: String
 )
 
-data class DeleteAsynchronousMachineTimeConstantReactanceEvent(@Id val asynchronousMachineTimeConstantReactanceId: UUID? = null)
+data class DeleteAsynchronousMachineTimeConstantReactanceEvent(@Id val asynchronousMachineTimeConstantReactanceId: java.util.UUID? = null)
 
 // single association events
 
@@ -632,16 +632,16 @@ data class DeleteAsynchronousMachineTimeConstantReactanceEvent(@Id val asynchron
 // AsynchronousMachineUserDefined Events
 
 data class CreateAsynchronousMachineUserDefinedEvent(
-    @Id var asynchronousMachineUserDefinedId: UUID? = null,
+    @Id var asynchronousMachineUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateAsynchronousMachineUserDefinedEvent(
-    @Id var asynchronousMachineUserDefinedId: UUID? = null,
+    @Id var asynchronousMachineUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteAsynchronousMachineUserDefinedEvent(@Id val asynchronousMachineUserDefinedId: UUID? = null)
+data class DeleteAsynchronousMachineUserDefinedEvent(@Id val asynchronousMachineUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -651,16 +651,16 @@ data class DeleteAsynchronousMachineUserDefinedEvent(@Id val asynchronousMachine
 // BaseVoltage Events
 
 data class CreateBaseVoltageEvent(
-    @Id var baseVoltageId: UUID? = null,
+    @Id var baseVoltageId: java.util.UUID? = null,
     val nominalVoltage: String
 )
 
 data class UpdateBaseVoltageEvent(
-    @Id var baseVoltageId: UUID? = null,
+    @Id var baseVoltageId: java.util.UUID? = null,
     val nominalVoltage: String
 )
 
-data class DeleteBaseVoltageEvent(@Id val baseVoltageId: UUID? = null)
+data class DeleteBaseVoltageEvent(@Id val baseVoltageId: java.util.UUID? = null)
 
 // single association events
 
@@ -670,20 +670,20 @@ data class DeleteBaseVoltageEvent(@Id val baseVoltageId: UUID? = null)
 // BasicIntervalSchedule Events
 
 data class CreateBasicIntervalScheduleEvent(
-    @Id var basicIntervalScheduleId: UUID? = null,
+    @Id var basicIntervalScheduleId: java.util.UUID? = null,
     val startTime: String,
     val value1Unit: String,
     val value2Unit: String
 )
 
 data class UpdateBasicIntervalScheduleEvent(
-    @Id var basicIntervalScheduleId: UUID? = null,
+    @Id var basicIntervalScheduleId: java.util.UUID? = null,
     val startTime: String,
     val value1Unit: String,
     val value2Unit: String
 )
 
-data class DeleteBasicIntervalScheduleEvent(@Id val basicIntervalScheduleId: UUID? = null)
+data class DeleteBasicIntervalScheduleEvent(@Id val basicIntervalScheduleId: java.util.UUID? = null)
 
 // single association events
 
@@ -693,14 +693,14 @@ data class DeleteBasicIntervalScheduleEvent(@Id val basicIntervalScheduleId: UUI
 // Bay Events
 
 data class CreateBayEvent(
-     val bayId: UUID? = null
+     val bayId: java.util.UUID? = null
 )
 
 data class UpdateBayEvent(
-     val bayId: UUID? = null
+     val bayId: java.util.UUID? = null
 )
 
-data class DeleteBayEvent(@Id val bayId: UUID? = null)
+data class DeleteBayEvent(@Id val bayId: java.util.UUID? = null)
 
 // single association events
 
@@ -710,14 +710,14 @@ data class DeleteBayEvent(@Id val bayId: UUID? = null)
 // BooleanProxy Events
 
 data class CreateBooleanProxyEvent(
-     val booleanProxyId: UUID? = null
+     val booleanProxyId: java.util.UUID? = null
 )
 
 data class UpdateBooleanProxyEvent(
-     val booleanProxyId: UUID? = null
+     val booleanProxyId: java.util.UUID? = null
 )
 
-data class DeleteBooleanProxyEvent(@Id val booleanProxyId: UUID? = null)
+data class DeleteBooleanProxyEvent(@Id val booleanProxyId: java.util.UUID? = null)
 
 // single association events
 
@@ -727,7 +727,7 @@ data class DeleteBooleanProxyEvent(@Id val booleanProxyId: UUID? = null)
 // BoundaryExtensions Events
 
 data class CreateBoundaryExtensionsEvent(
-    @Id var boundaryExtensionsId: UUID? = null,
+    @Id var boundaryExtensionsId: java.util.UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -738,7 +738,7 @@ data class CreateBoundaryExtensionsEvent(
 )
 
 data class UpdateBoundaryExtensionsEvent(
-    @Id var boundaryExtensionsId: UUID? = null,
+    @Id var boundaryExtensionsId: java.util.UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -748,7 +748,7 @@ data class UpdateBoundaryExtensionsEvent(
     val toEndNameTso: String
 )
 
-data class DeleteBoundaryExtensionsEvent(@Id val boundaryExtensionsId: UUID? = null)
+data class DeleteBoundaryExtensionsEvent(@Id val boundaryExtensionsId: java.util.UUID? = null)
 
 // single association events
 
@@ -758,14 +758,14 @@ data class DeleteBoundaryExtensionsEvent(@Id val boundaryExtensionsId: UUID? = n
 // Breaker Events
 
 data class CreateBreakerEvent(
-     val breakerId: UUID? = null
+     val breakerId: java.util.UUID? = null
 )
 
 data class UpdateBreakerEvent(
-     val breakerId: UUID? = null
+     val breakerId: java.util.UUID? = null
 )
 
-data class DeleteBreakerEvent(@Id val breakerId: UUID? = null)
+data class DeleteBreakerEvent(@Id val breakerId: java.util.UUID? = null)
 
 // single association events
 
@@ -775,16 +775,16 @@ data class DeleteBreakerEvent(@Id val breakerId: UUID? = null)
 // BusNameMarker Events
 
 data class CreateBusNameMarkerEvent(
-    @Id var busNameMarkerId: UUID? = null,
+    @Id var busNameMarkerId: java.util.UUID? = null,
     val priority: String
 )
 
 data class UpdateBusNameMarkerEvent(
-    @Id var busNameMarkerId: UUID? = null,
+    @Id var busNameMarkerId: java.util.UUID? = null,
     val priority: String
 )
 
-data class DeleteBusNameMarkerEvent(@Id val busNameMarkerId: UUID? = null)
+data class DeleteBusNameMarkerEvent(@Id val busNameMarkerId: java.util.UUID? = null)
 
 // single association events
 
@@ -794,16 +794,16 @@ data class DeleteBusNameMarkerEvent(@Id val busNameMarkerId: UUID? = null)
 // BusbarSection Events
 
 data class CreateBusbarSectionEvent(
-    @Id var busbarSectionId: UUID? = null,
+    @Id var busbarSectionId: java.util.UUID? = null,
     val ipMax: String
 )
 
 data class UpdateBusbarSectionEvent(
-    @Id var busbarSectionId: UUID? = null,
+    @Id var busbarSectionId: java.util.UUID? = null,
     val ipMax: String
 )
 
-data class DeleteBusbarSectionEvent(@Id val busbarSectionId: UUID? = null)
+data class DeleteBusbarSectionEvent(@Id val busbarSectionId: java.util.UUID? = null)
 
 // single association events
 
@@ -813,20 +813,20 @@ data class DeleteBusbarSectionEvent(@Id val busbarSectionId: UUID? = null)
 // Capacitance Events
 
 data class CreateCapacitanceEvent(
-    @Id var capacitanceId: UUID? = null,
+    @Id var capacitanceId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateCapacitanceEvent(
-    @Id var capacitanceId: UUID? = null,
+    @Id var capacitanceId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteCapacitanceEvent(@Id val capacitanceId: UUID? = null)
+data class DeleteCapacitanceEvent(@Id val capacitanceId: java.util.UUID? = null)
 
 // single association events
 
@@ -836,7 +836,7 @@ data class DeleteCapacitanceEvent(@Id val capacitanceId: UUID? = null)
 // CapacitancePerLength Events
 
 data class CreateCapacitancePerLengthEvent(
-    @Id var capacitancePerLengthId: UUID? = null,
+    @Id var capacitancePerLengthId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -845,7 +845,7 @@ data class CreateCapacitancePerLengthEvent(
 )
 
 data class UpdateCapacitancePerLengthEvent(
-    @Id var capacitancePerLengthId: UUID? = null,
+    @Id var capacitancePerLengthId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -853,7 +853,7 @@ data class UpdateCapacitancePerLengthEvent(
     val value: String
 )
 
-data class DeleteCapacitancePerLengthEvent(@Id val capacitancePerLengthId: UUID? = null)
+data class DeleteCapacitancePerLengthEvent(@Id val capacitancePerLengthId: java.util.UUID? = null)
 
 // single association events
 
@@ -863,18 +863,18 @@ data class DeleteCapacitancePerLengthEvent(@Id val capacitancePerLengthId: UUID?
 // Command Events
 
 data class CreateCommandEvent(
-    @Id var commandId: UUID? = null,
+    @Id var commandId: java.util.UUID? = null,
     val normalValue: String,
     val value: String
 )
 
 data class UpdateCommandEvent(
-    @Id var commandId: UUID? = null,
+    @Id var commandId: java.util.UUID? = null,
     val normalValue: String,
     val value: String
 )
 
-data class DeleteCommandEvent(@Id val commandId: UUID? = null)
+data class DeleteCommandEvent(@Id val commandId: java.util.UUID? = null)
 
 // single association events
 
@@ -884,20 +884,20 @@ data class DeleteCommandEvent(@Id val commandId: UUID? = null)
 // Conductance Events
 
 data class CreateConductanceEvent(
-    @Id var conductanceId: UUID? = null,
+    @Id var conductanceId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateConductanceEvent(
-    @Id var conductanceId: UUID? = null,
+    @Id var conductanceId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteConductanceEvent(@Id val conductanceId: UUID? = null)
+data class DeleteConductanceEvent(@Id val conductanceId: java.util.UUID? = null)
 
 // single association events
 
@@ -907,14 +907,14 @@ data class DeleteConductanceEvent(@Id val conductanceId: UUID? = null)
 // ConductingEquipment Events
 
 data class CreateConductingEquipmentEvent(
-     val conductingEquipmentId: UUID? = null
+     val conductingEquipmentId: java.util.UUID? = null
 )
 
 data class UpdateConductingEquipmentEvent(
-     val conductingEquipmentId: UUID? = null
+     val conductingEquipmentId: java.util.UUID? = null
 )
 
-data class DeleteConductingEquipmentEvent(@Id val conductingEquipmentId: UUID? = null)
+data class DeleteConductingEquipmentEvent(@Id val conductingEquipmentId: java.util.UUID? = null)
 
 // single association events
 
@@ -924,16 +924,16 @@ data class DeleteConductingEquipmentEvent(@Id val conductingEquipmentId: UUID? =
 // Conductor Events
 
 data class CreateConductorEvent(
-    @Id var conductorId: UUID? = null,
+    @Id var conductorId: java.util.UUID? = null,
     val length: String
 )
 
 data class UpdateConductorEvent(
-    @Id var conductorId: UUID? = null,
+    @Id var conductorId: java.util.UUID? = null,
     val length: String
 )
 
-data class DeleteConductorEvent(@Id val conductorId: UUID? = null)
+data class DeleteConductorEvent(@Id val conductorId: java.util.UUID? = null)
 
 // single association events
 
@@ -943,14 +943,14 @@ data class DeleteConductorEvent(@Id val conductorId: UUID? = null)
 // ConformLoad Events
 
 data class CreateConformLoadEvent(
-     val conformLoadId: UUID? = null
+     val conformLoadId: java.util.UUID? = null
 )
 
 data class UpdateConformLoadEvent(
-     val conformLoadId: UUID? = null
+     val conformLoadId: java.util.UUID? = null
 )
 
-data class DeleteConformLoadEvent(@Id val conformLoadId: UUID? = null)
+data class DeleteConformLoadEvent(@Id val conformLoadId: java.util.UUID? = null)
 
 // single association events
 
@@ -960,14 +960,14 @@ data class DeleteConformLoadEvent(@Id val conformLoadId: UUID? = null)
 // ConformLoadGroup Events
 
 data class CreateConformLoadGroupEvent(
-     val conformLoadGroupId: UUID? = null
+     val conformLoadGroupId: java.util.UUID? = null
 )
 
 data class UpdateConformLoadGroupEvent(
-     val conformLoadGroupId: UUID? = null
+     val conformLoadGroupId: java.util.UUID? = null
 )
 
-data class DeleteConformLoadGroupEvent(@Id val conformLoadGroupId: UUID? = null)
+data class DeleteConformLoadGroupEvent(@Id val conformLoadGroupId: java.util.UUID? = null)
 
 // single association events
 
@@ -977,14 +977,14 @@ data class DeleteConformLoadGroupEvent(@Id val conformLoadGroupId: UUID? = null)
 // ConformLoadSchedule Events
 
 data class CreateConformLoadScheduleEvent(
-     val conformLoadScheduleId: UUID? = null
+     val conformLoadScheduleId: java.util.UUID? = null
 )
 
 data class UpdateConformLoadScheduleEvent(
-     val conformLoadScheduleId: UUID? = null
+     val conformLoadScheduleId: java.util.UUID? = null
 )
 
-data class DeleteConformLoadScheduleEvent(@Id val conformLoadScheduleId: UUID? = null)
+data class DeleteConformLoadScheduleEvent(@Id val conformLoadScheduleId: java.util.UUID? = null)
 
 // single association events
 
@@ -994,7 +994,7 @@ data class DeleteConformLoadScheduleEvent(@Id val conformLoadScheduleId: UUID? =
 // ConnectivityNode Events
 
 data class CreateConnectivityNodeEvent(
-    @Id var connectivityNodeId: UUID? = null,
+    @Id var connectivityNodeId: java.util.UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -1005,7 +1005,7 @@ data class CreateConnectivityNodeEvent(
 )
 
 data class UpdateConnectivityNodeEvent(
-    @Id var connectivityNodeId: UUID? = null,
+    @Id var connectivityNodeId: java.util.UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -1015,7 +1015,7 @@ data class UpdateConnectivityNodeEvent(
     val toEndNameTso: String
 )
 
-data class DeleteConnectivityNodeEvent(@Id val connectivityNodeId: UUID? = null)
+data class DeleteConnectivityNodeEvent(@Id val connectivityNodeId: java.util.UUID? = null)
 
 // single association events
 
@@ -1025,14 +1025,14 @@ data class DeleteConnectivityNodeEvent(@Id val connectivityNodeId: UUID? = null)
 // ConnectivityNodeContainer Events
 
 data class CreateConnectivityNodeContainerEvent(
-     val connectivityNodeContainerId: UUID? = null
+     val connectivityNodeContainerId: java.util.UUID? = null
 )
 
 data class UpdateConnectivityNodeContainerEvent(
-     val connectivityNodeContainerId: UUID? = null
+     val connectivityNodeContainerId: java.util.UUID? = null
 )
 
-data class DeleteConnectivityNodeContainerEvent(@Id val connectivityNodeContainerId: UUID? = null)
+data class DeleteConnectivityNodeContainerEvent(@Id val connectivityNodeContainerId: java.util.UUID? = null)
 
 // single association events
 
@@ -1042,14 +1042,14 @@ data class DeleteConnectivityNodeContainerEvent(@Id val connectivityNodeContaine
 // Connector Events
 
 data class CreateConnectorEvent(
-     val connectorId: UUID? = null
+     val connectorId: java.util.UUID? = null
 )
 
 data class UpdateConnectorEvent(
-     val connectorId: UUID? = null
+     val connectorId: java.util.UUID? = null
 )
 
-data class DeleteConnectorEvent(@Id val connectorId: UUID? = null)
+data class DeleteConnectorEvent(@Id val connectorId: java.util.UUID? = null)
 
 // single association events
 
@@ -1059,7 +1059,7 @@ data class DeleteConnectorEvent(@Id val connectorId: UUID? = null)
 // Control Events
 
 data class CreateControlEvent(
-    @Id var controlId: UUID? = null,
+    @Id var controlId: java.util.UUID? = null,
     val controlType: String,
     val operationInProgress: String,
     val timeStamp: String,
@@ -1068,7 +1068,7 @@ data class CreateControlEvent(
 )
 
 data class UpdateControlEvent(
-    @Id var controlId: UUID? = null,
+    @Id var controlId: java.util.UUID? = null,
     val controlType: String,
     val operationInProgress: String,
     val timeStamp: String,
@@ -1076,7 +1076,7 @@ data class UpdateControlEvent(
     val unitSymbol: String
 )
 
-data class DeleteControlEvent(@Id val controlId: UUID? = null)
+data class DeleteControlEvent(@Id val controlId: java.util.UUID? = null)
 
 // single association events
 
@@ -1086,16 +1086,16 @@ data class DeleteControlEvent(@Id val controlId: UUID? = null)
 // ControlArea Events
 
 data class CreateControlAreaEvent(
-    @Id var controlAreaId: UUID? = null,
+    @Id var controlAreaId: java.util.UUID? = null,
     val type: String
 )
 
 data class UpdateControlAreaEvent(
-    @Id var controlAreaId: UUID? = null,
+    @Id var controlAreaId: java.util.UUID? = null,
     val type: String
 )
 
-data class DeleteControlAreaEvent(@Id val controlAreaId: UUID? = null)
+data class DeleteControlAreaEvent(@Id val controlAreaId: java.util.UUID? = null)
 
 // single association events
 
@@ -1105,14 +1105,14 @@ data class DeleteControlAreaEvent(@Id val controlAreaId: UUID? = null)
 // ControlAreaGeneratingUnit Events
 
 data class CreateControlAreaGeneratingUnitEvent(
-     val controlAreaGeneratingUnitId: UUID? = null
+     val controlAreaGeneratingUnitId: java.util.UUID? = null
 )
 
 data class UpdateControlAreaGeneratingUnitEvent(
-     val controlAreaGeneratingUnitId: UUID? = null
+     val controlAreaGeneratingUnitId: java.util.UUID? = null
 )
 
-data class DeleteControlAreaGeneratingUnitEvent(@Id val controlAreaGeneratingUnitId: UUID? = null)
+data class DeleteControlAreaGeneratingUnitEvent(@Id val controlAreaGeneratingUnitId: java.util.UUID? = null)
 
 // single association events
 
@@ -1122,16 +1122,16 @@ data class DeleteControlAreaGeneratingUnitEvent(@Id val controlAreaGeneratingUni
 // CoordinateSystem Events
 
 data class CreateCoordinateSystemEvent(
-    @Id var coordinateSystemId: UUID? = null,
+    @Id var coordinateSystemId: java.util.UUID? = null,
     val crsUrn: String
 )
 
 data class UpdateCoordinateSystemEvent(
-    @Id var coordinateSystemId: UUID? = null,
+    @Id var coordinateSystemId: java.util.UUID? = null,
     val crsUrn: String
 )
 
-data class DeleteCoordinateSystemEvent(@Id val coordinateSystemId: UUID? = null)
+data class DeleteCoordinateSystemEvent(@Id val coordinateSystemId: java.util.UUID? = null)
 
 // single association events
 
@@ -1141,7 +1141,7 @@ data class DeleteCoordinateSystemEvent(@Id val coordinateSystemId: UUID? = null)
 // CsConverter Events
 
 data class CreateCsConverterEvent(
-    @Id var csConverterId: UUID? = null,
+    @Id var csConverterId: java.util.UUID? = null,
     val maxAlpha: String,
     val maxGamma: String,
     val maxIdc: String,
@@ -1152,7 +1152,7 @@ data class CreateCsConverterEvent(
 )
 
 data class UpdateCsConverterEvent(
-    @Id var csConverterId: UUID? = null,
+    @Id var csConverterId: java.util.UUID? = null,
     val maxAlpha: String,
     val maxGamma: String,
     val maxIdc: String,
@@ -1162,7 +1162,7 @@ data class UpdateCsConverterEvent(
     val ratedIdc: String
 )
 
-data class DeleteCsConverterEvent(@Id val csConverterId: UUID? = null)
+data class DeleteCsConverterEvent(@Id val csConverterId: java.util.UUID? = null)
 
 // single association events
 
@@ -1172,20 +1172,20 @@ data class DeleteCsConverterEvent(@Id val csConverterId: UUID? = null)
 // CurrentFlow Events
 
 data class CreateCurrentFlowEvent(
-    @Id var currentFlowId: UUID? = null,
+    @Id var currentFlowId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateCurrentFlowEvent(
-    @Id var currentFlowId: UUID? = null,
+    @Id var currentFlowId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteCurrentFlowEvent(@Id val currentFlowId: UUID? = null)
+data class DeleteCurrentFlowEvent(@Id val currentFlowId: java.util.UUID? = null)
 
 // single association events
 
@@ -1195,16 +1195,16 @@ data class DeleteCurrentFlowEvent(@Id val currentFlowId: UUID? = null)
 // CurrentLimit Events
 
 data class CreateCurrentLimitEvent(
-    @Id var currentLimitId: UUID? = null,
+    @Id var currentLimitId: java.util.UUID? = null,
     val value: String
 )
 
 data class UpdateCurrentLimitEvent(
-    @Id var currentLimitId: UUID? = null,
+    @Id var currentLimitId: java.util.UUID? = null,
     val value: String
 )
 
-data class DeleteCurrentLimitEvent(@Id val currentLimitId: UUID? = null)
+data class DeleteCurrentLimitEvent(@Id val currentLimitId: java.util.UUID? = null)
 
 // single association events
 
@@ -1214,7 +1214,7 @@ data class DeleteCurrentLimitEvent(@Id val currentLimitId: UUID? = null)
 // Curve Events
 
 data class CreateCurveEvent(
-    @Id var curveId: UUID? = null,
+    @Id var curveId: java.util.UUID? = null,
     val curveStyle: String,
     val xUnit: String,
     val y1Unit: String,
@@ -1222,14 +1222,14 @@ data class CreateCurveEvent(
 )
 
 data class UpdateCurveEvent(
-    @Id var curveId: UUID? = null,
+    @Id var curveId: java.util.UUID? = null,
     val curveStyle: String,
     val xUnit: String,
     val y1Unit: String,
     val y2Unit: String
 )
 
-data class DeleteCurveEvent(@Id val curveId: UUID? = null)
+data class DeleteCurveEvent(@Id val curveId: java.util.UUID? = null)
 
 // single association events
 
@@ -1239,20 +1239,20 @@ data class DeleteCurveEvent(@Id val curveId: UUID? = null)
 // CurveData Events
 
 data class CreateCurveDataEvent(
-    @Id var curveDataId: UUID? = null,
+    @Id var curveDataId: java.util.UUID? = null,
     val xvalue: String,
     val y1value: String,
     val y2value: String
 )
 
 data class UpdateCurveDataEvent(
-    @Id var curveDataId: UUID? = null,
+    @Id var curveDataId: java.util.UUID? = null,
     val xvalue: String,
     val y1value: String,
     val y2value: String
 )
 
-data class DeleteCurveDataEvent(@Id val curveDataId: UUID? = null)
+data class DeleteCurveDataEvent(@Id val curveDataId: java.util.UUID? = null)
 
 // single association events
 
@@ -1262,14 +1262,14 @@ data class DeleteCurveDataEvent(@Id val curveDataId: UUID? = null)
 // DCBaseTerminal Events
 
 data class CreateDCBaseTerminalEvent(
-     val dCBaseTerminalId: UUID? = null
+     val dCBaseTerminalId: java.util.UUID? = null
 )
 
 data class UpdateDCBaseTerminalEvent(
-     val dCBaseTerminalId: UUID? = null
+     val dCBaseTerminalId: java.util.UUID? = null
 )
 
-data class DeleteDCBaseTerminalEvent(@Id val dCBaseTerminalId: UUID? = null)
+data class DeleteDCBaseTerminalEvent(@Id val dCBaseTerminalId: java.util.UUID? = null)
 
 // single association events
 
@@ -1279,14 +1279,14 @@ data class DeleteDCBaseTerminalEvent(@Id val dCBaseTerminalId: UUID? = null)
 // DCBreaker Events
 
 data class CreateDCBreakerEvent(
-     val dCBreakerId: UUID? = null
+     val dCBreakerId: java.util.UUID? = null
 )
 
 data class UpdateDCBreakerEvent(
-     val dCBreakerId: UUID? = null
+     val dCBreakerId: java.util.UUID? = null
 )
 
-data class DeleteDCBreakerEvent(@Id val dCBreakerId: UUID? = null)
+data class DeleteDCBreakerEvent(@Id val dCBreakerId: java.util.UUID? = null)
 
 // single association events
 
@@ -1296,14 +1296,14 @@ data class DeleteDCBreakerEvent(@Id val dCBreakerId: UUID? = null)
 // DCBusbar Events
 
 data class CreateDCBusbarEvent(
-     val dCBusbarId: UUID? = null
+     val dCBusbarId: java.util.UUID? = null
 )
 
 data class UpdateDCBusbarEvent(
-     val dCBusbarId: UUID? = null
+     val dCBusbarId: java.util.UUID? = null
 )
 
-data class DeleteDCBusbarEvent(@Id val dCBusbarId: UUID? = null)
+data class DeleteDCBusbarEvent(@Id val dCBusbarId: java.util.UUID? = null)
 
 // single association events
 
@@ -1313,14 +1313,14 @@ data class DeleteDCBusbarEvent(@Id val dCBusbarId: UUID? = null)
 // DCChopper Events
 
 data class CreateDCChopperEvent(
-     val dCChopperId: UUID? = null
+     val dCChopperId: java.util.UUID? = null
 )
 
 data class UpdateDCChopperEvent(
-     val dCChopperId: UUID? = null
+     val dCChopperId: java.util.UUID? = null
 )
 
-data class DeleteDCChopperEvent(@Id val dCChopperId: UUID? = null)
+data class DeleteDCChopperEvent(@Id val dCChopperId: java.util.UUID? = null)
 
 // single association events
 
@@ -1330,14 +1330,14 @@ data class DeleteDCChopperEvent(@Id val dCChopperId: UUID? = null)
 // DCConductingEquipment Events
 
 data class CreateDCConductingEquipmentEvent(
-     val dCConductingEquipmentId: UUID? = null
+     val dCConductingEquipmentId: java.util.UUID? = null
 )
 
 data class UpdateDCConductingEquipmentEvent(
-     val dCConductingEquipmentId: UUID? = null
+     val dCConductingEquipmentId: java.util.UUID? = null
 )
 
-data class DeleteDCConductingEquipmentEvent(@Id val dCConductingEquipmentId: UUID? = null)
+data class DeleteDCConductingEquipmentEvent(@Id val dCConductingEquipmentId: java.util.UUID? = null)
 
 // single association events
 
@@ -1347,16 +1347,16 @@ data class DeleteDCConductingEquipmentEvent(@Id val dCConductingEquipmentId: UUI
 // DCConverterUnit Events
 
 data class CreateDCConverterUnitEvent(
-    @Id var dCConverterUnitId: UUID? = null,
+    @Id var dCConverterUnitId: java.util.UUID? = null,
     val operationMode: String
 )
 
 data class UpdateDCConverterUnitEvent(
-    @Id var dCConverterUnitId: UUID? = null,
+    @Id var dCConverterUnitId: java.util.UUID? = null,
     val operationMode: String
 )
 
-data class DeleteDCConverterUnitEvent(@Id val dCConverterUnitId: UUID? = null)
+data class DeleteDCConverterUnitEvent(@Id val dCConverterUnitId: java.util.UUID? = null)
 
 // single association events
 
@@ -1366,14 +1366,14 @@ data class DeleteDCConverterUnitEvent(@Id val dCConverterUnitId: UUID? = null)
 // DCDisconnector Events
 
 data class CreateDCDisconnectorEvent(
-     val dCDisconnectorId: UUID? = null
+     val dCDisconnectorId: java.util.UUID? = null
 )
 
 data class UpdateDCDisconnectorEvent(
-     val dCDisconnectorId: UUID? = null
+     val dCDisconnectorId: java.util.UUID? = null
 )
 
-data class DeleteDCDisconnectorEvent(@Id val dCDisconnectorId: UUID? = null)
+data class DeleteDCDisconnectorEvent(@Id val dCDisconnectorId: java.util.UUID? = null)
 
 // single association events
 
@@ -1383,14 +1383,14 @@ data class DeleteDCDisconnectorEvent(@Id val dCDisconnectorId: UUID? = null)
 // DCEquipmentContainer Events
 
 data class CreateDCEquipmentContainerEvent(
-     val dCEquipmentContainerId: UUID? = null
+     val dCEquipmentContainerId: java.util.UUID? = null
 )
 
 data class UpdateDCEquipmentContainerEvent(
-     val dCEquipmentContainerId: UUID? = null
+     val dCEquipmentContainerId: java.util.UUID? = null
 )
 
-data class DeleteDCEquipmentContainerEvent(@Id val dCEquipmentContainerId: UUID? = null)
+data class DeleteDCEquipmentContainerEvent(@Id val dCEquipmentContainerId: java.util.UUID? = null)
 
 // single association events
 
@@ -1400,18 +1400,18 @@ data class DeleteDCEquipmentContainerEvent(@Id val dCEquipmentContainerId: UUID?
 // DCGround Events
 
 data class CreateDCGroundEvent(
-    @Id var dCGroundId: UUID? = null,
+    @Id var dCGroundId: java.util.UUID? = null,
     val inductance: String,
     val r: String
 )
 
 data class UpdateDCGroundEvent(
-    @Id var dCGroundId: UUID? = null,
+    @Id var dCGroundId: java.util.UUID? = null,
     val inductance: String,
     val r: String
 )
 
-data class DeleteDCGroundEvent(@Id val dCGroundId: UUID? = null)
+data class DeleteDCGroundEvent(@Id val dCGroundId: java.util.UUID? = null)
 
 // single association events
 
@@ -1421,14 +1421,14 @@ data class DeleteDCGroundEvent(@Id val dCGroundId: UUID? = null)
 // DCLine Events
 
 data class CreateDCLineEvent(
-     val dCLineId: UUID? = null
+     val dCLineId: java.util.UUID? = null
 )
 
 data class UpdateDCLineEvent(
-     val dCLineId: UUID? = null
+     val dCLineId: java.util.UUID? = null
 )
 
-data class DeleteDCLineEvent(@Id val dCLineId: UUID? = null)
+data class DeleteDCLineEvent(@Id val dCLineId: java.util.UUID? = null)
 
 // single association events
 
@@ -1438,7 +1438,7 @@ data class DeleteDCLineEvent(@Id val dCLineId: UUID? = null)
 // DCLineSegment Events
 
 data class CreateDCLineSegmentEvent(
-    @Id var dCLineSegmentId: UUID? = null,
+    @Id var dCLineSegmentId: java.util.UUID? = null,
     val capacitance: String,
     val inductance: String,
     val length: String,
@@ -1446,14 +1446,14 @@ data class CreateDCLineSegmentEvent(
 )
 
 data class UpdateDCLineSegmentEvent(
-    @Id var dCLineSegmentId: UUID? = null,
+    @Id var dCLineSegmentId: java.util.UUID? = null,
     val capacitance: String,
     val inductance: String,
     val length: String,
     val resistance: String
 )
 
-data class DeleteDCLineSegmentEvent(@Id val dCLineSegmentId: UUID? = null)
+data class DeleteDCLineSegmentEvent(@Id val dCLineSegmentId: java.util.UUID? = null)
 
 // single association events
 
@@ -1463,14 +1463,14 @@ data class DeleteDCLineSegmentEvent(@Id val dCLineSegmentId: UUID? = null)
 // DCNode Events
 
 data class CreateDCNodeEvent(
-     val dCNodeId: UUID? = null
+     val dCNodeId: java.util.UUID? = null
 )
 
 data class UpdateDCNodeEvent(
-     val dCNodeId: UUID? = null
+     val dCNodeId: java.util.UUID? = null
 )
 
-data class DeleteDCNodeEvent(@Id val dCNodeId: UUID? = null)
+data class DeleteDCNodeEvent(@Id val dCNodeId: java.util.UUID? = null)
 
 // single association events
 
@@ -1480,20 +1480,20 @@ data class DeleteDCNodeEvent(@Id val dCNodeId: UUID? = null)
 // DCSeriesDevice Events
 
 data class CreateDCSeriesDeviceEvent(
-    @Id var dCSeriesDeviceId: UUID? = null,
+    @Id var dCSeriesDeviceId: java.util.UUID? = null,
     val inductance: String,
     val ratedUdc: String,
     val resistance: String
 )
 
 data class UpdateDCSeriesDeviceEvent(
-    @Id var dCSeriesDeviceId: UUID? = null,
+    @Id var dCSeriesDeviceId: java.util.UUID? = null,
     val inductance: String,
     val ratedUdc: String,
     val resistance: String
 )
 
-data class DeleteDCSeriesDeviceEvent(@Id val dCSeriesDeviceId: UUID? = null)
+data class DeleteDCSeriesDeviceEvent(@Id val dCSeriesDeviceId: java.util.UUID? = null)
 
 // single association events
 
@@ -1503,20 +1503,20 @@ data class DeleteDCSeriesDeviceEvent(@Id val dCSeriesDeviceId: UUID? = null)
 // DCShunt Events
 
 data class CreateDCShuntEvent(
-    @Id var dCShuntId: UUID? = null,
+    @Id var dCShuntId: java.util.UUID? = null,
     val capacitance: String,
     val ratedUdc: String,
     val resistance: String
 )
 
 data class UpdateDCShuntEvent(
-    @Id var dCShuntId: UUID? = null,
+    @Id var dCShuntId: java.util.UUID? = null,
     val capacitance: String,
     val ratedUdc: String,
     val resistance: String
 )
 
-data class DeleteDCShuntEvent(@Id val dCShuntId: UUID? = null)
+data class DeleteDCShuntEvent(@Id val dCShuntId: java.util.UUID? = null)
 
 // single association events
 
@@ -1526,14 +1526,14 @@ data class DeleteDCShuntEvent(@Id val dCShuntId: UUID? = null)
 // DCSwitch Events
 
 data class CreateDCSwitchEvent(
-     val dCSwitchId: UUID? = null
+     val dCSwitchId: java.util.UUID? = null
 )
 
 data class UpdateDCSwitchEvent(
-     val dCSwitchId: UUID? = null
+     val dCSwitchId: java.util.UUID? = null
 )
 
-data class DeleteDCSwitchEvent(@Id val dCSwitchId: UUID? = null)
+data class DeleteDCSwitchEvent(@Id val dCSwitchId: java.util.UUID? = null)
 
 // single association events
 
@@ -1543,14 +1543,14 @@ data class DeleteDCSwitchEvent(@Id val dCSwitchId: UUID? = null)
 // DCTerminal Events
 
 data class CreateDCTerminalEvent(
-     val dCTerminalId: UUID? = null
+     val dCTerminalId: java.util.UUID? = null
 )
 
 data class UpdateDCTerminalEvent(
-     val dCTerminalId: UUID? = null
+     val dCTerminalId: java.util.UUID? = null
 )
 
-data class DeleteDCTerminalEvent(@Id val dCTerminalId: UUID? = null)
+data class DeleteDCTerminalEvent(@Id val dCTerminalId: java.util.UUID? = null)
 
 // single association events
 
@@ -1560,14 +1560,14 @@ data class DeleteDCTerminalEvent(@Id val dCTerminalId: UUID? = null)
 // DCTopologicalIsland Events
 
 data class CreateDCTopologicalIslandEvent(
-     val dCTopologicalIslandId: UUID? = null
+     val dCTopologicalIslandId: java.util.UUID? = null
 )
 
 data class UpdateDCTopologicalIslandEvent(
-     val dCTopologicalIslandId: UUID? = null
+     val dCTopologicalIslandId: java.util.UUID? = null
 )
 
-data class DeleteDCTopologicalIslandEvent(@Id val dCTopologicalIslandId: UUID? = null)
+data class DeleteDCTopologicalIslandEvent(@Id val dCTopologicalIslandId: java.util.UUID? = null)
 
 // single association events
 
@@ -1577,14 +1577,14 @@ data class DeleteDCTopologicalIslandEvent(@Id val dCTopologicalIslandId: UUID? =
 // DCTopologicalNode Events
 
 data class CreateDCTopologicalNodeEvent(
-     val dCTopologicalNodeId: UUID? = null
+     val dCTopologicalNodeId: java.util.UUID? = null
 )
 
 data class UpdateDCTopologicalNodeEvent(
-     val dCTopologicalNodeId: UUID? = null
+     val dCTopologicalNodeId: java.util.UUID? = null
 )
 
-data class DeleteDCTopologicalNodeEvent(@Id val dCTopologicalNodeId: UUID? = null)
+data class DeleteDCTopologicalNodeEvent(@Id val dCTopologicalNodeId: java.util.UUID? = null)
 
 // single association events
 
@@ -1594,14 +1594,14 @@ data class DeleteDCTopologicalNodeEvent(@Id val dCTopologicalNodeId: UUID? = nul
 // DateProxy Events
 
 data class CreateDateProxyEvent(
-     val dateProxyId: UUID? = null
+     val dateProxyId: java.util.UUID? = null
 )
 
 data class UpdateDateProxyEvent(
-     val dateProxyId: UUID? = null
+     val dateProxyId: java.util.UUID? = null
 )
 
-data class DeleteDateProxyEvent(@Id val dateProxyId: UUID? = null)
+data class DeleteDateProxyEvent(@Id val dateProxyId: java.util.UUID? = null)
 
 // single association events
 
@@ -1611,14 +1611,14 @@ data class DeleteDateProxyEvent(@Id val dateProxyId: UUID? = null)
 // DateTime Events
 
 data class CreateDateTimeEvent(
-     val dateTimeId: UUID? = null
+     val dateTimeId: java.util.UUID? = null
 )
 
 data class UpdateDateTimeEvent(
-     val dateTimeId: UUID? = null
+     val dateTimeId: java.util.UUID? = null
 )
 
-data class DeleteDateTimeEvent(@Id val dateTimeId: UUID? = null)
+data class DeleteDateTimeEvent(@Id val dateTimeId: java.util.UUID? = null)
 
 // single association events
 
@@ -1628,14 +1628,14 @@ data class DeleteDateTimeEvent(@Id val dateTimeId: UUID? = null)
 // DayType Events
 
 data class CreateDayTypeEvent(
-     val dayTypeId: UUID? = null
+     val dayTypeId: java.util.UUID? = null
 )
 
 data class UpdateDayTypeEvent(
-     val dayTypeId: UUID? = null
+     val dayTypeId: java.util.UUID? = null
 )
 
-data class DeleteDayTypeEvent(@Id val dayTypeId: UUID? = null)
+data class DeleteDayTypeEvent(@Id val dayTypeId: java.util.UUID? = null)
 
 // single association events
 
@@ -1645,14 +1645,14 @@ data class DeleteDayTypeEvent(@Id val dayTypeId: UUID? = null)
 // DecimalProxy Events
 
 data class CreateDecimalProxyEvent(
-     val decimalProxyId: UUID? = null
+     val decimalProxyId: java.util.UUID? = null
 )
 
 data class UpdateDecimalProxyEvent(
-     val decimalProxyId: UUID? = null
+     val decimalProxyId: java.util.UUID? = null
 )
 
-data class DeleteDecimalProxyEvent(@Id val decimalProxyId: UUID? = null)
+data class DeleteDecimalProxyEvent(@Id val decimalProxyId: java.util.UUID? = null)
 
 // single association events
 
@@ -1662,7 +1662,7 @@ data class DeleteDecimalProxyEvent(@Id val decimalProxyId: UUID? = null)
 // Diagram Events
 
 data class CreateDiagramEvent(
-    @Id var diagramId: UUID? = null,
+    @Id var diagramId: java.util.UUID? = null,
     val orientation: String,
     val x1InitialView: String,
     val x2InitialView: String,
@@ -1671,7 +1671,7 @@ data class CreateDiagramEvent(
 )
 
 data class UpdateDiagramEvent(
-    @Id var diagramId: UUID? = null,
+    @Id var diagramId: java.util.UUID? = null,
     val orientation: String,
     val x1InitialView: String,
     val x2InitialView: String,
@@ -1679,7 +1679,7 @@ data class UpdateDiagramEvent(
     val y2InitialView: String
 )
 
-data class DeleteDiagramEvent(@Id val diagramId: UUID? = null)
+data class DeleteDiagramEvent(@Id val diagramId: java.util.UUID? = null)
 
 // single association events
 
@@ -1689,7 +1689,7 @@ data class DeleteDiagramEvent(@Id val diagramId: UUID? = null)
 // DiagramLayoutVersion Events
 
 data class CreateDiagramLayoutVersionEvent(
-    @Id var diagramLayoutVersionId: UUID? = null,
+    @Id var diagramLayoutVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -1703,7 +1703,7 @@ data class CreateDiagramLayoutVersionEvent(
 )
 
 data class UpdateDiagramLayoutVersionEvent(
-    @Id var diagramLayoutVersionId: UUID? = null,
+    @Id var diagramLayoutVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -1716,7 +1716,7 @@ data class UpdateDiagramLayoutVersionEvent(
     val shortName: String
 )
 
-data class DeleteDiagramLayoutVersionEvent(@Id val diagramLayoutVersionId: UUID? = null)
+data class DeleteDiagramLayoutVersionEvent(@Id val diagramLayoutVersionId: java.util.UUID? = null)
 
 // single association events
 
@@ -1726,7 +1726,7 @@ data class DeleteDiagramLayoutVersionEvent(@Id val diagramLayoutVersionId: UUID?
 // DiagramObject Events
 
 data class CreateDiagramObjectEvent(
-    @Id var diagramObjectId: UUID? = null,
+    @Id var diagramObjectId: java.util.UUID? = null,
     val drawingOrder: String,
     val isPolygon: String,
     val offsetX: String,
@@ -1735,7 +1735,7 @@ data class CreateDiagramObjectEvent(
 )
 
 data class UpdateDiagramObjectEvent(
-    @Id var diagramObjectId: UUID? = null,
+    @Id var diagramObjectId: java.util.UUID? = null,
     val drawingOrder: String,
     val isPolygon: String,
     val offsetX: String,
@@ -1743,7 +1743,7 @@ data class UpdateDiagramObjectEvent(
     val rotation: String
 )
 
-data class DeleteDiagramObjectEvent(@Id val diagramObjectId: UUID? = null)
+data class DeleteDiagramObjectEvent(@Id val diagramObjectId: java.util.UUID? = null)
 
 // single association events
 
@@ -1753,14 +1753,14 @@ data class DeleteDiagramObjectEvent(@Id val diagramObjectId: UUID? = null)
 // DiagramObjectGluePoint Events
 
 data class CreateDiagramObjectGluePointEvent(
-     val diagramObjectGluePointId: UUID? = null
+     val diagramObjectGluePointId: java.util.UUID? = null
 )
 
 data class UpdateDiagramObjectGluePointEvent(
-     val diagramObjectGluePointId: UUID? = null
+     val diagramObjectGluePointId: java.util.UUID? = null
 )
 
-data class DeleteDiagramObjectGluePointEvent(@Id val diagramObjectGluePointId: UUID? = null)
+data class DeleteDiagramObjectGluePointEvent(@Id val diagramObjectGluePointId: java.util.UUID? = null)
 
 // single association events
 
@@ -1770,7 +1770,7 @@ data class DeleteDiagramObjectGluePointEvent(@Id val diagramObjectGluePointId: U
 // DiagramObjectPoint Events
 
 data class CreateDiagramObjectPointEvent(
-    @Id var diagramObjectPointId: UUID? = null,
+    @Id var diagramObjectPointId: java.util.UUID? = null,
     val sequenceNumber: String,
     val xPosition: String,
     val yPosition: String,
@@ -1778,14 +1778,14 @@ data class CreateDiagramObjectPointEvent(
 )
 
 data class UpdateDiagramObjectPointEvent(
-    @Id var diagramObjectPointId: UUID? = null,
+    @Id var diagramObjectPointId: java.util.UUID? = null,
     val sequenceNumber: String,
     val xPosition: String,
     val yPosition: String,
     val zPosition: String
 )
 
-data class DeleteDiagramObjectPointEvent(@Id val diagramObjectPointId: UUID? = null)
+data class DeleteDiagramObjectPointEvent(@Id val diagramObjectPointId: java.util.UUID? = null)
 
 // single association events
 
@@ -1795,14 +1795,14 @@ data class DeleteDiagramObjectPointEvent(@Id val diagramObjectPointId: UUID? = n
 // DiagramObjectStyle Events
 
 data class CreateDiagramObjectStyleEvent(
-     val diagramObjectStyleId: UUID? = null
+     val diagramObjectStyleId: java.util.UUID? = null
 )
 
 data class UpdateDiagramObjectStyleEvent(
-     val diagramObjectStyleId: UUID? = null
+     val diagramObjectStyleId: java.util.UUID? = null
 )
 
-data class DeleteDiagramObjectStyleEvent(@Id val diagramObjectStyleId: UUID? = null)
+data class DeleteDiagramObjectStyleEvent(@Id val diagramObjectStyleId: java.util.UUID? = null)
 
 // single association events
 
@@ -1812,14 +1812,14 @@ data class DeleteDiagramObjectStyleEvent(@Id val diagramObjectStyleId: UUID? = n
 // DiagramStyle Events
 
 data class CreateDiagramStyleEvent(
-     val diagramStyleId: UUID? = null
+     val diagramStyleId: java.util.UUID? = null
 )
 
 data class UpdateDiagramStyleEvent(
-     val diagramStyleId: UUID? = null
+     val diagramStyleId: java.util.UUID? = null
 )
 
-data class DeleteDiagramStyleEvent(@Id val diagramStyleId: UUID? = null)
+data class DeleteDiagramStyleEvent(@Id val diagramStyleId: java.util.UUID? = null)
 
 // single association events
 
@@ -1829,7 +1829,7 @@ data class DeleteDiagramStyleEvent(@Id val diagramStyleId: UUID? = null)
 // DiscExcContIEEEDEC1A Events
 
 data class CreateDiscExcContIEEEDEC1AEvent(
-    @Id var discExcContIEEEDEC1AId: UUID? = null,
+    @Id var discExcContIEEEDEC1AId: java.util.UUID? = null,
     val esc: String,
     val kan: String,
     val ketl: String,
@@ -1851,7 +1851,7 @@ data class CreateDiscExcContIEEEDEC1AEvent(
 )
 
 data class UpdateDiscExcContIEEEDEC1AEvent(
-    @Id var discExcContIEEEDEC1AId: UUID? = null,
+    @Id var discExcContIEEEDEC1AId: java.util.UUID? = null,
     val esc: String,
     val kan: String,
     val ketl: String,
@@ -1872,7 +1872,7 @@ data class UpdateDiscExcContIEEEDEC1AEvent(
     val vtn: String
 )
 
-data class DeleteDiscExcContIEEEDEC1AEvent(@Id val discExcContIEEEDEC1AId: UUID? = null)
+data class DeleteDiscExcContIEEEDEC1AEvent(@Id val discExcContIEEEDEC1AId: java.util.UUID? = null)
 
 // single association events
 
@@ -1882,7 +1882,7 @@ data class DeleteDiscExcContIEEEDEC1AEvent(@Id val discExcContIEEEDEC1AId: UUID?
 // DiscExcContIEEEDEC2A Events
 
 data class CreateDiscExcContIEEEDEC2AEvent(
-    @Id var discExcContIEEEDEC2AId: UUID? = null,
+    @Id var discExcContIEEEDEC2AId: java.util.UUID? = null,
     val td1: String,
     val td2: String,
     val vdmax: String,
@@ -1891,7 +1891,7 @@ data class CreateDiscExcContIEEEDEC2AEvent(
 )
 
 data class UpdateDiscExcContIEEEDEC2AEvent(
-    @Id var discExcContIEEEDEC2AId: UUID? = null,
+    @Id var discExcContIEEEDEC2AId: java.util.UUID? = null,
     val td1: String,
     val td2: String,
     val vdmax: String,
@@ -1899,7 +1899,7 @@ data class UpdateDiscExcContIEEEDEC2AEvent(
     val vk: String
 )
 
-data class DeleteDiscExcContIEEEDEC2AEvent(@Id val discExcContIEEEDEC2AId: UUID? = null)
+data class DeleteDiscExcContIEEEDEC2AEvent(@Id val discExcContIEEEDEC2AId: java.util.UUID? = null)
 
 // single association events
 
@@ -1909,18 +1909,18 @@ data class DeleteDiscExcContIEEEDEC2AEvent(@Id val discExcContIEEEDEC2AId: UUID?
 // DiscExcContIEEEDEC3A Events
 
 data class CreateDiscExcContIEEEDEC3AEvent(
-    @Id var discExcContIEEEDEC3AId: UUID? = null,
+    @Id var discExcContIEEEDEC3AId: java.util.UUID? = null,
     val tdr: String,
     val vtmin: String
 )
 
 data class UpdateDiscExcContIEEEDEC3AEvent(
-    @Id var discExcContIEEEDEC3AId: UUID? = null,
+    @Id var discExcContIEEEDEC3AId: java.util.UUID? = null,
     val tdr: String,
     val vtmin: String
 )
 
-data class DeleteDiscExcContIEEEDEC3AEvent(@Id val discExcContIEEEDEC3AId: UUID? = null)
+data class DeleteDiscExcContIEEEDEC3AEvent(@Id val discExcContIEEEDEC3AId: java.util.UUID? = null)
 
 // single association events
 
@@ -1930,14 +1930,14 @@ data class DeleteDiscExcContIEEEDEC3AEvent(@Id val discExcContIEEEDEC3AId: UUID?
 // Disconnector Events
 
 data class CreateDisconnectorEvent(
-     val disconnectorId: UUID? = null
+     val disconnectorId: java.util.UUID? = null
 )
 
 data class UpdateDisconnectorEvent(
-     val disconnectorId: UUID? = null
+     val disconnectorId: java.util.UUID? = null
 )
 
-data class DeleteDisconnectorEvent(@Id val disconnectorId: UUID? = null)
+data class DeleteDisconnectorEvent(@Id val disconnectorId: java.util.UUID? = null)
 
 // single association events
 
@@ -1947,14 +1947,14 @@ data class DeleteDisconnectorEvent(@Id val disconnectorId: UUID? = null)
 // DiscontinuousExcitationControlDynamics Events
 
 data class CreateDiscontinuousExcitationControlDynamicsEvent(
-     val discontinuousExcitationControlDynamicsId: UUID? = null
+     val discontinuousExcitationControlDynamicsId: java.util.UUID? = null
 )
 
 data class UpdateDiscontinuousExcitationControlDynamicsEvent(
-     val discontinuousExcitationControlDynamicsId: UUID? = null
+     val discontinuousExcitationControlDynamicsId: java.util.UUID? = null
 )
 
-data class DeleteDiscontinuousExcitationControlDynamicsEvent(@Id val discontinuousExcitationControlDynamicsId: UUID? = null)
+data class DeleteDiscontinuousExcitationControlDynamicsEvent(@Id val discontinuousExcitationControlDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -1964,16 +1964,16 @@ data class DeleteDiscontinuousExcitationControlDynamicsEvent(@Id val discontinuo
 // DiscontinuousExcitationControlUserDefined Events
 
 data class CreateDiscontinuousExcitationControlUserDefinedEvent(
-    @Id var discontinuousExcitationControlUserDefinedId: UUID? = null,
+    @Id var discontinuousExcitationControlUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateDiscontinuousExcitationControlUserDefinedEvent(
-    @Id var discontinuousExcitationControlUserDefinedId: UUID? = null,
+    @Id var discontinuousExcitationControlUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteDiscontinuousExcitationControlUserDefinedEvent(@Id val discontinuousExcitationControlUserDefinedId: UUID? = null)
+data class DeleteDiscontinuousExcitationControlUserDefinedEvent(@Id val discontinuousExcitationControlUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -1983,14 +1983,14 @@ data class DeleteDiscontinuousExcitationControlUserDefinedEvent(@Id val disconti
 // Discrete Events
 
 data class CreateDiscreteEvent(
-     val discreteId: UUID? = null
+     val discreteId: java.util.UUID? = null
 )
 
 data class UpdateDiscreteEvent(
-     val discreteId: UUID? = null
+     val discreteId: java.util.UUID? = null
 )
 
-data class DeleteDiscreteEvent(@Id val discreteId: UUID? = null)
+data class DeleteDiscreteEvent(@Id val discreteId: java.util.UUID? = null)
 
 // single association events
 
@@ -2000,16 +2000,16 @@ data class DeleteDiscreteEvent(@Id val discreteId: UUID? = null)
 // DiscreteValue Events
 
 data class CreateDiscreteValueEvent(
-    @Id var discreteValueId: UUID? = null,
+    @Id var discreteValueId: java.util.UUID? = null,
     val value: String
 )
 
 data class UpdateDiscreteValueEvent(
-    @Id var discreteValueId: UUID? = null,
+    @Id var discreteValueId: java.util.UUID? = null,
     val value: String
 )
 
-data class DeleteDiscreteValueEvent(@Id val discreteValueId: UUID? = null)
+data class DeleteDiscreteValueEvent(@Id val discreteValueId: java.util.UUID? = null)
 
 // single association events
 
@@ -2019,7 +2019,7 @@ data class DeleteDiscreteValueEvent(@Id val discreteValueId: UUID? = null)
 // DomainVersion Events
 
 data class CreateDomainVersionEvent(
-    @Id var domainVersionId: UUID? = null,
+    @Id var domainVersionId: java.util.UUID? = null,
     val baseUML: String,
     val date: String,
     val entsoeUML: String,
@@ -2027,14 +2027,14 @@ data class CreateDomainVersionEvent(
 )
 
 data class UpdateDomainVersionEvent(
-    @Id var domainVersionId: UUID? = null,
+    @Id var domainVersionId: java.util.UUID? = null,
     val baseUML: String,
     val date: String,
     val entsoeUML: String,
     val version: String
 )
 
-data class DeleteDomainVersionEvent(@Id val domainVersionId: UUID? = null)
+data class DeleteDomainVersionEvent(@Id val domainVersionId: java.util.UUID? = null)
 
 // single association events
 
@@ -2044,16 +2044,16 @@ data class DeleteDomainVersionEvent(@Id val domainVersionId: UUID? = null)
 // DynamicsFunctionBlock Events
 
 data class CreateDynamicsFunctionBlockEvent(
-    @Id var dynamicsFunctionBlockId: UUID? = null,
+    @Id var dynamicsFunctionBlockId: java.util.UUID? = null,
     val enabled: String
 )
 
 data class UpdateDynamicsFunctionBlockEvent(
-    @Id var dynamicsFunctionBlockId: UUID? = null,
+    @Id var dynamicsFunctionBlockId: java.util.UUID? = null,
     val enabled: String
 )
 
-data class DeleteDynamicsFunctionBlockEvent(@Id val dynamicsFunctionBlockId: UUID? = null)
+data class DeleteDynamicsFunctionBlockEvent(@Id val dynamicsFunctionBlockId: java.util.UUID? = null)
 
 // single association events
 
@@ -2063,7 +2063,7 @@ data class DeleteDynamicsFunctionBlockEvent(@Id val dynamicsFunctionBlockId: UUI
 // DynamicsVersion Events
 
 data class CreateDynamicsVersionEvent(
-    @Id var dynamicsVersionId: UUID? = null,
+    @Id var dynamicsVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -2077,7 +2077,7 @@ data class CreateDynamicsVersionEvent(
 )
 
 data class UpdateDynamicsVersionEvent(
-    @Id var dynamicsVersionId: UUID? = null,
+    @Id var dynamicsVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -2090,7 +2090,7 @@ data class UpdateDynamicsVersionEvent(
     val shortName: String
 )
 
-data class DeleteDynamicsVersionEvent(@Id val dynamicsVersionId: UUID? = null)
+data class DeleteDynamicsVersionEvent(@Id val dynamicsVersionId: java.util.UUID? = null)
 
 // single association events
 
@@ -2100,14 +2100,14 @@ data class DeleteDynamicsVersionEvent(@Id val dynamicsVersionId: UUID? = null)
 // Dynamicsmodel Events
 
 data class CreateDynamicsmodelEvent(
-     val dynamicsmodelId: UUID? = null
+     val dynamicsmodelId: java.util.UUID? = null
 )
 
 data class UpdateDynamicsmodelEvent(
-     val dynamicsmodelId: UUID? = null
+     val dynamicsmodelId: java.util.UUID? = null
 )
 
-data class DeleteDynamicsmodelEvent(@Id val dynamicsmodelId: UUID? = null)
+data class DeleteDynamicsmodelEvent(@Id val dynamicsmodelId: java.util.UUID? = null)
 
 // single association events
 
@@ -2117,14 +2117,14 @@ data class DeleteDynamicsmodelEvent(@Id val dynamicsmodelId: UUID? = null)
 // ENTSOEConnectivityNode Events
 
 data class CreateENTSOEConnectivityNodeEvent(
-     val eNTSOEConnectivityNodeId: UUID? = null
+     val eNTSOEConnectivityNodeId: java.util.UUID? = null
 )
 
 data class UpdateENTSOEConnectivityNodeEvent(
-     val eNTSOEConnectivityNodeId: UUID? = null
+     val eNTSOEConnectivityNodeId: java.util.UUID? = null
 )
 
-data class DeleteENTSOEConnectivityNodeEvent(@Id val eNTSOEConnectivityNodeId: UUID? = null)
+data class DeleteENTSOEConnectivityNodeEvent(@Id val eNTSOEConnectivityNodeId: java.util.UUID? = null)
 
 // single association events
 
@@ -2134,18 +2134,18 @@ data class DeleteENTSOEConnectivityNodeEvent(@Id val eNTSOEConnectivityNodeId: U
 // ENTSOEIdentifiedObject Events
 
 data class CreateENTSOEIdentifiedObjectEvent(
-    @Id var eNTSOEIdentifiedObjectId: UUID? = null,
+    @Id var eNTSOEIdentifiedObjectId: java.util.UUID? = null,
     val energyIdentCodeEic: String,
     val shortName: String
 )
 
 data class UpdateENTSOEIdentifiedObjectEvent(
-    @Id var eNTSOEIdentifiedObjectId: UUID? = null,
+    @Id var eNTSOEIdentifiedObjectId: java.util.UUID? = null,
     val energyIdentCodeEic: String,
     val shortName: String
 )
 
-data class DeleteENTSOEIdentifiedObjectEvent(@Id val eNTSOEIdentifiedObjectId: UUID? = null)
+data class DeleteENTSOEIdentifiedObjectEvent(@Id val eNTSOEIdentifiedObjectId: java.util.UUID? = null)
 
 // single association events
 
@@ -2155,14 +2155,14 @@ data class DeleteENTSOEIdentifiedObjectEvent(@Id val eNTSOEIdentifiedObjectId: U
 // ENTSOEJunction Events
 
 data class CreateENTSOEJunctionEvent(
-     val eNTSOEJunctionId: UUID? = null
+     val eNTSOEJunctionId: java.util.UUID? = null
 )
 
 data class UpdateENTSOEJunctionEvent(
-     val eNTSOEJunctionId: UUID? = null
+     val eNTSOEJunctionId: java.util.UUID? = null
 )
 
-data class DeleteENTSOEJunctionEvent(@Id val eNTSOEJunctionId: UUID? = null)
+data class DeleteENTSOEJunctionEvent(@Id val eNTSOEJunctionId: java.util.UUID? = null)
 
 // single association events
 
@@ -2172,16 +2172,16 @@ data class DeleteENTSOEJunctionEvent(@Id val eNTSOEJunctionId: UUID? = null)
 // ENTSOEOperationalLimitType Events
 
 data class CreateENTSOEOperationalLimitTypeEvent(
-    @Id var eNTSOEOperationalLimitTypeId: UUID? = null,
+    @Id var eNTSOEOperationalLimitTypeId: java.util.UUID? = null,
     val limitType: String
 )
 
 data class UpdateENTSOEOperationalLimitTypeEvent(
-    @Id var eNTSOEOperationalLimitTypeId: UUID? = null,
+    @Id var eNTSOEOperationalLimitTypeId: java.util.UUID? = null,
     val limitType: String
 )
 
-data class DeleteENTSOEOperationalLimitTypeEvent(@Id val eNTSOEOperationalLimitTypeId: UUID? = null)
+data class DeleteENTSOEOperationalLimitTypeEvent(@Id val eNTSOEOperationalLimitTypeId: java.util.UUID? = null)
 
 // single association events
 
@@ -2191,14 +2191,14 @@ data class DeleteENTSOEOperationalLimitTypeEvent(@Id val eNTSOEOperationalLimitT
 // ENTSOETopologicalNode Events
 
 data class CreateENTSOETopologicalNodeEvent(
-     val eNTSOETopologicalNodeId: UUID? = null
+     val eNTSOETopologicalNodeId: java.util.UUID? = null
 )
 
 data class UpdateENTSOETopologicalNodeEvent(
-     val eNTSOETopologicalNodeId: UUID? = null
+     val eNTSOETopologicalNodeId: java.util.UUID? = null
 )
 
-data class DeleteENTSOETopologicalNodeEvent(@Id val eNTSOETopologicalNodeId: UUID? = null)
+data class DeleteENTSOETopologicalNodeEvent(@Id val eNTSOETopologicalNodeId: java.util.UUID? = null)
 
 // single association events
 
@@ -2208,16 +2208,16 @@ data class DeleteENTSOETopologicalNodeEvent(@Id val eNTSOETopologicalNodeId: UUI
 // EarthFaultCompensator Events
 
 data class CreateEarthFaultCompensatorEvent(
-    @Id var earthFaultCompensatorId: UUID? = null,
+    @Id var earthFaultCompensatorId: java.util.UUID? = null,
     val r: String
 )
 
 data class UpdateEarthFaultCompensatorEvent(
-    @Id var earthFaultCompensatorId: UUID? = null,
+    @Id var earthFaultCompensatorId: java.util.UUID? = null,
     val r: String
 )
 
-data class DeleteEarthFaultCompensatorEvent(@Id val earthFaultCompensatorId: UUID? = null)
+data class DeleteEarthFaultCompensatorEvent(@Id val earthFaultCompensatorId: java.util.UUID? = null)
 
 // single association events
 
@@ -2227,14 +2227,14 @@ data class DeleteEarthFaultCompensatorEvent(@Id val earthFaultCompensatorId: UUI
 // EnergyArea Events
 
 data class CreateEnergyAreaEvent(
-     val energyAreaId: UUID? = null
+     val energyAreaId: java.util.UUID? = null
 )
 
 data class UpdateEnergyAreaEvent(
-     val energyAreaId: UUID? = null
+     val energyAreaId: java.util.UUID? = null
 )
 
-data class DeleteEnergyAreaEvent(@Id val energyAreaId: UUID? = null)
+data class DeleteEnergyAreaEvent(@Id val energyAreaId: java.util.UUID? = null)
 
 // single association events
 
@@ -2244,7 +2244,7 @@ data class DeleteEnergyAreaEvent(@Id val energyAreaId: UUID? = null)
 // EnergyConsumer Events
 
 data class CreateEnergyConsumerEvent(
-    @Id var energyConsumerId: UUID? = null,
+    @Id var energyConsumerId: java.util.UUID? = null,
     val pfixed: String,
     val pfixedPct: String,
     val qfixed: String,
@@ -2252,14 +2252,14 @@ data class CreateEnergyConsumerEvent(
 )
 
 data class UpdateEnergyConsumerEvent(
-    @Id var energyConsumerId: UUID? = null,
+    @Id var energyConsumerId: java.util.UUID? = null,
     val pfixed: String,
     val pfixedPct: String,
     val qfixed: String,
     val qfixedPct: String
 )
 
-data class DeleteEnergyConsumerEvent(@Id val energyConsumerId: UUID? = null)
+data class DeleteEnergyConsumerEvent(@Id val energyConsumerId: java.util.UUID? = null)
 
 // single association events
 
@@ -2269,14 +2269,14 @@ data class DeleteEnergyConsumerEvent(@Id val energyConsumerId: UUID? = null)
 // EnergySchedulingType Events
 
 data class CreateEnergySchedulingTypeEvent(
-     val energySchedulingTypeId: UUID? = null
+     val energySchedulingTypeId: java.util.UUID? = null
 )
 
 data class UpdateEnergySchedulingTypeEvent(
-     val energySchedulingTypeId: UUID? = null
+     val energySchedulingTypeId: java.util.UUID? = null
 )
 
-data class DeleteEnergySchedulingTypeEvent(@Id val energySchedulingTypeId: UUID? = null)
+data class DeleteEnergySchedulingTypeEvent(@Id val energySchedulingTypeId: java.util.UUID? = null)
 
 // single association events
 
@@ -2286,14 +2286,14 @@ data class DeleteEnergySchedulingTypeEvent(@Id val energySchedulingTypeId: UUID?
 // EnergySource Events
 
 data class CreateEnergySourceEvent(
-     val energySourceId: UUID? = null
+     val energySourceId: java.util.UUID? = null
 )
 
 data class UpdateEnergySourceEvent(
-     val energySourceId: UUID? = null
+     val energySourceId: java.util.UUID? = null
 )
 
-data class DeleteEnergySourceEvent(@Id val energySourceId: UUID? = null)
+data class DeleteEnergySourceEvent(@Id val energySourceId: java.util.UUID? = null)
 
 // single association events
 
@@ -2303,14 +2303,14 @@ data class DeleteEnergySourceEvent(@Id val energySourceId: UUID? = null)
 // Equipment Events
 
 data class CreateEquipmentEvent(
-     val equipmentId: UUID? = null
+     val equipmentId: java.util.UUID? = null
 )
 
 data class UpdateEquipmentEvent(
-     val equipmentId: UUID? = null
+     val equipmentId: java.util.UUID? = null
 )
 
-data class DeleteEquipmentEvent(@Id val equipmentId: UUID? = null)
+data class DeleteEquipmentEvent(@Id val equipmentId: java.util.UUID? = null)
 
 // single association events
 
@@ -2320,7 +2320,7 @@ data class DeleteEquipmentEvent(@Id val equipmentId: UUID? = null)
 // EquipmentBoundaryVersion Events
 
 data class CreateEquipmentBoundaryVersionEvent(
-    @Id var equipmentBoundaryVersionId: UUID? = null,
+    @Id var equipmentBoundaryVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -2335,7 +2335,7 @@ data class CreateEquipmentBoundaryVersionEvent(
 )
 
 data class UpdateEquipmentBoundaryVersionEvent(
-    @Id var equipmentBoundaryVersionId: UUID? = null,
+    @Id var equipmentBoundaryVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -2349,7 +2349,7 @@ data class UpdateEquipmentBoundaryVersionEvent(
     val shortName: String
 )
 
-data class DeleteEquipmentBoundaryVersionEvent(@Id val equipmentBoundaryVersionId: UUID? = null)
+data class DeleteEquipmentBoundaryVersionEvent(@Id val equipmentBoundaryVersionId: java.util.UUID? = null)
 
 // single association events
 
@@ -2359,14 +2359,14 @@ data class DeleteEquipmentBoundaryVersionEvent(@Id val equipmentBoundaryVersionI
 // EquipmentContainer Events
 
 data class CreateEquipmentContainerEvent(
-     val equipmentContainerId: UUID? = null
+     val equipmentContainerId: java.util.UUID? = null
 )
 
 data class UpdateEquipmentContainerEvent(
-     val equipmentContainerId: UUID? = null
+     val equipmentContainerId: java.util.UUID? = null
 )
 
-data class DeleteEquipmentContainerEvent(@Id val equipmentContainerId: UUID? = null)
+data class DeleteEquipmentContainerEvent(@Id val equipmentContainerId: java.util.UUID? = null)
 
 // single association events
 
@@ -2376,7 +2376,7 @@ data class DeleteEquipmentContainerEvent(@Id val equipmentContainerId: UUID? = n
 // EquipmentVersion Events
 
 data class CreateEquipmentVersionEvent(
-    @Id var equipmentVersionId: UUID? = null,
+    @Id var equipmentVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURIcore: String,
     val baseURIoperation: String,
@@ -2394,7 +2394,7 @@ data class CreateEquipmentVersionEvent(
 )
 
 data class UpdateEquipmentVersionEvent(
-    @Id var equipmentVersionId: UUID? = null,
+    @Id var equipmentVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURIcore: String,
     val baseURIoperation: String,
@@ -2411,7 +2411,7 @@ data class UpdateEquipmentVersionEvent(
     val shortName: String
 )
 
-data class DeleteEquipmentVersionEvent(@Id val equipmentVersionId: UUID? = null)
+data class DeleteEquipmentVersionEvent(@Id val equipmentVersionId: java.util.UUID? = null)
 
 // single association events
 
@@ -2421,7 +2421,7 @@ data class DeleteEquipmentVersionEvent(@Id val equipmentVersionId: UUID? = null)
 // EquivalentBranch Events
 
 data class CreateEquivalentBranchEvent(
-    @Id var equivalentBranchId: UUID? = null,
+    @Id var equivalentBranchId: java.util.UUID? = null,
     val negativeR12: String,
     val negativeR21: String,
     val negativeX12: String,
@@ -2441,7 +2441,7 @@ data class CreateEquivalentBranchEvent(
 )
 
 data class UpdateEquivalentBranchEvent(
-    @Id var equivalentBranchId: UUID? = null,
+    @Id var equivalentBranchId: java.util.UUID? = null,
     val negativeR12: String,
     val negativeR21: String,
     val negativeX12: String,
@@ -2460,7 +2460,7 @@ data class UpdateEquivalentBranchEvent(
     val zeroX21: String
 )
 
-data class DeleteEquivalentBranchEvent(@Id val equivalentBranchId: UUID? = null)
+data class DeleteEquivalentBranchEvent(@Id val equivalentBranchId: java.util.UUID? = null)
 
 // single association events
 
@@ -2470,14 +2470,14 @@ data class DeleteEquivalentBranchEvent(@Id val equivalentBranchId: UUID? = null)
 // EquivalentEquipment Events
 
 data class CreateEquivalentEquipmentEvent(
-     val equivalentEquipmentId: UUID? = null
+     val equivalentEquipmentId: java.util.UUID? = null
 )
 
 data class UpdateEquivalentEquipmentEvent(
-     val equivalentEquipmentId: UUID? = null
+     val equivalentEquipmentId: java.util.UUID? = null
 )
 
-data class DeleteEquivalentEquipmentEvent(@Id val equivalentEquipmentId: UUID? = null)
+data class DeleteEquivalentEquipmentEvent(@Id val equivalentEquipmentId: java.util.UUID? = null)
 
 // single association events
 
@@ -2487,7 +2487,7 @@ data class DeleteEquivalentEquipmentEvent(@Id val equivalentEquipmentId: UUID? =
 // EquivalentInjection Events
 
 data class CreateEquivalentInjectionEvent(
-    @Id var equivalentInjectionId: UUID? = null,
+    @Id var equivalentInjectionId: java.util.UUID? = null,
     val maxP: String,
     val maxQ: String,
     val minP: String,
@@ -2502,7 +2502,7 @@ data class CreateEquivalentInjectionEvent(
 )
 
 data class UpdateEquivalentInjectionEvent(
-    @Id var equivalentInjectionId: UUID? = null,
+    @Id var equivalentInjectionId: java.util.UUID? = null,
     val maxP: String,
     val maxQ: String,
     val minP: String,
@@ -2516,7 +2516,7 @@ data class UpdateEquivalentInjectionEvent(
     val x2: String
 )
 
-data class DeleteEquivalentInjectionEvent(@Id val equivalentInjectionId: UUID? = null)
+data class DeleteEquivalentInjectionEvent(@Id val equivalentInjectionId: java.util.UUID? = null)
 
 // single association events
 
@@ -2526,14 +2526,14 @@ data class DeleteEquivalentInjectionEvent(@Id val equivalentInjectionId: UUID? =
 // EquivalentNetwork Events
 
 data class CreateEquivalentNetworkEvent(
-     val equivalentNetworkId: UUID? = null
+     val equivalentNetworkId: java.util.UUID? = null
 )
 
 data class UpdateEquivalentNetworkEvent(
-     val equivalentNetworkId: UUID? = null
+     val equivalentNetworkId: java.util.UUID? = null
 )
 
-data class DeleteEquivalentNetworkEvent(@Id val equivalentNetworkId: UUID? = null)
+data class DeleteEquivalentNetworkEvent(@Id val equivalentNetworkId: java.util.UUID? = null)
 
 // single association events
 
@@ -2543,18 +2543,18 @@ data class DeleteEquivalentNetworkEvent(@Id val equivalentNetworkId: UUID? = nul
 // EquivalentShunt Events
 
 data class CreateEquivalentShuntEvent(
-    @Id var equivalentShuntId: UUID? = null,
+    @Id var equivalentShuntId: java.util.UUID? = null,
     val b: String,
     val g: String
 )
 
 data class UpdateEquivalentShuntEvent(
-    @Id var equivalentShuntId: UUID? = null,
+    @Id var equivalentShuntId: java.util.UUID? = null,
     val b: String,
     val g: String
 )
 
-data class DeleteEquivalentShuntEvent(@Id val equivalentShuntId: UUID? = null)
+data class DeleteEquivalentShuntEvent(@Id val equivalentShuntId: java.util.UUID? = null)
 
 // single association events
 
@@ -2564,7 +2564,7 @@ data class DeleteEquivalentShuntEvent(@Id val equivalentShuntId: UUID? = null)
 // ExcAC1A Events
 
 data class CreateExcAC1AEvent(
-    @Id var excAC1AId: UUID? = null,
+    @Id var excAC1AId: java.util.UUID? = null,
     val hvlvgates: String,
     val ka: String,
     val kc: String,
@@ -2590,7 +2590,7 @@ data class CreateExcAC1AEvent(
 )
 
 data class UpdateExcAC1AEvent(
-    @Id var excAC1AId: UUID? = null,
+    @Id var excAC1AId: java.util.UUID? = null,
     val hvlvgates: String,
     val ka: String,
     val kc: String,
@@ -2615,7 +2615,7 @@ data class UpdateExcAC1AEvent(
     val vrmin: String
 )
 
-data class DeleteExcAC1AEvent(@Id val excAC1AId: UUID? = null)
+data class DeleteExcAC1AEvent(@Id val excAC1AId: java.util.UUID? = null)
 
 // single association events
 
@@ -2625,7 +2625,7 @@ data class DeleteExcAC1AEvent(@Id val excAC1AId: UUID? = null)
 // ExcAC2A Events
 
 data class CreateExcAC2AEvent(
-    @Id var excAC2AId: UUID? = null,
+    @Id var excAC2AId: java.util.UUID? = null,
     val hvgate: String,
     val ka: String,
     val kb: String,
@@ -2657,7 +2657,7 @@ data class CreateExcAC2AEvent(
 )
 
 data class UpdateExcAC2AEvent(
-    @Id var excAC2AId: UUID? = null,
+    @Id var excAC2AId: java.util.UUID? = null,
     val hvgate: String,
     val ka: String,
     val kb: String,
@@ -2688,7 +2688,7 @@ data class UpdateExcAC2AEvent(
     val vrmin: String
 )
 
-data class DeleteExcAC2AEvent(@Id val excAC2AId: UUID? = null)
+data class DeleteExcAC2AEvent(@Id val excAC2AId: java.util.UUID? = null)
 
 // single association events
 
@@ -2698,7 +2698,7 @@ data class DeleteExcAC2AEvent(@Id val excAC2AId: UUID? = null)
 // ExcAC3A Events
 
 data class CreateExcAC3AEvent(
-    @Id var excAC3AId: UUID? = null,
+    @Id var excAC3AId: java.util.UUID? = null,
     val efdn: String,
     val ka: String,
     val kc: String,
@@ -2728,7 +2728,7 @@ data class CreateExcAC3AEvent(
 )
 
 data class UpdateExcAC3AEvent(
-    @Id var excAC3AId: UUID? = null,
+    @Id var excAC3AId: java.util.UUID? = null,
     val efdn: String,
     val ka: String,
     val kc: String,
@@ -2757,7 +2757,7 @@ data class UpdateExcAC3AEvent(
     val vlv: String
 )
 
-data class DeleteExcAC3AEvent(@Id val excAC3AId: UUID? = null)
+data class DeleteExcAC3AEvent(@Id val excAC3AId: java.util.UUID? = null)
 
 // single association events
 
@@ -2767,7 +2767,7 @@ data class DeleteExcAC3AEvent(@Id val excAC3AId: UUID? = null)
 // ExcAC4A Events
 
 data class CreateExcAC4AEvent(
-    @Id var excAC4AId: UUID? = null,
+    @Id var excAC4AId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val ta: String,
@@ -2780,7 +2780,7 @@ data class CreateExcAC4AEvent(
 )
 
 data class UpdateExcAC4AEvent(
-    @Id var excAC4AId: UUID? = null,
+    @Id var excAC4AId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val ta: String,
@@ -2792,7 +2792,7 @@ data class UpdateExcAC4AEvent(
     val vrmin: String
 )
 
-data class DeleteExcAC4AEvent(@Id val excAC4AId: UUID? = null)
+data class DeleteExcAC4AEvent(@Id val excAC4AId: java.util.UUID? = null)
 
 // single association events
 
@@ -2802,7 +2802,7 @@ data class DeleteExcAC4AEvent(@Id val excAC4AId: UUID? = null)
 // ExcAC5A Events
 
 data class CreateExcAC5AEvent(
-    @Id var excAC5AId: UUID? = null,
+    @Id var excAC5AId: java.util.UUID? = null,
     val a: String,
     val efd1: String,
     val efd2: String,
@@ -2824,7 +2824,7 @@ data class CreateExcAC5AEvent(
 )
 
 data class UpdateExcAC5AEvent(
-    @Id var excAC5AId: UUID? = null,
+    @Id var excAC5AId: java.util.UUID? = null,
     val a: String,
     val efd1: String,
     val efd2: String,
@@ -2845,7 +2845,7 @@ data class UpdateExcAC5AEvent(
     val vrmin: String
 )
 
-data class DeleteExcAC5AEvent(@Id val excAC5AId: UUID? = null)
+data class DeleteExcAC5AEvent(@Id val excAC5AId: java.util.UUID? = null)
 
 // single association events
 
@@ -2855,7 +2855,7 @@ data class DeleteExcAC5AEvent(@Id val excAC5AId: UUID? = null)
 // ExcAC6A Events
 
 data class CreateExcAC6AEvent(
-    @Id var excAC6AId: UUID? = null,
+    @Id var excAC6AId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -2882,7 +2882,7 @@ data class CreateExcAC6AEvent(
 )
 
 data class UpdateExcAC6AEvent(
-    @Id var excAC6AId: UUID? = null,
+    @Id var excAC6AId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -2908,7 +2908,7 @@ data class UpdateExcAC6AEvent(
     val vrmin: String
 )
 
-data class DeleteExcAC6AEvent(@Id val excAC6AId: UUID? = null)
+data class DeleteExcAC6AEvent(@Id val excAC6AId: java.util.UUID? = null)
 
 // single association events
 
@@ -2918,7 +2918,7 @@ data class DeleteExcAC6AEvent(@Id val excAC6AId: UUID? = null)
 // ExcAC8B Events
 
 data class CreateExcAC8BEvent(
-    @Id var excAC8BId: UUID? = null,
+    @Id var excAC8BId: java.util.UUID? = null,
     val inlim: String,
     val ka: String,
     val kc: String,
@@ -2949,7 +2949,7 @@ data class CreateExcAC8BEvent(
 )
 
 data class UpdateExcAC8BEvent(
-    @Id var excAC8BId: UUID? = null,
+    @Id var excAC8BId: java.util.UUID? = null,
     val inlim: String,
     val ka: String,
     val kc: String,
@@ -2979,7 +2979,7 @@ data class UpdateExcAC8BEvent(
     val vtmult: String
 )
 
-data class DeleteExcAC8BEvent(@Id val excAC8BId: UUID? = null)
+data class DeleteExcAC8BEvent(@Id val excAC8BId: java.util.UUID? = null)
 
 // single association events
 
@@ -2989,7 +2989,7 @@ data class DeleteExcAC8BEvent(@Id val excAC8BId: UUID? = null)
 // ExcANS Events
 
 data class CreateExcANSEvent(
-    @Id var excANSId: UUID? = null,
+    @Id var excANSId: java.util.UUID? = null,
     val blint: String,
     val ifmn: String,
     val ifmx: String,
@@ -3007,7 +3007,7 @@ data class CreateExcANSEvent(
 )
 
 data class UpdateExcANSEvent(
-    @Id var excANSId: UUID? = null,
+    @Id var excANSId: java.util.UUID? = null,
     val blint: String,
     val ifmn: String,
     val ifmx: String,
@@ -3024,7 +3024,7 @@ data class UpdateExcANSEvent(
     val vrmx: String
 )
 
-data class DeleteExcANSEvent(@Id val excANSId: UUID? = null)
+data class DeleteExcANSEvent(@Id val excANSId: java.util.UUID? = null)
 
 // single association events
 
@@ -3034,7 +3034,7 @@ data class DeleteExcANSEvent(@Id val excANSId: UUID? = null)
 // ExcAVR1 Events
 
 data class CreateExcAVR1Event(
-    @Id var excAVR1Id: UUID? = null,
+    @Id var excAVR1Id: java.util.UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -3050,7 +3050,7 @@ data class CreateExcAVR1Event(
 )
 
 data class UpdateExcAVR1Event(
-    @Id var excAVR1Id: UUID? = null,
+    @Id var excAVR1Id: java.util.UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -3065,7 +3065,7 @@ data class UpdateExcAVR1Event(
     val vrmx: String
 )
 
-data class DeleteExcAVR1Event(@Id val excAVR1Id: UUID? = null)
+data class DeleteExcAVR1Event(@Id val excAVR1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -3075,7 +3075,7 @@ data class DeleteExcAVR1Event(@Id val excAVR1Id: UUID? = null)
 // ExcAVR2 Events
 
 data class CreateExcAVR2Event(
-    @Id var excAVR2Id: UUID? = null,
+    @Id var excAVR2Id: java.util.UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -3092,7 +3092,7 @@ data class CreateExcAVR2Event(
 )
 
 data class UpdateExcAVR2Event(
-    @Id var excAVR2Id: UUID? = null,
+    @Id var excAVR2Id: java.util.UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -3108,7 +3108,7 @@ data class UpdateExcAVR2Event(
     val vrmx: String
 )
 
-data class DeleteExcAVR2Event(@Id val excAVR2Id: UUID? = null)
+data class DeleteExcAVR2Event(@Id val excAVR2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -3118,7 +3118,7 @@ data class DeleteExcAVR2Event(@Id val excAVR2Id: UUID? = null)
 // ExcAVR3 Events
 
 data class CreateExcAVR3Event(
-    @Id var excAVR3Id: UUID? = null,
+    @Id var excAVR3Id: java.util.UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -3134,7 +3134,7 @@ data class CreateExcAVR3Event(
 )
 
 data class UpdateExcAVR3Event(
-    @Id var excAVR3Id: UUID? = null,
+    @Id var excAVR3Id: java.util.UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -3149,7 +3149,7 @@ data class UpdateExcAVR3Event(
     val vrmx: String
 )
 
-data class DeleteExcAVR3Event(@Id val excAVR3Id: UUID? = null)
+data class DeleteExcAVR3Event(@Id val excAVR3Id: java.util.UUID? = null)
 
 // single association events
 
@@ -3159,7 +3159,7 @@ data class DeleteExcAVR3Event(@Id val excAVR3Id: UUID? = null)
 // ExcAVR4 Events
 
 data class CreateExcAVR4Event(
-    @Id var excAVR4Id: UUID? = null,
+    @Id var excAVR4Id: java.util.UUID? = null,
     val imul: String,
     val ka: String,
     val ke: String,
@@ -3177,7 +3177,7 @@ data class CreateExcAVR4Event(
 )
 
 data class UpdateExcAVR4Event(
-    @Id var excAVR4Id: UUID? = null,
+    @Id var excAVR4Id: java.util.UUID? = null,
     val imul: String,
     val ka: String,
     val ke: String,
@@ -3194,7 +3194,7 @@ data class UpdateExcAVR4Event(
     val vrmx: String
 )
 
-data class DeleteExcAVR4Event(@Id val excAVR4Id: UUID? = null)
+data class DeleteExcAVR4Event(@Id val excAVR4Id: java.util.UUID? = null)
 
 // single association events
 
@@ -3204,20 +3204,20 @@ data class DeleteExcAVR4Event(@Id val excAVR4Id: UUID? = null)
 // ExcAVR5 Events
 
 data class CreateExcAVR5Event(
-    @Id var excAVR5Id: UUID? = null,
+    @Id var excAVR5Id: java.util.UUID? = null,
     val ka: String,
     val rex: String,
     val ta: String
 )
 
 data class UpdateExcAVR5Event(
-    @Id var excAVR5Id: UUID? = null,
+    @Id var excAVR5Id: java.util.UUID? = null,
     val ka: String,
     val rex: String,
     val ta: String
 )
 
-data class DeleteExcAVR5Event(@Id val excAVR5Id: UUID? = null)
+data class DeleteExcAVR5Event(@Id val excAVR5Id: java.util.UUID? = null)
 
 // single association events
 
@@ -3227,7 +3227,7 @@ data class DeleteExcAVR5Event(@Id val excAVR5Id: UUID? = null)
 // ExcAVR7 Events
 
 data class CreateExcAVR7Event(
-    @Id var excAVR7Id: UUID? = null,
+    @Id var excAVR7Id: java.util.UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -3252,7 +3252,7 @@ data class CreateExcAVR7Event(
 )
 
 data class UpdateExcAVR7Event(
-    @Id var excAVR7Id: UUID? = null,
+    @Id var excAVR7Id: java.util.UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -3276,7 +3276,7 @@ data class UpdateExcAVR7Event(
     val vmin5: String
 )
 
-data class DeleteExcAVR7Event(@Id val excAVR7Id: UUID? = null)
+data class DeleteExcAVR7Event(@Id val excAVR7Id: java.util.UUID? = null)
 
 // single association events
 
@@ -3286,7 +3286,7 @@ data class DeleteExcAVR7Event(@Id val excAVR7Id: UUID? = null)
 // ExcBBC Events
 
 data class CreateExcBBCEvent(
-    @Id var excBBCId: UUID? = null,
+    @Id var excBBCId: java.util.UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val k: String,
@@ -3301,7 +3301,7 @@ data class CreateExcBBCEvent(
 )
 
 data class UpdateExcBBCEvent(
-    @Id var excBBCId: UUID? = null,
+    @Id var excBBCId: java.util.UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val k: String,
@@ -3315,7 +3315,7 @@ data class UpdateExcBBCEvent(
     val xe: String
 )
 
-data class DeleteExcBBCEvent(@Id val excBBCId: UUID? = null)
+data class DeleteExcBBCEvent(@Id val excBBCId: java.util.UUID? = null)
 
 // single association events
 
@@ -3325,7 +3325,7 @@ data class DeleteExcBBCEvent(@Id val excBBCId: UUID? = null)
 // ExcCZ Events
 
 data class CreateExcCZEvent(
-    @Id var excCZId: UUID? = null,
+    @Id var excCZId: java.util.UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val ka: String,
@@ -3339,7 +3339,7 @@ data class CreateExcCZEvent(
 )
 
 data class UpdateExcCZEvent(
-    @Id var excCZId: UUID? = null,
+    @Id var excCZId: java.util.UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val ka: String,
@@ -3352,7 +3352,7 @@ data class UpdateExcCZEvent(
     val vrmin: String
 )
 
-data class DeleteExcCZEvent(@Id val excCZId: UUID? = null)
+data class DeleteExcCZEvent(@Id val excCZId: java.util.UUID? = null)
 
 // single association events
 
@@ -3362,7 +3362,7 @@ data class DeleteExcCZEvent(@Id val excCZId: UUID? = null)
 // ExcDC1A Events
 
 data class CreateExcDC1AEvent(
-    @Id var excDC1AId: UUID? = null,
+    @Id var excDC1AId: java.util.UUID? = null,
     val edfmax: String,
     val efd1: String,
     val efd2: String,
@@ -3384,7 +3384,7 @@ data class CreateExcDC1AEvent(
 )
 
 data class UpdateExcDC1AEvent(
-    @Id var excDC1AId: UUID? = null,
+    @Id var excDC1AId: java.util.UUID? = null,
     val edfmax: String,
     val efd1: String,
     val efd2: String,
@@ -3405,7 +3405,7 @@ data class UpdateExcDC1AEvent(
     val vrmin: String
 )
 
-data class DeleteExcDC1AEvent(@Id val excDC1AId: UUID? = null)
+data class DeleteExcDC1AEvent(@Id val excDC1AId: java.util.UUID? = null)
 
 // single association events
 
@@ -3415,7 +3415,7 @@ data class DeleteExcDC1AEvent(@Id val excDC1AId: UUID? = null)
 // ExcDC2A Events
 
 data class CreateExcDC2AEvent(
-    @Id var excDC2AId: UUID? = null,
+    @Id var excDC2AId: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -3437,7 +3437,7 @@ data class CreateExcDC2AEvent(
 )
 
 data class UpdateExcDC2AEvent(
-    @Id var excDC2AId: UUID? = null,
+    @Id var excDC2AId: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -3458,7 +3458,7 @@ data class UpdateExcDC2AEvent(
     val vtlim: String
 )
 
-data class DeleteExcDC2AEvent(@Id val excDC2AId: UUID? = null)
+data class DeleteExcDC2AEvent(@Id val excDC2AId: java.util.UUID? = null)
 
 // single association events
 
@@ -3468,7 +3468,7 @@ data class DeleteExcDC2AEvent(@Id val excDC2AId: UUID? = null)
 // ExcDC3A Events
 
 data class CreateExcDC3AEvent(
-    @Id var excDC3AId: UUID? = null,
+    @Id var excDC3AId: java.util.UUID? = null,
     val edfmax: String,
     val efd1: String,
     val efd2: String,
@@ -3488,7 +3488,7 @@ data class CreateExcDC3AEvent(
 )
 
 data class UpdateExcDC3AEvent(
-    @Id var excDC3AId: UUID? = null,
+    @Id var excDC3AId: java.util.UUID? = null,
     val edfmax: String,
     val efd1: String,
     val efd2: String,
@@ -3507,7 +3507,7 @@ data class UpdateExcDC3AEvent(
     val vrmin: String
 )
 
-data class DeleteExcDC3AEvent(@Id val excDC3AId: UUID? = null)
+data class DeleteExcDC3AEvent(@Id val excDC3AId: java.util.UUID? = null)
 
 // single association events
 
@@ -3517,7 +3517,7 @@ data class DeleteExcDC3AEvent(@Id val excDC3AId: UUID? = null)
 // ExcDC3A1 Events
 
 data class CreateExcDC3A1Event(
-    @Id var excDC3A1Id: UUID? = null,
+    @Id var excDC3A1Id: java.util.UUID? = null,
     val exclim: String,
     val ka: String,
     val ke: String,
@@ -3535,7 +3535,7 @@ data class CreateExcDC3A1Event(
 )
 
 data class UpdateExcDC3A1Event(
-    @Id var excDC3A1Id: UUID? = null,
+    @Id var excDC3A1Id: java.util.UUID? = null,
     val exclim: String,
     val ka: String,
     val ke: String,
@@ -3552,7 +3552,7 @@ data class UpdateExcDC3A1Event(
     val vrmin: String
 )
 
-data class DeleteExcDC3A1Event(@Id val excDC3A1Id: UUID? = null)
+data class DeleteExcDC3A1Event(@Id val excDC3A1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -3562,7 +3562,7 @@ data class DeleteExcDC3A1Event(@Id val excDC3A1Id: UUID? = null)
 // ExcELIN1 Events
 
 data class CreateExcELIN1Event(
-    @Id var excELIN1Id: UUID? = null,
+    @Id var excELIN1Id: java.util.UUID? = null,
     val dpnf: String,
     val efmax: String,
     val efmin: String,
@@ -3581,7 +3581,7 @@ data class CreateExcELIN1Event(
 )
 
 data class UpdateExcELIN1Event(
-    @Id var excELIN1Id: UUID? = null,
+    @Id var excELIN1Id: java.util.UUID? = null,
     val dpnf: String,
     val efmax: String,
     val efmin: String,
@@ -3599,7 +3599,7 @@ data class UpdateExcELIN1Event(
     val xe: String
 )
 
-data class DeleteExcELIN1Event(@Id val excELIN1Id: UUID? = null)
+data class DeleteExcELIN1Event(@Id val excELIN1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -3609,7 +3609,7 @@ data class DeleteExcELIN1Event(@Id val excELIN1Id: UUID? = null)
 // ExcELIN2 Events
 
 data class CreateExcELIN2Event(
-    @Id var excELIN2Id: UUID? = null,
+    @Id var excELIN2Id: java.util.UUID? = null,
     val efdbas: String,
     val iefmax: String,
     val iefmax2: String,
@@ -3640,7 +3640,7 @@ data class CreateExcELIN2Event(
 )
 
 data class UpdateExcELIN2Event(
-    @Id var excELIN2Id: UUID? = null,
+    @Id var excELIN2Id: java.util.UUID? = null,
     val efdbas: String,
     val iefmax: String,
     val iefmax2: String,
@@ -3670,7 +3670,7 @@ data class UpdateExcELIN2Event(
     val xp: String
 )
 
-data class DeleteExcELIN2Event(@Id val excELIN2Id: UUID? = null)
+data class DeleteExcELIN2Event(@Id val excELIN2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -3680,7 +3680,7 @@ data class DeleteExcELIN2Event(@Id val excELIN2Id: UUID? = null)
 // ExcHU Events
 
 data class CreateExcHUEvent(
-    @Id var excHUId: UUID? = null,
+    @Id var excHUId: java.util.UUID? = null,
     val ae: String,
     val ai: String,
     val atr: String,
@@ -3696,7 +3696,7 @@ data class CreateExcHUEvent(
 )
 
 data class UpdateExcHUEvent(
-    @Id var excHUId: UUID? = null,
+    @Id var excHUId: java.util.UUID? = null,
     val ae: String,
     val ai: String,
     val atr: String,
@@ -3711,7 +3711,7 @@ data class UpdateExcHUEvent(
     val tr: String
 )
 
-data class DeleteExcHUEvent(@Id val excHUId: UUID? = null)
+data class DeleteExcHUEvent(@Id val excHUId: java.util.UUID? = null)
 
 // single association events
 
@@ -3721,7 +3721,7 @@ data class DeleteExcHUEvent(@Id val excHUId: UUID? = null)
 // ExcIEEEAC1A Events
 
 data class CreateExcIEEEAC1AEvent(
-    @Id var excIEEEAC1AId: UUID? = null,
+    @Id var excIEEEAC1AId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3743,7 +3743,7 @@ data class CreateExcIEEEAC1AEvent(
 )
 
 data class UpdateExcIEEEAC1AEvent(
-    @Id var excIEEEAC1AId: UUID? = null,
+    @Id var excIEEEAC1AId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3764,7 +3764,7 @@ data class UpdateExcIEEEAC1AEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC1AEvent(@Id val excIEEEAC1AId: UUID? = null)
+data class DeleteExcIEEEAC1AEvent(@Id val excIEEEAC1AId: java.util.UUID? = null)
 
 // single association events
 
@@ -3774,7 +3774,7 @@ data class DeleteExcIEEEAC1AEvent(@Id val excIEEEAC1AId: UUID? = null)
 // ExcIEEEAC2A Events
 
 data class CreateExcIEEEAC2AEvent(
-    @Id var excIEEEAC2AId: UUID? = null,
+    @Id var excIEEEAC2AId: java.util.UUID? = null,
     val ka: String,
     val kb: String,
     val kc: String,
@@ -3799,7 +3799,7 @@ data class CreateExcIEEEAC2AEvent(
 )
 
 data class UpdateExcIEEEAC2AEvent(
-    @Id var excIEEEAC2AId: UUID? = null,
+    @Id var excIEEEAC2AId: java.util.UUID? = null,
     val ka: String,
     val kb: String,
     val kc: String,
@@ -3823,7 +3823,7 @@ data class UpdateExcIEEEAC2AEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC2AEvent(@Id val excIEEEAC2AId: UUID? = null)
+data class DeleteExcIEEEAC2AEvent(@Id val excIEEEAC2AId: java.util.UUID? = null)
 
 // single association events
 
@@ -3833,7 +3833,7 @@ data class DeleteExcIEEEAC2AEvent(@Id val excIEEEAC2AId: UUID? = null)
 // ExcIEEEAC3A Events
 
 data class CreateExcIEEEAC3AEvent(
-    @Id var excIEEEAC3AId: UUID? = null,
+    @Id var excIEEEAC3AId: java.util.UUID? = null,
     val efdn: String,
     val ka: String,
     val kc: String,
@@ -3858,7 +3858,7 @@ data class CreateExcIEEEAC3AEvent(
 )
 
 data class UpdateExcIEEEAC3AEvent(
-    @Id var excIEEEAC3AId: UUID? = null,
+    @Id var excIEEEAC3AId: java.util.UUID? = null,
     val efdn: String,
     val ka: String,
     val kc: String,
@@ -3882,7 +3882,7 @@ data class UpdateExcIEEEAC3AEvent(
     val vfemax: String
 )
 
-data class DeleteExcIEEEAC3AEvent(@Id val excIEEEAC3AId: UUID? = null)
+data class DeleteExcIEEEAC3AEvent(@Id val excIEEEAC3AId: java.util.UUID? = null)
 
 // single association events
 
@@ -3892,7 +3892,7 @@ data class DeleteExcIEEEAC3AEvent(@Id val excIEEEAC3AId: UUID? = null)
 // ExcIEEEAC4A Events
 
 data class CreateExcIEEEAC4AEvent(
-    @Id var excIEEEAC4AId: UUID? = null,
+    @Id var excIEEEAC4AId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val ta: String,
@@ -3905,7 +3905,7 @@ data class CreateExcIEEEAC4AEvent(
 )
 
 data class UpdateExcIEEEAC4AEvent(
-    @Id var excIEEEAC4AId: UUID? = null,
+    @Id var excIEEEAC4AId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val ta: String,
@@ -3917,7 +3917,7 @@ data class UpdateExcIEEEAC4AEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC4AEvent(@Id val excIEEEAC4AId: UUID? = null)
+data class DeleteExcIEEEAC4AEvent(@Id val excIEEEAC4AId: java.util.UUID? = null)
 
 // single association events
 
@@ -3927,7 +3927,7 @@ data class DeleteExcIEEEAC4AEvent(@Id val excIEEEAC4AId: UUID? = null)
 // ExcIEEEAC5A Events
 
 data class CreateExcIEEEAC5AEvent(
-    @Id var excIEEEAC5AId: UUID? = null,
+    @Id var excIEEEAC5AId: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val ka: String,
@@ -3945,7 +3945,7 @@ data class CreateExcIEEEAC5AEvent(
 )
 
 data class UpdateExcIEEEAC5AEvent(
-    @Id var excIEEEAC5AId: UUID? = null,
+    @Id var excIEEEAC5AId: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val ka: String,
@@ -3962,7 +3962,7 @@ data class UpdateExcIEEEAC5AEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC5AEvent(@Id val excIEEEAC5AId: UUID? = null)
+data class DeleteExcIEEEAC5AEvent(@Id val excIEEEAC5AId: java.util.UUID? = null)
 
 // single association events
 
@@ -3972,7 +3972,7 @@ data class DeleteExcIEEEAC5AEvent(@Id val excIEEEAC5AId: UUID? = null)
 // ExcIEEEAC6A Events
 
 data class CreateExcIEEEAC6AEvent(
-    @Id var excIEEEAC6AId: UUID? = null,
+    @Id var excIEEEAC6AId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3998,7 +3998,7 @@ data class CreateExcIEEEAC6AEvent(
 )
 
 data class UpdateExcIEEEAC6AEvent(
-    @Id var excIEEEAC6AId: UUID? = null,
+    @Id var excIEEEAC6AId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -4023,7 +4023,7 @@ data class UpdateExcIEEEAC6AEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC6AEvent(@Id val excIEEEAC6AId: UUID? = null)
+data class DeleteExcIEEEAC6AEvent(@Id val excIEEEAC6AId: java.util.UUID? = null)
 
 // single association events
 
@@ -4033,7 +4033,7 @@ data class DeleteExcIEEEAC6AEvent(@Id val excIEEEAC6AId: UUID? = null)
 // ExcIEEEAC7B Events
 
 data class CreateExcIEEEAC7BEvent(
-    @Id var excIEEEAC7BId: UUID? = null,
+    @Id var excIEEEAC7BId: java.util.UUID? = null,
     val kc: String,
     val kd: String,
     val kdr: String,
@@ -4063,7 +4063,7 @@ data class CreateExcIEEEAC7BEvent(
 )
 
 data class UpdateExcIEEEAC7BEvent(
-    @Id var excIEEEAC7BId: UUID? = null,
+    @Id var excIEEEAC7BId: java.util.UUID? = null,
     val kc: String,
     val kd: String,
     val kdr: String,
@@ -4092,7 +4092,7 @@ data class UpdateExcIEEEAC7BEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC7BEvent(@Id val excIEEEAC7BId: UUID? = null)
+data class DeleteExcIEEEAC7BEvent(@Id val excIEEEAC7BId: java.util.UUID? = null)
 
 // single association events
 
@@ -4102,7 +4102,7 @@ data class DeleteExcIEEEAC7BEvent(@Id val excIEEEAC7BId: UUID? = null)
 // ExcIEEEAC8B Events
 
 data class CreateExcIEEEAC8BEvent(
-    @Id var excIEEEAC8BId: UUID? = null,
+    @Id var excIEEEAC8BId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -4124,7 +4124,7 @@ data class CreateExcIEEEAC8BEvent(
 )
 
 data class UpdateExcIEEEAC8BEvent(
-    @Id var excIEEEAC8BId: UUID? = null,
+    @Id var excIEEEAC8BId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -4145,7 +4145,7 @@ data class UpdateExcIEEEAC8BEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEAC8BEvent(@Id val excIEEEAC8BId: UUID? = null)
+data class DeleteExcIEEEAC8BEvent(@Id val excIEEEAC8BId: java.util.UUID? = null)
 
 // single association events
 
@@ -4155,7 +4155,7 @@ data class DeleteExcIEEEAC8BEvent(@Id val excIEEEAC8BId: UUID? = null)
 // ExcIEEEDC1A Events
 
 data class CreateExcIEEEDC1AEvent(
-    @Id var excIEEEDC1AId: UUID? = null,
+    @Id var excIEEEDC1AId: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4175,7 +4175,7 @@ data class CreateExcIEEEDC1AEvent(
 )
 
 data class UpdateExcIEEEDC1AEvent(
-    @Id var excIEEEDC1AId: UUID? = null,
+    @Id var excIEEEDC1AId: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4194,7 +4194,7 @@ data class UpdateExcIEEEDC1AEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEDC1AEvent(@Id val excIEEEDC1AId: UUID? = null)
+data class DeleteExcIEEEDC1AEvent(@Id val excIEEEDC1AId: java.util.UUID? = null)
 
 // single association events
 
@@ -4204,7 +4204,7 @@ data class DeleteExcIEEEDC1AEvent(@Id val excIEEEDC1AId: UUID? = null)
 // ExcIEEEDC2A Events
 
 data class CreateExcIEEEDC2AEvent(
-    @Id var excIEEEDC2AId: UUID? = null,
+    @Id var excIEEEDC2AId: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4224,7 +4224,7 @@ data class CreateExcIEEEDC2AEvent(
 )
 
 data class UpdateExcIEEEDC2AEvent(
-    @Id var excIEEEDC2AId: UUID? = null,
+    @Id var excIEEEDC2AId: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4243,7 +4243,7 @@ data class UpdateExcIEEEDC2AEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEDC2AEvent(@Id val excIEEEDC2AId: UUID? = null)
+data class DeleteExcIEEEDC2AEvent(@Id val excIEEEDC2AId: java.util.UUID? = null)
 
 // single association events
 
@@ -4253,7 +4253,7 @@ data class DeleteExcIEEEDC2AEvent(@Id val excIEEEDC2AId: UUID? = null)
 // ExcIEEEDC3A Events
 
 data class CreateExcIEEEDC3AEvent(
-    @Id var excIEEEDC3AId: UUID? = null,
+    @Id var excIEEEDC3AId: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4268,7 +4268,7 @@ data class CreateExcIEEEDC3AEvent(
 )
 
 data class UpdateExcIEEEDC3AEvent(
-    @Id var excIEEEDC3AId: UUID? = null,
+    @Id var excIEEEDC3AId: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4282,7 +4282,7 @@ data class UpdateExcIEEEDC3AEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEDC3AEvent(@Id val excIEEEDC3AId: UUID? = null)
+data class DeleteExcIEEEDC3AEvent(@Id val excIEEEDC3AId: java.util.UUID? = null)
 
 // single association events
 
@@ -4292,7 +4292,7 @@ data class DeleteExcIEEEDC3AEvent(@Id val excIEEEDC3AId: UUID? = null)
 // ExcIEEEDC4B Events
 
 data class CreateExcIEEEDC4BEvent(
-    @Id var excIEEEDC4BId: UUID? = null,
+    @Id var excIEEEDC4BId: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val ka: String,
@@ -4315,7 +4315,7 @@ data class CreateExcIEEEDC4BEvent(
 )
 
 data class UpdateExcIEEEDC4BEvent(
-    @Id var excIEEEDC4BId: UUID? = null,
+    @Id var excIEEEDC4BId: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val ka: String,
@@ -4337,7 +4337,7 @@ data class UpdateExcIEEEDC4BEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEDC4BEvent(@Id val excIEEEDC4BId: UUID? = null)
+data class DeleteExcIEEEDC4BEvent(@Id val excIEEEDC4BId: java.util.UUID? = null)
 
 // single association events
 
@@ -4347,7 +4347,7 @@ data class DeleteExcIEEEDC4BEvent(@Id val excIEEEDC4BId: UUID? = null)
 // ExcIEEEST1A Events
 
 data class CreateExcIEEEST1AEvent(
-    @Id var excIEEEST1AId: UUID? = null,
+    @Id var excIEEEST1AId: java.util.UUID? = null,
     val ilr: String,
     val ka: String,
     val kc: String,
@@ -4370,7 +4370,7 @@ data class CreateExcIEEEST1AEvent(
 )
 
 data class UpdateExcIEEEST1AEvent(
-    @Id var excIEEEST1AId: UUID? = null,
+    @Id var excIEEEST1AId: java.util.UUID? = null,
     val ilr: String,
     val ka: String,
     val kc: String,
@@ -4392,7 +4392,7 @@ data class UpdateExcIEEEST1AEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEST1AEvent(@Id val excIEEEST1AId: UUID? = null)
+data class DeleteExcIEEEST1AEvent(@Id val excIEEEST1AId: java.util.UUID? = null)
 
 // single association events
 
@@ -4402,7 +4402,7 @@ data class DeleteExcIEEEST1AEvent(@Id val excIEEEST1AId: UUID? = null)
 // ExcIEEEST2A Events
 
 data class CreateExcIEEEST2AEvent(
-    @Id var excIEEEST2AId: UUID? = null,
+    @Id var excIEEEST2AId: java.util.UUID? = null,
     val efdmax: String,
     val ka: String,
     val kc: String,
@@ -4419,7 +4419,7 @@ data class CreateExcIEEEST2AEvent(
 )
 
 data class UpdateExcIEEEST2AEvent(
-    @Id var excIEEEST2AId: UUID? = null,
+    @Id var excIEEEST2AId: java.util.UUID? = null,
     val efdmax: String,
     val ka: String,
     val kc: String,
@@ -4435,7 +4435,7 @@ data class UpdateExcIEEEST2AEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEST2AEvent(@Id val excIEEEST2AId: UUID? = null)
+data class DeleteExcIEEEST2AEvent(@Id val excIEEEST2AId: java.util.UUID? = null)
 
 // single association events
 
@@ -4445,7 +4445,7 @@ data class DeleteExcIEEEST2AEvent(@Id val excIEEEST2AId: UUID? = null)
 // ExcIEEEST3A Events
 
 data class CreateExcIEEEST3AEvent(
-    @Id var excIEEEST3AId: UUID? = null,
+    @Id var excIEEEST3AId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val kg: String,
@@ -4469,7 +4469,7 @@ data class CreateExcIEEEST3AEvent(
 )
 
 data class UpdateExcIEEEST3AEvent(
-    @Id var excIEEEST3AId: UUID? = null,
+    @Id var excIEEEST3AId: java.util.UUID? = null,
     val ka: String,
     val kc: String,
     val kg: String,
@@ -4492,7 +4492,7 @@ data class UpdateExcIEEEST3AEvent(
     val xl: String
 )
 
-data class DeleteExcIEEEST3AEvent(@Id val excIEEEST3AId: UUID? = null)
+data class DeleteExcIEEEST3AEvent(@Id val excIEEEST3AId: java.util.UUID? = null)
 
 // single association events
 
@@ -4502,7 +4502,7 @@ data class DeleteExcIEEEST3AEvent(@Id val excIEEEST3AId: UUID? = null)
 // ExcIEEEST4B Events
 
 data class CreateExcIEEEST4BEvent(
-    @Id var excIEEEST4BId: UUID? = null,
+    @Id var excIEEEST4BId: java.util.UUID? = null,
     val kc: String,
     val kg: String,
     val ki: String,
@@ -4522,7 +4522,7 @@ data class CreateExcIEEEST4BEvent(
 )
 
 data class UpdateExcIEEEST4BEvent(
-    @Id var excIEEEST4BId: UUID? = null,
+    @Id var excIEEEST4BId: java.util.UUID? = null,
     val kc: String,
     val kg: String,
     val ki: String,
@@ -4541,7 +4541,7 @@ data class UpdateExcIEEEST4BEvent(
     val xl: String
 )
 
-data class DeleteExcIEEEST4BEvent(@Id val excIEEEST4BId: UUID? = null)
+data class DeleteExcIEEEST4BEvent(@Id val excIEEEST4BId: java.util.UUID? = null)
 
 // single association events
 
@@ -4551,7 +4551,7 @@ data class DeleteExcIEEEST4BEvent(@Id val excIEEEST4BId: UUID? = null)
 // ExcIEEEST5B Events
 
 data class CreateExcIEEEST5BEvent(
-    @Id var excIEEEST5BId: UUID? = null,
+    @Id var excIEEEST5BId: java.util.UUID? = null,
     val kc: String,
     val kr: String,
     val t1: String,
@@ -4572,7 +4572,7 @@ data class CreateExcIEEEST5BEvent(
 )
 
 data class UpdateExcIEEEST5BEvent(
-    @Id var excIEEEST5BId: UUID? = null,
+    @Id var excIEEEST5BId: java.util.UUID? = null,
     val kc: String,
     val kr: String,
     val t1: String,
@@ -4592,7 +4592,7 @@ data class UpdateExcIEEEST5BEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEST5BEvent(@Id val excIEEEST5BId: UUID? = null)
+data class DeleteExcIEEEST5BEvent(@Id val excIEEEST5BId: java.util.UUID? = null)
 
 // single association events
 
@@ -4602,7 +4602,7 @@ data class DeleteExcIEEEST5BEvent(@Id val excIEEEST5BId: UUID? = null)
 // ExcIEEEST6B Events
 
 data class CreateExcIEEEST6BEvent(
-    @Id var excIEEEST6BId: UUID? = null,
+    @Id var excIEEEST6BId: java.util.UUID? = null,
     val ilr: String,
     val kci: String,
     val kff: String,
@@ -4620,7 +4620,7 @@ data class CreateExcIEEEST6BEvent(
 )
 
 data class UpdateExcIEEEST6BEvent(
-    @Id var excIEEEST6BId: UUID? = null,
+    @Id var excIEEEST6BId: java.util.UUID? = null,
     val ilr: String,
     val kci: String,
     val kff: String,
@@ -4637,7 +4637,7 @@ data class UpdateExcIEEEST6BEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEST6BEvent(@Id val excIEEEST6BId: UUID? = null)
+data class DeleteExcIEEEST6BEvent(@Id val excIEEEST6BId: java.util.UUID? = null)
 
 // single association events
 
@@ -4647,7 +4647,7 @@ data class DeleteExcIEEEST6BEvent(@Id val excIEEEST6BId: UUID? = null)
 // ExcIEEEST7B Events
 
 data class CreateExcIEEEST7BEvent(
-    @Id var excIEEEST7BId: UUID? = null,
+    @Id var excIEEEST7BId: java.util.UUID? = null,
     val kh: String,
     val kia: String,
     val kl: String,
@@ -4666,7 +4666,7 @@ data class CreateExcIEEEST7BEvent(
 )
 
 data class UpdateExcIEEEST7BEvent(
-    @Id var excIEEEST7BId: UUID? = null,
+    @Id var excIEEEST7BId: java.util.UUID? = null,
     val kh: String,
     val kia: String,
     val kl: String,
@@ -4684,7 +4684,7 @@ data class UpdateExcIEEEST7BEvent(
     val vrmin: String
 )
 
-data class DeleteExcIEEEST7BEvent(@Id val excIEEEST7BId: UUID? = null)
+data class DeleteExcIEEEST7BEvent(@Id val excIEEEST7BId: java.util.UUID? = null)
 
 // single association events
 
@@ -4694,7 +4694,7 @@ data class DeleteExcIEEEST7BEvent(@Id val excIEEEST7BId: UUID? = null)
 // ExcOEX3T Events
 
 data class CreateExcOEX3TEvent(
-    @Id var excOEX3TId: UUID? = null,
+    @Id var excOEX3TId: java.util.UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -4717,7 +4717,7 @@ data class CreateExcOEX3TEvent(
 )
 
 data class UpdateExcOEX3TEvent(
-    @Id var excOEX3TId: UUID? = null,
+    @Id var excOEX3TId: java.util.UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -4739,7 +4739,7 @@ data class UpdateExcOEX3TEvent(
     val vrmin: String
 )
 
-data class DeleteExcOEX3TEvent(@Id val excOEX3TId: UUID? = null)
+data class DeleteExcOEX3TEvent(@Id val excOEX3TId: java.util.UUID? = null)
 
 // single association events
 
@@ -4749,7 +4749,7 @@ data class DeleteExcOEX3TEvent(@Id val excOEX3TId: UUID? = null)
 // ExcPIC Events
 
 data class CreateExcPICEvent(
-    @Id var excPICId: UUID? = null,
+    @Id var excPICId: java.util.UUID? = null,
     val e1: String,
     val e2: String,
     val efdmax: String,
@@ -4776,7 +4776,7 @@ data class CreateExcPICEvent(
 )
 
 data class UpdateExcPICEvent(
-    @Id var excPICId: UUID? = null,
+    @Id var excPICId: java.util.UUID? = null,
     val e1: String,
     val e2: String,
     val efdmax: String,
@@ -4802,7 +4802,7 @@ data class UpdateExcPICEvent(
     val vrmin: String
 )
 
-data class DeleteExcPICEvent(@Id val excPICId: UUID? = null)
+data class DeleteExcPICEvent(@Id val excPICId: java.util.UUID? = null)
 
 // single association events
 
@@ -4812,7 +4812,7 @@ data class DeleteExcPICEvent(@Id val excPICId: UUID? = null)
 // ExcREXS Events
 
 data class CreateExcREXSEvent(
-    @Id var excREXSId: UUID? = null,
+    @Id var excREXSId: java.util.UUID? = null,
     val e1: String,
     val e2: String,
     val fbf: String,
@@ -4852,7 +4852,7 @@ data class CreateExcREXSEvent(
 )
 
 data class UpdateExcREXSEvent(
-    @Id var excREXSId: UUID? = null,
+    @Id var excREXSId: java.util.UUID? = null,
     val e1: String,
     val e2: String,
     val fbf: String,
@@ -4891,7 +4891,7 @@ data class UpdateExcREXSEvent(
     val xc: String
 )
 
-data class DeleteExcREXSEvent(@Id val excREXSId: UUID? = null)
+data class DeleteExcREXSEvent(@Id val excREXSId: java.util.UUID? = null)
 
 // single association events
 
@@ -4901,7 +4901,7 @@ data class DeleteExcREXSEvent(@Id val excREXSId: UUID? = null)
 // ExcSCRX Events
 
 data class CreateExcSCRXEvent(
-    @Id var excSCRXId: UUID? = null,
+    @Id var excSCRXId: java.util.UUID? = null,
     val cswitch: String,
     val emax: String,
     val emin: String,
@@ -4913,7 +4913,7 @@ data class CreateExcSCRXEvent(
 )
 
 data class UpdateExcSCRXEvent(
-    @Id var excSCRXId: UUID? = null,
+    @Id var excSCRXId: java.util.UUID? = null,
     val cswitch: String,
     val emax: String,
     val emin: String,
@@ -4924,7 +4924,7 @@ data class UpdateExcSCRXEvent(
     val te: String
 )
 
-data class DeleteExcSCRXEvent(@Id val excSCRXId: UUID? = null)
+data class DeleteExcSCRXEvent(@Id val excSCRXId: java.util.UUID? = null)
 
 // single association events
 
@@ -4934,7 +4934,7 @@ data class DeleteExcSCRXEvent(@Id val excSCRXId: UUID? = null)
 // ExcSEXS Events
 
 data class CreateExcSEXSEvent(
-    @Id var excSEXSId: UUID? = null,
+    @Id var excSEXSId: java.util.UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val emax: String,
@@ -4948,7 +4948,7 @@ data class CreateExcSEXSEvent(
 )
 
 data class UpdateExcSEXSEvent(
-    @Id var excSEXSId: UUID? = null,
+    @Id var excSEXSId: java.util.UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val emax: String,
@@ -4961,7 +4961,7 @@ data class UpdateExcSEXSEvent(
     val te: String
 )
 
-data class DeleteExcSEXSEvent(@Id val excSEXSId: UUID? = null)
+data class DeleteExcSEXSEvent(@Id val excSEXSId: java.util.UUID? = null)
 
 // single association events
 
@@ -4971,7 +4971,7 @@ data class DeleteExcSEXSEvent(@Id val excSEXSId: UUID? = null)
 // ExcSK Events
 
 data class CreateExcSKEvent(
-    @Id var excSKId: UUID? = null,
+    @Id var excSKId: java.util.UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val emax: String,
@@ -5007,7 +5007,7 @@ data class CreateExcSKEvent(
 )
 
 data class UpdateExcSKEvent(
-    @Id var excSKId: UUID? = null,
+    @Id var excSKId: java.util.UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val emax: String,
@@ -5042,7 +5042,7 @@ data class UpdateExcSKEvent(
     val yp: String
 )
 
-data class DeleteExcSKEvent(@Id val excSKId: UUID? = null)
+data class DeleteExcSKEvent(@Id val excSKId: java.util.UUID? = null)
 
 // single association events
 
@@ -5052,7 +5052,7 @@ data class DeleteExcSKEvent(@Id val excSKId: UUID? = null)
 // ExcST1A Events
 
 data class CreateExcST1AEvent(
-    @Id var excST1AId: UUID? = null,
+    @Id var excST1AId: java.util.UUID? = null,
     val ilr: String,
     val ka: String,
     val kc: String,
@@ -5074,7 +5074,7 @@ data class CreateExcST1AEvent(
 )
 
 data class UpdateExcST1AEvent(
-    @Id var excST1AId: UUID? = null,
+    @Id var excST1AId: java.util.UUID? = null,
     val ilr: String,
     val ka: String,
     val kc: String,
@@ -5095,7 +5095,7 @@ data class UpdateExcST1AEvent(
     val xe: String
 )
 
-data class DeleteExcST1AEvent(@Id val excST1AId: UUID? = null)
+data class DeleteExcST1AEvent(@Id val excST1AId: java.util.UUID? = null)
 
 // single association events
 
@@ -5105,7 +5105,7 @@ data class DeleteExcST1AEvent(@Id val excST1AId: UUID? = null)
 // ExcST2A Events
 
 data class CreateExcST2AEvent(
-    @Id var excST2AId: UUID? = null,
+    @Id var excST2AId: java.util.UUID? = null,
     val efdmax: String,
     val ka: String,
     val kc: String,
@@ -5124,7 +5124,7 @@ data class CreateExcST2AEvent(
 )
 
 data class UpdateExcST2AEvent(
-    @Id var excST2AId: UUID? = null,
+    @Id var excST2AId: java.util.UUID? = null,
     val efdmax: String,
     val ka: String,
     val kc: String,
@@ -5142,7 +5142,7 @@ data class UpdateExcST2AEvent(
     val vrmin: String
 )
 
-data class DeleteExcST2AEvent(@Id val excST2AId: UUID? = null)
+data class DeleteExcST2AEvent(@Id val excST2AId: java.util.UUID? = null)
 
 // single association events
 
@@ -5152,7 +5152,7 @@ data class DeleteExcST2AEvent(@Id val excST2AId: UUID? = null)
 // ExcST3A Events
 
 data class CreateExcST3AEvent(
-    @Id var excST3AId: UUID? = null,
+    @Id var excST3AId: java.util.UUID? = null,
     val efdmax: String,
     val kc: String,
     val kg: String,
@@ -5176,7 +5176,7 @@ data class CreateExcST3AEvent(
 )
 
 data class UpdateExcST3AEvent(
-    @Id var excST3AId: UUID? = null,
+    @Id var excST3AId: java.util.UUID? = null,
     val efdmax: String,
     val kc: String,
     val kg: String,
@@ -5199,7 +5199,7 @@ data class UpdateExcST3AEvent(
     val xl: String
 )
 
-data class DeleteExcST3AEvent(@Id val excST3AId: UUID? = null)
+data class DeleteExcST3AEvent(@Id val excST3AId: java.util.UUID? = null)
 
 // single association events
 
@@ -5209,7 +5209,7 @@ data class DeleteExcST3AEvent(@Id val excST3AId: UUID? = null)
 // ExcST4B Events
 
 data class CreateExcST4BEvent(
-    @Id var excST4BId: UUID? = null,
+    @Id var excST4BId: java.util.UUID? = null,
     val kc: String,
     val kg: String,
     val ki: String,
@@ -5232,7 +5232,7 @@ data class CreateExcST4BEvent(
 )
 
 data class UpdateExcST4BEvent(
-    @Id var excST4BId: UUID? = null,
+    @Id var excST4BId: java.util.UUID? = null,
     val kc: String,
     val kg: String,
     val ki: String,
@@ -5254,7 +5254,7 @@ data class UpdateExcST4BEvent(
     val xl: String
 )
 
-data class DeleteExcST4BEvent(@Id val excST4BId: UUID? = null)
+data class DeleteExcST4BEvent(@Id val excST4BId: java.util.UUID? = null)
 
 // single association events
 
@@ -5264,7 +5264,7 @@ data class DeleteExcST4BEvent(@Id val excST4BId: UUID? = null)
 // ExcST6B Events
 
 data class CreateExcST6BEvent(
-    @Id var excST6BId: UUID? = null,
+    @Id var excST6BId: java.util.UUID? = null,
     val ilr: String,
     val k1: String,
     val kcl: String,
@@ -5291,7 +5291,7 @@ data class CreateExcST6BEvent(
 )
 
 data class UpdateExcST6BEvent(
-    @Id var excST6BId: UUID? = null,
+    @Id var excST6BId: java.util.UUID? = null,
     val ilr: String,
     val k1: String,
     val kcl: String,
@@ -5317,7 +5317,7 @@ data class UpdateExcST6BEvent(
     val xc: String
 )
 
-data class DeleteExcST6BEvent(@Id val excST6BId: UUID? = null)
+data class DeleteExcST6BEvent(@Id val excST6BId: java.util.UUID? = null)
 
 // single association events
 
@@ -5327,7 +5327,7 @@ data class DeleteExcST6BEvent(@Id val excST6BId: UUID? = null)
 // ExcST7B Events
 
 data class CreateExcST7BEvent(
-    @Id var excST7BId: UUID? = null,
+    @Id var excST7BId: java.util.UUID? = null,
     val kh: String,
     val kia: String,
     val kl: String,
@@ -5347,7 +5347,7 @@ data class CreateExcST7BEvent(
 )
 
 data class UpdateExcST7BEvent(
-    @Id var excST7BId: UUID? = null,
+    @Id var excST7BId: java.util.UUID? = null,
     val kh: String,
     val kia: String,
     val kl: String,
@@ -5366,7 +5366,7 @@ data class UpdateExcST7BEvent(
     val vrmin: String
 )
 
-data class DeleteExcST7BEvent(@Id val excST7BId: UUID? = null)
+data class DeleteExcST7BEvent(@Id val excST7BId: java.util.UUID? = null)
 
 // single association events
 
@@ -5376,14 +5376,14 @@ data class DeleteExcST7BEvent(@Id val excST7BId: UUID? = null)
 // ExcitationSystemDynamics Events
 
 data class CreateExcitationSystemDynamicsEvent(
-     val excitationSystemDynamicsId: UUID? = null
+     val excitationSystemDynamicsId: java.util.UUID? = null
 )
 
 data class UpdateExcitationSystemDynamicsEvent(
-     val excitationSystemDynamicsId: UUID? = null
+     val excitationSystemDynamicsId: java.util.UUID? = null
 )
 
-data class DeleteExcitationSystemDynamicsEvent(@Id val excitationSystemDynamicsId: UUID? = null)
+data class DeleteExcitationSystemDynamicsEvent(@Id val excitationSystemDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -5393,16 +5393,16 @@ data class DeleteExcitationSystemDynamicsEvent(@Id val excitationSystemDynamicsI
 // ExcitationSystemUserDefined Events
 
 data class CreateExcitationSystemUserDefinedEvent(
-    @Id var excitationSystemUserDefinedId: UUID? = null,
+    @Id var excitationSystemUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateExcitationSystemUserDefinedEvent(
-    @Id var excitationSystemUserDefinedId: UUID? = null,
+    @Id var excitationSystemUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteExcitationSystemUserDefinedEvent(@Id val excitationSystemUserDefinedId: UUID? = null)
+data class DeleteExcitationSystemUserDefinedEvent(@Id val excitationSystemUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -5412,18 +5412,18 @@ data class DeleteExcitationSystemUserDefinedEvent(@Id val excitationSystemUserDe
 // ExtensionVersion Events
 
 data class CreateExtensionVersionEvent(
-    @Id var extensionVersionId: UUID? = null,
+    @Id var extensionVersionId: java.util.UUID? = null,
     val date: String,
     val namespaceURI: String
 )
 
 data class UpdateExtensionVersionEvent(
-    @Id var extensionVersionId: UUID? = null,
+    @Id var extensionVersionId: java.util.UUID? = null,
     val date: String,
     val namespaceURI: String
 )
 
-data class DeleteExtensionVersionEvent(@Id val extensionVersionId: UUID? = null)
+data class DeleteExtensionVersionEvent(@Id val extensionVersionId: java.util.UUID? = null)
 
 // single association events
 
@@ -5433,7 +5433,7 @@ data class DeleteExtensionVersionEvent(@Id val extensionVersionId: UUID? = null)
 // ExternalNetworkInjection Events
 
 data class CreateExternalNetworkInjectionEvent(
-    @Id var externalNetworkInjectionId: UUID? = null,
+    @Id var externalNetworkInjectionId: java.util.UUID? = null,
     val governorSCD: String,
     val ikSecond: String,
     val maxInitialSymShCCurrent: String,
@@ -5452,7 +5452,7 @@ data class CreateExternalNetworkInjectionEvent(
 )
 
 data class UpdateExternalNetworkInjectionEvent(
-    @Id var externalNetworkInjectionId: UUID? = null,
+    @Id var externalNetworkInjectionId: java.util.UUID? = null,
     val governorSCD: String,
     val ikSecond: String,
     val maxInitialSymShCCurrent: String,
@@ -5470,7 +5470,7 @@ data class UpdateExternalNetworkInjectionEvent(
     val voltageFactor: String
 )
 
-data class DeleteExternalNetworkInjectionEvent(@Id val externalNetworkInjectionId: UUID? = null)
+data class DeleteExternalNetworkInjectionEvent(@Id val externalNetworkInjectionId: java.util.UUID? = null)
 
 // single association events
 
@@ -5480,14 +5480,14 @@ data class DeleteExternalNetworkInjectionEvent(@Id val externalNetworkInjectionI
 // FloatProxy Events
 
 data class CreateFloatProxyEvent(
-     val floatProxyId: UUID? = null
+     val floatProxyId: java.util.UUID? = null
 )
 
 data class UpdateFloatProxyEvent(
-     val floatProxyId: UUID? = null
+     val floatProxyId: java.util.UUID? = null
 )
 
-data class DeleteFloatProxyEvent(@Id val floatProxyId: UUID? = null)
+data class DeleteFloatProxyEvent(@Id val floatProxyId: java.util.UUID? = null)
 
 // single association events
 
@@ -5497,16 +5497,16 @@ data class DeleteFloatProxyEvent(@Id val floatProxyId: UUID? = null)
 // FossilFuel Events
 
 data class CreateFossilFuelEvent(
-    @Id var fossilFuelId: UUID? = null,
+    @Id var fossilFuelId: java.util.UUID? = null,
     val fossilFuelType: String
 )
 
 data class UpdateFossilFuelEvent(
-    @Id var fossilFuelId: UUID? = null,
+    @Id var fossilFuelId: java.util.UUID? = null,
     val fossilFuelType: String
 )
 
-data class DeleteFossilFuelEvent(@Id val fossilFuelId: UUID? = null)
+data class DeleteFossilFuelEvent(@Id val fossilFuelId: java.util.UUID? = null)
 
 // single association events
 
@@ -5516,20 +5516,20 @@ data class DeleteFossilFuelEvent(@Id val fossilFuelId: UUID? = null)
 // Frequency Events
 
 data class CreateFrequencyEvent(
-    @Id var frequencyId: UUID? = null,
+    @Id var frequencyId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateFrequencyEvent(
-    @Id var frequencyId: UUID? = null,
+    @Id var frequencyId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteFrequencyEvent(@Id val frequencyId: UUID? = null)
+data class DeleteFrequencyEvent(@Id val frequencyId: java.util.UUID? = null)
 
 // single association events
 
@@ -5539,18 +5539,18 @@ data class DeleteFrequencyEvent(@Id val frequencyId: UUID? = null)
 // GenICompensationForGenJ Events
 
 data class CreateGenICompensationForGenJEvent(
-    @Id var genICompensationForGenJId: UUID? = null,
+    @Id var genICompensationForGenJId: java.util.UUID? = null,
     val rcij: String,
     val xcij: String
 )
 
 data class UpdateGenICompensationForGenJEvent(
-    @Id var genICompensationForGenJId: UUID? = null,
+    @Id var genICompensationForGenJId: java.util.UUID? = null,
     val rcij: String,
     val xcij: String
 )
 
-data class DeleteGenICompensationForGenJEvent(@Id val genICompensationForGenJId: UUID? = null)
+data class DeleteGenICompensationForGenJEvent(@Id val genICompensationForGenJId: java.util.UUID? = null)
 
 // single association events
 
@@ -5560,7 +5560,7 @@ data class DeleteGenICompensationForGenJEvent(@Id val genICompensationForGenJId:
 // GeneratingUnit Events
 
 data class CreateGeneratingUnitEvent(
-    @Id var generatingUnitId: UUID? = null,
+    @Id var generatingUnitId: java.util.UUID? = null,
     val genControlSource: String,
     val governorSCD: String,
     val initialP: String,
@@ -5579,7 +5579,7 @@ data class CreateGeneratingUnitEvent(
 )
 
 data class UpdateGeneratingUnitEvent(
-    @Id var generatingUnitId: UUID? = null,
+    @Id var generatingUnitId: java.util.UUID? = null,
     val genControlSource: String,
     val governorSCD: String,
     val initialP: String,
@@ -5597,7 +5597,7 @@ data class UpdateGeneratingUnitEvent(
     val variableCost: String
 )
 
-data class DeleteGeneratingUnitEvent(@Id val generatingUnitId: UUID? = null)
+data class DeleteGeneratingUnitEvent(@Id val generatingUnitId: java.util.UUID? = null)
 
 // single association events
 
@@ -5607,7 +5607,7 @@ data class DeleteGeneratingUnitEvent(@Id val generatingUnitId: UUID? = null)
 // GeographicalLocationVersion Events
 
 data class CreateGeographicalLocationVersionEvent(
-    @Id var geographicalLocationVersionId: UUID? = null,
+    @Id var geographicalLocationVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -5621,7 +5621,7 @@ data class CreateGeographicalLocationVersionEvent(
 )
 
 data class UpdateGeographicalLocationVersionEvent(
-    @Id var geographicalLocationVersionId: UUID? = null,
+    @Id var geographicalLocationVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -5634,7 +5634,7 @@ data class UpdateGeographicalLocationVersionEvent(
     val shortName: String
 )
 
-data class DeleteGeographicalLocationVersionEvent(@Id val geographicalLocationVersionId: UUID? = null)
+data class DeleteGeographicalLocationVersionEvent(@Id val geographicalLocationVersionId: java.util.UUID? = null)
 
 // single association events
 
@@ -5644,14 +5644,14 @@ data class DeleteGeographicalLocationVersionEvent(@Id val geographicalLocationVe
 // GeographicalRegion Events
 
 data class CreateGeographicalRegionEvent(
-     val geographicalRegionId: UUID? = null
+     val geographicalRegionId: java.util.UUID? = null
 )
 
 data class UpdateGeographicalRegionEvent(
-     val geographicalRegionId: UUID? = null
+     val geographicalRegionId: java.util.UUID? = null
 )
 
-data class DeleteGeographicalRegionEvent(@Id val geographicalRegionId: UUID? = null)
+data class DeleteGeographicalRegionEvent(@Id val geographicalRegionId: java.util.UUID? = null)
 
 // single association events
 
@@ -5661,7 +5661,7 @@ data class DeleteGeographicalRegionEvent(@Id val geographicalRegionId: UUID? = n
 // GovCT1 Events
 
 data class CreateGovCT1Event(
-    @Id var govCT1Id: UUID? = null,
+    @Id var govCT1Id: java.util.UUID? = null,
     val aset: String,
     val db: String,
     val dm: String,
@@ -5700,7 +5700,7 @@ data class CreateGovCT1Event(
 )
 
 data class UpdateGovCT1Event(
-    @Id var govCT1Id: UUID? = null,
+    @Id var govCT1Id: java.util.UUID? = null,
     val aset: String,
     val db: String,
     val dm: String,
@@ -5738,7 +5738,7 @@ data class UpdateGovCT1Event(
     val wfspd: String
 )
 
-data class DeleteGovCT1Event(@Id val govCT1Id: UUID? = null)
+data class DeleteGovCT1Event(@Id val govCT1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -5748,7 +5748,7 @@ data class DeleteGovCT1Event(@Id val govCT1Id: UUID? = null)
 // GovCT2 Events
 
 data class CreateGovCT2Event(
-    @Id var govCT2Id: UUID? = null,
+    @Id var govCT2Id: java.util.UUID? = null,
     val aset: String,
     val db: String,
     val dm: String,
@@ -5808,7 +5808,7 @@ data class CreateGovCT2Event(
 )
 
 data class UpdateGovCT2Event(
-    @Id var govCT2Id: UUID? = null,
+    @Id var govCT2Id: java.util.UUID? = null,
     val aset: String,
     val db: String,
     val dm: String,
@@ -5867,7 +5867,7 @@ data class UpdateGovCT2Event(
     val wfspd: String
 )
 
-data class DeleteGovCT2Event(@Id val govCT2Id: UUID? = null)
+data class DeleteGovCT2Event(@Id val govCT2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -5877,7 +5877,7 @@ data class DeleteGovCT2Event(@Id val govCT2Id: UUID? = null)
 // GovGAST Events
 
 data class CreateGovGASTEvent(
-    @Id var govGASTId: UUID? = null,
+    @Id var govGASTId: java.util.UUID? = null,
     val at: String,
     val dturb: String,
     val kt: String,
@@ -5891,7 +5891,7 @@ data class CreateGovGASTEvent(
 )
 
 data class UpdateGovGASTEvent(
-    @Id var govGASTId: UUID? = null,
+    @Id var govGASTId: java.util.UUID? = null,
     val at: String,
     val dturb: String,
     val kt: String,
@@ -5904,7 +5904,7 @@ data class UpdateGovGASTEvent(
     val vmin: String
 )
 
-data class DeleteGovGASTEvent(@Id val govGASTId: UUID? = null)
+data class DeleteGovGASTEvent(@Id val govGASTId: java.util.UUID? = null)
 
 // single association events
 
@@ -5914,7 +5914,7 @@ data class DeleteGovGASTEvent(@Id val govGASTId: UUID? = null)
 // GovGAST1 Events
 
 data class CreateGovGAST1Event(
-    @Id var govGAST1Id: UUID? = null,
+    @Id var govGAST1Id: java.util.UUID? = null,
     val a: String,
     val b: String,
     val db1: String,
@@ -5952,7 +5952,7 @@ data class CreateGovGAST1Event(
 )
 
 data class UpdateGovGAST1Event(
-    @Id var govGAST1Id: UUID? = null,
+    @Id var govGAST1Id: java.util.UUID? = null,
     val a: String,
     val b: String,
     val db1: String,
@@ -5989,7 +5989,7 @@ data class UpdateGovGAST1Event(
     val vmin: String
 )
 
-data class DeleteGovGAST1Event(@Id val govGAST1Id: UUID? = null)
+data class DeleteGovGAST1Event(@Id val govGAST1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -5999,7 +5999,7 @@ data class DeleteGovGAST1Event(@Id val govGAST1Id: UUID? = null)
 // GovGAST2 Events
 
 data class CreateGovGAST2Event(
-    @Id var govGAST2Id: UUID? = null,
+    @Id var govGAST2Id: java.util.UUID? = null,
     val a: String,
     val af1: String,
     val af2: String,
@@ -6035,7 +6035,7 @@ data class CreateGovGAST2Event(
 )
 
 data class UpdateGovGAST2Event(
-    @Id var govGAST2Id: UUID? = null,
+    @Id var govGAST2Id: java.util.UUID? = null,
     val a: String,
     val af1: String,
     val af2: String,
@@ -6070,7 +6070,7 @@ data class UpdateGovGAST2Event(
     val z: String
 )
 
-data class DeleteGovGAST2Event(@Id val govGAST2Id: UUID? = null)
+data class DeleteGovGAST2Event(@Id val govGAST2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -6080,7 +6080,7 @@ data class DeleteGovGAST2Event(@Id val govGAST2Id: UUID? = null)
 // GovGAST3 Events
 
 data class CreateGovGAST3Event(
-    @Id var govGAST3Id: UUID? = null,
+    @Id var govGAST3Id: java.util.UUID? = null,
     val bca: String,
     val bp: String,
     val dtc: String,
@@ -6105,7 +6105,7 @@ data class CreateGovGAST3Event(
 )
 
 data class UpdateGovGAST3Event(
-    @Id var govGAST3Id: UUID? = null,
+    @Id var govGAST3Id: java.util.UUID? = null,
     val bca: String,
     val bp: String,
     val dtc: String,
@@ -6129,7 +6129,7 @@ data class UpdateGovGAST3Event(
     val ty: String
 )
 
-data class DeleteGovGAST3Event(@Id val govGAST3Id: UUID? = null)
+data class DeleteGovGAST3Event(@Id val govGAST3Id: java.util.UUID? = null)
 
 // single association events
 
@@ -6139,7 +6139,7 @@ data class DeleteGovGAST3Event(@Id val govGAST3Id: UUID? = null)
 // GovGAST4 Events
 
 data class CreateGovGAST4Event(
-    @Id var govGAST4Id: UUID? = null,
+    @Id var govGAST4Id: java.util.UUID? = null,
     val bp: String,
     val ktm: String,
     val mnef: String,
@@ -6154,7 +6154,7 @@ data class CreateGovGAST4Event(
 )
 
 data class UpdateGovGAST4Event(
-    @Id var govGAST4Id: UUID? = null,
+    @Id var govGAST4Id: java.util.UUID? = null,
     val bp: String,
     val ktm: String,
     val mnef: String,
@@ -6168,7 +6168,7 @@ data class UpdateGovGAST4Event(
     val tv: String
 )
 
-data class DeleteGovGAST4Event(@Id val govGAST4Id: UUID? = null)
+data class DeleteGovGAST4Event(@Id val govGAST4Id: java.util.UUID? = null)
 
 // single association events
 
@@ -6178,7 +6178,7 @@ data class DeleteGovGAST4Event(@Id val govGAST4Id: UUID? = null)
 // GovGASTWD Events
 
 data class CreateGovGASTWDEvent(
-    @Id var govGASTWDId: UUID? = null,
+    @Id var govGASTWDId: java.util.UUID? = null,
     val a: String,
     val af1: String,
     val af2: String,
@@ -6215,7 +6215,7 @@ data class CreateGovGASTWDEvent(
 )
 
 data class UpdateGovGASTWDEvent(
-    @Id var govGASTWDId: UUID? = null,
+    @Id var govGASTWDId: java.util.UUID? = null,
     val a: String,
     val af1: String,
     val af2: String,
@@ -6251,7 +6251,7 @@ data class UpdateGovGASTWDEvent(
     val tt: String
 )
 
-data class DeleteGovGASTWDEvent(@Id val govGASTWDId: UUID? = null)
+data class DeleteGovGASTWDEvent(@Id val govGASTWDId: java.util.UUID? = null)
 
 // single association events
 
@@ -6261,7 +6261,7 @@ data class DeleteGovGASTWDEvent(@Id val govGASTWDId: UUID? = null)
 // GovHydro1 Events
 
 data class CreateGovHydro1Event(
-    @Id var govHydro1Id: UUID? = null,
+    @Id var govHydro1Id: java.util.UUID? = null,
     val at: String,
     val dturb: String,
     val gmax: String,
@@ -6279,7 +6279,7 @@ data class CreateGovHydro1Event(
 )
 
 data class UpdateGovHydro1Event(
-    @Id var govHydro1Id: UUID? = null,
+    @Id var govHydro1Id: java.util.UUID? = null,
     val at: String,
     val dturb: String,
     val gmax: String,
@@ -6296,7 +6296,7 @@ data class UpdateGovHydro1Event(
     val velm: String
 )
 
-data class DeleteGovHydro1Event(@Id val govHydro1Id: UUID? = null)
+data class DeleteGovHydro1Event(@Id val govHydro1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -6306,7 +6306,7 @@ data class DeleteGovHydro1Event(@Id val govHydro1Id: UUID? = null)
 // GovHydro2 Events
 
 data class CreateGovHydro2Event(
-    @Id var govHydro2Id: UUID? = null,
+    @Id var govHydro2Id: java.util.UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6339,7 +6339,7 @@ data class CreateGovHydro2Event(
 )
 
 data class UpdateGovHydro2Event(
-    @Id var govHydro2Id: UUID? = null,
+    @Id var govHydro2Id: java.util.UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6371,7 +6371,7 @@ data class UpdateGovHydro2Event(
     val uo: String
 )
 
-data class DeleteGovHydro2Event(@Id val govHydro2Id: UUID? = null)
+data class DeleteGovHydro2Event(@Id val govHydro2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -6381,7 +6381,7 @@ data class DeleteGovHydro2Event(@Id val govHydro2Id: UUID? = null)
 // GovHydro3 Events
 
 data class CreateGovHydro3Event(
-    @Id var govHydro3Id: UUID? = null,
+    @Id var govHydro3Id: java.util.UUID? = null,
     val at: String,
     val db1: String,
     val db2: String,
@@ -6421,7 +6421,7 @@ data class CreateGovHydro3Event(
 )
 
 data class UpdateGovHydro3Event(
-    @Id var govHydro3Id: UUID? = null,
+    @Id var govHydro3Id: java.util.UUID? = null,
     val at: String,
     val db1: String,
     val db2: String,
@@ -6460,7 +6460,7 @@ data class UpdateGovHydro3Event(
     val velop: String
 )
 
-data class DeleteGovHydro3Event(@Id val govHydro3Id: UUID? = null)
+data class DeleteGovHydro3Event(@Id val govHydro3Id: java.util.UUID? = null)
 
 // single association events
 
@@ -6470,7 +6470,7 @@ data class DeleteGovHydro3Event(@Id val govHydro3Id: UUID? = null)
 // GovHydro4 Events
 
 data class CreateGovHydro4Event(
-    @Id var govHydro4Id: UUID? = null,
+    @Id var govHydro4Id: java.util.UUID? = null,
     val at: String,
     val bgv0: String,
     val bgv1: String,
@@ -6512,7 +6512,7 @@ data class CreateGovHydro4Event(
 )
 
 data class UpdateGovHydro4Event(
-    @Id var govHydro4Id: UUID? = null,
+    @Id var govHydro4Id: java.util.UUID? = null,
     val at: String,
     val bgv0: String,
     val bgv1: String,
@@ -6553,7 +6553,7 @@ data class UpdateGovHydro4Event(
     val uo: String
 )
 
-data class DeleteGovHydro4Event(@Id val govHydro4Id: UUID? = null)
+data class DeleteGovHydro4Event(@Id val govHydro4Id: java.util.UUID? = null)
 
 // single association events
 
@@ -6563,7 +6563,7 @@ data class DeleteGovHydro4Event(@Id val govHydro4Id: UUID? = null)
 // GovHydroDD Events
 
 data class CreateGovHydroDDEvent(
-    @Id var govHydroDDId: UUID? = null,
+    @Id var govHydroDDId: java.util.UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6602,7 +6602,7 @@ data class CreateGovHydroDDEvent(
 )
 
 data class UpdateGovHydroDDEvent(
-    @Id var govHydroDDId: UUID? = null,
+    @Id var govHydroDDId: java.util.UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6640,7 +6640,7 @@ data class UpdateGovHydroDDEvent(
     val velop: String
 )
 
-data class DeleteGovHydroDDEvent(@Id val govHydroDDId: UUID? = null)
+data class DeleteGovHydroDDEvent(@Id val govHydroDDId: java.util.UUID? = null)
 
 // single association events
 
@@ -6650,7 +6650,7 @@ data class DeleteGovHydroDDEvent(@Id val govHydroDDId: UUID? = null)
 // GovHydroFrancis Events
 
 data class CreateGovHydroFrancisEvent(
-    @Id var govHydroFrancisId: UUID? = null,
+    @Id var govHydroFrancisId: java.util.UUID? = null,
     val am: String,
     val av0: String,
     val av1: String,
@@ -6681,7 +6681,7 @@ data class CreateGovHydroFrancisEvent(
 )
 
 data class UpdateGovHydroFrancisEvent(
-    @Id var govHydroFrancisId: UUID? = null,
+    @Id var govHydroFrancisId: java.util.UUID? = null,
     val am: String,
     val av0: String,
     val av1: String,
@@ -6711,7 +6711,7 @@ data class UpdateGovHydroFrancisEvent(
     val zsfc: String
 )
 
-data class DeleteGovHydroFrancisEvent(@Id val govHydroFrancisId: UUID? = null)
+data class DeleteGovHydroFrancisEvent(@Id val govHydroFrancisId: java.util.UUID? = null)
 
 // single association events
 
@@ -6721,7 +6721,7 @@ data class DeleteGovHydroFrancisEvent(@Id val govHydroFrancisId: UUID? = null)
 // GovHydroIEEE0 Events
 
 data class CreateGovHydroIEEE0Event(
-    @Id var govHydroIEEE0Id: UUID? = null,
+    @Id var govHydroIEEE0Id: java.util.UUID? = null,
     val k: String,
     val mwbase: String,
     val pmax: String,
@@ -6733,7 +6733,7 @@ data class CreateGovHydroIEEE0Event(
 )
 
 data class UpdateGovHydroIEEE0Event(
-    @Id var govHydroIEEE0Id: UUID? = null,
+    @Id var govHydroIEEE0Id: java.util.UUID? = null,
     val k: String,
     val mwbase: String,
     val pmax: String,
@@ -6744,7 +6744,7 @@ data class UpdateGovHydroIEEE0Event(
     val t4: String
 )
 
-data class DeleteGovHydroIEEE0Event(@Id val govHydroIEEE0Id: UUID? = null)
+data class DeleteGovHydroIEEE0Event(@Id val govHydroIEEE0Id: java.util.UUID? = null)
 
 // single association events
 
@@ -6754,7 +6754,7 @@ data class DeleteGovHydroIEEE0Event(@Id val govHydroIEEE0Id: UUID? = null)
 // GovHydroIEEE2 Events
 
 data class CreateGovHydroIEEE2Event(
-    @Id var govHydroIEEE2Id: UUID? = null,
+    @Id var govHydroIEEE2Id: java.util.UUID? = null,
     val aturb: String,
     val bturb: String,
     val gv1: String,
@@ -6784,7 +6784,7 @@ data class CreateGovHydroIEEE2Event(
 )
 
 data class UpdateGovHydroIEEE2Event(
-    @Id var govHydroIEEE2Id: UUID? = null,
+    @Id var govHydroIEEE2Id: java.util.UUID? = null,
     val aturb: String,
     val bturb: String,
     val gv1: String,
@@ -6813,7 +6813,7 @@ data class UpdateGovHydroIEEE2Event(
     val uo: String
 )
 
-data class DeleteGovHydroIEEE2Event(@Id val govHydroIEEE2Id: UUID? = null)
+data class DeleteGovHydroIEEE2Event(@Id val govHydroIEEE2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -6823,7 +6823,7 @@ data class DeleteGovHydroIEEE2Event(@Id val govHydroIEEE2Id: UUID? = null)
 // GovHydroPID Events
 
 data class CreateGovHydroPIDEvent(
-    @Id var govHydroPIDId: UUID? = null,
+    @Id var govHydroPIDId: java.util.UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6860,7 +6860,7 @@ data class CreateGovHydroPIDEvent(
 )
 
 data class UpdateGovHydroPIDEvent(
-    @Id var govHydroPIDId: UUID? = null,
+    @Id var govHydroPIDId: java.util.UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6896,7 +6896,7 @@ data class UpdateGovHydroPIDEvent(
     val velop: String
 )
 
-data class DeleteGovHydroPIDEvent(@Id val govHydroPIDId: UUID? = null)
+data class DeleteGovHydroPIDEvent(@Id val govHydroPIDId: java.util.UUID? = null)
 
 // single association events
 
@@ -6906,7 +6906,7 @@ data class DeleteGovHydroPIDEvent(@Id val govHydroPIDId: UUID? = null)
 // GovHydroPID2 Events
 
 data class CreateGovHydroPID2Event(
-    @Id var govHydroPID2Id: UUID? = null,
+    @Id var govHydroPID2Id: java.util.UUID? = null,
     val atw: String,
     val d: String,
     val feedbackSignal: String,
@@ -6932,7 +6932,7 @@ data class CreateGovHydroPID2Event(
 )
 
 data class UpdateGovHydroPID2Event(
-    @Id var govHydroPID2Id: UUID? = null,
+    @Id var govHydroPID2Id: java.util.UUID? = null,
     val atw: String,
     val d: String,
     val feedbackSignal: String,
@@ -6957,7 +6957,7 @@ data class UpdateGovHydroPID2Event(
     val velmin: String
 )
 
-data class DeleteGovHydroPID2Event(@Id val govHydroPID2Id: UUID? = null)
+data class DeleteGovHydroPID2Event(@Id val govHydroPID2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -6967,7 +6967,7 @@ data class DeleteGovHydroPID2Event(@Id val govHydroPID2Id: UUID? = null)
 // GovHydroPelton Events
 
 data class CreateGovHydroPeltonEvent(
-    @Id var govHydroPeltonId: UUID? = null,
+    @Id var govHydroPeltonId: java.util.UUID? = null,
     val av0: String,
     val av1: String,
     val bp: String,
@@ -6999,7 +6999,7 @@ data class CreateGovHydroPeltonEvent(
 )
 
 data class UpdateGovHydroPeltonEvent(
-    @Id var govHydroPeltonId: UUID? = null,
+    @Id var govHydroPeltonId: java.util.UUID? = null,
     val av0: String,
     val av1: String,
     val bp: String,
@@ -7030,7 +7030,7 @@ data class UpdateGovHydroPeltonEvent(
     val zsfc: String
 )
 
-data class DeleteGovHydroPeltonEvent(@Id val govHydroPeltonId: UUID? = null)
+data class DeleteGovHydroPeltonEvent(@Id val govHydroPeltonId: java.util.UUID? = null)
 
 // single association events
 
@@ -7040,7 +7040,7 @@ data class DeleteGovHydroPeltonEvent(@Id val govHydroPeltonId: UUID? = null)
 // GovHydroR Events
 
 data class CreateGovHydroREvent(
-    @Id var govHydroRId: UUID? = null,
+    @Id var govHydroRId: java.util.UUID? = null,
     val at: String,
     val db1: String,
     val db2: String,
@@ -7086,7 +7086,7 @@ data class CreateGovHydroREvent(
 )
 
 data class UpdateGovHydroREvent(
-    @Id var govHydroRId: UUID? = null,
+    @Id var govHydroRId: java.util.UUID? = null,
     val at: String,
     val db1: String,
     val db2: String,
@@ -7131,7 +7131,7 @@ data class UpdateGovHydroREvent(
     val velop: String
 )
 
-data class DeleteGovHydroREvent(@Id val govHydroRId: UUID? = null)
+data class DeleteGovHydroREvent(@Id val govHydroRId: java.util.UUID? = null)
 
 // single association events
 
@@ -7141,7 +7141,7 @@ data class DeleteGovHydroREvent(@Id val govHydroRId: UUID? = null)
 // GovHydroWEH Events
 
 data class CreateGovHydroWEHEvent(
-    @Id var govHydroWEHId: UUID? = null,
+    @Id var govHydroWEHId: java.util.UUID? = null,
     val db: String,
     val dicn: String,
     val dpv: String,
@@ -7196,7 +7196,7 @@ data class CreateGovHydroWEHEvent(
 )
 
 data class UpdateGovHydroWEHEvent(
-    @Id var govHydroWEHId: UUID? = null,
+    @Id var govHydroWEHId: java.util.UUID? = null,
     val db: String,
     val dicn: String,
     val dpv: String,
@@ -7250,7 +7250,7 @@ data class UpdateGovHydroWEHEvent(
     val tw: String
 )
 
-data class DeleteGovHydroWEHEvent(@Id val govHydroWEHId: UUID? = null)
+data class DeleteGovHydroWEHEvent(@Id val govHydroWEHId: java.util.UUID? = null)
 
 // single association events
 
@@ -7260,7 +7260,7 @@ data class DeleteGovHydroWEHEvent(@Id val govHydroWEHId: UUID? = null)
 // GovHydroWPID Events
 
 data class CreateGovHydroWPIDEvent(
-    @Id var govHydroWPIDId: UUID? = null,
+    @Id var govHydroWPIDId: java.util.UUID? = null,
     val d: String,
     val gatmax: String,
     val gatmin: String,
@@ -7286,7 +7286,7 @@ data class CreateGovHydroWPIDEvent(
 )
 
 data class UpdateGovHydroWPIDEvent(
-    @Id var govHydroWPIDId: UUID? = null,
+    @Id var govHydroWPIDId: java.util.UUID? = null,
     val d: String,
     val gatmax: String,
     val gatmin: String,
@@ -7311,7 +7311,7 @@ data class UpdateGovHydroWPIDEvent(
     val velmin: String
 )
 
-data class DeleteGovHydroWPIDEvent(@Id val govHydroWPIDId: UUID? = null)
+data class DeleteGovHydroWPIDEvent(@Id val govHydroWPIDId: java.util.UUID? = null)
 
 // single association events
 
@@ -7321,7 +7321,7 @@ data class DeleteGovHydroWPIDEvent(@Id val govHydroWPIDId: UUID? = null)
 // GovSteam0 Events
 
 data class CreateGovSteam0Event(
-    @Id var govSteam0Id: UUID? = null,
+    @Id var govSteam0Id: java.util.UUID? = null,
     val dt: String,
     val mwbase: String,
     val r: String,
@@ -7333,7 +7333,7 @@ data class CreateGovSteam0Event(
 )
 
 data class UpdateGovSteam0Event(
-    @Id var govSteam0Id: UUID? = null,
+    @Id var govSteam0Id: java.util.UUID? = null,
     val dt: String,
     val mwbase: String,
     val r: String,
@@ -7344,7 +7344,7 @@ data class UpdateGovSteam0Event(
     val vmin: String
 )
 
-data class DeleteGovSteam0Event(@Id val govSteam0Id: UUID? = null)
+data class DeleteGovSteam0Event(@Id val govSteam0Id: java.util.UUID? = null)
 
 // single association events
 
@@ -7354,7 +7354,7 @@ data class DeleteGovSteam0Event(@Id val govSteam0Id: UUID? = null)
 // GovSteam1 Events
 
 data class CreateGovSteam1Event(
-    @Id var govSteam1Id: UUID? = null,
+    @Id var govSteam1Id: java.util.UUID? = null,
     val db1: String,
     val db2: String,
     val eps: String,
@@ -7397,7 +7397,7 @@ data class CreateGovSteam1Event(
 )
 
 data class UpdateGovSteam1Event(
-    @Id var govSteam1Id: UUID? = null,
+    @Id var govSteam1Id: java.util.UUID? = null,
     val db1: String,
     val db2: String,
     val eps: String,
@@ -7439,7 +7439,7 @@ data class UpdateGovSteam1Event(
     val valve: String
 )
 
-data class DeleteGovSteam1Event(@Id val govSteam1Id: UUID? = null)
+data class DeleteGovSteam1Event(@Id val govSteam1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -7449,7 +7449,7 @@ data class DeleteGovSteam1Event(@Id val govSteam1Id: UUID? = null)
 // GovSteam2 Events
 
 data class CreateGovSteam2Event(
-    @Id var govSteam2Id: UUID? = null,
+    @Id var govSteam2Id: java.util.UUID? = null,
     val dbf: String,
     val k: String,
     val mnef: String,
@@ -7461,7 +7461,7 @@ data class CreateGovSteam2Event(
 )
 
 data class UpdateGovSteam2Event(
-    @Id var govSteam2Id: UUID? = null,
+    @Id var govSteam2Id: java.util.UUID? = null,
     val dbf: String,
     val k: String,
     val mnef: String,
@@ -7472,7 +7472,7 @@ data class UpdateGovSteam2Event(
     val t2: String
 )
 
-data class DeleteGovSteam2Event(@Id val govSteam2Id: UUID? = null)
+data class DeleteGovSteam2Event(@Id val govSteam2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -7482,7 +7482,7 @@ data class DeleteGovSteam2Event(@Id val govSteam2Id: UUID? = null)
 // GovSteamCC Events
 
 data class CreateGovSteamCCEvent(
-    @Id var govSteamCCId: UUID? = null,
+    @Id var govSteamCCId: java.util.UUID? = null,
     val dhp: String,
     val dlp: String,
     val fhp: String,
@@ -7503,7 +7503,7 @@ data class CreateGovSteamCCEvent(
 )
 
 data class UpdateGovSteamCCEvent(
-    @Id var govSteamCCId: UUID? = null,
+    @Id var govSteamCCId: java.util.UUID? = null,
     val dhp: String,
     val dlp: String,
     val fhp: String,
@@ -7523,7 +7523,7 @@ data class UpdateGovSteamCCEvent(
     val t5lp: String
 )
 
-data class DeleteGovSteamCCEvent(@Id val govSteamCCId: UUID? = null)
+data class DeleteGovSteamCCEvent(@Id val govSteamCCId: java.util.UUID? = null)
 
 // single association events
 
@@ -7533,7 +7533,7 @@ data class DeleteGovSteamCCEvent(@Id val govSteamCCId: UUID? = null)
 // GovSteamEU Events
 
 data class CreateGovSteamEUEvent(
-    @Id var govSteamEUId: UUID? = null,
+    @Id var govSteamEUId: java.util.UUID? = null,
     val chc: String,
     val cho: String,
     val cic: String,
@@ -7572,7 +7572,7 @@ data class CreateGovSteamEUEvent(
 )
 
 data class UpdateGovSteamEUEvent(
-    @Id var govSteamEUId: UUID? = null,
+    @Id var govSteamEUId: java.util.UUID? = null,
     val chc: String,
     val cho: String,
     val cic: String,
@@ -7610,7 +7610,7 @@ data class UpdateGovSteamEUEvent(
     val wwmin: String
 )
 
-data class DeleteGovSteamEUEvent(@Id val govSteamEUId: UUID? = null)
+data class DeleteGovSteamEUEvent(@Id val govSteamEUId: java.util.UUID? = null)
 
 // single association events
 
@@ -7620,7 +7620,7 @@ data class DeleteGovSteamEUEvent(@Id val govSteamEUId: UUID? = null)
 // GovSteamFV2 Events
 
 data class CreateGovSteamFV2Event(
-    @Id var govSteamFV2Id: UUID? = null,
+    @Id var govSteamFV2Id: java.util.UUID? = null,
     val dt: String,
     val k: String,
     val mwbase: String,
@@ -7637,7 +7637,7 @@ data class CreateGovSteamFV2Event(
 )
 
 data class UpdateGovSteamFV2Event(
-    @Id var govSteamFV2Id: UUID? = null,
+    @Id var govSteamFV2Id: java.util.UUID? = null,
     val dt: String,
     val k: String,
     val mwbase: String,
@@ -7653,7 +7653,7 @@ data class UpdateGovSteamFV2Event(
     val vmin: String
 )
 
-data class DeleteGovSteamFV2Event(@Id val govSteamFV2Id: UUID? = null)
+data class DeleteGovSteamFV2Event(@Id val govSteamFV2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -7663,7 +7663,7 @@ data class DeleteGovSteamFV2Event(@Id val govSteamFV2Id: UUID? = null)
 // GovSteamFV3 Events
 
 data class CreateGovSteamFV3Event(
-    @Id var govSteamFV3Id: UUID? = null,
+    @Id var govSteamFV3Id: java.util.UUID? = null,
     val k: String,
     val k1: String,
     val k2: String,
@@ -7686,7 +7686,7 @@ data class CreateGovSteamFV3Event(
 )
 
 data class UpdateGovSteamFV3Event(
-    @Id var govSteamFV3Id: UUID? = null,
+    @Id var govSteamFV3Id: java.util.UUID? = null,
     val k: String,
     val k1: String,
     val k2: String,
@@ -7708,7 +7708,7 @@ data class UpdateGovSteamFV3Event(
     val uo: String
 )
 
-data class DeleteGovSteamFV3Event(@Id val govSteamFV3Id: UUID? = null)
+data class DeleteGovSteamFV3Event(@Id val govSteamFV3Id: java.util.UUID? = null)
 
 // single association events
 
@@ -7718,7 +7718,7 @@ data class DeleteGovSteamFV3Event(@Id val govSteamFV3Id: UUID? = null)
 // GovSteamFV4 Events
 
 data class CreateGovSteamFV4Event(
-    @Id var govSteamFV4Id: UUID? = null,
+    @Id var govSteamFV4Id: java.util.UUID? = null,
     val cpsmn: String,
     val cpsmx: String,
     val crmn: String,
@@ -7773,7 +7773,7 @@ data class CreateGovSteamFV4Event(
 )
 
 data class UpdateGovSteamFV4Event(
-    @Id var govSteamFV4Id: UUID? = null,
+    @Id var govSteamFV4Id: java.util.UUID? = null,
     val cpsmn: String,
     val cpsmx: String,
     val crmn: String,
@@ -7827,7 +7827,7 @@ data class UpdateGovSteamFV4Event(
     val ympmx: String
 )
 
-data class DeleteGovSteamFV4Event(@Id val govSteamFV4Id: UUID? = null)
+data class DeleteGovSteamFV4Event(@Id val govSteamFV4Id: java.util.UUID? = null)
 
 // single association events
 
@@ -7837,7 +7837,7 @@ data class DeleteGovSteamFV4Event(@Id val govSteamFV4Id: UUID? = null)
 // GovSteamIEEE1 Events
 
 data class CreateGovSteamIEEE1Event(
-    @Id var govSteamIEEE1Id: UUID? = null,
+    @Id var govSteamIEEE1Id: java.util.UUID? = null,
     val k: String,
     val k1: String,
     val k2: String,
@@ -7862,7 +7862,7 @@ data class CreateGovSteamIEEE1Event(
 )
 
 data class UpdateGovSteamIEEE1Event(
-    @Id var govSteamIEEE1Id: UUID? = null,
+    @Id var govSteamIEEE1Id: java.util.UUID? = null,
     val k: String,
     val k1: String,
     val k2: String,
@@ -7886,7 +7886,7 @@ data class UpdateGovSteamIEEE1Event(
     val uo: String
 )
 
-data class DeleteGovSteamIEEE1Event(@Id val govSteamIEEE1Id: UUID? = null)
+data class DeleteGovSteamIEEE1Event(@Id val govSteamIEEE1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -7896,7 +7896,7 @@ data class DeleteGovSteamIEEE1Event(@Id val govSteamIEEE1Id: UUID? = null)
 // GovSteamSGO Events
 
 data class CreateGovSteamSGOEvent(
-    @Id var govSteamSGOId: UUID? = null,
+    @Id var govSteamSGOId: java.util.UUID? = null,
     val k1: String,
     val k2: String,
     val k3: String,
@@ -7912,7 +7912,7 @@ data class CreateGovSteamSGOEvent(
 )
 
 data class UpdateGovSteamSGOEvent(
-    @Id var govSteamSGOId: UUID? = null,
+    @Id var govSteamSGOId: java.util.UUID? = null,
     val k1: String,
     val k2: String,
     val k3: String,
@@ -7927,7 +7927,7 @@ data class UpdateGovSteamSGOEvent(
     val t6: String
 )
 
-data class DeleteGovSteamSGOEvent(@Id val govSteamSGOId: UUID? = null)
+data class DeleteGovSteamSGOEvent(@Id val govSteamSGOId: java.util.UUID? = null)
 
 // single association events
 
@@ -7937,14 +7937,14 @@ data class DeleteGovSteamSGOEvent(@Id val govSteamSGOId: UUID? = null)
 // GrossToNetActivePowerCurve Events
 
 data class CreateGrossToNetActivePowerCurveEvent(
-     val grossToNetActivePowerCurveId: UUID? = null
+     val grossToNetActivePowerCurveId: java.util.UUID? = null
 )
 
 data class UpdateGrossToNetActivePowerCurveEvent(
-     val grossToNetActivePowerCurveId: UUID? = null
+     val grossToNetActivePowerCurveId: java.util.UUID? = null
 )
 
-data class DeleteGrossToNetActivePowerCurveEvent(@Id val grossToNetActivePowerCurveId: UUID? = null)
+data class DeleteGrossToNetActivePowerCurveEvent(@Id val grossToNetActivePowerCurveId: java.util.UUID? = null)
 
 // single association events
 
@@ -7954,14 +7954,14 @@ data class DeleteGrossToNetActivePowerCurveEvent(@Id val grossToNetActivePowerCu
 // Ground Events
 
 data class CreateGroundEvent(
-     val groundId: UUID? = null
+     val groundId: java.util.UUID? = null
 )
 
 data class UpdateGroundEvent(
-     val groundId: UUID? = null
+     val groundId: java.util.UUID? = null
 )
 
-data class DeleteGroundEvent(@Id val groundId: UUID? = null)
+data class DeleteGroundEvent(@Id val groundId: java.util.UUID? = null)
 
 // single association events
 
@@ -7971,14 +7971,14 @@ data class DeleteGroundEvent(@Id val groundId: UUID? = null)
 // GroundDisconnector Events
 
 data class CreateGroundDisconnectorEvent(
-     val groundDisconnectorId: UUID? = null
+     val groundDisconnectorId: java.util.UUID? = null
 )
 
 data class UpdateGroundDisconnectorEvent(
-     val groundDisconnectorId: UUID? = null
+     val groundDisconnectorId: java.util.UUID? = null
 )
 
-data class DeleteGroundDisconnectorEvent(@Id val groundDisconnectorId: UUID? = null)
+data class DeleteGroundDisconnectorEvent(@Id val groundDisconnectorId: java.util.UUID? = null)
 
 // single association events
 
@@ -7988,16 +7988,16 @@ data class DeleteGroundDisconnectorEvent(@Id val groundDisconnectorId: UUID? = n
 // GroundingImpedance Events
 
 data class CreateGroundingImpedanceEvent(
-    @Id var groundingImpedanceId: UUID? = null,
+    @Id var groundingImpedanceId: java.util.UUID? = null,
     val x: String
 )
 
 data class UpdateGroundingImpedanceEvent(
-    @Id var groundingImpedanceId: UUID? = null,
+    @Id var groundingImpedanceId: java.util.UUID? = null,
     val x: String
 )
 
-data class DeleteGroundingImpedanceEvent(@Id val groundingImpedanceId: UUID? = null)
+data class DeleteGroundingImpedanceEvent(@Id val groundingImpedanceId: java.util.UUID? = null)
 
 // single association events
 
@@ -8007,16 +8007,16 @@ data class DeleteGroundingImpedanceEvent(@Id val groundingImpedanceId: UUID? = n
 // HydroGeneratingUnit Events
 
 data class CreateHydroGeneratingUnitEvent(
-    @Id var hydroGeneratingUnitId: UUID? = null,
+    @Id var hydroGeneratingUnitId: java.util.UUID? = null,
     val energyConversionCapability: String
 )
 
 data class UpdateHydroGeneratingUnitEvent(
-    @Id var hydroGeneratingUnitId: UUID? = null,
+    @Id var hydroGeneratingUnitId: java.util.UUID? = null,
     val energyConversionCapability: String
 )
 
-data class DeleteHydroGeneratingUnitEvent(@Id val hydroGeneratingUnitId: UUID? = null)
+data class DeleteHydroGeneratingUnitEvent(@Id val hydroGeneratingUnitId: java.util.UUID? = null)
 
 // single association events
 
@@ -8026,16 +8026,16 @@ data class DeleteHydroGeneratingUnitEvent(@Id val hydroGeneratingUnitId: UUID? =
 // HydroPowerPlant Events
 
 data class CreateHydroPowerPlantEvent(
-    @Id var hydroPowerPlantId: UUID? = null,
+    @Id var hydroPowerPlantId: java.util.UUID? = null,
     val hydroPlantStorageType: String
 )
 
 data class UpdateHydroPowerPlantEvent(
-    @Id var hydroPowerPlantId: UUID? = null,
+    @Id var hydroPowerPlantId: java.util.UUID? = null,
     val hydroPlantStorageType: String
 )
 
-data class DeleteHydroPowerPlantEvent(@Id val hydroPowerPlantId: UUID? = null)
+data class DeleteHydroPowerPlantEvent(@Id val hydroPowerPlantId: java.util.UUID? = null)
 
 // single association events
 
@@ -8045,14 +8045,14 @@ data class DeleteHydroPowerPlantEvent(@Id val hydroPowerPlantId: UUID? = null)
 // HydroPump Events
 
 data class CreateHydroPumpEvent(
-     val hydroPumpId: UUID? = null
+     val hydroPumpId: java.util.UUID? = null
 )
 
 data class UpdateHydroPumpEvent(
-     val hydroPumpId: UUID? = null
+     val hydroPumpId: java.util.UUID? = null
 )
 
-data class DeleteHydroPumpEvent(@Id val hydroPumpId: UUID? = null)
+data class DeleteHydroPumpEvent(@Id val hydroPumpId: java.util.UUID? = null)
 
 // single association events
 
@@ -8062,7 +8062,7 @@ data class DeleteHydroPumpEvent(@Id val hydroPumpId: UUID? = null)
 // IdentifiedObject Events
 
 data class CreateIdentifiedObjectEvent(
-    @Id var identifiedObjectId: UUID? = null,
+    @Id var identifiedObjectId: java.util.UUID? = null,
     val description: String,
     val energyIdentCodeEic: String,
     val mRID: String,
@@ -8071,7 +8071,7 @@ data class CreateIdentifiedObjectEvent(
 )
 
 data class UpdateIdentifiedObjectEvent(
-    @Id var identifiedObjectId: UUID? = null,
+    @Id var identifiedObjectId: java.util.UUID? = null,
     val description: String,
     val energyIdentCodeEic: String,
     val mRID: String,
@@ -8079,7 +8079,7 @@ data class UpdateIdentifiedObjectEvent(
     val shortName: String
 )
 
-data class DeleteIdentifiedObjectEvent(@Id val identifiedObjectId: UUID? = null)
+data class DeleteIdentifiedObjectEvent(@Id val identifiedObjectId: java.util.UUID? = null)
 
 // single association events
 
@@ -8089,20 +8089,20 @@ data class DeleteIdentifiedObjectEvent(@Id val identifiedObjectId: UUID? = null)
 // Inductance Events
 
 data class CreateInductanceEvent(
-    @Id var inductanceId: UUID? = null,
+    @Id var inductanceId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateInductanceEvent(
-    @Id var inductanceId: UUID? = null,
+    @Id var inductanceId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteInductanceEvent(@Id val inductanceId: UUID? = null)
+data class DeleteInductanceEvent(@Id val inductanceId: java.util.UUID? = null)
 
 // single association events
 
@@ -8112,7 +8112,7 @@ data class DeleteInductanceEvent(@Id val inductanceId: UUID? = null)
 // InductancePerLength Events
 
 data class CreateInductancePerLengthEvent(
-    @Id var inductancePerLengthId: UUID? = null,
+    @Id var inductancePerLengthId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -8121,7 +8121,7 @@ data class CreateInductancePerLengthEvent(
 )
 
 data class UpdateInductancePerLengthEvent(
-    @Id var inductancePerLengthId: UUID? = null,
+    @Id var inductancePerLengthId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -8129,7 +8129,7 @@ data class UpdateInductancePerLengthEvent(
     val value: String
 )
 
-data class DeleteInductancePerLengthEvent(@Id val inductancePerLengthId: UUID? = null)
+data class DeleteInductancePerLengthEvent(@Id val inductancePerLengthId: java.util.UUID? = null)
 
 // single association events
 
@@ -8139,14 +8139,14 @@ data class DeleteInductancePerLengthEvent(@Id val inductancePerLengthId: UUID? =
 // IntegerProxy Events
 
 data class CreateIntegerProxyEvent(
-     val integerProxyId: UUID? = null
+     val integerProxyId: java.util.UUID? = null
 )
 
 data class UpdateIntegerProxyEvent(
-     val integerProxyId: UUID? = null
+     val integerProxyId: java.util.UUID? = null
 )
 
-data class DeleteIntegerProxyEvent(@Id val integerProxyId: UUID? = null)
+data class DeleteIntegerProxyEvent(@Id val integerProxyId: java.util.UUID? = null)
 
 // single association events
 
@@ -8156,14 +8156,14 @@ data class DeleteIntegerProxyEvent(@Id val integerProxyId: UUID? = null)
 // Junction Events
 
 data class CreateJunctionEvent(
-     val junctionId: UUID? = null
+     val junctionId: java.util.UUID? = null
 )
 
 data class UpdateJunctionEvent(
-     val junctionId: UUID? = null
+     val junctionId: java.util.UUID? = null
 )
 
-data class DeleteJunctionEvent(@Id val junctionId: UUID? = null)
+data class DeleteJunctionEvent(@Id val junctionId: java.util.UUID? = null)
 
 // single association events
 
@@ -8173,20 +8173,20 @@ data class DeleteJunctionEvent(@Id val junctionId: UUID? = null)
 // Length Events
 
 data class CreateLengthEvent(
-    @Id var lengthId: UUID? = null,
+    @Id var lengthId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateLengthEvent(
-    @Id var lengthId: UUID? = null,
+    @Id var lengthId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteLengthEvent(@Id val lengthId: UUID? = null)
+data class DeleteLengthEvent(@Id val lengthId: java.util.UUID? = null)
 
 // single association events
 
@@ -8196,14 +8196,14 @@ data class DeleteLengthEvent(@Id val lengthId: UUID? = null)
 // Limit Events
 
 data class CreateLimitEvent(
-     val limitId: UUID? = null
+     val limitId: java.util.UUID? = null
 )
 
 data class UpdateLimitEvent(
-     val limitId: UUID? = null
+     val limitId: java.util.UUID? = null
 )
 
-data class DeleteLimitEvent(@Id val limitId: UUID? = null)
+data class DeleteLimitEvent(@Id val limitId: java.util.UUID? = null)
 
 // single association events
 
@@ -8213,16 +8213,16 @@ data class DeleteLimitEvent(@Id val limitId: UUID? = null)
 // LimitSet Events
 
 data class CreateLimitSetEvent(
-    @Id var limitSetId: UUID? = null,
+    @Id var limitSetId: java.util.UUID? = null,
     val isPercentageLimits: String
 )
 
 data class UpdateLimitSetEvent(
-    @Id var limitSetId: UUID? = null,
+    @Id var limitSetId: java.util.UUID? = null,
     val isPercentageLimits: String
 )
 
-data class DeleteLimitSetEvent(@Id val limitSetId: UUID? = null)
+data class DeleteLimitSetEvent(@Id val limitSetId: java.util.UUID? = null)
 
 // single association events
 
@@ -8232,14 +8232,14 @@ data class DeleteLimitSetEvent(@Id val limitSetId: UUID? = null)
 // Line Events
 
 data class CreateLineEvent(
-     val lineId: UUID? = null
+     val lineId: java.util.UUID? = null
 )
 
 data class UpdateLineEvent(
-     val lineId: UUID? = null
+     val lineId: java.util.UUID? = null
 )
 
-data class DeleteLineEvent(@Id val lineId: UUID? = null)
+data class DeleteLineEvent(@Id val lineId: java.util.UUID? = null)
 
 // single association events
 
@@ -8249,7 +8249,7 @@ data class DeleteLineEvent(@Id val lineId: UUID? = null)
 // LinearShuntCompensator Events
 
 data class CreateLinearShuntCompensatorEvent(
-    @Id var linearShuntCompensatorId: UUID? = null,
+    @Id var linearShuntCompensatorId: java.util.UUID? = null,
     val b0PerSection: String,
     val bPerSection: String,
     val g0PerSection: String,
@@ -8257,14 +8257,14 @@ data class CreateLinearShuntCompensatorEvent(
 )
 
 data class UpdateLinearShuntCompensatorEvent(
-    @Id var linearShuntCompensatorId: UUID? = null,
+    @Id var linearShuntCompensatorId: java.util.UUID? = null,
     val b0PerSection: String,
     val bPerSection: String,
     val g0PerSection: String,
     val gPerSection: String
 )
 
-data class DeleteLinearShuntCompensatorEvent(@Id val linearShuntCompensatorId: UUID? = null)
+data class DeleteLinearShuntCompensatorEvent(@Id val linearShuntCompensatorId: java.util.UUID? = null)
 
 // single association events
 
@@ -8274,14 +8274,14 @@ data class DeleteLinearShuntCompensatorEvent(@Id val linearShuntCompensatorId: U
 // LoadAggregate Events
 
 data class CreateLoadAggregateEvent(
-     val loadAggregateId: UUID? = null
+     val loadAggregateId: java.util.UUID? = null
 )
 
 data class UpdateLoadAggregateEvent(
-     val loadAggregateId: UUID? = null
+     val loadAggregateId: java.util.UUID? = null
 )
 
-data class DeleteLoadAggregateEvent(@Id val loadAggregateId: UUID? = null)
+data class DeleteLoadAggregateEvent(@Id val loadAggregateId: java.util.UUID? = null)
 
 // single association events
 
@@ -8291,14 +8291,14 @@ data class DeleteLoadAggregateEvent(@Id val loadAggregateId: UUID? = null)
 // LoadArea Events
 
 data class CreateLoadAreaEvent(
-     val loadAreaId: UUID? = null
+     val loadAreaId: java.util.UUID? = null
 )
 
 data class UpdateLoadAreaEvent(
-     val loadAreaId: UUID? = null
+     val loadAreaId: java.util.UUID? = null
 )
 
-data class DeleteLoadAreaEvent(@Id val loadAreaId: UUID? = null)
+data class DeleteLoadAreaEvent(@Id val loadAreaId: java.util.UUID? = null)
 
 // single association events
 
@@ -8308,14 +8308,14 @@ data class DeleteLoadAreaEvent(@Id val loadAreaId: UUID? = null)
 // LoadBreakSwitch Events
 
 data class CreateLoadBreakSwitchEvent(
-     val loadBreakSwitchId: UUID? = null
+     val loadBreakSwitchId: java.util.UUID? = null
 )
 
 data class UpdateLoadBreakSwitchEvent(
-     val loadBreakSwitchId: UUID? = null
+     val loadBreakSwitchId: java.util.UUID? = null
 )
 
-data class DeleteLoadBreakSwitchEvent(@Id val loadBreakSwitchId: UUID? = null)
+data class DeleteLoadBreakSwitchEvent(@Id val loadBreakSwitchId: java.util.UUID? = null)
 
 // single association events
 
@@ -8325,7 +8325,7 @@ data class DeleteLoadBreakSwitchEvent(@Id val loadBreakSwitchId: UUID? = null)
 // LoadComposite Events
 
 data class CreateLoadCompositeEvent(
-    @Id var loadCompositeId: UUID? = null,
+    @Id var loadCompositeId: java.util.UUID? = null,
     val epfd: String,
     val epfs: String,
     val epvd: String,
@@ -8340,7 +8340,7 @@ data class CreateLoadCompositeEvent(
 )
 
 data class UpdateLoadCompositeEvent(
-    @Id var loadCompositeId: UUID? = null,
+    @Id var loadCompositeId: java.util.UUID? = null,
     val epfd: String,
     val epfs: String,
     val epvd: String,
@@ -8354,7 +8354,7 @@ data class UpdateLoadCompositeEvent(
     val pfrac: String
 )
 
-data class DeleteLoadCompositeEvent(@Id val loadCompositeId: UUID? = null)
+data class DeleteLoadCompositeEvent(@Id val loadCompositeId: java.util.UUID? = null)
 
 // single association events
 
@@ -8364,14 +8364,14 @@ data class DeleteLoadCompositeEvent(@Id val loadCompositeId: UUID? = null)
 // LoadDynamics Events
 
 data class CreateLoadDynamicsEvent(
-     val loadDynamicsId: UUID? = null
+     val loadDynamicsId: java.util.UUID? = null
 )
 
 data class UpdateLoadDynamicsEvent(
-     val loadDynamicsId: UUID? = null
+     val loadDynamicsId: java.util.UUID? = null
 )
 
-data class DeleteLoadDynamicsEvent(@Id val loadDynamicsId: UUID? = null)
+data class DeleteLoadDynamicsEvent(@Id val loadDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -8381,7 +8381,7 @@ data class DeleteLoadDynamicsEvent(@Id val loadDynamicsId: UUID? = null)
 // LoadGenericNonLinear Events
 
 data class CreateLoadGenericNonLinearEvent(
-    @Id var loadGenericNonLinearId: UUID? = null,
+    @Id var loadGenericNonLinearId: java.util.UUID? = null,
     val bs: String,
     val bt: String,
     val genericNonLinearLoadModelType: String,
@@ -8394,7 +8394,7 @@ data class CreateLoadGenericNonLinearEvent(
 )
 
 data class UpdateLoadGenericNonLinearEvent(
-    @Id var loadGenericNonLinearId: UUID? = null,
+    @Id var loadGenericNonLinearId: java.util.UUID? = null,
     val bs: String,
     val bt: String,
     val genericNonLinearLoadModelType: String,
@@ -8406,7 +8406,7 @@ data class UpdateLoadGenericNonLinearEvent(
     val tq: String
 )
 
-data class DeleteLoadGenericNonLinearEvent(@Id val loadGenericNonLinearId: UUID? = null)
+data class DeleteLoadGenericNonLinearEvent(@Id val loadGenericNonLinearId: java.util.UUID? = null)
 
 // single association events
 
@@ -8416,14 +8416,14 @@ data class DeleteLoadGenericNonLinearEvent(@Id val loadGenericNonLinearId: UUID?
 // LoadGroup Events
 
 data class CreateLoadGroupEvent(
-     val loadGroupId: UUID? = null
+     val loadGroupId: java.util.UUID? = null
 )
 
 data class UpdateLoadGroupEvent(
-     val loadGroupId: UUID? = null
+     val loadGroupId: java.util.UUID? = null
 )
 
-data class DeleteLoadGroupEvent(@Id val loadGroupId: UUID? = null)
+data class DeleteLoadGroupEvent(@Id val loadGroupId: java.util.UUID? = null)
 
 // single association events
 
@@ -8433,7 +8433,7 @@ data class DeleteLoadGroupEvent(@Id val loadGroupId: UUID? = null)
 // LoadMotor Events
 
 data class CreateLoadMotorEvent(
-    @Id var loadMotorId: UUID? = null,
+    @Id var loadMotorId: java.util.UUID? = null,
     val d: String,
     val h: String,
     val lfac: String,
@@ -8450,7 +8450,7 @@ data class CreateLoadMotorEvent(
 )
 
 data class UpdateLoadMotorEvent(
-    @Id var loadMotorId: UUID? = null,
+    @Id var loadMotorId: java.util.UUID? = null,
     val d: String,
     val h: String,
     val lfac: String,
@@ -8466,7 +8466,7 @@ data class UpdateLoadMotorEvent(
     val vt: String
 )
 
-data class DeleteLoadMotorEvent(@Id val loadMotorId: UUID? = null)
+data class DeleteLoadMotorEvent(@Id val loadMotorId: java.util.UUID? = null)
 
 // single association events
 
@@ -8476,7 +8476,7 @@ data class DeleteLoadMotorEvent(@Id val loadMotorId: UUID? = null)
 // LoadResponseCharacteristic Events
 
 data class CreateLoadResponseCharacteristicEvent(
-    @Id var loadResponseCharacteristicId: UUID? = null,
+    @Id var loadResponseCharacteristicId: java.util.UUID? = null,
     val exponentModel: String,
     val pConstantCurrent: String,
     val pConstantImpedance: String,
@@ -8491,7 +8491,7 @@ data class CreateLoadResponseCharacteristicEvent(
 )
 
 data class UpdateLoadResponseCharacteristicEvent(
-    @Id var loadResponseCharacteristicId: UUID? = null,
+    @Id var loadResponseCharacteristicId: java.util.UUID? = null,
     val exponentModel: String,
     val pConstantCurrent: String,
     val pConstantImpedance: String,
@@ -8505,7 +8505,7 @@ data class UpdateLoadResponseCharacteristicEvent(
     val qVoltageExponent: String
 )
 
-data class DeleteLoadResponseCharacteristicEvent(@Id val loadResponseCharacteristicId: UUID? = null)
+data class DeleteLoadResponseCharacteristicEvent(@Id val loadResponseCharacteristicId: java.util.UUID? = null)
 
 // single association events
 
@@ -8515,7 +8515,7 @@ data class DeleteLoadResponseCharacteristicEvent(@Id val loadResponseCharacteris
 // LoadStatic Events
 
 data class CreateLoadStaticEvent(
-    @Id var loadStaticId: UUID? = null,
+    @Id var loadStaticId: java.util.UUID? = null,
     val ep1: String,
     val ep2: String,
     val ep3: String,
@@ -8536,7 +8536,7 @@ data class CreateLoadStaticEvent(
 )
 
 data class UpdateLoadStaticEvent(
-    @Id var loadStaticId: UUID? = null,
+    @Id var loadStaticId: java.util.UUID? = null,
     val ep1: String,
     val ep2: String,
     val ep3: String,
@@ -8556,7 +8556,7 @@ data class UpdateLoadStaticEvent(
     val staticLoadModelType: String
 )
 
-data class DeleteLoadStaticEvent(@Id val loadStaticId: UUID? = null)
+data class DeleteLoadStaticEvent(@Id val loadStaticId: java.util.UUID? = null)
 
 // single association events
 
@@ -8566,16 +8566,16 @@ data class DeleteLoadStaticEvent(@Id val loadStaticId: UUID? = null)
 // LoadUserDefined Events
 
 data class CreateLoadUserDefinedEvent(
-    @Id var loadUserDefinedId: UUID? = null,
+    @Id var loadUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateLoadUserDefinedEvent(
-    @Id var loadUserDefinedId: UUID? = null,
+    @Id var loadUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteLoadUserDefinedEvent(@Id val loadUserDefinedId: UUID? = null)
+data class DeleteLoadUserDefinedEvent(@Id val loadUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -8585,14 +8585,14 @@ data class DeleteLoadUserDefinedEvent(@Id val loadUserDefinedId: UUID? = null)
 // Location Events
 
 data class CreateLocationEvent(
-     val locationId: UUID? = null
+     val locationId: java.util.UUID? = null
 )
 
 data class UpdateLocationEvent(
-     val locationId: UUID? = null
+     val locationId: java.util.UUID? = null
 )
 
-data class DeleteLocationEvent(@Id val locationId: UUID? = null)
+data class DeleteLocationEvent(@Id val locationId: java.util.UUID? = null)
 
 // single association events
 
@@ -8602,7 +8602,7 @@ data class DeleteLocationEvent(@Id val locationId: UUID? = null)
 // Measurement Events
 
 data class CreateMeasurementEvent(
-    @Id var measurementId: UUID? = null,
+    @Id var measurementId: java.util.UUID? = null,
     val measurementType: String,
     val phases: String,
     val unitMultiplier: String,
@@ -8610,14 +8610,14 @@ data class CreateMeasurementEvent(
 )
 
 data class UpdateMeasurementEvent(
-    @Id var measurementId: UUID? = null,
+    @Id var measurementId: java.util.UUID? = null,
     val measurementType: String,
     val phases: String,
     val unitMultiplier: String,
     val unitSymbol: String
 )
 
-data class DeleteMeasurementEvent(@Id val measurementId: UUID? = null)
+data class DeleteMeasurementEvent(@Id val measurementId: java.util.UUID? = null)
 
 // single association events
 
@@ -8627,18 +8627,18 @@ data class DeleteMeasurementEvent(@Id val measurementId: UUID? = null)
 // MeasurementValue Events
 
 data class CreateMeasurementValueEvent(
-    @Id var measurementValueId: UUID? = null,
+    @Id var measurementValueId: java.util.UUID? = null,
     val sensorAccuracy: String,
     val timeStamp: String
 )
 
 data class UpdateMeasurementValueEvent(
-    @Id var measurementValueId: UUID? = null,
+    @Id var measurementValueId: java.util.UUID? = null,
     val sensorAccuracy: String,
     val timeStamp: String
 )
 
-data class DeleteMeasurementValueEvent(@Id val measurementValueId: UUID? = null)
+data class DeleteMeasurementValueEvent(@Id val measurementValueId: java.util.UUID? = null)
 
 // single association events
 
@@ -8648,14 +8648,14 @@ data class DeleteMeasurementValueEvent(@Id val measurementValueId: UUID? = null)
 // MeasurementValueQuality Events
 
 data class CreateMeasurementValueQualityEvent(
-     val measurementValueQualityId: UUID? = null
+     val measurementValueQualityId: java.util.UUID? = null
 )
 
 data class UpdateMeasurementValueQualityEvent(
-     val measurementValueQualityId: UUID? = null
+     val measurementValueQualityId: java.util.UUID? = null
 )
 
-data class DeleteMeasurementValueQualityEvent(@Id val measurementValueQualityId: UUID? = null)
+data class DeleteMeasurementValueQualityEvent(@Id val measurementValueQualityId: java.util.UUID? = null)
 
 // single association events
 
@@ -8665,14 +8665,14 @@ data class DeleteMeasurementValueQualityEvent(@Id val measurementValueQualityId:
 // MeasurementValueSource Events
 
 data class CreateMeasurementValueSourceEvent(
-     val measurementValueSourceId: UUID? = null
+     val measurementValueSourceId: java.util.UUID? = null
 )
 
 data class UpdateMeasurementValueSourceEvent(
-     val measurementValueSourceId: UUID? = null
+     val measurementValueSourceId: java.util.UUID? = null
 )
 
-data class DeleteMeasurementValueSourceEvent(@Id val measurementValueSourceId: UUID? = null)
+data class DeleteMeasurementValueSourceEvent(@Id val measurementValueSourceId: java.util.UUID? = null)
 
 // single association events
 
@@ -8682,7 +8682,7 @@ data class DeleteMeasurementValueSourceEvent(@Id val measurementValueSourceId: U
 // MechLoad1 Events
 
 data class CreateMechLoad1Event(
-    @Id var mechLoad1Id: UUID? = null,
+    @Id var mechLoad1Id: java.util.UUID? = null,
     val a: String,
     val b: String,
     val d: String,
@@ -8690,14 +8690,14 @@ data class CreateMechLoad1Event(
 )
 
 data class UpdateMechLoad1Event(
-    @Id var mechLoad1Id: UUID? = null,
+    @Id var mechLoad1Id: java.util.UUID? = null,
     val a: String,
     val b: String,
     val d: String,
     val e: String
 )
 
-data class DeleteMechLoad1Event(@Id val mechLoad1Id: UUID? = null)
+data class DeleteMechLoad1Event(@Id val mechLoad1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -8707,14 +8707,14 @@ data class DeleteMechLoad1Event(@Id val mechLoad1Id: UUID? = null)
 // MechanicalLoadDynamics Events
 
 data class CreateMechanicalLoadDynamicsEvent(
-     val mechanicalLoadDynamicsId: UUID? = null
+     val mechanicalLoadDynamicsId: java.util.UUID? = null
 )
 
 data class UpdateMechanicalLoadDynamicsEvent(
-     val mechanicalLoadDynamicsId: UUID? = null
+     val mechanicalLoadDynamicsId: java.util.UUID? = null
 )
 
-data class DeleteMechanicalLoadDynamicsEvent(@Id val mechanicalLoadDynamicsId: UUID? = null)
+data class DeleteMechanicalLoadDynamicsEvent(@Id val mechanicalLoadDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -8724,16 +8724,16 @@ data class DeleteMechanicalLoadDynamicsEvent(@Id val mechanicalLoadDynamicsId: U
 // MechanicalLoadUserDefined Events
 
 data class CreateMechanicalLoadUserDefinedEvent(
-    @Id var mechanicalLoadUserDefinedId: UUID? = null,
+    @Id var mechanicalLoadUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateMechanicalLoadUserDefinedEvent(
-    @Id var mechanicalLoadUserDefinedId: UUID? = null,
+    @Id var mechanicalLoadUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteMechanicalLoadUserDefinedEvent(@Id val mechanicalLoadUserDefinedId: UUID? = null)
+data class DeleteMechanicalLoadUserDefinedEvent(@Id val mechanicalLoadUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -8743,20 +8743,20 @@ data class DeleteMechanicalLoadUserDefinedEvent(@Id val mechanicalLoadUserDefine
 // Money Events
 
 data class CreateMoneyEvent(
-    @Id var moneyId: UUID? = null,
+    @Id var moneyId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateMoneyEvent(
-    @Id var moneyId: UUID? = null,
+    @Id var moneyId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteMoneyEvent(@Id val moneyId: UUID? = null)
+data class DeleteMoneyEvent(@Id val moneyId: java.util.UUID? = null)
 
 // single association events
 
@@ -8766,14 +8766,14 @@ data class DeleteMoneyEvent(@Id val moneyId: UUID? = null)
 // MonthDay Events
 
 data class CreateMonthDayEvent(
-     val monthDayId: UUID? = null
+     val monthDayId: java.util.UUID? = null
 )
 
 data class UpdateMonthDayEvent(
-     val monthDayId: UUID? = null
+     val monthDayId: java.util.UUID? = null
 )
 
-data class DeleteMonthDayEvent(@Id val monthDayId: UUID? = null)
+data class DeleteMonthDayEvent(@Id val monthDayId: java.util.UUID? = null)
 
 // single association events
 
@@ -8783,18 +8783,18 @@ data class DeleteMonthDayEvent(@Id val monthDayId: UUID? = null)
 // MonthDayInterval Events
 
 data class CreateMonthDayIntervalEvent(
-    @Id var monthDayIntervalId: UUID? = null,
+    @Id var monthDayIntervalId: java.util.UUID? = null,
     val end: String,
     val start: String
 )
 
 data class UpdateMonthDayIntervalEvent(
-    @Id var monthDayIntervalId: UUID? = null,
+    @Id var monthDayIntervalId: java.util.UUID? = null,
     val end: String,
     val start: String
 )
 
-data class DeleteMonthDayIntervalEvent(@Id val monthDayIntervalId: UUID? = null)
+data class DeleteMonthDayIntervalEvent(@Id val monthDayIntervalId: java.util.UUID? = null)
 
 // single association events
 
@@ -8804,7 +8804,7 @@ data class DeleteMonthDayIntervalEvent(@Id val monthDayIntervalId: UUID? = null)
 // MutualCoupling Events
 
 data class CreateMutualCouplingEvent(
-    @Id var mutualCouplingId: UUID? = null,
+    @Id var mutualCouplingId: java.util.UUID? = null,
     val b0ch: String,
     val distance11: String,
     val distance12: String,
@@ -8816,7 +8816,7 @@ data class CreateMutualCouplingEvent(
 )
 
 data class UpdateMutualCouplingEvent(
-    @Id var mutualCouplingId: UUID? = null,
+    @Id var mutualCouplingId: java.util.UUID? = null,
     val b0ch: String,
     val distance11: String,
     val distance12: String,
@@ -8827,7 +8827,7 @@ data class UpdateMutualCouplingEvent(
     val x0: String
 )
 
-data class DeleteMutualCouplingEvent(@Id val mutualCouplingId: UUID? = null)
+data class DeleteMutualCouplingEvent(@Id val mutualCouplingId: java.util.UUID? = null)
 
 // single association events
 
@@ -8837,14 +8837,14 @@ data class DeleteMutualCouplingEvent(@Id val mutualCouplingId: UUID? = null)
 // NonConformLoad Events
 
 data class CreateNonConformLoadEvent(
-     val nonConformLoadId: UUID? = null
+     val nonConformLoadId: java.util.UUID? = null
 )
 
 data class UpdateNonConformLoadEvent(
-     val nonConformLoadId: UUID? = null
+     val nonConformLoadId: java.util.UUID? = null
 )
 
-data class DeleteNonConformLoadEvent(@Id val nonConformLoadId: UUID? = null)
+data class DeleteNonConformLoadEvent(@Id val nonConformLoadId: java.util.UUID? = null)
 
 // single association events
 
@@ -8854,14 +8854,14 @@ data class DeleteNonConformLoadEvent(@Id val nonConformLoadId: UUID? = null)
 // NonConformLoadGroup Events
 
 data class CreateNonConformLoadGroupEvent(
-     val nonConformLoadGroupId: UUID? = null
+     val nonConformLoadGroupId: java.util.UUID? = null
 )
 
 data class UpdateNonConformLoadGroupEvent(
-     val nonConformLoadGroupId: UUID? = null
+     val nonConformLoadGroupId: java.util.UUID? = null
 )
 
-data class DeleteNonConformLoadGroupEvent(@Id val nonConformLoadGroupId: UUID? = null)
+data class DeleteNonConformLoadGroupEvent(@Id val nonConformLoadGroupId: java.util.UUID? = null)
 
 // single association events
 
@@ -8871,14 +8871,14 @@ data class DeleteNonConformLoadGroupEvent(@Id val nonConformLoadGroupId: UUID? =
 // NonConformLoadSchedule Events
 
 data class CreateNonConformLoadScheduleEvent(
-     val nonConformLoadScheduleId: UUID? = null
+     val nonConformLoadScheduleId: java.util.UUID? = null
 )
 
 data class UpdateNonConformLoadScheduleEvent(
-     val nonConformLoadScheduleId: UUID? = null
+     val nonConformLoadScheduleId: java.util.UUID? = null
 )
 
-data class DeleteNonConformLoadScheduleEvent(@Id val nonConformLoadScheduleId: UUID? = null)
+data class DeleteNonConformLoadScheduleEvent(@Id val nonConformLoadScheduleId: java.util.UUID? = null)
 
 // single association events
 
@@ -8888,14 +8888,14 @@ data class DeleteNonConformLoadScheduleEvent(@Id val nonConformLoadScheduleId: U
 // NonlinearShuntCompensator Events
 
 data class CreateNonlinearShuntCompensatorEvent(
-     val nonlinearShuntCompensatorId: UUID? = null
+     val nonlinearShuntCompensatorId: java.util.UUID? = null
 )
 
 data class UpdateNonlinearShuntCompensatorEvent(
-     val nonlinearShuntCompensatorId: UUID? = null
+     val nonlinearShuntCompensatorId: java.util.UUID? = null
 )
 
-data class DeleteNonlinearShuntCompensatorEvent(@Id val nonlinearShuntCompensatorId: UUID? = null)
+data class DeleteNonlinearShuntCompensatorEvent(@Id val nonlinearShuntCompensatorId: java.util.UUID? = null)
 
 // single association events
 
@@ -8905,7 +8905,7 @@ data class DeleteNonlinearShuntCompensatorEvent(@Id val nonlinearShuntCompensato
 // NonlinearShuntCompensatorPoint Events
 
 data class CreateNonlinearShuntCompensatorPointEvent(
-    @Id var nonlinearShuntCompensatorPointId: UUID? = null,
+    @Id var nonlinearShuntCompensatorPointId: java.util.UUID? = null,
     val b: String,
     val b0: String,
     val g: String,
@@ -8914,7 +8914,7 @@ data class CreateNonlinearShuntCompensatorPointEvent(
 )
 
 data class UpdateNonlinearShuntCompensatorPointEvent(
-    @Id var nonlinearShuntCompensatorPointId: UUID? = null,
+    @Id var nonlinearShuntCompensatorPointId: java.util.UUID? = null,
     val b: String,
     val b0: String,
     val g: String,
@@ -8922,7 +8922,7 @@ data class UpdateNonlinearShuntCompensatorPointEvent(
     val sectionNumber: String
 )
 
-data class DeleteNonlinearShuntCompensatorPointEvent(@Id val nonlinearShuntCompensatorPointId: UUID? = null)
+data class DeleteNonlinearShuntCompensatorPointEvent(@Id val nonlinearShuntCompensatorPointId: java.util.UUID? = null)
 
 // single association events
 
@@ -8932,14 +8932,14 @@ data class DeleteNonlinearShuntCompensatorPointEvent(@Id val nonlinearShuntCompe
 // NuclearGeneratingUnit Events
 
 data class CreateNuclearGeneratingUnitEvent(
-     val nuclearGeneratingUnitId: UUID? = null
+     val nuclearGeneratingUnitId: java.util.UUID? = null
 )
 
 data class UpdateNuclearGeneratingUnitEvent(
-     val nuclearGeneratingUnitId: UUID? = null
+     val nuclearGeneratingUnitId: java.util.UUID? = null
 )
 
-data class DeleteNuclearGeneratingUnitEvent(@Id val nuclearGeneratingUnitId: UUID? = null)
+data class DeleteNuclearGeneratingUnitEvent(@Id val nuclearGeneratingUnitId: java.util.UUID? = null)
 
 // single association events
 
@@ -8949,14 +8949,14 @@ data class DeleteNuclearGeneratingUnitEvent(@Id val nuclearGeneratingUnitId: UUI
 // OperationalLimit Events
 
 data class CreateOperationalLimitEvent(
-     val operationalLimitId: UUID? = null
+     val operationalLimitId: java.util.UUID? = null
 )
 
 data class UpdateOperationalLimitEvent(
-     val operationalLimitId: UUID? = null
+     val operationalLimitId: java.util.UUID? = null
 )
 
-data class DeleteOperationalLimitEvent(@Id val operationalLimitId: UUID? = null)
+data class DeleteOperationalLimitEvent(@Id val operationalLimitId: java.util.UUID? = null)
 
 // single association events
 
@@ -8966,14 +8966,14 @@ data class DeleteOperationalLimitEvent(@Id val operationalLimitId: UUID? = null)
 // OperationalLimitSet Events
 
 data class CreateOperationalLimitSetEvent(
-     val operationalLimitSetId: UUID? = null
+     val operationalLimitSetId: java.util.UUID? = null
 )
 
 data class UpdateOperationalLimitSetEvent(
-     val operationalLimitSetId: UUID? = null
+     val operationalLimitSetId: java.util.UUID? = null
 )
 
-data class DeleteOperationalLimitSetEvent(@Id val operationalLimitSetId: UUID? = null)
+data class DeleteOperationalLimitSetEvent(@Id val operationalLimitSetId: java.util.UUID? = null)
 
 // single association events
 
@@ -8983,20 +8983,20 @@ data class DeleteOperationalLimitSetEvent(@Id val operationalLimitSetId: UUID? =
 // OperationalLimitType Events
 
 data class CreateOperationalLimitTypeEvent(
-    @Id var operationalLimitTypeId: UUID? = null,
+    @Id var operationalLimitTypeId: java.util.UUID? = null,
     val acceptableDuration: String,
     val direction: String,
     val limitType: String
 )
 
 data class UpdateOperationalLimitTypeEvent(
-    @Id var operationalLimitTypeId: UUID? = null,
+    @Id var operationalLimitTypeId: java.util.UUID? = null,
     val acceptableDuration: String,
     val direction: String,
     val limitType: String
 )
 
-data class DeleteOperationalLimitTypeEvent(@Id val operationalLimitTypeId: UUID? = null)
+data class DeleteOperationalLimitTypeEvent(@Id val operationalLimitTypeId: java.util.UUID? = null)
 
 // single association events
 
@@ -9006,7 +9006,7 @@ data class DeleteOperationalLimitTypeEvent(@Id val operationalLimitTypeId: UUID?
 // OverexcLim2 Events
 
 data class CreateOverexcLim2Event(
-    @Id var overexcLim2Id: UUID? = null,
+    @Id var overexcLim2Id: java.util.UUID? = null,
     val ifdlim: String,
     val koi: String,
     val voimax: String,
@@ -9014,14 +9014,14 @@ data class CreateOverexcLim2Event(
 )
 
 data class UpdateOverexcLim2Event(
-    @Id var overexcLim2Id: UUID? = null,
+    @Id var overexcLim2Id: java.util.UUID? = null,
     val ifdlim: String,
     val koi: String,
     val voimax: String,
     val voimin: String
 )
 
-data class DeleteOverexcLim2Event(@Id val overexcLim2Id: UUID? = null)
+data class DeleteOverexcLim2Event(@Id val overexcLim2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -9031,7 +9031,7 @@ data class DeleteOverexcLim2Event(@Id val overexcLim2Id: UUID? = null)
 // OverexcLimIEEE Events
 
 data class CreateOverexcLimIEEEEvent(
-    @Id var overexcLimIEEEId: UUID? = null,
+    @Id var overexcLimIEEEId: java.util.UUID? = null,
     val hyst: String,
     val ifdlim: String,
     val ifdmax: String,
@@ -9041,7 +9041,7 @@ data class CreateOverexcLimIEEEEvent(
 )
 
 data class UpdateOverexcLimIEEEEvent(
-    @Id var overexcLimIEEEId: UUID? = null,
+    @Id var overexcLimIEEEId: java.util.UUID? = null,
     val hyst: String,
     val ifdlim: String,
     val ifdmax: String,
@@ -9050,7 +9050,7 @@ data class UpdateOverexcLimIEEEEvent(
     val kramp: String
 )
 
-data class DeleteOverexcLimIEEEEvent(@Id val overexcLimIEEEId: UUID? = null)
+data class DeleteOverexcLimIEEEEvent(@Id val overexcLimIEEEId: java.util.UUID? = null)
 
 // single association events
 
@@ -9060,7 +9060,7 @@ data class DeleteOverexcLimIEEEEvent(@Id val overexcLimIEEEId: UUID? = null)
 // OverexcLimX1 Events
 
 data class CreateOverexcLimX1Event(
-    @Id var overexcLimX1Id: UUID? = null,
+    @Id var overexcLimX1Id: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val efd3: String,
@@ -9074,7 +9074,7 @@ data class CreateOverexcLimX1Event(
 )
 
 data class UpdateOverexcLimX1Event(
-    @Id var overexcLimX1Id: UUID? = null,
+    @Id var overexcLimX1Id: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val efd3: String,
@@ -9087,7 +9087,7 @@ data class UpdateOverexcLimX1Event(
     val vlow: String
 )
 
-data class DeleteOverexcLimX1Event(@Id val overexcLimX1Id: UUID? = null)
+data class DeleteOverexcLimX1Event(@Id val overexcLimX1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -9097,7 +9097,7 @@ data class DeleteOverexcLimX1Event(@Id val overexcLimX1Id: UUID? = null)
 // OverexcLimX2 Events
 
 data class CreateOverexcLimX2Event(
-    @Id var overexcLimX2Id: UUID? = null,
+    @Id var overexcLimX2Id: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val efd3: String,
@@ -9112,7 +9112,7 @@ data class CreateOverexcLimX2Event(
 )
 
 data class UpdateOverexcLimX2Event(
-    @Id var overexcLimX2Id: UUID? = null,
+    @Id var overexcLimX2Id: java.util.UUID? = null,
     val efd1: String,
     val efd2: String,
     val efd3: String,
@@ -9126,7 +9126,7 @@ data class UpdateOverexcLimX2Event(
     val vlow: String
 )
 
-data class DeleteOverexcLimX2Event(@Id val overexcLimX2Id: UUID? = null)
+data class DeleteOverexcLimX2Event(@Id val overexcLimX2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -9136,14 +9136,14 @@ data class DeleteOverexcLimX2Event(@Id val overexcLimX2Id: UUID? = null)
 // OverexcitationLimiterDynamics Events
 
 data class CreateOverexcitationLimiterDynamicsEvent(
-     val overexcitationLimiterDynamicsId: UUID? = null
+     val overexcitationLimiterDynamicsId: java.util.UUID? = null
 )
 
 data class UpdateOverexcitationLimiterDynamicsEvent(
-     val overexcitationLimiterDynamicsId: UUID? = null
+     val overexcitationLimiterDynamicsId: java.util.UUID? = null
 )
 
-data class DeleteOverexcitationLimiterDynamicsEvent(@Id val overexcitationLimiterDynamicsId: UUID? = null)
+data class DeleteOverexcitationLimiterDynamicsEvent(@Id val overexcitationLimiterDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -9153,16 +9153,16 @@ data class DeleteOverexcitationLimiterDynamicsEvent(@Id val overexcitationLimite
 // OverexcitationLimiterUserDefined Events
 
 data class CreateOverexcitationLimiterUserDefinedEvent(
-    @Id var overexcitationLimiterUserDefinedId: UUID? = null,
+    @Id var overexcitationLimiterUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateOverexcitationLimiterUserDefinedEvent(
-    @Id var overexcitationLimiterUserDefinedId: UUID? = null,
+    @Id var overexcitationLimiterUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteOverexcitationLimiterUserDefinedEvent(@Id val overexcitationLimiterUserDefinedId: UUID? = null)
+data class DeleteOverexcitationLimiterUserDefinedEvent(@Id val overexcitationLimiterUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -9172,14 +9172,14 @@ data class DeleteOverexcitationLimiterUserDefinedEvent(@Id val overexcitationLim
 // PFVArControllerType1Dynamics Events
 
 data class CreatePFVArControllerType1DynamicsEvent(
-     val pFVArControllerType1DynamicsId: UUID? = null
+     val pFVArControllerType1DynamicsId: java.util.UUID? = null
 )
 
 data class UpdatePFVArControllerType1DynamicsEvent(
-     val pFVArControllerType1DynamicsId: UUID? = null
+     val pFVArControllerType1DynamicsId: java.util.UUID? = null
 )
 
-data class DeletePFVArControllerType1DynamicsEvent(@Id val pFVArControllerType1DynamicsId: UUID? = null)
+data class DeletePFVArControllerType1DynamicsEvent(@Id val pFVArControllerType1DynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -9189,16 +9189,16 @@ data class DeletePFVArControllerType1DynamicsEvent(@Id val pFVArControllerType1D
 // PFVArControllerType1UserDefined Events
 
 data class CreatePFVArControllerType1UserDefinedEvent(
-    @Id var pFVArControllerType1UserDefinedId: UUID? = null,
+    @Id var pFVArControllerType1UserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdatePFVArControllerType1UserDefinedEvent(
-    @Id var pFVArControllerType1UserDefinedId: UUID? = null,
+    @Id var pFVArControllerType1UserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeletePFVArControllerType1UserDefinedEvent(@Id val pFVArControllerType1UserDefinedId: UUID? = null)
+data class DeletePFVArControllerType1UserDefinedEvent(@Id val pFVArControllerType1UserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -9208,14 +9208,14 @@ data class DeletePFVArControllerType1UserDefinedEvent(@Id val pFVArControllerTyp
 // PFVArControllerType2Dynamics Events
 
 data class CreatePFVArControllerType2DynamicsEvent(
-     val pFVArControllerType2DynamicsId: UUID? = null
+     val pFVArControllerType2DynamicsId: java.util.UUID? = null
 )
 
 data class UpdatePFVArControllerType2DynamicsEvent(
-     val pFVArControllerType2DynamicsId: UUID? = null
+     val pFVArControllerType2DynamicsId: java.util.UUID? = null
 )
 
-data class DeletePFVArControllerType2DynamicsEvent(@Id val pFVArControllerType2DynamicsId: UUID? = null)
+data class DeletePFVArControllerType2DynamicsEvent(@Id val pFVArControllerType2DynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -9225,16 +9225,16 @@ data class DeletePFVArControllerType2DynamicsEvent(@Id val pFVArControllerType2D
 // PFVArControllerType2UserDefined Events
 
 data class CreatePFVArControllerType2UserDefinedEvent(
-    @Id var pFVArControllerType2UserDefinedId: UUID? = null,
+    @Id var pFVArControllerType2UserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdatePFVArControllerType2UserDefinedEvent(
-    @Id var pFVArControllerType2UserDefinedId: UUID? = null,
+    @Id var pFVArControllerType2UserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeletePFVArControllerType2UserDefinedEvent(@Id val pFVArControllerType2UserDefinedId: UUID? = null)
+data class DeletePFVArControllerType2UserDefinedEvent(@Id val pFVArControllerType2UserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -9244,7 +9244,7 @@ data class DeletePFVArControllerType2UserDefinedEvent(@Id val pFVArControllerTyp
 // PFVArType1IEEEPFController Events
 
 data class CreatePFVArType1IEEEPFControllerEvent(
-    @Id var pFVArType1IEEEPFControllerId: UUID? = null,
+    @Id var pFVArType1IEEEPFControllerId: java.util.UUID? = null,
     val ovex: String,
     val tpfc: String,
     val vitmin: String,
@@ -9256,7 +9256,7 @@ data class CreatePFVArType1IEEEPFControllerEvent(
 )
 
 data class UpdatePFVArType1IEEEPFControllerEvent(
-    @Id var pFVArType1IEEEPFControllerId: UUID? = null,
+    @Id var pFVArType1IEEEPFControllerId: java.util.UUID? = null,
     val ovex: String,
     val tpfc: String,
     val vitmin: String,
@@ -9267,7 +9267,7 @@ data class UpdatePFVArType1IEEEPFControllerEvent(
     val vvtmin: String
 )
 
-data class DeletePFVArType1IEEEPFControllerEvent(@Id val pFVArType1IEEEPFControllerId: UUID? = null)
+data class DeletePFVArType1IEEEPFControllerEvent(@Id val pFVArType1IEEEPFControllerId: java.util.UUID? = null)
 
 // single association events
 
@@ -9277,7 +9277,7 @@ data class DeletePFVArType1IEEEPFControllerEvent(@Id val pFVArType1IEEEPFControl
 // PFVArType1IEEEVArController Events
 
 data class CreatePFVArType1IEEEVArControllerEvent(
-    @Id var pFVArType1IEEEVArControllerId: UUID? = null,
+    @Id var pFVArType1IEEEVArControllerId: java.util.UUID? = null,
     val tvarc: String,
     val vvar: String,
     val vvarcbw: String,
@@ -9287,7 +9287,7 @@ data class CreatePFVArType1IEEEVArControllerEvent(
 )
 
 data class UpdatePFVArType1IEEEVArControllerEvent(
-    @Id var pFVArType1IEEEVArControllerId: UUID? = null,
+    @Id var pFVArType1IEEEVArControllerId: java.util.UUID? = null,
     val tvarc: String,
     val vvar: String,
     val vvarcbw: String,
@@ -9296,7 +9296,7 @@ data class UpdatePFVArType1IEEEVArControllerEvent(
     val vvtmin: String
 )
 
-data class DeletePFVArType1IEEEVArControllerEvent(@Id val pFVArType1IEEEVArControllerId: UUID? = null)
+data class DeletePFVArType1IEEEVArControllerEvent(@Id val pFVArType1IEEEVArControllerId: java.util.UUID? = null)
 
 // single association events
 
@@ -9306,7 +9306,7 @@ data class DeletePFVArType1IEEEVArControllerEvent(@Id val pFVArType1IEEEVArContr
 // PFVArType2Common1 Events
 
 data class CreatePFVArType2Common1Event(
-    @Id var pFVArType2Common1Id: UUID? = null,
+    @Id var pFVArType2Common1Id: java.util.UUID? = null,
     val j: String,
     val ki: String,
     val kp: String,
@@ -9315,7 +9315,7 @@ data class CreatePFVArType2Common1Event(
 )
 
 data class UpdatePFVArType2Common1Event(
-    @Id var pFVArType2Common1Id: UUID? = null,
+    @Id var pFVArType2Common1Id: java.util.UUID? = null,
     val j: String,
     val ki: String,
     val kp: String,
@@ -9323,7 +9323,7 @@ data class UpdatePFVArType2Common1Event(
     val ref: String
 )
 
-data class DeletePFVArType2Common1Event(@Id val pFVArType2Common1Id: UUID? = null)
+data class DeletePFVArType2Common1Event(@Id val pFVArType2Common1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -9333,7 +9333,7 @@ data class DeletePFVArType2Common1Event(@Id val pFVArType2Common1Id: UUID? = nul
 // PFVArType2IEEEPFController Events
 
 data class CreatePFVArType2IEEEPFControllerEvent(
-    @Id var pFVArType2IEEEPFControllerId: UUID? = null,
+    @Id var pFVArType2IEEEPFControllerId: java.util.UUID? = null,
     val exlon: String,
     val ki: String,
     val kp: String,
@@ -9344,7 +9344,7 @@ data class CreatePFVArType2IEEEPFControllerEvent(
 )
 
 data class UpdatePFVArType2IEEEPFControllerEvent(
-    @Id var pFVArType2IEEEPFControllerId: UUID? = null,
+    @Id var pFVArType2IEEEPFControllerId: java.util.UUID? = null,
     val exlon: String,
     val ki: String,
     val kp: String,
@@ -9354,7 +9354,7 @@ data class UpdatePFVArType2IEEEPFControllerEvent(
     val vs: String
 )
 
-data class DeletePFVArType2IEEEPFControllerEvent(@Id val pFVArType2IEEEPFControllerId: UUID? = null)
+data class DeletePFVArType2IEEEPFControllerEvent(@Id val pFVArType2IEEEPFControllerId: java.util.UUID? = null)
 
 // single association events
 
@@ -9364,7 +9364,7 @@ data class DeletePFVArType2IEEEPFControllerEvent(@Id val pFVArType2IEEEPFControl
 // PFVArType2IEEEVArController Events
 
 data class CreatePFVArType2IEEEVArControllerEvent(
-    @Id var pFVArType2IEEEVArControllerId: UUID? = null,
+    @Id var pFVArType2IEEEVArControllerId: java.util.UUID? = null,
     val exlon: String,
     val ki: String,
     val kp: String,
@@ -9375,7 +9375,7 @@ data class CreatePFVArType2IEEEVArControllerEvent(
 )
 
 data class UpdatePFVArType2IEEEVArControllerEvent(
-    @Id var pFVArType2IEEEVArControllerId: UUID? = null,
+    @Id var pFVArType2IEEEVArControllerId: java.util.UUID? = null,
     val exlon: String,
     val ki: String,
     val kp: String,
@@ -9385,7 +9385,7 @@ data class UpdatePFVArType2IEEEVArControllerEvent(
     val vs: String
 )
 
-data class DeletePFVArType2IEEEVArControllerEvent(@Id val pFVArType2IEEEVArControllerId: UUID? = null)
+data class DeletePFVArType2IEEEVArControllerEvent(@Id val pFVArType2IEEEVArControllerId: java.util.UUID? = null)
 
 // single association events
 
@@ -9395,20 +9395,20 @@ data class DeletePFVArType2IEEEVArControllerEvent(@Id val pFVArType2IEEEVArContr
 // PU Events
 
 data class CreatePUEvent(
-    @Id var pUId: UUID? = null,
+    @Id var pUId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdatePUEvent(
-    @Id var pUId: UUID? = null,
+    @Id var pUId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeletePUEvent(@Id val pUId: UUID? = null)
+data class DeletePUEvent(@Id val pUId: java.util.UUID? = null)
 
 // single association events
 
@@ -9418,20 +9418,20 @@ data class DeletePUEvent(@Id val pUId: UUID? = null)
 // PerCent Events
 
 data class CreatePerCentEvent(
-    @Id var perCentId: UUID? = null,
+    @Id var perCentId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdatePerCentEvent(
-    @Id var perCentId: UUID? = null,
+    @Id var perCentId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeletePerCentEvent(@Id val perCentId: UUID? = null)
+data class DeletePerCentEvent(@Id val perCentId: java.util.UUID? = null)
 
 // single association events
 
@@ -9441,20 +9441,20 @@ data class DeletePerCentEvent(@Id val perCentId: UUID? = null)
 // PerLengthDCLineParameter Events
 
 data class CreatePerLengthDCLineParameterEvent(
-    @Id var perLengthDCLineParameterId: UUID? = null,
+    @Id var perLengthDCLineParameterId: java.util.UUID? = null,
     val capacitance: String,
     val inductance: String,
     val resistance: String
 )
 
 data class UpdatePerLengthDCLineParameterEvent(
-    @Id var perLengthDCLineParameterId: UUID? = null,
+    @Id var perLengthDCLineParameterId: java.util.UUID? = null,
     val capacitance: String,
     val inductance: String,
     val resistance: String
 )
 
-data class DeletePerLengthDCLineParameterEvent(@Id val perLengthDCLineParameterId: UUID? = null)
+data class DeletePerLengthDCLineParameterEvent(@Id val perLengthDCLineParameterId: java.util.UUID? = null)
 
 // single association events
 
@@ -9464,7 +9464,7 @@ data class DeletePerLengthDCLineParameterEvent(@Id val perLengthDCLineParameterI
 // PetersenCoil Events
 
 data class CreatePetersenCoilEvent(
-    @Id var petersenCoilId: UUID? = null,
+    @Id var petersenCoilId: java.util.UUID? = null,
     val mode: String,
     val nominalU: String,
     val offsetCurrent: String,
@@ -9475,7 +9475,7 @@ data class CreatePetersenCoilEvent(
 )
 
 data class UpdatePetersenCoilEvent(
-    @Id var petersenCoilId: UUID? = null,
+    @Id var petersenCoilId: java.util.UUID? = null,
     val mode: String,
     val nominalU: String,
     val offsetCurrent: String,
@@ -9485,7 +9485,7 @@ data class UpdatePetersenCoilEvent(
     val xGroundNominal: String
 )
 
-data class DeletePetersenCoilEvent(@Id val petersenCoilId: UUID? = null)
+data class DeletePetersenCoilEvent(@Id val petersenCoilId: java.util.UUID? = null)
 
 // single association events
 
@@ -9495,14 +9495,14 @@ data class DeletePetersenCoilEvent(@Id val petersenCoilId: UUID? = null)
 // PhaseTapChanger Events
 
 data class CreatePhaseTapChangerEvent(
-     val phaseTapChangerId: UUID? = null
+     val phaseTapChangerId: java.util.UUID? = null
 )
 
 data class UpdatePhaseTapChangerEvent(
-     val phaseTapChangerId: UUID? = null
+     val phaseTapChangerId: java.util.UUID? = null
 )
 
-data class DeletePhaseTapChangerEvent(@Id val phaseTapChangerId: UUID? = null)
+data class DeletePhaseTapChangerEvent(@Id val phaseTapChangerId: java.util.UUID? = null)
 
 // single association events
 
@@ -9512,16 +9512,16 @@ data class DeletePhaseTapChangerEvent(@Id val phaseTapChangerId: UUID? = null)
 // PhaseTapChangerAsymmetrical Events
 
 data class CreatePhaseTapChangerAsymmetricalEvent(
-    @Id var phaseTapChangerAsymmetricalId: UUID? = null,
+    @Id var phaseTapChangerAsymmetricalId: java.util.UUID? = null,
     val windingConnectionAngle: String
 )
 
 data class UpdatePhaseTapChangerAsymmetricalEvent(
-    @Id var phaseTapChangerAsymmetricalId: UUID? = null,
+    @Id var phaseTapChangerAsymmetricalId: java.util.UUID? = null,
     val windingConnectionAngle: String
 )
 
-data class DeletePhaseTapChangerAsymmetricalEvent(@Id val phaseTapChangerAsymmetricalId: UUID? = null)
+data class DeletePhaseTapChangerAsymmetricalEvent(@Id val phaseTapChangerAsymmetricalId: java.util.UUID? = null)
 
 // single association events
 
@@ -9531,20 +9531,20 @@ data class DeletePhaseTapChangerAsymmetricalEvent(@Id val phaseTapChangerAsymmet
 // PhaseTapChangerLinear Events
 
 data class CreatePhaseTapChangerLinearEvent(
-    @Id var phaseTapChangerLinearId: UUID? = null,
+    @Id var phaseTapChangerLinearId: java.util.UUID? = null,
     val stepPhaseShiftIncrement: String,
     val xMax: String,
     val xMin: String
 )
 
 data class UpdatePhaseTapChangerLinearEvent(
-    @Id var phaseTapChangerLinearId: UUID? = null,
+    @Id var phaseTapChangerLinearId: java.util.UUID? = null,
     val stepPhaseShiftIncrement: String,
     val xMax: String,
     val xMin: String
 )
 
-data class DeletePhaseTapChangerLinearEvent(@Id val phaseTapChangerLinearId: UUID? = null)
+data class DeletePhaseTapChangerLinearEvent(@Id val phaseTapChangerLinearId: java.util.UUID? = null)
 
 // single association events
 
@@ -9554,20 +9554,20 @@ data class DeletePhaseTapChangerLinearEvent(@Id val phaseTapChangerLinearId: UUI
 // PhaseTapChangerNonLinear Events
 
 data class CreatePhaseTapChangerNonLinearEvent(
-    @Id var phaseTapChangerNonLinearId: UUID? = null,
+    @Id var phaseTapChangerNonLinearId: java.util.UUID? = null,
     val voltageStepIncrement: String,
     val xMax: String,
     val xMin: String
 )
 
 data class UpdatePhaseTapChangerNonLinearEvent(
-    @Id var phaseTapChangerNonLinearId: UUID? = null,
+    @Id var phaseTapChangerNonLinearId: java.util.UUID? = null,
     val voltageStepIncrement: String,
     val xMax: String,
     val xMin: String
 )
 
-data class DeletePhaseTapChangerNonLinearEvent(@Id val phaseTapChangerNonLinearId: UUID? = null)
+data class DeletePhaseTapChangerNonLinearEvent(@Id val phaseTapChangerNonLinearId: java.util.UUID? = null)
 
 // single association events
 
@@ -9577,14 +9577,14 @@ data class DeletePhaseTapChangerNonLinearEvent(@Id val phaseTapChangerNonLinearI
 // PhaseTapChangerSymmetrical Events
 
 data class CreatePhaseTapChangerSymmetricalEvent(
-     val phaseTapChangerSymmetricalId: UUID? = null
+     val phaseTapChangerSymmetricalId: java.util.UUID? = null
 )
 
 data class UpdatePhaseTapChangerSymmetricalEvent(
-     val phaseTapChangerSymmetricalId: UUID? = null
+     val phaseTapChangerSymmetricalId: java.util.UUID? = null
 )
 
-data class DeletePhaseTapChangerSymmetricalEvent(@Id val phaseTapChangerSymmetricalId: UUID? = null)
+data class DeletePhaseTapChangerSymmetricalEvent(@Id val phaseTapChangerSymmetricalId: java.util.UUID? = null)
 
 // single association events
 
@@ -9594,14 +9594,14 @@ data class DeletePhaseTapChangerSymmetricalEvent(@Id val phaseTapChangerSymmetri
 // PhaseTapChangerTable Events
 
 data class CreatePhaseTapChangerTableEvent(
-     val phaseTapChangerTableId: UUID? = null
+     val phaseTapChangerTableId: java.util.UUID? = null
 )
 
 data class UpdatePhaseTapChangerTableEvent(
-     val phaseTapChangerTableId: UUID? = null
+     val phaseTapChangerTableId: java.util.UUID? = null
 )
 
-data class DeletePhaseTapChangerTableEvent(@Id val phaseTapChangerTableId: UUID? = null)
+data class DeletePhaseTapChangerTableEvent(@Id val phaseTapChangerTableId: java.util.UUID? = null)
 
 // single association events
 
@@ -9611,16 +9611,16 @@ data class DeletePhaseTapChangerTableEvent(@Id val phaseTapChangerTableId: UUID?
 // PhaseTapChangerTablePoint Events
 
 data class CreatePhaseTapChangerTablePointEvent(
-    @Id var phaseTapChangerTablePointId: UUID? = null,
+    @Id var phaseTapChangerTablePointId: java.util.UUID? = null,
     val angle: String
 )
 
 data class UpdatePhaseTapChangerTablePointEvent(
-    @Id var phaseTapChangerTablePointId: UUID? = null,
+    @Id var phaseTapChangerTablePointId: java.util.UUID? = null,
     val angle: String
 )
 
-data class DeletePhaseTapChangerTablePointEvent(@Id val phaseTapChangerTablePointId: UUID? = null)
+data class DeletePhaseTapChangerTablePointEvent(@Id val phaseTapChangerTablePointId: java.util.UUID? = null)
 
 // single association events
 
@@ -9630,14 +9630,14 @@ data class DeletePhaseTapChangerTablePointEvent(@Id val phaseTapChangerTablePoin
 // PhaseTapChangerTabular Events
 
 data class CreatePhaseTapChangerTabularEvent(
-     val phaseTapChangerTabularId: UUID? = null
+     val phaseTapChangerTabularId: java.util.UUID? = null
 )
 
 data class UpdatePhaseTapChangerTabularEvent(
-     val phaseTapChangerTabularId: UUID? = null
+     val phaseTapChangerTabularId: java.util.UUID? = null
 )
 
-data class DeletePhaseTapChangerTabularEvent(@Id val phaseTapChangerTabularId: UUID? = null)
+data class DeletePhaseTapChangerTabularEvent(@Id val phaseTapChangerTabularId: java.util.UUID? = null)
 
 // single association events
 
@@ -9647,7 +9647,7 @@ data class DeletePhaseTapChangerTabularEvent(@Id val phaseTapChangerTabularId: U
 // PositionPoint Events
 
 data class CreatePositionPointEvent(
-    @Id var positionPointId: UUID? = null,
+    @Id var positionPointId: java.util.UUID? = null,
     val sequenceNumber: String,
     val xPosition: String,
     val yPosition: String,
@@ -9655,14 +9655,14 @@ data class CreatePositionPointEvent(
 )
 
 data class UpdatePositionPointEvent(
-    @Id var positionPointId: UUID? = null,
+    @Id var positionPointId: java.util.UUID? = null,
     val sequenceNumber: String,
     val xPosition: String,
     val yPosition: String,
     val zPosition: String
 )
 
-data class DeletePositionPointEvent(@Id val positionPointId: UUID? = null)
+data class DeletePositionPointEvent(@Id val positionPointId: java.util.UUID? = null)
 
 // single association events
 
@@ -9672,14 +9672,14 @@ data class DeletePositionPointEvent(@Id val positionPointId: UUID? = null)
 // PowerSystemResource Events
 
 data class CreatePowerSystemResourceEvent(
-     val powerSystemResourceId: UUID? = null
+     val powerSystemResourceId: java.util.UUID? = null
 )
 
 data class UpdatePowerSystemResourceEvent(
-     val powerSystemResourceId: UUID? = null
+     val powerSystemResourceId: java.util.UUID? = null
 )
 
-data class DeletePowerSystemResourceEvent(@Id val powerSystemResourceId: UUID? = null)
+data class DeletePowerSystemResourceEvent(@Id val powerSystemResourceId: java.util.UUID? = null)
 
 // single association events
 
@@ -9689,14 +9689,14 @@ data class DeletePowerSystemResourceEvent(@Id val powerSystemResourceId: UUID? =
 // PowerSystemStabilizerDynamics Events
 
 data class CreatePowerSystemStabilizerDynamicsEvent(
-     val powerSystemStabilizerDynamicsId: UUID? = null
+     val powerSystemStabilizerDynamicsId: java.util.UUID? = null
 )
 
 data class UpdatePowerSystemStabilizerDynamicsEvent(
-     val powerSystemStabilizerDynamicsId: UUID? = null
+     val powerSystemStabilizerDynamicsId: java.util.UUID? = null
 )
 
-data class DeletePowerSystemStabilizerDynamicsEvent(@Id val powerSystemStabilizerDynamicsId: UUID? = null)
+data class DeletePowerSystemStabilizerDynamicsEvent(@Id val powerSystemStabilizerDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -9706,16 +9706,16 @@ data class DeletePowerSystemStabilizerDynamicsEvent(@Id val powerSystemStabilize
 // PowerSystemStabilizerUserDefined Events
 
 data class CreatePowerSystemStabilizerUserDefinedEvent(
-    @Id var powerSystemStabilizerUserDefinedId: UUID? = null,
+    @Id var powerSystemStabilizerUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdatePowerSystemStabilizerUserDefinedEvent(
-    @Id var powerSystemStabilizerUserDefinedId: UUID? = null,
+    @Id var powerSystemStabilizerUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeletePowerSystemStabilizerUserDefinedEvent(@Id val powerSystemStabilizerUserDefinedId: UUID? = null)
+data class DeletePowerSystemStabilizerUserDefinedEvent(@Id val powerSystemStabilizerUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -9725,7 +9725,7 @@ data class DeletePowerSystemStabilizerUserDefinedEvent(@Id val powerSystemStabil
 // PowerTransformer Events
 
 data class CreatePowerTransformerEvent(
-    @Id var powerTransformerId: UUID? = null,
+    @Id var powerTransformerId: java.util.UUID? = null,
     val beforeShCircuitHighestOperatingCurrent: String,
     val beforeShCircuitHighestOperatingVoltage: String,
     val beforeShortCircuitAnglePf: String,
@@ -9735,7 +9735,7 @@ data class CreatePowerTransformerEvent(
 )
 
 data class UpdatePowerTransformerEvent(
-    @Id var powerTransformerId: UUID? = null,
+    @Id var powerTransformerId: java.util.UUID? = null,
     val beforeShCircuitHighestOperatingCurrent: String,
     val beforeShCircuitHighestOperatingVoltage: String,
     val beforeShortCircuitAnglePf: String,
@@ -9744,7 +9744,7 @@ data class UpdatePowerTransformerEvent(
     val operationalValuesConsidered: String
 )
 
-data class DeletePowerTransformerEvent(@Id val powerTransformerId: UUID? = null)
+data class DeletePowerTransformerEvent(@Id val powerTransformerId: java.util.UUID? = null)
 
 // single association events
 
@@ -9754,7 +9754,7 @@ data class DeletePowerTransformerEvent(@Id val powerTransformerId: UUID? = null)
 // PowerTransformerEnd Events
 
 data class CreatePowerTransformerEndEvent(
-    @Id var powerTransformerEndId: UUID? = null,
+    @Id var powerTransformerEndId: java.util.UUID? = null,
     val b: String,
     val b0: String,
     val connectionKind: String,
@@ -9770,7 +9770,7 @@ data class CreatePowerTransformerEndEvent(
 )
 
 data class UpdatePowerTransformerEndEvent(
-    @Id var powerTransformerEndId: UUID? = null,
+    @Id var powerTransformerEndId: java.util.UUID? = null,
     val b: String,
     val b0: String,
     val connectionKind: String,
@@ -9785,7 +9785,7 @@ data class UpdatePowerTransformerEndEvent(
     val x0: String
 )
 
-data class DeletePowerTransformerEndEvent(@Id val powerTransformerEndId: UUID? = null)
+data class DeletePowerTransformerEndEvent(@Id val powerTransformerEndId: java.util.UUID? = null)
 
 // single association events
 
@@ -9795,7 +9795,7 @@ data class DeletePowerTransformerEndEvent(@Id val powerTransformerEndId: UUID? =
 // ProprietaryParameterDynamics Events
 
 data class CreateProprietaryParameterDynamicsEvent(
-    @Id var proprietaryParameterDynamicsId: UUID? = null,
+    @Id var proprietaryParameterDynamicsId: java.util.UUID? = null,
     val booleanParameterValue: String,
     val floatParameterValue: String,
     val integerParameterValue: String,
@@ -9803,14 +9803,14 @@ data class CreateProprietaryParameterDynamicsEvent(
 )
 
 data class UpdateProprietaryParameterDynamicsEvent(
-    @Id var proprietaryParameterDynamicsId: UUID? = null,
+    @Id var proprietaryParameterDynamicsId: java.util.UUID? = null,
     val booleanParameterValue: String,
     val floatParameterValue: String,
     val integerParameterValue: String,
     val parameterNumber: String
 )
 
-data class DeleteProprietaryParameterDynamicsEvent(@Id val proprietaryParameterDynamicsId: UUID? = null)
+data class DeleteProprietaryParameterDynamicsEvent(@Id val proprietaryParameterDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -9820,14 +9820,14 @@ data class DeleteProprietaryParameterDynamicsEvent(@Id val proprietaryParameterD
 // ProtectedSwitch Events
 
 data class CreateProtectedSwitchEvent(
-     val protectedSwitchId: UUID? = null
+     val protectedSwitchId: java.util.UUID? = null
 )
 
 data class UpdateProtectedSwitchEvent(
-     val protectedSwitchId: UUID? = null
+     val protectedSwitchId: java.util.UUID? = null
 )
 
-data class DeleteProtectedSwitchEvent(@Id val protectedSwitchId: UUID? = null)
+data class DeleteProtectedSwitchEvent(@Id val protectedSwitchId: java.util.UUID? = null)
 
 // single association events
 
@@ -9837,7 +9837,7 @@ data class DeleteProtectedSwitchEvent(@Id val protectedSwitchId: UUID? = null)
 // Pss1 Events
 
 data class CreatePss1Event(
-    @Id var pss1Id: UUID? = null,
+    @Id var pss1Id: java.util.UUID? = null,
     val kf: String,
     val kpe: String,
     val ks: String,
@@ -9856,7 +9856,7 @@ data class CreatePss1Event(
 )
 
 data class UpdatePss1Event(
-    @Id var pss1Id: UUID? = null,
+    @Id var pss1Id: java.util.UUID? = null,
     val kf: String,
     val kpe: String,
     val ks: String,
@@ -9874,7 +9874,7 @@ data class UpdatePss1Event(
     val vsmx: String
 )
 
-data class DeletePss1Event(@Id val pss1Id: UUID? = null)
+data class DeletePss1Event(@Id val pss1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -9884,7 +9884,7 @@ data class DeletePss1Event(@Id val pss1Id: UUID? = null)
 // Pss1A Events
 
 data class CreatePss1AEvent(
-    @Id var pss1AId: UUID? = null,
+    @Id var pss1AId: java.util.UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -9910,7 +9910,7 @@ data class CreatePss1AEvent(
 )
 
 data class UpdatePss1AEvent(
-    @Id var pss1AId: UUID? = null,
+    @Id var pss1AId: java.util.UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -9935,7 +9935,7 @@ data class UpdatePss1AEvent(
     val vrmin: String
 )
 
-data class DeletePss1AEvent(@Id val pss1AId: UUID? = null)
+data class DeletePss1AEvent(@Id val pss1AId: java.util.UUID? = null)
 
 // single association events
 
@@ -9945,7 +9945,7 @@ data class DeletePss1AEvent(@Id val pss1AId: UUID? = null)
 // Pss2B Events
 
 data class CreatePss2BEvent(
-    @Id var pss2BId: UUID? = null,
+    @Id var pss2BId: java.util.UUID? = null,
     val a: String,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
@@ -9980,7 +9980,7 @@ data class CreatePss2BEvent(
 )
 
 data class UpdatePss2BEvent(
-    @Id var pss2BId: UUID? = null,
+    @Id var pss2BId: java.util.UUID? = null,
     val a: String,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
@@ -10014,7 +10014,7 @@ data class UpdatePss2BEvent(
     val vstmin: String
 )
 
-data class DeletePss2BEvent(@Id val pss2BId: UUID? = null)
+data class DeletePss2BEvent(@Id val pss2BId: java.util.UUID? = null)
 
 // single association events
 
@@ -10024,7 +10024,7 @@ data class DeletePss2BEvent(@Id val pss2BId: UUID? = null)
 // Pss2ST Events
 
 data class CreatePss2STEvent(
-    @Id var pss2STId: UUID? = null,
+    @Id var pss2STId: java.util.UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val k1: String,
@@ -10046,7 +10046,7 @@ data class CreatePss2STEvent(
 )
 
 data class UpdatePss2STEvent(
-    @Id var pss2STId: UUID? = null,
+    @Id var pss2STId: java.util.UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val k1: String,
@@ -10067,7 +10067,7 @@ data class UpdatePss2STEvent(
     val vcu: String
 )
 
-data class DeletePss2STEvent(@Id val pss2STId: UUID? = null)
+data class DeletePss2STEvent(@Id val pss2STId: java.util.UUID? = null)
 
 // single association events
 
@@ -10077,7 +10077,7 @@ data class DeletePss2STEvent(@Id val pss2STId: UUID? = null)
 // Pss5 Events
 
 data class CreatePss5Event(
-    @Id var pss5Id: UUID? = null,
+    @Id var pss5Id: java.util.UUID? = null,
     val ctw2: String,
     val deadband: String,
     val isfreq: String,
@@ -10098,7 +10098,7 @@ data class CreatePss5Event(
 )
 
 data class UpdatePss5Event(
-    @Id var pss5Id: UUID? = null,
+    @Id var pss5Id: java.util.UUID? = null,
     val ctw2: String,
     val deadband: String,
     val isfreq: String,
@@ -10118,7 +10118,7 @@ data class UpdatePss5Event(
     val vsmx: String
 )
 
-data class DeletePss5Event(@Id val pss5Id: UUID? = null)
+data class DeletePss5Event(@Id val pss5Id: java.util.UUID? = null)
 
 // single association events
 
@@ -10128,7 +10128,7 @@ data class DeletePss5Event(@Id val pss5Id: UUID? = null)
 // PssELIN2 Events
 
 data class CreatePssELIN2Event(
-    @Id var pssELIN2Id: UUID? = null,
+    @Id var pssELIN2Id: java.util.UUID? = null,
     val apss: String,
     val ks1: String,
     val ks2: String,
@@ -10143,7 +10143,7 @@ data class CreatePssELIN2Event(
 )
 
 data class UpdatePssELIN2Event(
-    @Id var pssELIN2Id: UUID? = null,
+    @Id var pssELIN2Id: java.util.UUID? = null,
     val apss: String,
     val ks1: String,
     val ks2: String,
@@ -10157,7 +10157,7 @@ data class UpdatePssELIN2Event(
     val ts6: String
 )
 
-data class DeletePssELIN2Event(@Id val pssELIN2Id: UUID? = null)
+data class DeletePssELIN2Event(@Id val pssELIN2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -10167,7 +10167,7 @@ data class DeletePssELIN2Event(@Id val pssELIN2Id: UUID? = null)
 // PssIEEE1A Events
 
 data class CreatePssIEEE1AEvent(
-    @Id var pssIEEE1AId: UUID? = null,
+    @Id var pssIEEE1AId: java.util.UUID? = null,
     val a1: String,
     val a2: String,
     val inputSignalType: String,
@@ -10183,7 +10183,7 @@ data class CreatePssIEEE1AEvent(
 )
 
 data class UpdatePssIEEE1AEvent(
-    @Id var pssIEEE1AId: UUID? = null,
+    @Id var pssIEEE1AId: java.util.UUID? = null,
     val a1: String,
     val a2: String,
     val inputSignalType: String,
@@ -10198,7 +10198,7 @@ data class UpdatePssIEEE1AEvent(
     val vrmin: String
 )
 
-data class DeletePssIEEE1AEvent(@Id val pssIEEE1AId: UUID? = null)
+data class DeletePssIEEE1AEvent(@Id val pssIEEE1AId: java.util.UUID? = null)
 
 // single association events
 
@@ -10208,7 +10208,7 @@ data class DeletePssIEEE1AEvent(@Id val pssIEEE1AId: UUID? = null)
 // PssIEEE2B Events
 
 data class CreatePssIEEE2BEvent(
-    @Id var pssIEEE2BId: UUID? = null,
+    @Id var pssIEEE2BId: java.util.UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val ks1: String,
@@ -10239,7 +10239,7 @@ data class CreatePssIEEE2BEvent(
 )
 
 data class UpdatePssIEEE2BEvent(
-    @Id var pssIEEE2BId: UUID? = null,
+    @Id var pssIEEE2BId: java.util.UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val ks1: String,
@@ -10269,7 +10269,7 @@ data class UpdatePssIEEE2BEvent(
     val vstmin: String
 )
 
-data class DeletePssIEEE2BEvent(@Id val pssIEEE2BId: UUID? = null)
+data class DeletePssIEEE2BEvent(@Id val pssIEEE2BId: java.util.UUID? = null)
 
 // single association events
 
@@ -10279,7 +10279,7 @@ data class DeletePssIEEE2BEvent(@Id val pssIEEE2BId: UUID? = null)
 // PssIEEE3B Events
 
 data class CreatePssIEEE3BEvent(
-    @Id var pssIEEE3BId: UUID? = null,
+    @Id var pssIEEE3BId: java.util.UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -10302,7 +10302,7 @@ data class CreatePssIEEE3BEvent(
 )
 
 data class UpdatePssIEEE3BEvent(
-    @Id var pssIEEE3BId: UUID? = null,
+    @Id var pssIEEE3BId: java.util.UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -10324,7 +10324,7 @@ data class UpdatePssIEEE3BEvent(
     val vstmin: String
 )
 
-data class DeletePssIEEE3BEvent(@Id val pssIEEE3BId: UUID? = null)
+data class DeletePssIEEE3BEvent(@Id val pssIEEE3BId: java.util.UUID? = null)
 
 // single association events
 
@@ -10334,7 +10334,7 @@ data class DeletePssIEEE3BEvent(@Id val pssIEEE3BId: UUID? = null)
 // PssIEEE4B Events
 
 data class CreatePssIEEE4BEvent(
-    @Id var pssIEEE4BId: UUID? = null,
+    @Id var pssIEEE4BId: java.util.UUID? = null,
     val bwh1: String,
     val bwh2: String,
     val bwl1: String,
@@ -10405,7 +10405,7 @@ data class CreatePssIEEE4BEvent(
 )
 
 data class UpdatePssIEEE4BEvent(
-    @Id var pssIEEE4BId: UUID? = null,
+    @Id var pssIEEE4BId: java.util.UUID? = null,
     val bwh1: String,
     val bwh2: String,
     val bwl1: String,
@@ -10475,7 +10475,7 @@ data class UpdatePssIEEE4BEvent(
     val vstmin: String
 )
 
-data class DeletePssIEEE4BEvent(@Id val pssIEEE4BId: UUID? = null)
+data class DeletePssIEEE4BEvent(@Id val pssIEEE4BId: java.util.UUID? = null)
 
 // single association events
 
@@ -10485,7 +10485,7 @@ data class DeletePssIEEE4BEvent(@Id val pssIEEE4BId: UUID? = null)
 // PssPTIST1 Events
 
 data class CreatePssPTIST1Event(
-    @Id var pssPTIST1Id: UUID? = null,
+    @Id var pssPTIST1Id: java.util.UUID? = null,
     val dtc: String,
     val dtf: String,
     val dtp: String,
@@ -10500,7 +10500,7 @@ data class CreatePssPTIST1Event(
 )
 
 data class UpdatePssPTIST1Event(
-    @Id var pssPTIST1Id: UUID? = null,
+    @Id var pssPTIST1Id: java.util.UUID? = null,
     val dtc: String,
     val dtf: String,
     val dtp: String,
@@ -10514,7 +10514,7 @@ data class UpdatePssPTIST1Event(
     val tp: String
 )
 
-data class DeletePssPTIST1Event(@Id val pssPTIST1Id: UUID? = null)
+data class DeletePssPTIST1Event(@Id val pssPTIST1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -10524,7 +10524,7 @@ data class DeletePssPTIST1Event(@Id val pssPTIST1Id: UUID? = null)
 // PssPTIST3 Events
 
 data class CreatePssPTIST3Event(
-    @Id var pssPTIST3Id: UUID? = null,
+    @Id var pssPTIST3Id: java.util.UUID? = null,
     val a0: String,
     val a1: String,
     val a2: String,
@@ -10562,7 +10562,7 @@ data class CreatePssPTIST3Event(
 )
 
 data class UpdatePssPTIST3Event(
-    @Id var pssPTIST3Id: UUID? = null,
+    @Id var pssPTIST3Id: java.util.UUID? = null,
     val a0: String,
     val a1: String,
     val a2: String,
@@ -10599,7 +10599,7 @@ data class UpdatePssPTIST3Event(
     val tp: String
 )
 
-data class DeletePssPTIST3Event(@Id val pssPTIST3Id: UUID? = null)
+data class DeletePssPTIST3Event(@Id val pssPTIST3Id: java.util.UUID? = null)
 
 // single association events
 
@@ -10609,7 +10609,7 @@ data class DeletePssPTIST3Event(@Id val pssPTIST3Id: UUID? = null)
 // PssSB4 Events
 
 data class CreatePssSB4Event(
-    @Id var pssSB4Id: UUID? = null,
+    @Id var pssSB4Id: java.util.UUID? = null,
     val kx: String,
     val ta: String,
     val tb: String,
@@ -10624,7 +10624,7 @@ data class CreatePssSB4Event(
 )
 
 data class UpdatePssSB4Event(
-    @Id var pssSB4Id: UUID? = null,
+    @Id var pssSB4Id: java.util.UUID? = null,
     val kx: String,
     val ta: String,
     val tb: String,
@@ -10638,7 +10638,7 @@ data class UpdatePssSB4Event(
     val vsmin: String
 )
 
-data class DeletePssSB4Event(@Id val pssSB4Id: UUID? = null)
+data class DeletePssSB4Event(@Id val pssSB4Id: java.util.UUID? = null)
 
 // single association events
 
@@ -10648,7 +10648,7 @@ data class DeletePssSB4Event(@Id val pssSB4Id: UUID? = null)
 // PssSH Events
 
 data class CreatePssSHEvent(
-    @Id var pssSHId: UUID? = null,
+    @Id var pssSHId: java.util.UUID? = null,
     val k: String,
     val k0: String,
     val k1: String,
@@ -10665,7 +10665,7 @@ data class CreatePssSHEvent(
 )
 
 data class UpdatePssSHEvent(
-    @Id var pssSHId: UUID? = null,
+    @Id var pssSHId: java.util.UUID? = null,
     val k: String,
     val k0: String,
     val k1: String,
@@ -10681,7 +10681,7 @@ data class UpdatePssSHEvent(
     val vsmin: String
 )
 
-data class DeletePssSHEvent(@Id val pssSHId: UUID? = null)
+data class DeletePssSHEvent(@Id val pssSHId: java.util.UUID? = null)
 
 // single association events
 
@@ -10691,7 +10691,7 @@ data class DeletePssSHEvent(@Id val pssSHId: UUID? = null)
 // PssSK Events
 
 data class CreatePssSKEvent(
-    @Id var pssSKId: UUID? = null,
+    @Id var pssSKId: java.util.UUID? = null,
     val k1: String,
     val k2: String,
     val k3: String,
@@ -10706,7 +10706,7 @@ data class CreatePssSKEvent(
 )
 
 data class UpdatePssSKEvent(
-    @Id var pssSKId: UUID? = null,
+    @Id var pssSKId: java.util.UUID? = null,
     val k1: String,
     val k2: String,
     val k3: String,
@@ -10720,7 +10720,7 @@ data class UpdatePssSKEvent(
     val vsmin: String
 )
 
-data class DeletePssSKEvent(@Id val pssSKId: UUID? = null)
+data class DeletePssSKEvent(@Id val pssSKId: java.util.UUID? = null)
 
 // single association events
 
@@ -10730,7 +10730,7 @@ data class DeletePssSKEvent(@Id val pssSKId: UUID? = null)
 // PssWECC Events
 
 data class CreatePssWECCEvent(
-    @Id var pssWECCId: UUID? = null,
+    @Id var pssWECCId: java.util.UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val k1: String,
@@ -10752,7 +10752,7 @@ data class CreatePssWECCEvent(
 )
 
 data class UpdatePssWECCEvent(
-    @Id var pssWECCId: UUID? = null,
+    @Id var pssWECCId: java.util.UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val k1: String,
@@ -10773,7 +10773,7 @@ data class UpdatePssWECCEvent(
     val vsmin: String
 )
 
-data class DeletePssWECCEvent(@Id val pssWECCId: UUID? = null)
+data class DeletePssWECCEvent(@Id val pssWECCId: java.util.UUID? = null)
 
 // single association events
 
@@ -10783,7 +10783,7 @@ data class DeletePssWECCEvent(@Id val pssWECCId: UUID? = null)
 // Quality61850 Events
 
 data class CreateQuality61850Event(
-    @Id var quality61850Id: UUID? = null,
+    @Id var quality61850Id: java.util.UUID? = null,
     val badReference: String,
     val estimatorReplaced: String,
     val failure: String,
@@ -10799,7 +10799,7 @@ data class CreateQuality61850Event(
 )
 
 data class UpdateQuality61850Event(
-    @Id var quality61850Id: UUID? = null,
+    @Id var quality61850Id: java.util.UUID? = null,
     val badReference: String,
     val estimatorReplaced: String,
     val failure: String,
@@ -10814,7 +10814,7 @@ data class UpdateQuality61850Event(
     val validity: String
 )
 
-data class DeleteQuality61850Event(@Id val quality61850Id: UUID? = null)
+data class DeleteQuality61850Event(@Id val quality61850Id: java.util.UUID? = null)
 
 // single association events
 
@@ -10824,14 +10824,14 @@ data class DeleteQuality61850Event(@Id val quality61850Id: UUID? = null)
 // RaiseLowerCommand Events
 
 data class CreateRaiseLowerCommandEvent(
-     val raiseLowerCommandId: UUID? = null
+     val raiseLowerCommandId: java.util.UUID? = null
 )
 
 data class UpdateRaiseLowerCommandEvent(
-     val raiseLowerCommandId: UUID? = null
+     val raiseLowerCommandId: java.util.UUID? = null
 )
 
-data class DeleteRaiseLowerCommandEvent(@Id val raiseLowerCommandId: UUID? = null)
+data class DeleteRaiseLowerCommandEvent(@Id val raiseLowerCommandId: java.util.UUID? = null)
 
 // single association events
 
@@ -10841,18 +10841,18 @@ data class DeleteRaiseLowerCommandEvent(@Id val raiseLowerCommandId: UUID? = nul
 // RatioTapChanger Events
 
 data class CreateRatioTapChangerEvent(
-    @Id var ratioTapChangerId: UUID? = null,
+    @Id var ratioTapChangerId: java.util.UUID? = null,
     val stepVoltageIncrement: String,
     val tculControlMode: String
 )
 
 data class UpdateRatioTapChangerEvent(
-    @Id var ratioTapChangerId: UUID? = null,
+    @Id var ratioTapChangerId: java.util.UUID? = null,
     val stepVoltageIncrement: String,
     val tculControlMode: String
 )
 
-data class DeleteRatioTapChangerEvent(@Id val ratioTapChangerId: UUID? = null)
+data class DeleteRatioTapChangerEvent(@Id val ratioTapChangerId: java.util.UUID? = null)
 
 // single association events
 
@@ -10862,14 +10862,14 @@ data class DeleteRatioTapChangerEvent(@Id val ratioTapChangerId: UUID? = null)
 // RatioTapChangerTable Events
 
 data class CreateRatioTapChangerTableEvent(
-     val ratioTapChangerTableId: UUID? = null
+     val ratioTapChangerTableId: java.util.UUID? = null
 )
 
 data class UpdateRatioTapChangerTableEvent(
-     val ratioTapChangerTableId: UUID? = null
+     val ratioTapChangerTableId: java.util.UUID? = null
 )
 
-data class DeleteRatioTapChangerTableEvent(@Id val ratioTapChangerTableId: UUID? = null)
+data class DeleteRatioTapChangerTableEvent(@Id val ratioTapChangerTableId: java.util.UUID? = null)
 
 // single association events
 
@@ -10879,14 +10879,14 @@ data class DeleteRatioTapChangerTableEvent(@Id val ratioTapChangerTableId: UUID?
 // RatioTapChangerTablePoint Events
 
 data class CreateRatioTapChangerTablePointEvent(
-     val ratioTapChangerTablePointId: UUID? = null
+     val ratioTapChangerTablePointId: java.util.UUID? = null
 )
 
 data class UpdateRatioTapChangerTablePointEvent(
-     val ratioTapChangerTablePointId: UUID? = null
+     val ratioTapChangerTablePointId: java.util.UUID? = null
 )
 
-data class DeleteRatioTapChangerTablePointEvent(@Id val ratioTapChangerTablePointId: UUID? = null)
+data class DeleteRatioTapChangerTablePointEvent(@Id val ratioTapChangerTablePointId: java.util.UUID? = null)
 
 // single association events
 
@@ -10896,20 +10896,20 @@ data class DeleteRatioTapChangerTablePointEvent(@Id val ratioTapChangerTablePoin
 // Reactance Events
 
 data class CreateReactanceEvent(
-    @Id var reactanceId: UUID? = null,
+    @Id var reactanceId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateReactanceEvent(
-    @Id var reactanceId: UUID? = null,
+    @Id var reactanceId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteReactanceEvent(@Id val reactanceId: UUID? = null)
+data class DeleteReactanceEvent(@Id val reactanceId: java.util.UUID? = null)
 
 // single association events
 
@@ -10919,14 +10919,14 @@ data class DeleteReactanceEvent(@Id val reactanceId: UUID? = null)
 // ReactiveCapabilityCurve Events
 
 data class CreateReactiveCapabilityCurveEvent(
-     val reactiveCapabilityCurveId: UUID? = null
+     val reactiveCapabilityCurveId: java.util.UUID? = null
 )
 
 data class UpdateReactiveCapabilityCurveEvent(
-     val reactiveCapabilityCurveId: UUID? = null
+     val reactiveCapabilityCurveId: java.util.UUID? = null
 )
 
-data class DeleteReactiveCapabilityCurveEvent(@Id val reactiveCapabilityCurveId: UUID? = null)
+data class DeleteReactiveCapabilityCurveEvent(@Id val reactiveCapabilityCurveId: java.util.UUID? = null)
 
 // single association events
 
@@ -10936,20 +10936,20 @@ data class DeleteReactiveCapabilityCurveEvent(@Id val reactiveCapabilityCurveId:
 // ReactivePower Events
 
 data class CreateReactivePowerEvent(
-    @Id var reactivePowerId: UUID? = null,
+    @Id var reactivePowerId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateReactivePowerEvent(
-    @Id var reactivePowerId: UUID? = null,
+    @Id var reactivePowerId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteReactivePowerEvent(@Id val reactivePowerId: UUID? = null)
+data class DeleteReactivePowerEvent(@Id val reactivePowerId: java.util.UUID? = null)
 
 // single association events
 
@@ -10959,18 +10959,18 @@ data class DeleteReactivePowerEvent(@Id val reactivePowerId: UUID? = null)
 // RegularIntervalSchedule Events
 
 data class CreateRegularIntervalScheduleEvent(
-    @Id var regularIntervalScheduleId: UUID? = null,
+    @Id var regularIntervalScheduleId: java.util.UUID? = null,
     val endTime: String,
     val timeStep: String
 )
 
 data class UpdateRegularIntervalScheduleEvent(
-    @Id var regularIntervalScheduleId: UUID? = null,
+    @Id var regularIntervalScheduleId: java.util.UUID? = null,
     val endTime: String,
     val timeStep: String
 )
 
-data class DeleteRegularIntervalScheduleEvent(@Id val regularIntervalScheduleId: UUID? = null)
+data class DeleteRegularIntervalScheduleEvent(@Id val regularIntervalScheduleId: java.util.UUID? = null)
 
 // single association events
 
@@ -10980,20 +10980,20 @@ data class DeleteRegularIntervalScheduleEvent(@Id val regularIntervalScheduleId:
 // RegularTimePoint Events
 
 data class CreateRegularTimePointEvent(
-    @Id var regularTimePointId: UUID? = null,
+    @Id var regularTimePointId: java.util.UUID? = null,
     val sequenceNumber: String,
     val value1: String,
     val value2: String
 )
 
 data class UpdateRegularTimePointEvent(
-    @Id var regularTimePointId: UUID? = null,
+    @Id var regularTimePointId: java.util.UUID? = null,
     val sequenceNumber: String,
     val value1: String,
     val value2: String
 )
 
-data class DeleteRegularTimePointEvent(@Id val regularTimePointId: UUID? = null)
+data class DeleteRegularTimePointEvent(@Id val regularTimePointId: java.util.UUID? = null)
 
 // single association events
 
@@ -11003,14 +11003,14 @@ data class DeleteRegularTimePointEvent(@Id val regularTimePointId: UUID? = null)
 // RegulatingCondEq Events
 
 data class CreateRegulatingCondEqEvent(
-     val regulatingCondEqId: UUID? = null
+     val regulatingCondEqId: java.util.UUID? = null
 )
 
 data class UpdateRegulatingCondEqEvent(
-     val regulatingCondEqId: UUID? = null
+     val regulatingCondEqId: java.util.UUID? = null
 )
 
-data class DeleteRegulatingCondEqEvent(@Id val regulatingCondEqId: UUID? = null)
+data class DeleteRegulatingCondEqEvent(@Id val regulatingCondEqId: java.util.UUID? = null)
 
 // single association events
 
@@ -11020,16 +11020,16 @@ data class DeleteRegulatingCondEqEvent(@Id val regulatingCondEqId: UUID? = null)
 // RegulatingControl Events
 
 data class CreateRegulatingControlEvent(
-    @Id var regulatingControlId: UUID? = null,
+    @Id var regulatingControlId: java.util.UUID? = null,
     val mode: String
 )
 
 data class UpdateRegulatingControlEvent(
-    @Id var regulatingControlId: UUID? = null,
+    @Id var regulatingControlId: java.util.UUID? = null,
     val mode: String
 )
 
-data class DeleteRegulatingControlEvent(@Id val regulatingControlId: UUID? = null)
+data class DeleteRegulatingControlEvent(@Id val regulatingControlId: java.util.UUID? = null)
 
 // single association events
 
@@ -11039,14 +11039,14 @@ data class DeleteRegulatingControlEvent(@Id val regulatingControlId: UUID? = nul
 // RegulationSchedule Events
 
 data class CreateRegulationScheduleEvent(
-     val regulationScheduleId: UUID? = null
+     val regulationScheduleId: java.util.UUID? = null
 )
 
 data class UpdateRegulationScheduleEvent(
-     val regulationScheduleId: UUID? = null
+     val regulationScheduleId: java.util.UUID? = null
 )
 
-data class DeleteRegulationScheduleEvent(@Id val regulationScheduleId: UUID? = null)
+data class DeleteRegulationScheduleEvent(@Id val regulationScheduleId: java.util.UUID? = null)
 
 // single association events
 
@@ -11056,16 +11056,16 @@ data class DeleteRegulationScheduleEvent(@Id val regulationScheduleId: UUID? = n
 // RemoteInputSignal Events
 
 data class CreateRemoteInputSignalEvent(
-    @Id var remoteInputSignalId: UUID? = null,
+    @Id var remoteInputSignalId: java.util.UUID? = null,
     val remoteSignalType: String
 )
 
 data class UpdateRemoteInputSignalEvent(
-    @Id var remoteInputSignalId: UUID? = null,
+    @Id var remoteInputSignalId: java.util.UUID? = null,
     val remoteSignalType: String
 )
 
-data class DeleteRemoteInputSignalEvent(@Id val remoteInputSignalId: UUID? = null)
+data class DeleteRemoteInputSignalEvent(@Id val remoteInputSignalId: java.util.UUID? = null)
 
 // single association events
 
@@ -11075,14 +11075,14 @@ data class DeleteRemoteInputSignalEvent(@Id val remoteInputSignalId: UUID? = nul
 // ReportingGroup Events
 
 data class CreateReportingGroupEvent(
-     val reportingGroupId: UUID? = null
+     val reportingGroupId: java.util.UUID? = null
 )
 
 data class UpdateReportingGroupEvent(
-     val reportingGroupId: UUID? = null
+     val reportingGroupId: java.util.UUID? = null
 )
 
-data class DeleteReportingGroupEvent(@Id val reportingGroupId: UUID? = null)
+data class DeleteReportingGroupEvent(@Id val reportingGroupId: java.util.UUID? = null)
 
 // single association events
 
@@ -11092,20 +11092,20 @@ data class DeleteReportingGroupEvent(@Id val reportingGroupId: UUID? = null)
 // Resistance Events
 
 data class CreateResistanceEvent(
-    @Id var resistanceId: UUID? = null,
+    @Id var resistanceId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateResistanceEvent(
-    @Id var resistanceId: UUID? = null,
+    @Id var resistanceId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteResistanceEvent(@Id val resistanceId: UUID? = null)
+data class DeleteResistanceEvent(@Id val resistanceId: java.util.UUID? = null)
 
 // single association events
 
@@ -11115,7 +11115,7 @@ data class DeleteResistanceEvent(@Id val resistanceId: UUID? = null)
 // ResistancePerLength Events
 
 data class CreateResistancePerLengthEvent(
-    @Id var resistancePerLengthId: UUID? = null,
+    @Id var resistancePerLengthId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -11124,7 +11124,7 @@ data class CreateResistancePerLengthEvent(
 )
 
 data class UpdateResistancePerLengthEvent(
-    @Id var resistancePerLengthId: UUID? = null,
+    @Id var resistancePerLengthId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -11132,7 +11132,7 @@ data class UpdateResistancePerLengthEvent(
     val value: String
 )
 
-data class DeleteResistancePerLengthEvent(@Id val resistancePerLengthId: UUID? = null)
+data class DeleteResistancePerLengthEvent(@Id val resistancePerLengthId: java.util.UUID? = null)
 
 // single association events
 
@@ -11142,20 +11142,20 @@ data class DeleteResistancePerLengthEvent(@Id val resistancePerLengthId: UUID? =
 // RotatingMachine Events
 
 data class CreateRotatingMachineEvent(
-    @Id var rotatingMachineId: UUID? = null,
+    @Id var rotatingMachineId: java.util.UUID? = null,
     val ratedPowerFactor: String,
     val ratedS: String,
     val ratedU: String
 )
 
 data class UpdateRotatingMachineEvent(
-    @Id var rotatingMachineId: UUID? = null,
+    @Id var rotatingMachineId: java.util.UUID? = null,
     val ratedPowerFactor: String,
     val ratedS: String,
     val ratedU: String
 )
 
-data class DeleteRotatingMachineEvent(@Id val rotatingMachineId: UUID? = null)
+data class DeleteRotatingMachineEvent(@Id val rotatingMachineId: java.util.UUID? = null)
 
 // single association events
 
@@ -11165,7 +11165,7 @@ data class DeleteRotatingMachineEvent(@Id val rotatingMachineId: UUID? = null)
 // RotatingMachineDynamics Events
 
 data class CreateRotatingMachineDynamicsEvent(
-    @Id var rotatingMachineDynamicsId: UUID? = null,
+    @Id var rotatingMachineDynamicsId: java.util.UUID? = null,
     val damping: String,
     val inertia: String,
     val saturationFactor: String,
@@ -11175,7 +11175,7 @@ data class CreateRotatingMachineDynamicsEvent(
 )
 
 data class UpdateRotatingMachineDynamicsEvent(
-    @Id var rotatingMachineDynamicsId: UUID? = null,
+    @Id var rotatingMachineDynamicsId: java.util.UUID? = null,
     val damping: String,
     val inertia: String,
     val saturationFactor: String,
@@ -11184,7 +11184,7 @@ data class UpdateRotatingMachineDynamicsEvent(
     val statorResistance: String
 )
 
-data class DeleteRotatingMachineDynamicsEvent(@Id val rotatingMachineDynamicsId: UUID? = null)
+data class DeleteRotatingMachineDynamicsEvent(@Id val rotatingMachineDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -11194,7 +11194,7 @@ data class DeleteRotatingMachineDynamicsEvent(@Id val rotatingMachineDynamicsId:
 // RotationSpeed Events
 
 data class CreateRotationSpeedEvent(
-    @Id var rotationSpeedId: UUID? = null,
+    @Id var rotationSpeedId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -11203,7 +11203,7 @@ data class CreateRotationSpeedEvent(
 )
 
 data class UpdateRotationSpeedEvent(
-    @Id var rotationSpeedId: UUID? = null,
+    @Id var rotationSpeedId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -11211,7 +11211,7 @@ data class UpdateRotationSpeedEvent(
     val value: String
 )
 
-data class DeleteRotationSpeedEvent(@Id val rotationSpeedId: UUID? = null)
+data class DeleteRotationSpeedEvent(@Id val rotationSpeedId: java.util.UUID? = null)
 
 // single association events
 
@@ -11221,18 +11221,18 @@ data class DeleteRotationSpeedEvent(@Id val rotationSpeedId: UUID? = null)
 // Season Events
 
 data class CreateSeasonEvent(
-    @Id var seasonId: UUID? = null,
+    @Id var seasonId: java.util.UUID? = null,
     val endDate: String,
     val startDate: String
 )
 
 data class UpdateSeasonEvent(
-    @Id var seasonId: UUID? = null,
+    @Id var seasonId: java.util.UUID? = null,
     val endDate: String,
     val startDate: String
 )
 
-data class DeleteSeasonEvent(@Id val seasonId: UUID? = null)
+data class DeleteSeasonEvent(@Id val seasonId: java.util.UUID? = null)
 
 // single association events
 
@@ -11242,14 +11242,14 @@ data class DeleteSeasonEvent(@Id val seasonId: UUID? = null)
 // SeasonDayTypeSchedule Events
 
 data class CreateSeasonDayTypeScheduleEvent(
-     val seasonDayTypeScheduleId: UUID? = null
+     val seasonDayTypeScheduleId: java.util.UUID? = null
 )
 
 data class UpdateSeasonDayTypeScheduleEvent(
-     val seasonDayTypeScheduleId: UUID? = null
+     val seasonDayTypeScheduleId: java.util.UUID? = null
 )
 
-data class DeleteSeasonDayTypeScheduleEvent(@Id val seasonDayTypeScheduleId: UUID? = null)
+data class DeleteSeasonDayTypeScheduleEvent(@Id val seasonDayTypeScheduleId: java.util.UUID? = null)
 
 // single association events
 
@@ -11259,20 +11259,20 @@ data class DeleteSeasonDayTypeScheduleEvent(@Id val seasonDayTypeScheduleId: UUI
 // Seconds Events
 
 data class CreateSecondsEvent(
-    @Id var secondsId: UUID? = null,
+    @Id var secondsId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateSecondsEvent(
-    @Id var secondsId: UUID? = null,
+    @Id var secondsId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteSecondsEvent(@Id val secondsId: UUID? = null)
+data class DeleteSecondsEvent(@Id val secondsId: java.util.UUID? = null)
 
 // single association events
 
@@ -11282,7 +11282,7 @@ data class DeleteSecondsEvent(@Id val secondsId: UUID? = null)
 // SeriesCompensator Events
 
 data class CreateSeriesCompensatorEvent(
-    @Id var seriesCompensatorId: UUID? = null,
+    @Id var seriesCompensatorId: java.util.UUID? = null,
     val r: String,
     val r0: String,
     val varistorPresent: String,
@@ -11293,7 +11293,7 @@ data class CreateSeriesCompensatorEvent(
 )
 
 data class UpdateSeriesCompensatorEvent(
-    @Id var seriesCompensatorId: UUID? = null,
+    @Id var seriesCompensatorId: java.util.UUID? = null,
     val r: String,
     val r0: String,
     val varistorPresent: String,
@@ -11303,7 +11303,7 @@ data class UpdateSeriesCompensatorEvent(
     val x0: String
 )
 
-data class DeleteSeriesCompensatorEvent(@Id val seriesCompensatorId: UUID? = null)
+data class DeleteSeriesCompensatorEvent(@Id val seriesCompensatorId: java.util.UUID? = null)
 
 // single association events
 
@@ -11313,18 +11313,18 @@ data class DeleteSeriesCompensatorEvent(@Id val seriesCompensatorId: UUID? = nul
 // SetPoint Events
 
 data class CreateSetPointEvent(
-    @Id var setPointId: UUID? = null,
+    @Id var setPointId: java.util.UUID? = null,
     val normalValue: String,
     val value: String
 )
 
 data class UpdateSetPointEvent(
-    @Id var setPointId: UUID? = null,
+    @Id var setPointId: java.util.UUID? = null,
     val normalValue: String,
     val value: String
 )
 
-data class DeleteSetPointEvent(@Id val setPointId: UUID? = null)
+data class DeleteSetPointEvent(@Id val setPointId: java.util.UUID? = null)
 
 // single association events
 
@@ -11334,7 +11334,7 @@ data class DeleteSetPointEvent(@Id val setPointId: UUID? = null)
 // ShuntCompensator Events
 
 data class CreateShuntCompensatorEvent(
-    @Id var shuntCompensatorId: UUID? = null,
+    @Id var shuntCompensatorId: java.util.UUID? = null,
     val aVRDelay: String,
     val grounded: String,
     val maximumSections: String,
@@ -11346,7 +11346,7 @@ data class CreateShuntCompensatorEvent(
 )
 
 data class UpdateShuntCompensatorEvent(
-    @Id var shuntCompensatorId: UUID? = null,
+    @Id var shuntCompensatorId: java.util.UUID? = null,
     val aVRDelay: String,
     val grounded: String,
     val maximumSections: String,
@@ -11357,7 +11357,7 @@ data class UpdateShuntCompensatorEvent(
     val voltageSensitivity: String
 )
 
-data class DeleteShuntCompensatorEvent(@Id val shuntCompensatorId: UUID? = null)
+data class DeleteShuntCompensatorEvent(@Id val shuntCompensatorId: java.util.UUID? = null)
 
 // single association events
 
@@ -11367,16 +11367,16 @@ data class DeleteShuntCompensatorEvent(@Id val shuntCompensatorId: UUID? = null)
 // Simple_Float Events
 
 data class CreateSimple_FloatEvent(
-    @Id var simple_FloatId: UUID? = null,
+    @Id var simple_FloatId: java.util.UUID? = null,
     val value: String
 )
 
 data class UpdateSimple_FloatEvent(
-    @Id var simple_FloatId: UUID? = null,
+    @Id var simple_FloatId: java.util.UUID? = null,
     val value: String
 )
 
-data class DeleteSimple_FloatEvent(@Id val simple_FloatId: UUID? = null)
+data class DeleteSimple_FloatEvent(@Id val simple_FloatId: java.util.UUID? = null)
 
 // single association events
 
@@ -11386,14 +11386,14 @@ data class DeleteSimple_FloatEvent(@Id val simple_FloatId: UUID? = null)
 // SolarGeneratingUnit Events
 
 data class CreateSolarGeneratingUnitEvent(
-     val solarGeneratingUnitId: UUID? = null
+     val solarGeneratingUnitId: java.util.UUID? = null
 )
 
 data class UpdateSolarGeneratingUnitEvent(
-     val solarGeneratingUnitId: UUID? = null
+     val solarGeneratingUnitId: java.util.UUID? = null
 )
 
-data class DeleteSolarGeneratingUnitEvent(@Id val solarGeneratingUnitId: UUID? = null)
+data class DeleteSolarGeneratingUnitEvent(@Id val solarGeneratingUnitId: java.util.UUID? = null)
 
 // single association events
 
@@ -11403,7 +11403,7 @@ data class DeleteSolarGeneratingUnitEvent(@Id val solarGeneratingUnitId: UUID? =
 // StateVariablesVersion Events
 
 data class CreateStateVariablesVersionEvent(
-    @Id var stateVariablesVersionId: UUID? = null,
+    @Id var stateVariablesVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11417,7 +11417,7 @@ data class CreateStateVariablesVersionEvent(
 )
 
 data class UpdateStateVariablesVersionEvent(
-    @Id var stateVariablesVersionId: UUID? = null,
+    @Id var stateVariablesVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11430,7 +11430,7 @@ data class UpdateStateVariablesVersionEvent(
     val shortName: String
 )
 
-data class DeleteStateVariablesVersionEvent(@Id val stateVariablesVersionId: UUID? = null)
+data class DeleteStateVariablesVersionEvent(@Id val stateVariablesVersionId: java.util.UUID? = null)
 
 // single association events
 
@@ -11440,7 +11440,7 @@ data class DeleteStateVariablesVersionEvent(@Id val stateVariablesVersionId: UUI
 // StaticVarCompensator Events
 
 data class CreateStaticVarCompensatorEvent(
-    @Id var staticVarCompensatorId: UUID? = null,
+    @Id var staticVarCompensatorId: java.util.UUID? = null,
     val capacitiveRating: String,
     val inductiveRating: String,
     val slope: String,
@@ -11449,7 +11449,7 @@ data class CreateStaticVarCompensatorEvent(
 )
 
 data class UpdateStaticVarCompensatorEvent(
-    @Id var staticVarCompensatorId: UUID? = null,
+    @Id var staticVarCompensatorId: java.util.UUID? = null,
     val capacitiveRating: String,
     val inductiveRating: String,
     val slope: String,
@@ -11457,7 +11457,7 @@ data class UpdateStaticVarCompensatorEvent(
     val voltageSetPoint: String
 )
 
-data class DeleteStaticVarCompensatorEvent(@Id val staticVarCompensatorId: UUID? = null)
+data class DeleteStaticVarCompensatorEvent(@Id val staticVarCompensatorId: java.util.UUID? = null)
 
 // single association events
 
@@ -11467,14 +11467,14 @@ data class DeleteStaticVarCompensatorEvent(@Id val staticVarCompensatorId: UUID?
 // Staticpowersystemmodel Events
 
 data class CreateStaticpowersystemmodelEvent(
-     val staticpowersystemmodelId: UUID? = null
+     val staticpowersystemmodelId: java.util.UUID? = null
 )
 
 data class UpdateStaticpowersystemmodelEvent(
-     val staticpowersystemmodelId: UUID? = null
+     val staticpowersystemmodelId: java.util.UUID? = null
 )
 
-data class DeleteStaticpowersystemmodelEvent(@Id val staticpowersystemmodelId: UUID? = null)
+data class DeleteStaticpowersystemmodelEvent(@Id val staticpowersystemmodelId: java.util.UUID? = null)
 
 // single association events
 
@@ -11484,14 +11484,14 @@ data class DeleteStaticpowersystemmodelEvent(@Id val staticpowersystemmodelId: U
 // StationSupply Events
 
 data class CreateStationSupplyEvent(
-     val stationSupplyId: UUID? = null
+     val stationSupplyId: java.util.UUID? = null
 )
 
 data class UpdateStationSupplyEvent(
-     val stationSupplyId: UUID? = null
+     val stationSupplyId: java.util.UUID? = null
 )
 
-data class DeleteStationSupplyEvent(@Id val stationSupplyId: UUID? = null)
+data class DeleteStationSupplyEvent(@Id val stationSupplyId: java.util.UUID? = null)
 
 // single association events
 
@@ -11501,7 +11501,7 @@ data class DeleteStationSupplyEvent(@Id val stationSupplyId: UUID? = null)
 // SteadyStateHypothesisVersion Events
 
 data class CreateSteadyStateHypothesisVersionEvent(
-    @Id var steadyStateHypothesisVersionId: UUID? = null,
+    @Id var steadyStateHypothesisVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11515,7 +11515,7 @@ data class CreateSteadyStateHypothesisVersionEvent(
 )
 
 data class UpdateSteadyStateHypothesisVersionEvent(
-    @Id var steadyStateHypothesisVersionId: UUID? = null,
+    @Id var steadyStateHypothesisVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11528,7 +11528,7 @@ data class UpdateSteadyStateHypothesisVersionEvent(
     val shortName: String
 )
 
-data class DeleteSteadyStateHypothesisVersionEvent(@Id val steadyStateHypothesisVersionId: UUID? = null)
+data class DeleteSteadyStateHypothesisVersionEvent(@Id val steadyStateHypothesisVersionId: java.util.UUID? = null)
 
 // single association events
 
@@ -11538,14 +11538,14 @@ data class DeleteSteadyStateHypothesisVersionEvent(@Id val steadyStateHypothesis
 // StringMeasurement Events
 
 data class CreateStringMeasurementEvent(
-     val stringMeasurementId: UUID? = null
+     val stringMeasurementId: java.util.UUID? = null
 )
 
 data class UpdateStringMeasurementEvent(
-     val stringMeasurementId: UUID? = null
+     val stringMeasurementId: java.util.UUID? = null
 )
 
-data class DeleteStringMeasurementEvent(@Id val stringMeasurementId: UUID? = null)
+data class DeleteStringMeasurementEvent(@Id val stringMeasurementId: java.util.UUID? = null)
 
 // single association events
 
@@ -11555,16 +11555,16 @@ data class DeleteStringMeasurementEvent(@Id val stringMeasurementId: UUID? = nul
 // StringMeasurementValue Events
 
 data class CreateStringMeasurementValueEvent(
-    @Id var stringMeasurementValueId: UUID? = null,
+    @Id var stringMeasurementValueId: java.util.UUID? = null,
     val value: String
 )
 
 data class UpdateStringMeasurementValueEvent(
-    @Id var stringMeasurementValueId: UUID? = null,
+    @Id var stringMeasurementValueId: java.util.UUID? = null,
     val value: String
 )
 
-data class DeleteStringMeasurementValueEvent(@Id val stringMeasurementValueId: UUID? = null)
+data class DeleteStringMeasurementValueEvent(@Id val stringMeasurementValueId: java.util.UUID? = null)
 
 // single association events
 
@@ -11574,14 +11574,14 @@ data class DeleteStringMeasurementValueEvent(@Id val stringMeasurementValueId: U
 // StringProxy Events
 
 data class CreateStringProxyEvent(
-     val stringProxyId: UUID? = null
+     val stringProxyId: java.util.UUID? = null
 )
 
 data class UpdateStringProxyEvent(
-     val stringProxyId: UUID? = null
+     val stringProxyId: java.util.UUID? = null
 )
 
-data class DeleteStringProxyEvent(@Id val stringProxyId: UUID? = null)
+data class DeleteStringProxyEvent(@Id val stringProxyId: java.util.UUID? = null)
 
 // single association events
 
@@ -11591,14 +11591,14 @@ data class DeleteStringProxyEvent(@Id val stringProxyId: UUID? = null)
 // SubGeographicalRegion Events
 
 data class CreateSubGeographicalRegionEvent(
-     val subGeographicalRegionId: UUID? = null
+     val subGeographicalRegionId: java.util.UUID? = null
 )
 
 data class UpdateSubGeographicalRegionEvent(
-     val subGeographicalRegionId: UUID? = null
+     val subGeographicalRegionId: java.util.UUID? = null
 )
 
-data class DeleteSubGeographicalRegionEvent(@Id val subGeographicalRegionId: UUID? = null)
+data class DeleteSubGeographicalRegionEvent(@Id val subGeographicalRegionId: java.util.UUID? = null)
 
 // single association events
 
@@ -11608,14 +11608,14 @@ data class DeleteSubGeographicalRegionEvent(@Id val subGeographicalRegionId: UUI
 // SubLoadArea Events
 
 data class CreateSubLoadAreaEvent(
-     val subLoadAreaId: UUID? = null
+     val subLoadAreaId: java.util.UUID? = null
 )
 
 data class UpdateSubLoadAreaEvent(
-     val subLoadAreaId: UUID? = null
+     val subLoadAreaId: java.util.UUID? = null
 )
 
-data class DeleteSubLoadAreaEvent(@Id val subLoadAreaId: UUID? = null)
+data class DeleteSubLoadAreaEvent(@Id val subLoadAreaId: java.util.UUID? = null)
 
 // single association events
 
@@ -11625,14 +11625,14 @@ data class DeleteSubLoadAreaEvent(@Id val subLoadAreaId: UUID? = null)
 // Substation Events
 
 data class CreateSubstationEvent(
-     val substationId: UUID? = null
+     val substationId: java.util.UUID? = null
 )
 
 data class UpdateSubstationEvent(
-     val substationId: UUID? = null
+     val substationId: java.util.UUID? = null
 )
 
-data class DeleteSubstationEvent(@Id val substationId: UUID? = null)
+data class DeleteSubstationEvent(@Id val substationId: java.util.UUID? = null)
 
 // single association events
 
@@ -11642,20 +11642,20 @@ data class DeleteSubstationEvent(@Id val substationId: UUID? = null)
 // Susceptance Events
 
 data class CreateSusceptanceEvent(
-    @Id var susceptanceId: UUID? = null,
+    @Id var susceptanceId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateSusceptanceEvent(
-    @Id var susceptanceId: UUID? = null,
+    @Id var susceptanceId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteSusceptanceEvent(@Id val susceptanceId: UUID? = null)
+data class DeleteSusceptanceEvent(@Id val susceptanceId: java.util.UUID? = null)
 
 // single association events
 
@@ -11665,18 +11665,18 @@ data class DeleteSusceptanceEvent(@Id val susceptanceId: UUID? = null)
 // SvInjection Events
 
 data class CreateSvInjectionEvent(
-    @Id var svInjectionId: UUID? = null,
+    @Id var svInjectionId: java.util.UUID? = null,
     val pInjection: String,
     val qInjection: String
 )
 
 data class UpdateSvInjectionEvent(
-    @Id var svInjectionId: UUID? = null,
+    @Id var svInjectionId: java.util.UUID? = null,
     val pInjection: String,
     val qInjection: String
 )
 
-data class DeleteSvInjectionEvent(@Id val svInjectionId: UUID? = null)
+data class DeleteSvInjectionEvent(@Id val svInjectionId: java.util.UUID? = null)
 
 // single association events
 
@@ -11686,18 +11686,18 @@ data class DeleteSvInjectionEvent(@Id val svInjectionId: UUID? = null)
 // SvPowerFlow Events
 
 data class CreateSvPowerFlowEvent(
-    @Id var svPowerFlowId: UUID? = null,
+    @Id var svPowerFlowId: java.util.UUID? = null,
     val p: String,
     val q: String
 )
 
 data class UpdateSvPowerFlowEvent(
-    @Id var svPowerFlowId: UUID? = null,
+    @Id var svPowerFlowId: java.util.UUID? = null,
     val p: String,
     val q: String
 )
 
-data class DeleteSvPowerFlowEvent(@Id val svPowerFlowId: UUID? = null)
+data class DeleteSvPowerFlowEvent(@Id val svPowerFlowId: java.util.UUID? = null)
 
 // single association events
 
@@ -11707,16 +11707,16 @@ data class DeleteSvPowerFlowEvent(@Id val svPowerFlowId: UUID? = null)
 // SvShuntCompensatorSections Events
 
 data class CreateSvShuntCompensatorSectionsEvent(
-    @Id var svShuntCompensatorSectionsId: UUID? = null,
+    @Id var svShuntCompensatorSectionsId: java.util.UUID? = null,
     val sections: String
 )
 
 data class UpdateSvShuntCompensatorSectionsEvent(
-    @Id var svShuntCompensatorSectionsId: UUID? = null,
+    @Id var svShuntCompensatorSectionsId: java.util.UUID? = null,
     val sections: String
 )
 
-data class DeleteSvShuntCompensatorSectionsEvent(@Id val svShuntCompensatorSectionsId: UUID? = null)
+data class DeleteSvShuntCompensatorSectionsEvent(@Id val svShuntCompensatorSectionsId: java.util.UUID? = null)
 
 // single association events
 
@@ -11726,16 +11726,16 @@ data class DeleteSvShuntCompensatorSectionsEvent(@Id val svShuntCompensatorSecti
 // SvStatus Events
 
 data class CreateSvStatusEvent(
-    @Id var svStatusId: UUID? = null,
+    @Id var svStatusId: java.util.UUID? = null,
     val inService: String
 )
 
 data class UpdateSvStatusEvent(
-    @Id var svStatusId: UUID? = null,
+    @Id var svStatusId: java.util.UUID? = null,
     val inService: String
 )
 
-data class DeleteSvStatusEvent(@Id val svStatusId: UUID? = null)
+data class DeleteSvStatusEvent(@Id val svStatusId: java.util.UUID? = null)
 
 // single association events
 
@@ -11745,16 +11745,16 @@ data class DeleteSvStatusEvent(@Id val svStatusId: UUID? = null)
 // SvTapStep Events
 
 data class CreateSvTapStepEvent(
-    @Id var svTapStepId: UUID? = null,
+    @Id var svTapStepId: java.util.UUID? = null,
     val position: String
 )
 
 data class UpdateSvTapStepEvent(
-    @Id var svTapStepId: UUID? = null,
+    @Id var svTapStepId: java.util.UUID? = null,
     val position: String
 )
 
-data class DeleteSvTapStepEvent(@Id val svTapStepId: UUID? = null)
+data class DeleteSvTapStepEvent(@Id val svTapStepId: java.util.UUID? = null)
 
 // single association events
 
@@ -11764,18 +11764,18 @@ data class DeleteSvTapStepEvent(@Id val svTapStepId: UUID? = null)
 // SvVoltage Events
 
 data class CreateSvVoltageEvent(
-    @Id var svVoltageId: UUID? = null,
+    @Id var svVoltageId: java.util.UUID? = null,
     val angle: String,
     val v: String
 )
 
 data class UpdateSvVoltageEvent(
-    @Id var svVoltageId: UUID? = null,
+    @Id var svVoltageId: java.util.UUID? = null,
     val angle: String,
     val v: String
 )
 
-data class DeleteSvVoltageEvent(@Id val svVoltageId: UUID? = null)
+data class DeleteSvVoltageEvent(@Id val svVoltageId: java.util.UUID? = null)
 
 // single association events
 
@@ -11785,16 +11785,16 @@ data class DeleteSvVoltageEvent(@Id val svVoltageId: UUID? = null)
 // SwitchIt Events
 
 data class CreateSwitchItEvent(
-    @Id var switchItId: UUID? = null,
+    @Id var switchItId: java.util.UUID? = null,
     val open: String
 )
 
 data class UpdateSwitchItEvent(
-    @Id var switchItId: UUID? = null,
+    @Id var switchItId: java.util.UUID? = null,
     val open: String
 )
 
-data class DeleteSwitchItEvent(@Id val switchItId: UUID? = null)
+data class DeleteSwitchItEvent(@Id val switchItId: java.util.UUID? = null)
 
 // single association events
 
@@ -11804,20 +11804,20 @@ data class DeleteSwitchItEvent(@Id val switchItId: UUID? = null)
 // SwitchProxy Events
 
 data class CreateSwitchProxyEvent(
-    @Id var switchProxyId: UUID? = null,
+    @Id var switchProxyId: java.util.UUID? = null,
     val normalOpen: String,
     val ratedCurrent: String,
     val retained: String
 )
 
 data class UpdateSwitchProxyEvent(
-    @Id var switchProxyId: UUID? = null,
+    @Id var switchProxyId: java.util.UUID? = null,
     val normalOpen: String,
     val ratedCurrent: String,
     val retained: String
 )
 
-data class DeleteSwitchProxyEvent(@Id val switchProxyId: UUID? = null)
+data class DeleteSwitchProxyEvent(@Id val switchProxyId: java.util.UUID? = null)
 
 // single association events
 
@@ -11827,14 +11827,14 @@ data class DeleteSwitchProxyEvent(@Id val switchProxyId: UUID? = null)
 // SwitchSchedule Events
 
 data class CreateSwitchScheduleEvent(
-     val switchScheduleId: UUID? = null
+     val switchScheduleId: java.util.UUID? = null
 )
 
 data class UpdateSwitchScheduleEvent(
-     val switchScheduleId: UUID? = null
+     val switchScheduleId: java.util.UUID? = null
 )
 
-data class DeleteSwitchScheduleEvent(@Id val switchScheduleId: UUID? = null)
+data class DeleteSwitchScheduleEvent(@Id val switchScheduleId: java.util.UUID? = null)
 
 // single association events
 
@@ -11844,7 +11844,7 @@ data class DeleteSwitchScheduleEvent(@Id val switchScheduleId: UUID? = null)
 // SynchronousMachine Events
 
 data class CreateSynchronousMachineEvent(
-    @Id var synchronousMachineId: UUID? = null,
+    @Id var synchronousMachineId: java.util.UUID? = null,
     val earthing: String,
     val earthingStarPointR: String,
     val earthingStarPointX: String,
@@ -11867,7 +11867,7 @@ data class CreateSynchronousMachineEvent(
 )
 
 data class UpdateSynchronousMachineEvent(
-    @Id var synchronousMachineId: UUID? = null,
+    @Id var synchronousMachineId: java.util.UUID? = null,
     val earthing: String,
     val earthingStarPointR: String,
     val earthingStarPointX: String,
@@ -11889,7 +11889,7 @@ data class UpdateSynchronousMachineEvent(
     val x2: String
 )
 
-data class DeleteSynchronousMachineEvent(@Id val synchronousMachineId: UUID? = null)
+data class DeleteSynchronousMachineEvent(@Id val synchronousMachineId: java.util.UUID? = null)
 
 // single association events
 
@@ -11899,7 +11899,7 @@ data class DeleteSynchronousMachineEvent(@Id val synchronousMachineId: UUID? = n
 // SynchronousMachineDetailed Events
 
 data class CreateSynchronousMachineDetailedEvent(
-    @Id var synchronousMachineDetailedId: UUID? = null,
+    @Id var synchronousMachineDetailedId: java.util.UUID? = null,
     val efdBaseRatio: String,
     val ifdBaseType: String,
     val ifdBaseValue: String,
@@ -11908,7 +11908,7 @@ data class CreateSynchronousMachineDetailedEvent(
 )
 
 data class UpdateSynchronousMachineDetailedEvent(
-    @Id var synchronousMachineDetailedId: UUID? = null,
+    @Id var synchronousMachineDetailedId: java.util.UUID? = null,
     val efdBaseRatio: String,
     val ifdBaseType: String,
     val ifdBaseValue: String,
@@ -11916,7 +11916,7 @@ data class UpdateSynchronousMachineDetailedEvent(
     val saturationFactorQAxis: String
 )
 
-data class DeleteSynchronousMachineDetailedEvent(@Id val synchronousMachineDetailedId: UUID? = null)
+data class DeleteSynchronousMachineDetailedEvent(@Id val synchronousMachineDetailedId: java.util.UUID? = null)
 
 // single association events
 
@@ -11926,14 +11926,14 @@ data class DeleteSynchronousMachineDetailedEvent(@Id val synchronousMachineDetai
 // SynchronousMachineDynamics Events
 
 data class CreateSynchronousMachineDynamicsEvent(
-     val synchronousMachineDynamicsId: UUID? = null
+     val synchronousMachineDynamicsId: java.util.UUID? = null
 )
 
 data class UpdateSynchronousMachineDynamicsEvent(
-     val synchronousMachineDynamicsId: UUID? = null
+     val synchronousMachineDynamicsId: java.util.UUID? = null
 )
 
-data class DeleteSynchronousMachineDynamicsEvent(@Id val synchronousMachineDynamicsId: UUID? = null)
+data class DeleteSynchronousMachineDynamicsEvent(@Id val synchronousMachineDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -11943,7 +11943,7 @@ data class DeleteSynchronousMachineDynamicsEvent(@Id val synchronousMachineDynam
 // SynchronousMachineEquivalentCircuit Events
 
 data class CreateSynchronousMachineEquivalentCircuitEvent(
-    @Id var synchronousMachineEquivalentCircuitId: UUID? = null,
+    @Id var synchronousMachineEquivalentCircuitId: java.util.UUID? = null,
     val r1d: String,
     val r1q: String,
     val r2q: String,
@@ -11958,7 +11958,7 @@ data class CreateSynchronousMachineEquivalentCircuitEvent(
 )
 
 data class UpdateSynchronousMachineEquivalentCircuitEvent(
-    @Id var synchronousMachineEquivalentCircuitId: UUID? = null,
+    @Id var synchronousMachineEquivalentCircuitId: java.util.UUID? = null,
     val r1d: String,
     val r1q: String,
     val r2q: String,
@@ -11972,7 +11972,7 @@ data class UpdateSynchronousMachineEquivalentCircuitEvent(
     val xfd: String
 )
 
-data class DeleteSynchronousMachineEquivalentCircuitEvent(@Id val synchronousMachineEquivalentCircuitId: UUID? = null)
+data class DeleteSynchronousMachineEquivalentCircuitEvent(@Id val synchronousMachineEquivalentCircuitId: java.util.UUID? = null)
 
 // single association events
 
@@ -11982,14 +11982,14 @@ data class DeleteSynchronousMachineEquivalentCircuitEvent(@Id val synchronousMac
 // SynchronousMachineSimplified Events
 
 data class CreateSynchronousMachineSimplifiedEvent(
-     val synchronousMachineSimplifiedId: UUID? = null
+     val synchronousMachineSimplifiedId: java.util.UUID? = null
 )
 
 data class UpdateSynchronousMachineSimplifiedEvent(
-     val synchronousMachineSimplifiedId: UUID? = null
+     val synchronousMachineSimplifiedId: java.util.UUID? = null
 )
 
-data class DeleteSynchronousMachineSimplifiedEvent(@Id val synchronousMachineSimplifiedId: UUID? = null)
+data class DeleteSynchronousMachineSimplifiedEvent(@Id val synchronousMachineSimplifiedId: java.util.UUID? = null)
 
 // single association events
 
@@ -11999,7 +11999,7 @@ data class DeleteSynchronousMachineSimplifiedEvent(@Id val synchronousMachineSim
 // SynchronousMachineTimeConstantReactance Events
 
 data class CreateSynchronousMachineTimeConstantReactanceEvent(
-    @Id var synchronousMachineTimeConstantReactanceId: UUID? = null,
+    @Id var synchronousMachineTimeConstantReactanceId: java.util.UUID? = null,
     val ks: String,
     val modelType: String,
     val rotorType: String,
@@ -12017,7 +12017,7 @@ data class CreateSynchronousMachineTimeConstantReactanceEvent(
 )
 
 data class UpdateSynchronousMachineTimeConstantReactanceEvent(
-    @Id var synchronousMachineTimeConstantReactanceId: UUID? = null,
+    @Id var synchronousMachineTimeConstantReactanceId: java.util.UUID? = null,
     val ks: String,
     val modelType: String,
     val rotorType: String,
@@ -12034,7 +12034,7 @@ data class UpdateSynchronousMachineTimeConstantReactanceEvent(
     val xQuadTrans: String
 )
 
-data class DeleteSynchronousMachineTimeConstantReactanceEvent(@Id val synchronousMachineTimeConstantReactanceId: UUID? = null)
+data class DeleteSynchronousMachineTimeConstantReactanceEvent(@Id val synchronousMachineTimeConstantReactanceId: java.util.UUID? = null)
 
 // single association events
 
@@ -12044,16 +12044,16 @@ data class DeleteSynchronousMachineTimeConstantReactanceEvent(@Id val synchronou
 // SynchronousMachineUserDefined Events
 
 data class CreateSynchronousMachineUserDefinedEvent(
-    @Id var synchronousMachineUserDefinedId: UUID? = null,
+    @Id var synchronousMachineUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateSynchronousMachineUserDefinedEvent(
-    @Id var synchronousMachineUserDefinedId: UUID? = null,
+    @Id var synchronousMachineUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteSynchronousMachineUserDefinedEvent(@Id val synchronousMachineUserDefinedId: UUID? = null)
+data class DeleteSynchronousMachineUserDefinedEvent(@Id val synchronousMachineUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -12063,7 +12063,7 @@ data class DeleteSynchronousMachineUserDefinedEvent(@Id val synchronousMachineUs
 // TapChanger Events
 
 data class CreateTapChangerEvent(
-    @Id var tapChangerId: UUID? = null,
+    @Id var tapChangerId: java.util.UUID? = null,
     val highStep: String,
     val lowStep: String,
     val ltcFlag: String,
@@ -12073,7 +12073,7 @@ data class CreateTapChangerEvent(
 )
 
 data class UpdateTapChangerEvent(
-    @Id var tapChangerId: UUID? = null,
+    @Id var tapChangerId: java.util.UUID? = null,
     val highStep: String,
     val lowStep: String,
     val ltcFlag: String,
@@ -12082,7 +12082,7 @@ data class UpdateTapChangerEvent(
     val normalStep: String
 )
 
-data class DeleteTapChangerEvent(@Id val tapChangerId: UUID? = null)
+data class DeleteTapChangerEvent(@Id val tapChangerId: java.util.UUID? = null)
 
 // single association events
 
@@ -12092,14 +12092,14 @@ data class DeleteTapChangerEvent(@Id val tapChangerId: UUID? = null)
 // TapChangerControl Events
 
 data class CreateTapChangerControlEvent(
-     val tapChangerControlId: UUID? = null
+     val tapChangerControlId: java.util.UUID? = null
 )
 
 data class UpdateTapChangerControlEvent(
-     val tapChangerControlId: UUID? = null
+     val tapChangerControlId: java.util.UUID? = null
 )
 
-data class DeleteTapChangerControlEvent(@Id val tapChangerControlId: UUID? = null)
+data class DeleteTapChangerControlEvent(@Id val tapChangerControlId: java.util.UUID? = null)
 
 // single association events
 
@@ -12109,7 +12109,7 @@ data class DeleteTapChangerControlEvent(@Id val tapChangerControlId: UUID? = nul
 // TapChangerTablePoint Events
 
 data class CreateTapChangerTablePointEvent(
-    @Id var tapChangerTablePointId: UUID? = null,
+    @Id var tapChangerTablePointId: java.util.UUID? = null,
     val b: String,
     val g: String,
     val r: String,
@@ -12119,7 +12119,7 @@ data class CreateTapChangerTablePointEvent(
 )
 
 data class UpdateTapChangerTablePointEvent(
-    @Id var tapChangerTablePointId: UUID? = null,
+    @Id var tapChangerTablePointId: java.util.UUID? = null,
     val b: String,
     val g: String,
     val r: String,
@@ -12128,7 +12128,7 @@ data class UpdateTapChangerTablePointEvent(
     val x: String
 )
 
-data class DeleteTapChangerTablePointEvent(@Id val tapChangerTablePointId: UUID? = null)
+data class DeleteTapChangerTablePointEvent(@Id val tapChangerTablePointId: java.util.UUID? = null)
 
 // single association events
 
@@ -12138,14 +12138,14 @@ data class DeleteTapChangerTablePointEvent(@Id val tapChangerTablePointId: UUID?
 // TapSchedule Events
 
 data class CreateTapScheduleEvent(
-     val tapScheduleId: UUID? = null
+     val tapScheduleId: java.util.UUID? = null
 )
 
 data class UpdateTapScheduleEvent(
-     val tapScheduleId: UUID? = null
+     val tapScheduleId: java.util.UUID? = null
 )
 
-data class DeleteTapScheduleEvent(@Id val tapScheduleId: UUID? = null)
+data class DeleteTapScheduleEvent(@Id val tapScheduleId: java.util.UUID? = null)
 
 // single association events
 
@@ -12155,20 +12155,20 @@ data class DeleteTapScheduleEvent(@Id val tapScheduleId: UUID? = null)
 // Temperature Events
 
 data class CreateTemperatureEvent(
-    @Id var temperatureId: UUID? = null,
+    @Id var temperatureId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateTemperatureEvent(
-    @Id var temperatureId: UUID? = null,
+    @Id var temperatureId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteTemperatureEvent(@Id val temperatureId: UUID? = null)
+data class DeleteTemperatureEvent(@Id val temperatureId: java.util.UUID? = null)
 
 // single association events
 
@@ -12178,14 +12178,14 @@ data class DeleteTemperatureEvent(@Id val temperatureId: UUID? = null)
 // Terminal Events
 
 data class CreateTerminalEvent(
-     val terminalId: UUID? = null
+     val terminalId: java.util.UUID? = null
 )
 
 data class UpdateTerminalEvent(
-     val terminalId: UUID? = null
+     val terminalId: java.util.UUID? = null
 )
 
-data class DeleteTerminalEvent(@Id val terminalId: UUID? = null)
+data class DeleteTerminalEvent(@Id val terminalId: java.util.UUID? = null)
 
 // single association events
 
@@ -12195,16 +12195,16 @@ data class DeleteTerminalEvent(@Id val terminalId: UUID? = null)
 // TextDiagramObject Events
 
 data class CreateTextDiagramObjectEvent(
-    @Id var textDiagramObjectId: UUID? = null,
+    @Id var textDiagramObjectId: java.util.UUID? = null,
     val text: String
 )
 
 data class UpdateTextDiagramObjectEvent(
-    @Id var textDiagramObjectId: UUID? = null,
+    @Id var textDiagramObjectId: java.util.UUID? = null,
     val text: String
 )
 
-data class DeleteTextDiagramObjectEvent(@Id val textDiagramObjectId: UUID? = null)
+data class DeleteTextDiagramObjectEvent(@Id val textDiagramObjectId: java.util.UUID? = null)
 
 // single association events
 
@@ -12214,14 +12214,14 @@ data class DeleteTextDiagramObjectEvent(@Id val textDiagramObjectId: UUID? = nul
 // ThermalGeneratingUnit Events
 
 data class CreateThermalGeneratingUnitEvent(
-     val thermalGeneratingUnitId: UUID? = null
+     val thermalGeneratingUnitId: java.util.UUID? = null
 )
 
 data class UpdateThermalGeneratingUnitEvent(
-     val thermalGeneratingUnitId: UUID? = null
+     val thermalGeneratingUnitId: java.util.UUID? = null
 )
 
-data class DeleteThermalGeneratingUnitEvent(@Id val thermalGeneratingUnitId: UUID? = null)
+data class DeleteThermalGeneratingUnitEvent(@Id val thermalGeneratingUnitId: java.util.UUID? = null)
 
 // single association events
 
@@ -12231,16 +12231,16 @@ data class DeleteThermalGeneratingUnitEvent(@Id val thermalGeneratingUnitId: UUI
 // TieFlow Events
 
 data class CreateTieFlowEvent(
-    @Id var tieFlowId: UUID? = null,
+    @Id var tieFlowId: java.util.UUID? = null,
     val positiveFlowIn: String
 )
 
 data class UpdateTieFlowEvent(
-    @Id var tieFlowId: UUID? = null,
+    @Id var tieFlowId: java.util.UUID? = null,
     val positiveFlowIn: String
 )
 
-data class DeleteTieFlowEvent(@Id val tieFlowId: UUID? = null)
+data class DeleteTieFlowEvent(@Id val tieFlowId: java.util.UUID? = null)
 
 // single association events
 
@@ -12250,14 +12250,14 @@ data class DeleteTieFlowEvent(@Id val tieFlowId: UUID? = null)
 // TopologicalIsland Events
 
 data class CreateTopologicalIslandEvent(
-     val topologicalIslandId: UUID? = null
+     val topologicalIslandId: java.util.UUID? = null
 )
 
 data class UpdateTopologicalIslandEvent(
-     val topologicalIslandId: UUID? = null
+     val topologicalIslandId: java.util.UUID? = null
 )
 
-data class DeleteTopologicalIslandEvent(@Id val topologicalIslandId: UUID? = null)
+data class DeleteTopologicalIslandEvent(@Id val topologicalIslandId: java.util.UUID? = null)
 
 // single association events
 
@@ -12267,7 +12267,7 @@ data class DeleteTopologicalIslandEvent(@Id val topologicalIslandId: UUID? = nul
 // TopologicalNode Events
 
 data class CreateTopologicalNodeEvent(
-    @Id var topologicalNodeId: UUID? = null,
+    @Id var topologicalNodeId: java.util.UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -12278,7 +12278,7 @@ data class CreateTopologicalNodeEvent(
 )
 
 data class UpdateTopologicalNodeEvent(
-    @Id var topologicalNodeId: UUID? = null,
+    @Id var topologicalNodeId: java.util.UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -12288,7 +12288,7 @@ data class UpdateTopologicalNodeEvent(
     val toEndNameTso: String
 )
 
-data class DeleteTopologicalNodeEvent(@Id val topologicalNodeId: UUID? = null)
+data class DeleteTopologicalNodeEvent(@Id val topologicalNodeId: java.util.UUID? = null)
 
 // single association events
 
@@ -12298,7 +12298,7 @@ data class DeleteTopologicalNodeEvent(@Id val topologicalNodeId: UUID? = null)
 // TopologyBoundaryVersion Events
 
 data class CreateTopologyBoundaryVersionEvent(
-    @Id var topologyBoundaryVersionId: UUID? = null,
+    @Id var topologyBoundaryVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -12312,7 +12312,7 @@ data class CreateTopologyBoundaryVersionEvent(
 )
 
 data class UpdateTopologyBoundaryVersionEvent(
-    @Id var topologyBoundaryVersionId: UUID? = null,
+    @Id var topologyBoundaryVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -12325,7 +12325,7 @@ data class UpdateTopologyBoundaryVersionEvent(
     val shortName: String
 )
 
-data class DeleteTopologyBoundaryVersionEvent(@Id val topologyBoundaryVersionId: UUID? = null)
+data class DeleteTopologyBoundaryVersionEvent(@Id val topologyBoundaryVersionId: java.util.UUID? = null)
 
 // single association events
 
@@ -12335,7 +12335,7 @@ data class DeleteTopologyBoundaryVersionEvent(@Id val topologyBoundaryVersionId:
 // TopologyVersion Events
 
 data class CreateTopologyVersionEvent(
-    @Id var topologyVersionId: UUID? = null,
+    @Id var topologyVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -12349,7 +12349,7 @@ data class CreateTopologyVersionEvent(
 )
 
 data class UpdateTopologyVersionEvent(
-    @Id var topologyVersionId: UUID? = null,
+    @Id var topologyVersionId: java.util.UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -12362,7 +12362,7 @@ data class UpdateTopologyVersionEvent(
     val shortName: String
 )
 
-data class DeleteTopologyVersionEvent(@Id val topologyVersionId: UUID? = null)
+data class DeleteTopologyVersionEvent(@Id val topologyVersionId: java.util.UUID? = null)
 
 // single association events
 
@@ -12372,7 +12372,7 @@ data class DeleteTopologyVersionEvent(@Id val topologyVersionId: UUID? = null)
 // TransformerEnd Events
 
 data class CreateTransformerEndEvent(
-    @Id var transformerEndId: UUID? = null,
+    @Id var transformerEndId: java.util.UUID? = null,
     val endNumber: String,
     val grounded: String,
     val rground: String,
@@ -12380,14 +12380,14 @@ data class CreateTransformerEndEvent(
 )
 
 data class UpdateTransformerEndEvent(
-    @Id var transformerEndId: UUID? = null,
+    @Id var transformerEndId: java.util.UUID? = null,
     val endNumber: String,
     val grounded: String,
     val rground: String,
     val xground: String
 )
 
-data class DeleteTransformerEndEvent(@Id val transformerEndId: UUID? = null)
+data class DeleteTransformerEndEvent(@Id val transformerEndId: java.util.UUID? = null)
 
 // single association events
 
@@ -12397,7 +12397,7 @@ data class DeleteTransformerEndEvent(@Id val transformerEndId: UUID? = null)
 // TurbLCFB1 Events
 
 data class CreateTurbLCFB1Event(
-    @Id var turbLCFB1Id: UUID? = null,
+    @Id var turbLCFB1Id: java.util.UUID? = null,
     val db: String,
     val emax: String,
     val fb: String,
@@ -12413,7 +12413,7 @@ data class CreateTurbLCFB1Event(
 )
 
 data class UpdateTurbLCFB1Event(
-    @Id var turbLCFB1Id: UUID? = null,
+    @Id var turbLCFB1Id: java.util.UUID? = null,
     val db: String,
     val emax: String,
     val fb: String,
@@ -12428,7 +12428,7 @@ data class UpdateTurbLCFB1Event(
     val tpelec: String
 )
 
-data class DeleteTurbLCFB1Event(@Id val turbLCFB1Id: UUID? = null)
+data class DeleteTurbLCFB1Event(@Id val turbLCFB1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -12438,14 +12438,14 @@ data class DeleteTurbLCFB1Event(@Id val turbLCFB1Id: UUID? = null)
 // TurbineGovernorDynamics Events
 
 data class CreateTurbineGovernorDynamicsEvent(
-     val turbineGovernorDynamicsId: UUID? = null
+     val turbineGovernorDynamicsId: java.util.UUID? = null
 )
 
 data class UpdateTurbineGovernorDynamicsEvent(
-     val turbineGovernorDynamicsId: UUID? = null
+     val turbineGovernorDynamicsId: java.util.UUID? = null
 )
 
-data class DeleteTurbineGovernorDynamicsEvent(@Id val turbineGovernorDynamicsId: UUID? = null)
+data class DeleteTurbineGovernorDynamicsEvent(@Id val turbineGovernorDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -12455,16 +12455,16 @@ data class DeleteTurbineGovernorDynamicsEvent(@Id val turbineGovernorDynamicsId:
 // TurbineGovernorUserDefined Events
 
 data class CreateTurbineGovernorUserDefinedEvent(
-    @Id var turbineGovernorUserDefinedId: UUID? = null,
+    @Id var turbineGovernorUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateTurbineGovernorUserDefinedEvent(
-    @Id var turbineGovernorUserDefinedId: UUID? = null,
+    @Id var turbineGovernorUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteTurbineGovernorUserDefinedEvent(@Id val turbineGovernorUserDefinedId: UUID? = null)
+data class DeleteTurbineGovernorUserDefinedEvent(@Id val turbineGovernorUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -12474,14 +12474,14 @@ data class DeleteTurbineGovernorUserDefinedEvent(@Id val turbineGovernorUserDefi
 // TurbineLoadControllerDynamics Events
 
 data class CreateTurbineLoadControllerDynamicsEvent(
-     val turbineLoadControllerDynamicsId: UUID? = null
+     val turbineLoadControllerDynamicsId: java.util.UUID? = null
 )
 
 data class UpdateTurbineLoadControllerDynamicsEvent(
-     val turbineLoadControllerDynamicsId: UUID? = null
+     val turbineLoadControllerDynamicsId: java.util.UUID? = null
 )
 
-data class DeleteTurbineLoadControllerDynamicsEvent(@Id val turbineLoadControllerDynamicsId: UUID? = null)
+data class DeleteTurbineLoadControllerDynamicsEvent(@Id val turbineLoadControllerDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -12491,16 +12491,16 @@ data class DeleteTurbineLoadControllerDynamicsEvent(@Id val turbineLoadControlle
 // TurbineLoadControllerUserDefined Events
 
 data class CreateTurbineLoadControllerUserDefinedEvent(
-    @Id var turbineLoadControllerUserDefinedId: UUID? = null,
+    @Id var turbineLoadControllerUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateTurbineLoadControllerUserDefinedEvent(
-    @Id var turbineLoadControllerUserDefinedId: UUID? = null,
+    @Id var turbineLoadControllerUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteTurbineLoadControllerUserDefinedEvent(@Id val turbineLoadControllerUserDefinedId: UUID? = null)
+data class DeleteTurbineLoadControllerUserDefinedEvent(@Id val turbineLoadControllerUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -12510,7 +12510,7 @@ data class DeleteTurbineLoadControllerUserDefinedEvent(@Id val turbineLoadContro
 // UnderexcLim2Simplified Events
 
 data class CreateUnderexcLim2SimplifiedEvent(
-    @Id var underexcLim2SimplifiedId: UUID? = null,
+    @Id var underexcLim2SimplifiedId: java.util.UUID? = null,
     val kui: String,
     val p0: String,
     val p1: String,
@@ -12521,7 +12521,7 @@ data class CreateUnderexcLim2SimplifiedEvent(
 )
 
 data class UpdateUnderexcLim2SimplifiedEvent(
-    @Id var underexcLim2SimplifiedId: UUID? = null,
+    @Id var underexcLim2SimplifiedId: java.util.UUID? = null,
     val kui: String,
     val p0: String,
     val p1: String,
@@ -12531,7 +12531,7 @@ data class UpdateUnderexcLim2SimplifiedEvent(
     val vuimin: String
 )
 
-data class DeleteUnderexcLim2SimplifiedEvent(@Id val underexcLim2SimplifiedId: UUID? = null)
+data class DeleteUnderexcLim2SimplifiedEvent(@Id val underexcLim2SimplifiedId: java.util.UUID? = null)
 
 // single association events
 
@@ -12541,7 +12541,7 @@ data class DeleteUnderexcLim2SimplifiedEvent(@Id val underexcLim2SimplifiedId: U
 // UnderexcLimIEEE1 Events
 
 data class CreateUnderexcLimIEEE1Event(
-    @Id var underexcLimIEEE1Id: UUID? = null,
+    @Id var underexcLimIEEE1Id: java.util.UUID? = null,
     val kuc: String,
     val kuf: String,
     val kui: String,
@@ -12560,7 +12560,7 @@ data class CreateUnderexcLimIEEE1Event(
 )
 
 data class UpdateUnderexcLimIEEE1Event(
-    @Id var underexcLimIEEE1Id: UUID? = null,
+    @Id var underexcLimIEEE1Id: java.util.UUID? = null,
     val kuc: String,
     val kuf: String,
     val kui: String,
@@ -12578,7 +12578,7 @@ data class UpdateUnderexcLimIEEE1Event(
     val vurmax: String
 )
 
-data class DeleteUnderexcLimIEEE1Event(@Id val underexcLimIEEE1Id: UUID? = null)
+data class DeleteUnderexcLimIEEE1Event(@Id val underexcLimIEEE1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -12588,7 +12588,7 @@ data class DeleteUnderexcLimIEEE1Event(@Id val underexcLimIEEE1Id: UUID? = null)
 // UnderexcLimIEEE2 Events
 
 data class CreateUnderexcLimIEEE2Event(
-    @Id var underexcLimIEEE2Id: UUID? = null,
+    @Id var underexcLimIEEE2Id: java.util.UUID? = null,
     val k1: String,
     val k2: String,
     val kfb: String,
@@ -12632,7 +12632,7 @@ data class CreateUnderexcLimIEEE2Event(
 )
 
 data class UpdateUnderexcLimIEEE2Event(
-    @Id var underexcLimIEEE2Id: UUID? = null,
+    @Id var underexcLimIEEE2Id: java.util.UUID? = null,
     val k1: String,
     val k2: String,
     val kfb: String,
@@ -12675,7 +12675,7 @@ data class UpdateUnderexcLimIEEE2Event(
     val vulmin: String
 )
 
-data class DeleteUnderexcLimIEEE2Event(@Id val underexcLimIEEE2Id: UUID? = null)
+data class DeleteUnderexcLimIEEE2Event(@Id val underexcLimIEEE2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -12685,7 +12685,7 @@ data class DeleteUnderexcLimIEEE2Event(@Id val underexcLimIEEE2Id: UUID? = null)
 // UnderexcLimX1 Events
 
 data class CreateUnderexcLimX1Event(
-    @Id var underexcLimX1Id: UUID? = null,
+    @Id var underexcLimX1Id: java.util.UUID? = null,
     val k: String,
     val kf2: String,
     val km: String,
@@ -12695,7 +12695,7 @@ data class CreateUnderexcLimX1Event(
 )
 
 data class UpdateUnderexcLimX1Event(
-    @Id var underexcLimX1Id: UUID? = null,
+    @Id var underexcLimX1Id: java.util.UUID? = null,
     val k: String,
     val kf2: String,
     val km: String,
@@ -12704,7 +12704,7 @@ data class UpdateUnderexcLimX1Event(
     val tm: String
 )
 
-data class DeleteUnderexcLimX1Event(@Id val underexcLimX1Id: UUID? = null)
+data class DeleteUnderexcLimX1Event(@Id val underexcLimX1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -12714,7 +12714,7 @@ data class DeleteUnderexcLimX1Event(@Id val underexcLimX1Id: UUID? = null)
 // UnderexcLimX2 Events
 
 data class CreateUnderexcLimX2Event(
-    @Id var underexcLimX2Id: UUID? = null,
+    @Id var underexcLimX2Id: java.util.UUID? = null,
     val kf2: String,
     val km: String,
     val melmax: String,
@@ -12725,7 +12725,7 @@ data class CreateUnderexcLimX2Event(
 )
 
 data class UpdateUnderexcLimX2Event(
-    @Id var underexcLimX2Id: UUID? = null,
+    @Id var underexcLimX2Id: java.util.UUID? = null,
     val kf2: String,
     val km: String,
     val melmax: String,
@@ -12735,7 +12735,7 @@ data class UpdateUnderexcLimX2Event(
     val tm: String
 )
 
-data class DeleteUnderexcLimX2Event(@Id val underexcLimX2Id: UUID? = null)
+data class DeleteUnderexcLimX2Event(@Id val underexcLimX2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -12745,14 +12745,14 @@ data class DeleteUnderexcLimX2Event(@Id val underexcLimX2Id: UUID? = null)
 // UnderexcitationLimiterDynamics Events
 
 data class CreateUnderexcitationLimiterDynamicsEvent(
-     val underexcitationLimiterDynamicsId: UUID? = null
+     val underexcitationLimiterDynamicsId: java.util.UUID? = null
 )
 
 data class UpdateUnderexcitationLimiterDynamicsEvent(
-     val underexcitationLimiterDynamicsId: UUID? = null
+     val underexcitationLimiterDynamicsId: java.util.UUID? = null
 )
 
-data class DeleteUnderexcitationLimiterDynamicsEvent(@Id val underexcitationLimiterDynamicsId: UUID? = null)
+data class DeleteUnderexcitationLimiterDynamicsEvent(@Id val underexcitationLimiterDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -12762,16 +12762,16 @@ data class DeleteUnderexcitationLimiterDynamicsEvent(@Id val underexcitationLimi
 // UnderexcitationLimiterUserDefined Events
 
 data class CreateUnderexcitationLimiterUserDefinedEvent(
-    @Id var underexcitationLimiterUserDefinedId: UUID? = null,
+    @Id var underexcitationLimiterUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateUnderexcitationLimiterUserDefinedEvent(
-    @Id var underexcitationLimiterUserDefinedId: UUID? = null,
+    @Id var underexcitationLimiterUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteUnderexcitationLimiterUserDefinedEvent(@Id val underexcitationLimiterUserDefinedId: UUID? = null)
+data class DeleteUnderexcitationLimiterUserDefinedEvent(@Id val underexcitationLimiterUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -12781,14 +12781,14 @@ data class DeleteUnderexcitationLimiterUserDefinedEvent(@Id val underexcitationL
 // Unresolvedname Events
 
 data class CreateUnresolvednameEvent(
-     val unresolvednameId: UUID? = null
+     val unresolvednameId: java.util.UUID? = null
 )
 
 data class UpdateUnresolvednameEvent(
-     val unresolvednameId: UUID? = null
+     val unresolvednameId: java.util.UUID? = null
 )
 
-data class DeleteUnresolvednameEvent(@Id val unresolvednameId: UUID? = null)
+data class DeleteUnresolvednameEvent(@Id val unresolvednameId: java.util.UUID? = null)
 
 // single association events
 
@@ -12798,7 +12798,7 @@ data class DeleteUnresolvednameEvent(@Id val unresolvednameId: UUID? = null)
 // VAdjIEEE Events
 
 data class CreateVAdjIEEEEvent(
-    @Id var vAdjIEEEId: UUID? = null,
+    @Id var vAdjIEEEId: java.util.UUID? = null,
     val adjslew: String,
     val taoff: String,
     val taon: String,
@@ -12808,7 +12808,7 @@ data class CreateVAdjIEEEEvent(
 )
 
 data class UpdateVAdjIEEEEvent(
-    @Id var vAdjIEEEId: UUID? = null,
+    @Id var vAdjIEEEId: java.util.UUID? = null,
     val adjslew: String,
     val taoff: String,
     val taon: String,
@@ -12817,7 +12817,7 @@ data class UpdateVAdjIEEEEvent(
     val vadjmin: String
 )
 
-data class DeleteVAdjIEEEEvent(@Id val vAdjIEEEId: UUID? = null)
+data class DeleteVAdjIEEEEvent(@Id val vAdjIEEEId: java.util.UUID? = null)
 
 // single association events
 
@@ -12827,20 +12827,20 @@ data class DeleteVAdjIEEEEvent(@Id val vAdjIEEEId: UUID? = null)
 // VCompIEEEType1 Events
 
 data class CreateVCompIEEEType1Event(
-    @Id var vCompIEEEType1Id: UUID? = null,
+    @Id var vCompIEEEType1Id: java.util.UUID? = null,
     val rc: String,
     val tr: String,
     val xc: String
 )
 
 data class UpdateVCompIEEEType1Event(
-    @Id var vCompIEEEType1Id: UUID? = null,
+    @Id var vCompIEEEType1Id: java.util.UUID? = null,
     val rc: String,
     val tr: String,
     val xc: String
 )
 
-data class DeleteVCompIEEEType1Event(@Id val vCompIEEEType1Id: UUID? = null)
+data class DeleteVCompIEEEType1Event(@Id val vCompIEEEType1Id: java.util.UUID? = null)
 
 // single association events
 
@@ -12850,16 +12850,16 @@ data class DeleteVCompIEEEType1Event(@Id val vCompIEEEType1Id: UUID? = null)
 // VCompIEEEType2 Events
 
 data class CreateVCompIEEEType2Event(
-    @Id var vCompIEEEType2Id: UUID? = null,
+    @Id var vCompIEEEType2Id: java.util.UUID? = null,
     val tr: String
 )
 
 data class UpdateVCompIEEEType2Event(
-    @Id var vCompIEEEType2Id: UUID? = null,
+    @Id var vCompIEEEType2Id: java.util.UUID? = null,
     val tr: String
 )
 
-data class DeleteVCompIEEEType2Event(@Id val vCompIEEEType2Id: UUID? = null)
+data class DeleteVCompIEEEType2Event(@Id val vCompIEEEType2Id: java.util.UUID? = null)
 
 // single association events
 
@@ -12869,14 +12869,14 @@ data class DeleteVCompIEEEType2Event(@Id val vCompIEEEType2Id: UUID? = null)
 // ValueAliasSet Events
 
 data class CreateValueAliasSetEvent(
-     val valueAliasSetId: UUID? = null
+     val valueAliasSetId: java.util.UUID? = null
 )
 
 data class UpdateValueAliasSetEvent(
-     val valueAliasSetId: UUID? = null
+     val valueAliasSetId: java.util.UUID? = null
 )
 
-data class DeleteValueAliasSetEvent(@Id val valueAliasSetId: UUID? = null)
+data class DeleteValueAliasSetEvent(@Id val valueAliasSetId: java.util.UUID? = null)
 
 // single association events
 
@@ -12886,16 +12886,16 @@ data class DeleteValueAliasSetEvent(@Id val valueAliasSetId: UUID? = null)
 // ValueToAlias Events
 
 data class CreateValueToAliasEvent(
-    @Id var valueToAliasId: UUID? = null,
+    @Id var valueToAliasId: java.util.UUID? = null,
     val value: String
 )
 
 data class UpdateValueToAliasEvent(
-    @Id var valueToAliasId: UUID? = null,
+    @Id var valueToAliasId: java.util.UUID? = null,
     val value: String
 )
 
-data class DeleteValueToAliasEvent(@Id val valueToAliasId: UUID? = null)
+data class DeleteValueToAliasEvent(@Id val valueToAliasId: java.util.UUID? = null)
 
 // single association events
 
@@ -12905,16 +12905,16 @@ data class DeleteValueToAliasEvent(@Id val valueToAliasId: UUID? = null)
 // VisibilityLayer Events
 
 data class CreateVisibilityLayerEvent(
-    @Id var visibilityLayerId: UUID? = null,
+    @Id var visibilityLayerId: java.util.UUID? = null,
     val drawingOrder: String
 )
 
 data class UpdateVisibilityLayerEvent(
-    @Id var visibilityLayerId: UUID? = null,
+    @Id var visibilityLayerId: java.util.UUID? = null,
     val drawingOrder: String
 )
 
-data class DeleteVisibilityLayerEvent(@Id val visibilityLayerId: UUID? = null)
+data class DeleteVisibilityLayerEvent(@Id val visibilityLayerId: java.util.UUID? = null)
 
 // single association events
 
@@ -12924,20 +12924,20 @@ data class DeleteVisibilityLayerEvent(@Id val visibilityLayerId: UUID? = null)
 // Voltage Events
 
 data class CreateVoltageEvent(
-    @Id var voltageId: UUID? = null,
+    @Id var voltageId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateVoltageEvent(
-    @Id var voltageId: UUID? = null,
+    @Id var voltageId: java.util.UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
-data class DeleteVoltageEvent(@Id val voltageId: UUID? = null)
+data class DeleteVoltageEvent(@Id val voltageId: java.util.UUID? = null)
 
 // single association events
 
@@ -12947,14 +12947,14 @@ data class DeleteVoltageEvent(@Id val voltageId: UUID? = null)
 // VoltageAdjusterDynamics Events
 
 data class CreateVoltageAdjusterDynamicsEvent(
-     val voltageAdjusterDynamicsId: UUID? = null
+     val voltageAdjusterDynamicsId: java.util.UUID? = null
 )
 
 data class UpdateVoltageAdjusterDynamicsEvent(
-     val voltageAdjusterDynamicsId: UUID? = null
+     val voltageAdjusterDynamicsId: java.util.UUID? = null
 )
 
-data class DeleteVoltageAdjusterDynamicsEvent(@Id val voltageAdjusterDynamicsId: UUID? = null)
+data class DeleteVoltageAdjusterDynamicsEvent(@Id val voltageAdjusterDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -12964,16 +12964,16 @@ data class DeleteVoltageAdjusterDynamicsEvent(@Id val voltageAdjusterDynamicsId:
 // VoltageAdjusterUserDefined Events
 
 data class CreateVoltageAdjusterUserDefinedEvent(
-    @Id var voltageAdjusterUserDefinedId: UUID? = null,
+    @Id var voltageAdjusterUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateVoltageAdjusterUserDefinedEvent(
-    @Id var voltageAdjusterUserDefinedId: UUID? = null,
+    @Id var voltageAdjusterUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteVoltageAdjusterUserDefinedEvent(@Id val voltageAdjusterUserDefinedId: UUID? = null)
+data class DeleteVoltageAdjusterUserDefinedEvent(@Id val voltageAdjusterUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -12983,14 +12983,14 @@ data class DeleteVoltageAdjusterUserDefinedEvent(@Id val voltageAdjusterUserDefi
 // VoltageCompensatorDynamics Events
 
 data class CreateVoltageCompensatorDynamicsEvent(
-     val voltageCompensatorDynamicsId: UUID? = null
+     val voltageCompensatorDynamicsId: java.util.UUID? = null
 )
 
 data class UpdateVoltageCompensatorDynamicsEvent(
-     val voltageCompensatorDynamicsId: UUID? = null
+     val voltageCompensatorDynamicsId: java.util.UUID? = null
 )
 
-data class DeleteVoltageCompensatorDynamicsEvent(@Id val voltageCompensatorDynamicsId: UUID? = null)
+data class DeleteVoltageCompensatorDynamicsEvent(@Id val voltageCompensatorDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -13000,16 +13000,16 @@ data class DeleteVoltageCompensatorDynamicsEvent(@Id val voltageCompensatorDynam
 // VoltageCompensatorUserDefined Events
 
 data class CreateVoltageCompensatorUserDefinedEvent(
-    @Id var voltageCompensatorUserDefinedId: UUID? = null,
+    @Id var voltageCompensatorUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateVoltageCompensatorUserDefinedEvent(
-    @Id var voltageCompensatorUserDefinedId: UUID? = null,
+    @Id var voltageCompensatorUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteVoltageCompensatorUserDefinedEvent(@Id val voltageCompensatorUserDefinedId: UUID? = null)
+data class DeleteVoltageCompensatorUserDefinedEvent(@Id val voltageCompensatorUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -13019,18 +13019,18 @@ data class DeleteVoltageCompensatorUserDefinedEvent(@Id val voltageCompensatorUs
 // VoltageLevel Events
 
 data class CreateVoltageLevelEvent(
-    @Id var voltageLevelId: UUID? = null,
+    @Id var voltageLevelId: java.util.UUID? = null,
     val highVoltageLimit: String,
     val lowVoltageLimit: String
 )
 
 data class UpdateVoltageLevelEvent(
-    @Id var voltageLevelId: UUID? = null,
+    @Id var voltageLevelId: java.util.UUID? = null,
     val highVoltageLimit: String,
     val lowVoltageLimit: String
 )
 
-data class DeleteVoltageLevelEvent(@Id val voltageLevelId: UUID? = null)
+data class DeleteVoltageLevelEvent(@Id val voltageLevelId: java.util.UUID? = null)
 
 // single association events
 
@@ -13040,16 +13040,16 @@ data class DeleteVoltageLevelEvent(@Id val voltageLevelId: UUID? = null)
 // VoltageLimit Events
 
 data class CreateVoltageLimitEvent(
-    @Id var voltageLimitId: UUID? = null,
+    @Id var voltageLimitId: java.util.UUID? = null,
     val value: String
 )
 
 data class UpdateVoltageLimitEvent(
-    @Id var voltageLimitId: UUID? = null,
+    @Id var voltageLimitId: java.util.UUID? = null,
     val value: String
 )
 
-data class DeleteVoltageLimitEvent(@Id val voltageLimitId: UUID? = null)
+data class DeleteVoltageLimitEvent(@Id val voltageLimitId: java.util.UUID? = null)
 
 // single association events
 
@@ -13059,7 +13059,7 @@ data class DeleteVoltageLimitEvent(@Id val voltageLimitId: UUID? = null)
 // VoltagePerReactivePower Events
 
 data class CreateVoltagePerReactivePowerEvent(
-    @Id var voltagePerReactivePowerId: UUID? = null,
+    @Id var voltagePerReactivePowerId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -13068,7 +13068,7 @@ data class CreateVoltagePerReactivePowerEvent(
 )
 
 data class UpdateVoltagePerReactivePowerEvent(
-    @Id var voltagePerReactivePowerId: UUID? = null,
+    @Id var voltagePerReactivePowerId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -13076,7 +13076,7 @@ data class UpdateVoltagePerReactivePowerEvent(
     val value: String
 )
 
-data class DeleteVoltagePerReactivePowerEvent(@Id val voltagePerReactivePowerId: UUID? = null)
+data class DeleteVoltagePerReactivePowerEvent(@Id val voltagePerReactivePowerId: java.util.UUID? = null)
 
 // single association events
 
@@ -13086,7 +13086,7 @@ data class DeleteVoltagePerReactivePowerEvent(@Id val voltagePerReactivePowerId:
 // VolumeFlowRate Events
 
 data class CreateVolumeFlowRateEvent(
-    @Id var volumeFlowRateId: UUID? = null,
+    @Id var volumeFlowRateId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -13095,7 +13095,7 @@ data class CreateVolumeFlowRateEvent(
 )
 
 data class UpdateVolumeFlowRateEvent(
-    @Id var volumeFlowRateId: UUID? = null,
+    @Id var volumeFlowRateId: java.util.UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -13103,7 +13103,7 @@ data class UpdateVolumeFlowRateEvent(
     val value: String
 )
 
-data class DeleteVolumeFlowRateEvent(@Id val volumeFlowRateId: UUID? = null)
+data class DeleteVolumeFlowRateEvent(@Id val volumeFlowRateId: java.util.UUID? = null)
 
 // single association events
 
@@ -13113,14 +13113,14 @@ data class DeleteVolumeFlowRateEvent(@Id val volumeFlowRateId: UUID? = null)
 // VsCapabilityCurve Events
 
 data class CreateVsCapabilityCurveEvent(
-     val vsCapabilityCurveId: UUID? = null
+     val vsCapabilityCurveId: java.util.UUID? = null
 )
 
 data class UpdateVsCapabilityCurveEvent(
-     val vsCapabilityCurveId: UUID? = null
+     val vsCapabilityCurveId: java.util.UUID? = null
 )
 
-data class DeleteVsCapabilityCurveEvent(@Id val vsCapabilityCurveId: UUID? = null)
+data class DeleteVsCapabilityCurveEvent(@Id val vsCapabilityCurveId: java.util.UUID? = null)
 
 // single association events
 
@@ -13130,18 +13130,18 @@ data class DeleteVsCapabilityCurveEvent(@Id val vsCapabilityCurveId: UUID? = nul
 // VsConverter Events
 
 data class CreateVsConverterEvent(
-    @Id var vsConverterId: UUID? = null,
+    @Id var vsConverterId: java.util.UUID? = null,
     val maxModulationIndex: String,
     val maxValveCurrent: String
 )
 
 data class UpdateVsConverterEvent(
-    @Id var vsConverterId: UUID? = null,
+    @Id var vsConverterId: java.util.UUID? = null,
     val maxModulationIndex: String,
     val maxValveCurrent: String
 )
 
-data class DeleteVsConverterEvent(@Id val vsConverterId: UUID? = null)
+data class DeleteVsConverterEvent(@Id val vsConverterId: java.util.UUID? = null)
 
 // single association events
 
@@ -13151,14 +13151,14 @@ data class DeleteVsConverterEvent(@Id val vsConverterId: UUID? = null)
 // WindAeroConstIEC Events
 
 data class CreateWindAeroConstIECEvent(
-     val windAeroConstIECId: UUID? = null
+     val windAeroConstIECId: java.util.UUID? = null
 )
 
 data class UpdateWindAeroConstIECEvent(
-     val windAeroConstIECId: UUID? = null
+     val windAeroConstIECId: java.util.UUID? = null
 )
 
-data class DeleteWindAeroConstIECEvent(@Id val windAeroConstIECId: UUID? = null)
+data class DeleteWindAeroConstIECEvent(@Id val windAeroConstIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13168,7 +13168,7 @@ data class DeleteWindAeroConstIECEvent(@Id val windAeroConstIECId: UUID? = null)
 // WindAeroLinearIEC Events
 
 data class CreateWindAeroLinearIECEvent(
-    @Id var windAeroLinearIECId: UUID? = null,
+    @Id var windAeroLinearIECId: java.util.UUID? = null,
     val dpomega: String,
     val dptheta: String,
     val omegazero: String,
@@ -13177,7 +13177,7 @@ data class CreateWindAeroLinearIECEvent(
 )
 
 data class UpdateWindAeroLinearIECEvent(
-    @Id var windAeroLinearIECId: UUID? = null,
+    @Id var windAeroLinearIECId: java.util.UUID? = null,
     val dpomega: String,
     val dptheta: String,
     val omegazero: String,
@@ -13185,7 +13185,7 @@ data class UpdateWindAeroLinearIECEvent(
     val thetazero: String
 )
 
-data class DeleteWindAeroLinearIECEvent(@Id val windAeroLinearIECId: UUID? = null)
+data class DeleteWindAeroLinearIECEvent(@Id val windAeroLinearIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13195,7 +13195,7 @@ data class DeleteWindAeroLinearIECEvent(@Id val windAeroLinearIECId: UUID? = nul
 // WindContCurrLimIEC Events
 
 data class CreateWindContCurrLimIECEvent(
-    @Id var windContCurrLimIECId: UUID? = null,
+    @Id var windContCurrLimIECId: java.util.UUID? = null,
     val imax: String,
     val imaxdip: String,
     val mdfslim: String,
@@ -13204,7 +13204,7 @@ data class CreateWindContCurrLimIECEvent(
 )
 
 data class UpdateWindContCurrLimIECEvent(
-    @Id var windContCurrLimIECId: UUID? = null,
+    @Id var windContCurrLimIECId: java.util.UUID? = null,
     val imax: String,
     val imaxdip: String,
     val mdfslim: String,
@@ -13212,7 +13212,7 @@ data class UpdateWindContCurrLimIECEvent(
     val tufilt: String
 )
 
-data class DeleteWindContCurrLimIECEvent(@Id val windContCurrLimIECId: UUID? = null)
+data class DeleteWindContCurrLimIECEvent(@Id val windContCurrLimIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13222,7 +13222,7 @@ data class DeleteWindContCurrLimIECEvent(@Id val windContCurrLimIECId: UUID? = n
 // WindContPType3IEC Events
 
 data class CreateWindContPType3IECEvent(
-    @Id var windContPType3IECId: UUID? = null,
+    @Id var windContPType3IECId: java.util.UUID? = null,
     val dpmax: String,
     val dtrisemaxlvrt: String,
     val kdtd: String,
@@ -13247,7 +13247,7 @@ data class CreateWindContPType3IECEvent(
 )
 
 data class UpdateWindContPType3IECEvent(
-    @Id var windContPType3IECId: UUID? = null,
+    @Id var windContPType3IECId: java.util.UUID? = null,
     val dpmax: String,
     val dtrisemaxlvrt: String,
     val kdtd: String,
@@ -13271,7 +13271,7 @@ data class UpdateWindContPType3IECEvent(
     val zeta: String
 )
 
-data class DeleteWindContPType3IECEvent(@Id val windContPType3IECId: UUID? = null)
+data class DeleteWindContPType3IECEvent(@Id val windContPType3IECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13281,20 +13281,20 @@ data class DeleteWindContPType3IECEvent(@Id val windContPType3IECId: UUID? = nul
 // WindContPType4aIEC Events
 
 data class CreateWindContPType4aIECEvent(
-    @Id var windContPType4aIECId: UUID? = null,
+    @Id var windContPType4aIECId: java.util.UUID? = null,
     val dpmax: String,
     val tpord: String,
     val tufilt: String
 )
 
 data class UpdateWindContPType4aIECEvent(
-    @Id var windContPType4aIECId: UUID? = null,
+    @Id var windContPType4aIECId: java.util.UUID? = null,
     val dpmax: String,
     val tpord: String,
     val tufilt: String
 )
 
-data class DeleteWindContPType4aIECEvent(@Id val windContPType4aIECId: UUID? = null)
+data class DeleteWindContPType4aIECEvent(@Id val windContPType4aIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13304,7 +13304,7 @@ data class DeleteWindContPType4aIECEvent(@Id val windContPType4aIECId: UUID? = n
 // WindContPType4bIEC Events
 
 data class CreateWindContPType4bIECEvent(
-    @Id var windContPType4bIECId: UUID? = null,
+    @Id var windContPType4bIECId: java.util.UUID? = null,
     val dpmax: String,
     val tpaero: String,
     val tpord: String,
@@ -13312,14 +13312,14 @@ data class CreateWindContPType4bIECEvent(
 )
 
 data class UpdateWindContPType4bIECEvent(
-    @Id var windContPType4bIECId: UUID? = null,
+    @Id var windContPType4bIECId: java.util.UUID? = null,
     val dpmax: String,
     val tpaero: String,
     val tpord: String,
     val tufilt: String
 )
 
-data class DeleteWindContPType4bIECEvent(@Id val windContPType4bIECId: UUID? = null)
+data class DeleteWindContPType4bIECEvent(@Id val windContPType4bIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13329,7 +13329,7 @@ data class DeleteWindContPType4bIECEvent(@Id val windContPType4bIECId: UUID? = n
 // WindContPitchAngleIEC Events
 
 data class CreateWindContPitchAngleIECEvent(
-    @Id var windContPitchAngleIECId: UUID? = null,
+    @Id var windContPitchAngleIECId: java.util.UUID? = null,
     val dthetamax: String,
     val dthetamin: String,
     val kic: String,
@@ -13343,7 +13343,7 @@ data class CreateWindContPitchAngleIECEvent(
 )
 
 data class UpdateWindContPitchAngleIECEvent(
-    @Id var windContPitchAngleIECId: UUID? = null,
+    @Id var windContPitchAngleIECId: java.util.UUID? = null,
     val dthetamax: String,
     val dthetamin: String,
     val kic: String,
@@ -13356,7 +13356,7 @@ data class UpdateWindContPitchAngleIECEvent(
     val ttheta: String
 )
 
-data class DeleteWindContPitchAngleIECEvent(@Id val windContPitchAngleIECId: UUID? = null)
+data class DeleteWindContPitchAngleIECEvent(@Id val windContPitchAngleIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13366,7 +13366,7 @@ data class DeleteWindContPitchAngleIECEvent(@Id val windContPitchAngleIECId: UUI
 // WindContQIEC Events
 
 data class CreateWindContQIECEvent(
-    @Id var windContQIECId: UUID? = null,
+    @Id var windContQIECId: java.util.UUID? = null,
     val iqh1: String,
     val iqmax: String,
     val iqmin: String,
@@ -13396,7 +13396,7 @@ data class CreateWindContQIECEvent(
 )
 
 data class UpdateWindContQIECEvent(
-    @Id var windContQIECId: UUID? = null,
+    @Id var windContQIECId: java.util.UUID? = null,
     val iqh1: String,
     val iqmax: String,
     val iqmin: String,
@@ -13425,7 +13425,7 @@ data class UpdateWindContQIECEvent(
     val xdroop: String
 )
 
-data class DeleteWindContQIECEvent(@Id val windContQIECId: UUID? = null)
+data class DeleteWindContQIECEvent(@Id val windContQIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13435,7 +13435,7 @@ data class DeleteWindContQIECEvent(@Id val windContQIECId: UUID? = null)
 // WindContRotorRIEC Events
 
 data class CreateWindContRotorRIECEvent(
-    @Id var windContRotorRIECId: UUID? = null,
+    @Id var windContRotorRIECId: java.util.UUID? = null,
     val kirr: String,
     val komegafilt: String,
     val kpfilt: String,
@@ -13447,7 +13447,7 @@ data class CreateWindContRotorRIECEvent(
 )
 
 data class UpdateWindContRotorRIECEvent(
-    @Id var windContRotorRIECId: UUID? = null,
+    @Id var windContRotorRIECId: java.util.UUID? = null,
     val kirr: String,
     val komegafilt: String,
     val kpfilt: String,
@@ -13458,7 +13458,7 @@ data class UpdateWindContRotorRIECEvent(
     val tpfilt: String
 )
 
-data class DeleteWindContRotorRIECEvent(@Id val windContRotorRIECId: UUID? = null)
+data class DeleteWindContRotorRIECEvent(@Id val windContRotorRIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13468,7 +13468,7 @@ data class DeleteWindContRotorRIECEvent(@Id val windContRotorRIECId: UUID? = nul
 // WindDynamicsLookupTable Events
 
 data class CreateWindDynamicsLookupTableEvent(
-    @Id var windDynamicsLookupTableId: UUID? = null,
+    @Id var windDynamicsLookupTableId: java.util.UUID? = null,
     val input: String,
     val lookupTableFunctionType: String,
     val output: String,
@@ -13476,14 +13476,14 @@ data class CreateWindDynamicsLookupTableEvent(
 )
 
 data class UpdateWindDynamicsLookupTableEvent(
-    @Id var windDynamicsLookupTableId: UUID? = null,
+    @Id var windDynamicsLookupTableId: java.util.UUID? = null,
     val input: String,
     val lookupTableFunctionType: String,
     val output: String,
     val sequence: String
 )
 
-data class DeleteWindDynamicsLookupTableEvent(@Id val windDynamicsLookupTableId: UUID? = null)
+data class DeleteWindDynamicsLookupTableEvent(@Id val windDynamicsLookupTableId: java.util.UUID? = null)
 
 // single association events
 
@@ -13493,14 +13493,14 @@ data class DeleteWindDynamicsLookupTableEvent(@Id val windDynamicsLookupTableId:
 // WindGenTurbineType1IEC Events
 
 data class CreateWindGenTurbineType1IECEvent(
-     val windGenTurbineType1IECId: UUID? = null
+     val windGenTurbineType1IECId: java.util.UUID? = null
 )
 
 data class UpdateWindGenTurbineType1IECEvent(
-     val windGenTurbineType1IECId: UUID? = null
+     val windGenTurbineType1IECId: java.util.UUID? = null
 )
 
-data class DeleteWindGenTurbineType1IECEvent(@Id val windGenTurbineType1IECId: UUID? = null)
+data class DeleteWindGenTurbineType1IECEvent(@Id val windGenTurbineType1IECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13510,14 +13510,14 @@ data class DeleteWindGenTurbineType1IECEvent(@Id val windGenTurbineType1IECId: U
 // WindGenTurbineType2IEC Events
 
 data class CreateWindGenTurbineType2IECEvent(
-     val windGenTurbineType2IECId: UUID? = null
+     val windGenTurbineType2IECId: java.util.UUID? = null
 )
 
 data class UpdateWindGenTurbineType2IECEvent(
-     val windGenTurbineType2IECId: UUID? = null
+     val windGenTurbineType2IECId: java.util.UUID? = null
 )
 
-data class DeleteWindGenTurbineType2IECEvent(@Id val windGenTurbineType2IECId: UUID? = null)
+data class DeleteWindGenTurbineType2IECEvent(@Id val windGenTurbineType2IECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13527,18 +13527,18 @@ data class DeleteWindGenTurbineType2IECEvent(@Id val windGenTurbineType2IECId: U
 // WindGenTurbineType3IEC Events
 
 data class CreateWindGenTurbineType3IECEvent(
-    @Id var windGenTurbineType3IECId: UUID? = null,
+    @Id var windGenTurbineType3IECId: java.util.UUID? = null,
     val dipmax: String,
     val diqmax: String
 )
 
 data class UpdateWindGenTurbineType3IECEvent(
-    @Id var windGenTurbineType3IECId: UUID? = null,
+    @Id var windGenTurbineType3IECId: java.util.UUID? = null,
     val dipmax: String,
     val diqmax: String
 )
 
-data class DeleteWindGenTurbineType3IECEvent(@Id val windGenTurbineType3IECId: UUID? = null)
+data class DeleteWindGenTurbineType3IECEvent(@Id val windGenTurbineType3IECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13548,20 +13548,20 @@ data class DeleteWindGenTurbineType3IECEvent(@Id val windGenTurbineType3IECId: U
 // WindGenTurbineType3aIEC Events
 
 data class CreateWindGenTurbineType3aIECEvent(
-    @Id var windGenTurbineType3aIECId: UUID? = null,
+    @Id var windGenTurbineType3aIECId: java.util.UUID? = null,
     val kpc: String,
     val tic: String,
     val xs: String
 )
 
 data class UpdateWindGenTurbineType3aIECEvent(
-    @Id var windGenTurbineType3aIECId: UUID? = null,
+    @Id var windGenTurbineType3aIECId: java.util.UUID? = null,
     val kpc: String,
     val tic: String,
     val xs: String
 )
 
-data class DeleteWindGenTurbineType3aIECEvent(@Id val windGenTurbineType3aIECId: UUID? = null)
+data class DeleteWindGenTurbineType3aIECEvent(@Id val windGenTurbineType3aIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13571,7 +13571,7 @@ data class DeleteWindGenTurbineType3aIECEvent(@Id val windGenTurbineType3aIECId:
 // WindGenTurbineType3bIEC Events
 
 data class CreateWindGenTurbineType3bIECEvent(
-    @Id var windGenTurbineType3bIECId: UUID? = null,
+    @Id var windGenTurbineType3bIECId: java.util.UUID? = null,
     val fducw: String,
     val mwtcwp: String,
     val tg: String,
@@ -13580,7 +13580,7 @@ data class CreateWindGenTurbineType3bIECEvent(
 )
 
 data class UpdateWindGenTurbineType3bIECEvent(
-    @Id var windGenTurbineType3bIECId: UUID? = null,
+    @Id var windGenTurbineType3bIECId: java.util.UUID? = null,
     val fducw: String,
     val mwtcwp: String,
     val tg: String,
@@ -13588,7 +13588,7 @@ data class UpdateWindGenTurbineType3bIECEvent(
     val xs: String
 )
 
-data class DeleteWindGenTurbineType3bIECEvent(@Id val windGenTurbineType3bIECId: UUID? = null)
+data class DeleteWindGenTurbineType3bIECEvent(@Id val windGenTurbineType3bIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13598,7 +13598,7 @@ data class DeleteWindGenTurbineType3bIECEvent(@Id val windGenTurbineType3bIECId:
 // WindGenType4IEC Events
 
 data class CreateWindGenType4IECEvent(
-    @Id var windGenType4IECId: UUID? = null,
+    @Id var windGenType4IECId: java.util.UUID? = null,
     val dipmax: String,
     val diqmax: String,
     val diqmin: String,
@@ -13606,14 +13606,14 @@ data class CreateWindGenType4IECEvent(
 )
 
 data class UpdateWindGenType4IECEvent(
-    @Id var windGenType4IECId: UUID? = null,
+    @Id var windGenType4IECId: java.util.UUID? = null,
     val dipmax: String,
     val diqmax: String,
     val diqmin: String,
     val tg: String
 )
 
-data class DeleteWindGenType4IECEvent(@Id val windGenType4IECId: UUID? = null)
+data class DeleteWindGenType4IECEvent(@Id val windGenType4IECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13623,16 +13623,16 @@ data class DeleteWindGenType4IECEvent(@Id val windGenType4IECId: UUID? = null)
 // WindGeneratingUnit Events
 
 data class CreateWindGeneratingUnitEvent(
-    @Id var windGeneratingUnitId: UUID? = null,
+    @Id var windGeneratingUnitId: java.util.UUID? = null,
     val windGenUnitType: String
 )
 
 data class UpdateWindGeneratingUnitEvent(
-    @Id var windGeneratingUnitId: UUID? = null,
+    @Id var windGeneratingUnitId: java.util.UUID? = null,
     val windGenUnitType: String
 )
 
-data class DeleteWindGeneratingUnitEvent(@Id val windGeneratingUnitId: UUID? = null)
+data class DeleteWindGeneratingUnitEvent(@Id val windGeneratingUnitId: java.util.UUID? = null)
 
 // single association events
 
@@ -13642,7 +13642,7 @@ data class DeleteWindGeneratingUnitEvent(@Id val windGeneratingUnitId: UUID? = n
 // WindMechIEC Events
 
 data class CreateWindMechIECEvent(
-    @Id var windMechIECId: UUID? = null,
+    @Id var windMechIECId: java.util.UUID? = null,
     val cdrt: String,
     val hgen: String,
     val hwtr: String,
@@ -13650,14 +13650,14 @@ data class CreateWindMechIECEvent(
 )
 
 data class UpdateWindMechIECEvent(
-    @Id var windMechIECId: UUID? = null,
+    @Id var windMechIECId: java.util.UUID? = null,
     val cdrt: String,
     val hgen: String,
     val hwtr: String,
     val kdrt: String
 )
 
-data class DeleteWindMechIECEvent(@Id val windMechIECId: UUID? = null)
+data class DeleteWindMechIECEvent(@Id val windMechIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13667,7 +13667,7 @@ data class DeleteWindMechIECEvent(@Id val windMechIECId: UUID? = null)
 // WindPitchContEmulIEC Events
 
 data class CreateWindPitchContEmulIECEvent(
-    @Id var windPitchContEmulIECId: UUID? = null,
+    @Id var windPitchContEmulIECId: java.util.UUID? = null,
     val kdroop: String,
     val kipce: String,
     val komegaaero: String,
@@ -13681,7 +13681,7 @@ data class CreateWindPitchContEmulIECEvent(
 )
 
 data class UpdateWindPitchContEmulIECEvent(
-    @Id var windPitchContEmulIECId: UUID? = null,
+    @Id var windPitchContEmulIECId: java.util.UUID? = null,
     val kdroop: String,
     val kipce: String,
     val komegaaero: String,
@@ -13694,7 +13694,7 @@ data class UpdateWindPitchContEmulIECEvent(
     val tpe: String
 )
 
-data class DeleteWindPitchContEmulIECEvent(@Id val windPitchContEmulIECId: UUID? = null)
+data class DeleteWindPitchContEmulIECEvent(@Id val windPitchContEmulIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13704,14 +13704,14 @@ data class DeleteWindPitchContEmulIECEvent(@Id val windPitchContEmulIECId: UUID?
 // WindPlantDynamics Events
 
 data class CreateWindPlantDynamicsEvent(
-     val windPlantDynamicsId: UUID? = null
+     val windPlantDynamicsId: java.util.UUID? = null
 )
 
 data class UpdateWindPlantDynamicsEvent(
-     val windPlantDynamicsId: UUID? = null
+     val windPlantDynamicsId: java.util.UUID? = null
 )
 
-data class DeleteWindPlantDynamicsEvent(@Id val windPlantDynamicsId: UUID? = null)
+data class DeleteWindPlantDynamicsEvent(@Id val windPlantDynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -13721,7 +13721,7 @@ data class DeleteWindPlantDynamicsEvent(@Id val windPlantDynamicsId: UUID? = nul
 // WindPlantFreqPcontrolIEC Events
 
 data class CreateWindPlantFreqPcontrolIECEvent(
-    @Id var windPlantFreqPcontrolIECId: UUID? = null,
+    @Id var windPlantFreqPcontrolIECId: java.util.UUID? = null,
     val dprefmax: String,
     val dprefmin: String,
     val kiwpp: String,
@@ -13735,7 +13735,7 @@ data class CreateWindPlantFreqPcontrolIECEvent(
 )
 
 data class UpdateWindPlantFreqPcontrolIECEvent(
-    @Id var windPlantFreqPcontrolIECId: UUID? = null,
+    @Id var windPlantFreqPcontrolIECId: java.util.UUID? = null,
     val dprefmax: String,
     val dprefmin: String,
     val kiwpp: String,
@@ -13748,7 +13748,7 @@ data class UpdateWindPlantFreqPcontrolIECEvent(
     val twppfilt: String
 )
 
-data class DeleteWindPlantFreqPcontrolIECEvent(@Id val windPlantFreqPcontrolIECId: UUID? = null)
+data class DeleteWindPlantFreqPcontrolIECEvent(@Id val windPlantFreqPcontrolIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13758,14 +13758,14 @@ data class DeleteWindPlantFreqPcontrolIECEvent(@Id val windPlantFreqPcontrolIECI
 // WindPlantIEC Events
 
 data class CreateWindPlantIECEvent(
-     val windPlantIECId: UUID? = null
+     val windPlantIECId: java.util.UUID? = null
 )
 
 data class UpdateWindPlantIECEvent(
-     val windPlantIECId: UUID? = null
+     val windPlantIECId: java.util.UUID? = null
 )
 
-data class DeleteWindPlantIECEvent(@Id val windPlantIECId: UUID? = null)
+data class DeleteWindPlantIECEvent(@Id val windPlantIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13775,7 +13775,7 @@ data class DeleteWindPlantIECEvent(@Id val windPlantIECId: UUID? = null)
 // WindPlantReactiveControlIEC Events
 
 data class CreateWindPlantReactiveControlIECEvent(
-    @Id var windPlantReactiveControlIECId: UUID? = null,
+    @Id var windPlantReactiveControlIECId: java.util.UUID? = null,
     val kiwpx: String,
     val kpwpx: String,
     val kwpqu: String,
@@ -13792,7 +13792,7 @@ data class CreateWindPlantReactiveControlIECEvent(
 )
 
 data class UpdateWindPlantReactiveControlIECEvent(
-    @Id var windPlantReactiveControlIECId: UUID? = null,
+    @Id var windPlantReactiveControlIECId: java.util.UUID? = null,
     val kiwpx: String,
     val kpwpx: String,
     val kwpqu: String,
@@ -13808,7 +13808,7 @@ data class UpdateWindPlantReactiveControlIECEvent(
     val xrefmin: String
 )
 
-data class DeleteWindPlantReactiveControlIECEvent(@Id val windPlantReactiveControlIECId: UUID? = null)
+data class DeleteWindPlantReactiveControlIECEvent(@Id val windPlantReactiveControlIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13818,16 +13818,16 @@ data class DeleteWindPlantReactiveControlIECEvent(@Id val windPlantReactiveContr
 // WindPlantUserDefined Events
 
 data class CreateWindPlantUserDefinedEvent(
-    @Id var windPlantUserDefinedId: UUID? = null,
+    @Id var windPlantUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateWindPlantUserDefinedEvent(
-    @Id var windPlantUserDefinedId: UUID? = null,
+    @Id var windPlantUserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteWindPlantUserDefinedEvent(@Id val windPlantUserDefinedId: UUID? = null)
+data class DeleteWindPlantUserDefinedEvent(@Id val windPlantUserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -13837,7 +13837,7 @@ data class DeleteWindPlantUserDefinedEvent(@Id val windPlantUserDefinedId: UUID?
 // WindProtectionIEC Events
 
 data class CreateWindProtectionIECEvent(
-    @Id var windProtectionIECId: UUID? = null,
+    @Id var windProtectionIECId: java.util.UUID? = null,
     val fover: String,
     val funder: String,
     val tfover: String,
@@ -13849,7 +13849,7 @@ data class CreateWindProtectionIECEvent(
 )
 
 data class UpdateWindProtectionIECEvent(
-    @Id var windProtectionIECId: UUID? = null,
+    @Id var windProtectionIECId: java.util.UUID? = null,
     val fover: String,
     val funder: String,
     val tfover: String,
@@ -13860,7 +13860,7 @@ data class UpdateWindProtectionIECEvent(
     val uunder: String
 )
 
-data class DeleteWindProtectionIECEvent(@Id val windProtectionIECId: UUID? = null)
+data class DeleteWindProtectionIECEvent(@Id val windProtectionIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13870,14 +13870,14 @@ data class DeleteWindProtectionIECEvent(@Id val windProtectionIECId: UUID? = nul
 // WindTurbineType1or2Dynamics Events
 
 data class CreateWindTurbineType1or2DynamicsEvent(
-     val windTurbineType1or2DynamicsId: UUID? = null
+     val windTurbineType1or2DynamicsId: java.util.UUID? = null
 )
 
 data class UpdateWindTurbineType1or2DynamicsEvent(
-     val windTurbineType1or2DynamicsId: UUID? = null
+     val windTurbineType1or2DynamicsId: java.util.UUID? = null
 )
 
-data class DeleteWindTurbineType1or2DynamicsEvent(@Id val windTurbineType1or2DynamicsId: UUID? = null)
+data class DeleteWindTurbineType1or2DynamicsEvent(@Id val windTurbineType1or2DynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -13887,14 +13887,14 @@ data class DeleteWindTurbineType1or2DynamicsEvent(@Id val windTurbineType1or2Dyn
 // WindTurbineType1or2IEC Events
 
 data class CreateWindTurbineType1or2IECEvent(
-     val windTurbineType1or2IECId: UUID? = null
+     val windTurbineType1or2IECId: java.util.UUID? = null
 )
 
 data class UpdateWindTurbineType1or2IECEvent(
-     val windTurbineType1or2IECId: UUID? = null
+     val windTurbineType1or2IECId: java.util.UUID? = null
 )
 
-data class DeleteWindTurbineType1or2IECEvent(@Id val windTurbineType1or2IECId: UUID? = null)
+data class DeleteWindTurbineType1or2IECEvent(@Id val windTurbineType1or2IECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13904,14 +13904,14 @@ data class DeleteWindTurbineType1or2IECEvent(@Id val windTurbineType1or2IECId: U
 // WindTurbineType3or4Dynamics Events
 
 data class CreateWindTurbineType3or4DynamicsEvent(
-     val windTurbineType3or4DynamicsId: UUID? = null
+     val windTurbineType3or4DynamicsId: java.util.UUID? = null
 )
 
 data class UpdateWindTurbineType3or4DynamicsEvent(
-     val windTurbineType3or4DynamicsId: UUID? = null
+     val windTurbineType3or4DynamicsId: java.util.UUID? = null
 )
 
-data class DeleteWindTurbineType3or4DynamicsEvent(@Id val windTurbineType3or4DynamicsId: UUID? = null)
+data class DeleteWindTurbineType3or4DynamicsEvent(@Id val windTurbineType3or4DynamicsId: java.util.UUID? = null)
 
 // single association events
 
@@ -13921,14 +13921,14 @@ data class DeleteWindTurbineType3or4DynamicsEvent(@Id val windTurbineType3or4Dyn
 // WindTurbineType3or4IEC Events
 
 data class CreateWindTurbineType3or4IECEvent(
-     val windTurbineType3or4IECId: UUID? = null
+     val windTurbineType3or4IECId: java.util.UUID? = null
 )
 
 data class UpdateWindTurbineType3or4IECEvent(
-     val windTurbineType3or4IECId: UUID? = null
+     val windTurbineType3or4IECId: java.util.UUID? = null
 )
 
-data class DeleteWindTurbineType3or4IECEvent(@Id val windTurbineType3or4IECId: UUID? = null)
+data class DeleteWindTurbineType3or4IECEvent(@Id val windTurbineType3or4IECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13938,14 +13938,14 @@ data class DeleteWindTurbineType3or4IECEvent(@Id val windTurbineType3or4IECId: U
 // WindTurbineType4aIEC Events
 
 data class CreateWindTurbineType4aIECEvent(
-     val windTurbineType4aIECId: UUID? = null
+     val windTurbineType4aIECId: java.util.UUID? = null
 )
 
 data class UpdateWindTurbineType4aIECEvent(
-     val windTurbineType4aIECId: UUID? = null
+     val windTurbineType4aIECId: java.util.UUID? = null
 )
 
-data class DeleteWindTurbineType4aIECEvent(@Id val windTurbineType4aIECId: UUID? = null)
+data class DeleteWindTurbineType4aIECEvent(@Id val windTurbineType4aIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13955,14 +13955,14 @@ data class DeleteWindTurbineType4aIECEvent(@Id val windTurbineType4aIECId: UUID?
 // WindTurbineType4bIEC Events
 
 data class CreateWindTurbineType4bIECEvent(
-     val windTurbineType4bIECId: UUID? = null
+     val windTurbineType4bIECId: java.util.UUID? = null
 )
 
 data class UpdateWindTurbineType4bIECEvent(
-     val windTurbineType4bIECId: UUID? = null
+     val windTurbineType4bIECId: java.util.UUID? = null
 )
 
-data class DeleteWindTurbineType4bIECEvent(@Id val windTurbineType4bIECId: UUID? = null)
+data class DeleteWindTurbineType4bIECEvent(@Id val windTurbineType4bIECId: java.util.UUID? = null)
 
 // single association events
 
@@ -13972,16 +13972,16 @@ data class DeleteWindTurbineType4bIECEvent(@Id val windTurbineType4bIECId: UUID?
 // WindType1or2UserDefined Events
 
 data class CreateWindType1or2UserDefinedEvent(
-    @Id var windType1or2UserDefinedId: UUID? = null,
+    @Id var windType1or2UserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateWindType1or2UserDefinedEvent(
-    @Id var windType1or2UserDefinedId: UUID? = null,
+    @Id var windType1or2UserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteWindType1or2UserDefinedEvent(@Id val windType1or2UserDefinedId: UUID? = null)
+data class DeleteWindType1or2UserDefinedEvent(@Id val windType1or2UserDefinedId: java.util.UUID? = null)
 
 // single association events
 
@@ -13991,16 +13991,16 @@ data class DeleteWindType1or2UserDefinedEvent(@Id val windType1or2UserDefinedId:
 // WindType3or4UserDefined Events
 
 data class CreateWindType3or4UserDefinedEvent(
-    @Id var windType3or4UserDefinedId: UUID? = null,
+    @Id var windType3or4UserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
 data class UpdateWindType3or4UserDefinedEvent(
-    @Id var windType3or4UserDefinedId: UUID? = null,
+    @Id var windType3or4UserDefinedId: java.util.UUID? = null,
     val proprietary: String
 )
 
-data class DeleteWindType3or4UserDefinedEvent(@Id val windType3or4UserDefinedId: UUID? = null)
+data class DeleteWindType3or4UserDefinedEvent(@Id val windType3or4UserDefinedId: java.util.UUID? = null)
 
 // single association events
 
