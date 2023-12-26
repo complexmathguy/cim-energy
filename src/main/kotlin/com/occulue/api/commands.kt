@@ -15,10 +15,10 @@ package com.occulue.api
 import org.axonframework.modelling.command.TargetAggregateIdentifier
 
 
-import java.util
-import javax.persistence
+import java.util.*
+import javax.persistence.*
 
-import com.occulue.entity.*;
+import com.occulue.entity.*
 
 //-----------------------------------------------------------
 // Command definitions
